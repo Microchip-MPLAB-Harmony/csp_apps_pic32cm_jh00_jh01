@@ -1,0 +1,640 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Configuration>
+  <Configurator>
+    <Name dnOrder="0" value="pic32cm_jh00_jh01"/>
+    <Processor dnOrder="1" value="PIC32CM5164JH00100"/>
+    <Harmony dnOrder="2" path="../../../../.."/>
+    <Folder_Name dnOrder="3" value=""/>
+    <Manifest dnOrder="4">
+      <Files dnOrder="0">
+        <File dnOrder="0">
+          <Type dnOrder="0">SOURCE</Type>
+          <Name dnOrder="1">exceptions.c</Name>
+          <Security dnOrder="2">NON_SECURE</Security>
+          <LogicalPath dnOrder="3">config/pic32cm_jh00_jh01/</LogicalPath>
+          <PhysicalPath dnOrder="4">/</PhysicalPath>
+          <GeneratedChecksum dnOrder="5">9DE4051D799EAFEBF2B648E71E7FCDAA</GeneratedChecksum>
+          <UserChecksum dnOrder="6">9DE4051D799EAFEBF2B648E71E7FCDAA</UserChecksum>
+        </File>
+        <File dnOrder="1">
+          <Type dnOrder="0">SOURCE</Type>
+          <Name dnOrder="1">initialization.c</Name>
+          <Security dnOrder="2">NON_SECURE</Security>
+          <LogicalPath dnOrder="3">config/pic32cm_jh00_jh01/</LogicalPath>
+          <PhysicalPath dnOrder="4">/</PhysicalPath>
+          <GeneratedChecksum dnOrder="5">071D1D27145DF641E514DFD1F7E6A544</GeneratedChecksum>
+          <UserChecksum dnOrder="6">071D1D27145DF641E514DFD1F7E6A544</UserChecksum>
+        </File>
+        <File dnOrder="2">
+          <Type dnOrder="0">SOURCE</Type>
+          <Name dnOrder="1">interrupts.c</Name>
+          <Security dnOrder="2">NON_SECURE</Security>
+          <LogicalPath dnOrder="3">config/pic32cm_jh00_jh01/</LogicalPath>
+          <PhysicalPath dnOrder="4">/</PhysicalPath>
+          <GeneratedChecksum dnOrder="5">E5DA26E77F66B6B16B12A24244A33661</GeneratedChecksum>
+          <UserChecksum dnOrder="6">E5DA26E77F66B6B16B12A24244A33661</UserChecksum>
+        </File>
+        <File dnOrder="3">
+          <Type dnOrder="0">SOURCE</Type>
+          <Name dnOrder="1">libc_syscalls.c</Name>
+          <Security dnOrder="2">NON_SECURE</Security>
+          <LogicalPath dnOrder="3">config/pic32cm_jh00_jh01/</LogicalPath>
+          <PhysicalPath dnOrder="4">/</PhysicalPath>
+          <GeneratedChecksum dnOrder="5">328F1E09E0DD9BEE901C4562A3E5180A</GeneratedChecksum>
+          <UserChecksum dnOrder="6">328F1E09E0DD9BEE901C4562A3E5180A</UserChecksum>
+        </File>
+        <File dnOrder="4">
+          <Type dnOrder="0">SOURCE</Type>
+          <Name dnOrder="1">main.c</Name>
+          <Security dnOrder="2">NON_SECURE</Security>
+          <LogicalPath dnOrder="3"/>
+          <PhysicalPath dnOrder="4">/../../</PhysicalPath>
+          <GeneratedChecksum dnOrder="5">F81A00E640818EDFB9E79C9BD241AEF4</GeneratedChecksum>
+          <UserChecksum dnOrder="6">F81A00E640818EDFB9E79C9BD241AEF4</UserChecksum>
+        </File>
+        <File dnOrder="5">
+          <Type dnOrder="0">SOURCE</Type>
+          <Name dnOrder="1">plib_clock.c</Name>
+          <Security dnOrder="2">NON_SECURE</Security>
+          <LogicalPath dnOrder="3">config/pic32cm_jh00_jh01/peripheral/clock/</LogicalPath>
+          <PhysicalPath dnOrder="4">/peripheral/clock/</PhysicalPath>
+          <GeneratedChecksum dnOrder="5">E79D3CC9B5F91A4B06DD9EC53C6CE000</GeneratedChecksum>
+          <UserChecksum dnOrder="6">E79D3CC9B5F91A4B06DD9EC53C6CE000</UserChecksum>
+        </File>
+        <File dnOrder="6">
+          <Type dnOrder="0">SOURCE</Type>
+          <Name dnOrder="1">plib_divas.c</Name>
+          <Security dnOrder="2">NON_SECURE</Security>
+          <LogicalPath dnOrder="3">config/pic32cm_jh00_jh01/peripheral/divas/</LogicalPath>
+          <PhysicalPath dnOrder="4">/peripheral/divas/</PhysicalPath>
+          <GeneratedChecksum dnOrder="5">4553DDDDFA8DF7BE32DDACCD9E97A2D0</GeneratedChecksum>
+          <UserChecksum dnOrder="6">4553DDDDFA8DF7BE32DDACCD9E97A2D0</UserChecksum>
+        </File>
+        <File dnOrder="7">
+          <Type dnOrder="0">SOURCE</Type>
+          <Name dnOrder="1">plib_evsys.c</Name>
+          <Security dnOrder="2">NON_SECURE</Security>
+          <LogicalPath dnOrder="3">config/pic32cm_jh00_jh01/peripheral/evsys</LogicalPath>
+          <PhysicalPath dnOrder="4">/peripheral/evsys/</PhysicalPath>
+          <GeneratedChecksum dnOrder="5">C99E6D9B9BA371EA749B7DC16BC2C209</GeneratedChecksum>
+          <UserChecksum dnOrder="6">C99E6D9B9BA371EA749B7DC16BC2C209</UserChecksum>
+        </File>
+        <File dnOrder="8">
+          <Type dnOrder="0">SOURCE</Type>
+          <Name dnOrder="1">plib_nvic.c</Name>
+          <Security dnOrder="2">NON_SECURE</Security>
+          <LogicalPath dnOrder="3">config/pic32cm_jh00_jh01/peripheral/nvic/</LogicalPath>
+          <PhysicalPath dnOrder="4">/peripheral/nvic/</PhysicalPath>
+          <GeneratedChecksum dnOrder="5">D0684B5522FCD6E33EAAF787D58818BE</GeneratedChecksum>
+          <UserChecksum dnOrder="6">D0684B5522FCD6E33EAAF787D58818BE</UserChecksum>
+        </File>
+        <File dnOrder="9">
+          <Type dnOrder="0">SOURCE</Type>
+          <Name dnOrder="1">plib_nvmctrl.c</Name>
+          <Security dnOrder="2">NON_SECURE</Security>
+          <LogicalPath dnOrder="3">config/pic32cm_jh00_jh01/peripheral/nvmctrl/</LogicalPath>
+          <PhysicalPath dnOrder="4">/peripheral/nvmctrl/</PhysicalPath>
+          <GeneratedChecksum dnOrder="5">6199352E96A4D76EB273FD2BA42D39B4</GeneratedChecksum>
+          <UserChecksum dnOrder="6">6199352E96A4D76EB273FD2BA42D39B4</UserChecksum>
+        </File>
+        <File dnOrder="10">
+          <Type dnOrder="0">SOURCE</Type>
+          <Name dnOrder="1">plib_port.c</Name>
+          <Security dnOrder="2">NON_SECURE</Security>
+          <LogicalPath dnOrder="3">config/pic32cm_jh00_jh01/peripheral/port/</LogicalPath>
+          <PhysicalPath dnOrder="4">/peripheral/port/</PhysicalPath>
+          <GeneratedChecksum dnOrder="5">0D8A38364BB9BB5640EE817B38761771</GeneratedChecksum>
+          <UserChecksum dnOrder="6">0D8A38364BB9BB5640EE817B38761771</UserChecksum>
+        </File>
+        <File dnOrder="11">
+          <Type dnOrder="0">SOURCE</Type>
+          <Name dnOrder="1">plib_sercom4_usart.c</Name>
+          <Security dnOrder="2">NON_SECURE</Security>
+          <LogicalPath dnOrder="3">config/pic32cm_jh00_jh01/peripheral/sercom/usart/</LogicalPath>
+          <PhysicalPath dnOrder="4">/peripheral/sercom/usart/</PhysicalPath>
+          <GeneratedChecksum dnOrder="5">5392356E3CFF7B9932F2892C3419D09E</GeneratedChecksum>
+          <UserChecksum dnOrder="6">5392356E3CFF7B9932F2892C3419D09E</UserChecksum>
+        </File>
+        <File dnOrder="12">
+          <Type dnOrder="0">SOURCE</Type>
+          <Name dnOrder="1">startup_xc32.c</Name>
+          <Security dnOrder="2">NON_SECURE</Security>
+          <LogicalPath dnOrder="3">config/pic32cm_jh00_jh01/</LogicalPath>
+          <PhysicalPath dnOrder="4">/</PhysicalPath>
+          <GeneratedChecksum dnOrder="5">1D663AF01040F617CC298F9373DE9B57</GeneratedChecksum>
+          <UserChecksum dnOrder="6">1D663AF01040F617CC298F9373DE9B57</UserChecksum>
+        </File>
+        <File dnOrder="13">
+          <Type dnOrder="0">SOURCE</Type>
+          <Name dnOrder="1">xc32_monitor.c</Name>
+          <Security dnOrder="2">NON_SECURE</Security>
+          <LogicalPath dnOrder="3">config/pic32cm_jh00_jh01/stdio/</LogicalPath>
+          <PhysicalPath dnOrder="4">/stdio/</PhysicalPath>
+          <GeneratedChecksum dnOrder="5">4F761C8A14DBB5C5E11017805D0E5DDF</GeneratedChecksum>
+          <UserChecksum dnOrder="6">4F761C8A14DBB5C5E11017805D0E5DDF</UserChecksum>
+        </File>
+        <File dnOrder="14">
+          <Type dnOrder="0">HEADER</Type>
+          <Name dnOrder="1">ac.h</Name>
+          <Security dnOrder="2">NON_SECURE</Security>
+          <LogicalPath dnOrder="3">packs/PIC32CM5164JH00100_DFP/component/</LogicalPath>
+          <PhysicalPath dnOrder="4">/../../packs/PIC32CM5164JH00100_DFP/component/</PhysicalPath>
+          <GeneratedChecksum dnOrder="5">FB0DC2EB3B26322E345777128E16E9C7</GeneratedChecksum>
+          <UserChecksum dnOrder="6">FB0DC2EB3B26322E345777128E16E9C7</UserChecksum>
+        </File>
+        <File dnOrder="15">
+          <Type dnOrder="0">HEADER</Type>
+          <Name dnOrder="1">adc.h</Name>
+          <Security dnOrder="2">NON_SECURE</Security>
+          <LogicalPath dnOrder="3">packs/PIC32CM5164JH00100_DFP/component/</LogicalPath>
+          <PhysicalPath dnOrder="4">/../../packs/PIC32CM5164JH00100_DFP/component/</PhysicalPath>
+          <GeneratedChecksum dnOrder="5">D87ADF14012450CE9E925A763FA2DC62</GeneratedChecksum>
+          <UserChecksum dnOrder="6">D87ADF14012450CE9E925A763FA2DC62</UserChecksum>
+        </File>
+        <File dnOrder="16">
+          <Type dnOrder="0">HEADER</Type>
+          <Name dnOrder="1">ccl.h</Name>
+          <Security dnOrder="2">NON_SECURE</Security>
+          <LogicalPath dnOrder="3">packs/PIC32CM5164JH00100_DFP/component/</LogicalPath>
+          <PhysicalPath dnOrder="4">/../../packs/PIC32CM5164JH00100_DFP/component/</PhysicalPath>
+          <GeneratedChecksum dnOrder="5">BA223997B1C813441720F9905349B711</GeneratedChecksum>
+          <UserChecksum dnOrder="6">BA223997B1C813441720F9905349B711</UserChecksum>
+        </File>
+        <File dnOrder="17">
+          <Type dnOrder="0">HEADER</Type>
+          <Name dnOrder="1">cmsis_armcc.h</Name>
+          <Security dnOrder="2">NON_SECURE</Security>
+          <LogicalPath dnOrder="3">packs/CMSIS/CMSIS/Core/Include/</LogicalPath>
+          <PhysicalPath dnOrder="4">/../../packs/CMSIS/CMSIS/Core/Include/</PhysicalPath>
+          <GeneratedChecksum dnOrder="5">D0A91713174AE0A9464105CD4157DEC1</GeneratedChecksum>
+          <UserChecksum dnOrder="6">D0A91713174AE0A9464105CD4157DEC1</UserChecksum>
+        </File>
+        <File dnOrder="18">
+          <Type dnOrder="0">HEADER</Type>
+          <Name dnOrder="1">cmsis_armclang.h</Name>
+          <Security dnOrder="2">NON_SECURE</Security>
+          <LogicalPath dnOrder="3">packs/CMSIS/CMSIS/Core/Include/</LogicalPath>
+          <PhysicalPath dnOrder="4">/../../packs/CMSIS/CMSIS/Core/Include/</PhysicalPath>
+          <GeneratedChecksum dnOrder="5">FB9082D52CC87C29BABCEC7CDA5DA8CD</GeneratedChecksum>
+          <UserChecksum dnOrder="6">FB9082D52CC87C29BABCEC7CDA5DA8CD</UserChecksum>
+        </File>
+        <File dnOrder="19">
+          <Type dnOrder="0">HEADER</Type>
+          <Name dnOrder="1">cmsis_armclang_ltm.h</Name>
+          <Security dnOrder="2">NON_SECURE</Security>
+          <LogicalPath dnOrder="3">packs/CMSIS/CMSIS/Core/Include/</LogicalPath>
+          <PhysicalPath dnOrder="4">/../../packs/CMSIS/CMSIS/Core/Include/</PhysicalPath>
+          <GeneratedChecksum dnOrder="5">787D64C13CE3DCD1082EA06108F51EC6</GeneratedChecksum>
+          <UserChecksum dnOrder="6">787D64C13CE3DCD1082EA06108F51EC6</UserChecksum>
+        </File>
+        <File dnOrder="20">
+          <Type dnOrder="0">HEADER</Type>
+          <Name dnOrder="1">cmsis_compiler.h</Name>
+          <Security dnOrder="2">NON_SECURE</Security>
+          <LogicalPath dnOrder="3">packs/CMSIS/CMSIS/Core/Include/</LogicalPath>
+          <PhysicalPath dnOrder="4">/../../packs/CMSIS/CMSIS/Core/Include/</PhysicalPath>
+          <GeneratedChecksum dnOrder="5">60385A5C6C9882B5D30709A1F6EAEC35</GeneratedChecksum>
+          <UserChecksum dnOrder="6">60385A5C6C9882B5D30709A1F6EAEC35</UserChecksum>
+        </File>
+        <File dnOrder="21">
+          <Type dnOrder="0">HEADER</Type>
+          <Name dnOrder="1">cmsis_gcc.h</Name>
+          <Security dnOrder="2">NON_SECURE</Security>
+          <LogicalPath dnOrder="3">packs/CMSIS/CMSIS/Core/Include/</LogicalPath>
+          <PhysicalPath dnOrder="4">/../../packs/CMSIS/CMSIS/Core/Include/</PhysicalPath>
+          <GeneratedChecksum dnOrder="5">B2E4B79E96D9481B139252F7F1C5924F</GeneratedChecksum>
+          <UserChecksum dnOrder="6">B2E4B79E96D9481B139252F7F1C5924F</UserChecksum>
+        </File>
+        <File dnOrder="22">
+          <Type dnOrder="0">HEADER</Type>
+          <Name dnOrder="1">cmsis_iccarm.h</Name>
+          <Security dnOrder="2">NON_SECURE</Security>
+          <LogicalPath dnOrder="3">packs/CMSIS/CMSIS/Core/Include/</LogicalPath>
+          <PhysicalPath dnOrder="4">/../../packs/CMSIS/CMSIS/Core/Include/</PhysicalPath>
+          <GeneratedChecksum dnOrder="5">AF3CC89090034E070238E8A7BE343262</GeneratedChecksum>
+          <UserChecksum dnOrder="6">AF3CC89090034E070238E8A7BE343262</UserChecksum>
+        </File>
+        <File dnOrder="23">
+          <Type dnOrder="0">HEADER</Type>
+          <Name dnOrder="1">cmsis_version.h</Name>
+          <Security dnOrder="2">NON_SECURE</Security>
+          <LogicalPath dnOrder="3">packs/CMSIS/CMSIS/Core/Include/</LogicalPath>
+          <PhysicalPath dnOrder="4">/../../packs/CMSIS/CMSIS/Core/Include/</PhysicalPath>
+          <GeneratedChecksum dnOrder="5">8D06BEF47A08B8A7A91DE48D1C5DFDAB</GeneratedChecksum>
+          <UserChecksum dnOrder="6">8D06BEF47A08B8A7A91DE48D1C5DFDAB</UserChecksum>
+        </File>
+        <File dnOrder="24">
+          <Type dnOrder="0">HEADER</Type>
+          <Name dnOrder="1">core_cm0plus.h</Name>
+          <Security dnOrder="2">NON_SECURE</Security>
+          <LogicalPath dnOrder="3">packs/CMSIS/CMSIS/Core/Include/</LogicalPath>
+          <PhysicalPath dnOrder="4">/../../packs/CMSIS/CMSIS/Core/Include/</PhysicalPath>
+          <GeneratedChecksum dnOrder="5">B0478E0DFBB919F587783E5CB5E6DBF3</GeneratedChecksum>
+          <UserChecksum dnOrder="6">B0478E0DFBB919F587783E5CB5E6DBF3</UserChecksum>
+        </File>
+        <File dnOrder="25">
+          <Type dnOrder="0">HEADER</Type>
+          <Name dnOrder="1">dac.h</Name>
+          <Security dnOrder="2">NON_SECURE</Security>
+          <LogicalPath dnOrder="3">packs/PIC32CM5164JH00100_DFP/component/</LogicalPath>
+          <PhysicalPath dnOrder="4">/../../packs/PIC32CM5164JH00100_DFP/component/</PhysicalPath>
+          <GeneratedChecksum dnOrder="5">505FCBE386FDC4727EEB8BD918452974</GeneratedChecksum>
+          <UserChecksum dnOrder="6">505FCBE386FDC4727EEB8BD918452974</UserChecksum>
+        </File>
+        <File dnOrder="26">
+          <Type dnOrder="0">HEADER</Type>
+          <Name dnOrder="1">definitions.h</Name>
+          <Security dnOrder="2">NON_SECURE</Security>
+          <LogicalPath dnOrder="3">config/pic32cm_jh00_jh01/</LogicalPath>
+          <PhysicalPath dnOrder="4">/</PhysicalPath>
+          <GeneratedChecksum dnOrder="5">3ECA6BF175C42E172BD970FBC819CB4D</GeneratedChecksum>
+          <UserChecksum dnOrder="6">3ECA6BF175C42E172BD970FBC819CB4D</UserChecksum>
+        </File>
+        <File dnOrder="27">
+          <Type dnOrder="0">HEADER</Type>
+          <Name dnOrder="1">device.h</Name>
+          <Security dnOrder="2">NON_SECURE</Security>
+          <LogicalPath dnOrder="3">packs/PIC32CM5164JH00100_DFP/</LogicalPath>
+          <PhysicalPath dnOrder="4">/../../packs/PIC32CM5164JH00100_DFP/</PhysicalPath>
+          <GeneratedChecksum dnOrder="5">D0B8179A64834781F62BC27F44CF8574</GeneratedChecksum>
+          <UserChecksum dnOrder="6">D0B8179A64834781F62BC27F44CF8574</UserChecksum>
+        </File>
+        <File dnOrder="28">
+          <Type dnOrder="0">HEADER</Type>
+          <Name dnOrder="1">device_cache.h</Name>
+          <Security dnOrder="2">NON_SECURE</Security>
+          <LogicalPath dnOrder="3">config/pic32cm_jh00_jh01/</LogicalPath>
+          <PhysicalPath dnOrder="4">/</PhysicalPath>
+          <GeneratedChecksum dnOrder="5">85D3482D395C59BDFF268B01940CDDDE</GeneratedChecksum>
+          <UserChecksum dnOrder="6">85D3482D395C59BDFF268B01940CDDDE</UserChecksum>
+        </File>
+        <File dnOrder="29">
+          <Type dnOrder="0">HEADER</Type>
+          <Name dnOrder="1">divas.h</Name>
+          <Security dnOrder="2">NON_SECURE</Security>
+          <LogicalPath dnOrder="3">packs/PIC32CM5164JH00100_DFP/component/</LogicalPath>
+          <PhysicalPath dnOrder="4">/../../packs/PIC32CM5164JH00100_DFP/component/</PhysicalPath>
+          <GeneratedChecksum dnOrder="5">04C4018151AB1B0E14409D3B1B47FAE3</GeneratedChecksum>
+          <UserChecksum dnOrder="6">04C4018151AB1B0E14409D3B1B47FAE3</UserChecksum>
+        </File>
+        <File dnOrder="30">
+          <Type dnOrder="0">HEADER</Type>
+          <Name dnOrder="1">dmac.h</Name>
+          <Security dnOrder="2">NON_SECURE</Security>
+          <LogicalPath dnOrder="3">packs/PIC32CM5164JH00100_DFP/component/</LogicalPath>
+          <PhysicalPath dnOrder="4">/../../packs/PIC32CM5164JH00100_DFP/component/</PhysicalPath>
+          <GeneratedChecksum dnOrder="5">66DDFA1ACB51323FF0D749DDBB02A17B</GeneratedChecksum>
+          <UserChecksum dnOrder="6">66DDFA1ACB51323FF0D749DDBB02A17B</UserChecksum>
+        </File>
+        <File dnOrder="31">
+          <Type dnOrder="0">HEADER</Type>
+          <Name dnOrder="1">dsu.h</Name>
+          <Security dnOrder="2">NON_SECURE</Security>
+          <LogicalPath dnOrder="3">packs/PIC32CM5164JH00100_DFP/component/</LogicalPath>
+          <PhysicalPath dnOrder="4">/../../packs/PIC32CM5164JH00100_DFP/component/</PhysicalPath>
+          <GeneratedChecksum dnOrder="5">4F1907AA8BAD16739358B7A761B5AF65</GeneratedChecksum>
+          <UserChecksum dnOrder="6">4F1907AA8BAD16739358B7A761B5AF65</UserChecksum>
+        </File>
+        <File dnOrder="32">
+          <Type dnOrder="0">HEADER</Type>
+          <Name dnOrder="1">eic.h</Name>
+          <Security dnOrder="2">NON_SECURE</Security>
+          <LogicalPath dnOrder="3">packs/PIC32CM5164JH00100_DFP/component/</LogicalPath>
+          <PhysicalPath dnOrder="4">/../../packs/PIC32CM5164JH00100_DFP/component/</PhysicalPath>
+          <GeneratedChecksum dnOrder="5">346C9F370A3C535504AA0A5E013E5310</GeneratedChecksum>
+          <UserChecksum dnOrder="6">346C9F370A3C535504AA0A5E013E5310</UserChecksum>
+        </File>
+        <File dnOrder="33">
+          <Type dnOrder="0">HEADER</Type>
+          <Name dnOrder="1">evsys.h</Name>
+          <Security dnOrder="2">NON_SECURE</Security>
+          <LogicalPath dnOrder="3">packs/PIC32CM5164JH00100_DFP/component/</LogicalPath>
+          <PhysicalPath dnOrder="4">/../../packs/PIC32CM5164JH00100_DFP/component/</PhysicalPath>
+          <GeneratedChecksum dnOrder="5">482D45F0FB274EEDF6E728CBEB74F7AD</GeneratedChecksum>
+          <UserChecksum dnOrder="6">482D45F0FB274EEDF6E728CBEB74F7AD</UserChecksum>
+        </File>
+        <File dnOrder="34">
+          <Type dnOrder="0">HEADER</Type>
+          <Name dnOrder="1">freqm.h</Name>
+          <Security dnOrder="2">NON_SECURE</Security>
+          <LogicalPath dnOrder="3">packs/PIC32CM5164JH00100_DFP/component/</LogicalPath>
+          <PhysicalPath dnOrder="4">/../../packs/PIC32CM5164JH00100_DFP/component/</PhysicalPath>
+          <GeneratedChecksum dnOrder="5">6D44DA3FEF7F2627FE0509E9F4E331C7</GeneratedChecksum>
+          <UserChecksum dnOrder="6">6D44DA3FEF7F2627FE0509E9F4E331C7</UserChecksum>
+        </File>
+        <File dnOrder="35">
+          <Type dnOrder="0">HEADER</Type>
+          <Name dnOrder="1">gclk.h</Name>
+          <Security dnOrder="2">NON_SECURE</Security>
+          <LogicalPath dnOrder="3">packs/PIC32CM5164JH00100_DFP/component/</LogicalPath>
+          <PhysicalPath dnOrder="4">/../../packs/PIC32CM5164JH00100_DFP/component/</PhysicalPath>
+          <GeneratedChecksum dnOrder="5">2F91DB5A53373E96C8D8E600FB2737C0</GeneratedChecksum>
+          <UserChecksum dnOrder="6">2F91DB5A53373E96C8D8E600FB2737C0</UserChecksum>
+        </File>
+        <File dnOrder="36">
+          <Type dnOrder="0">HEADER</Type>
+          <Name dnOrder="1">icm.h</Name>
+          <Security dnOrder="2">NON_SECURE</Security>
+          <LogicalPath dnOrder="3">packs/PIC32CM5164JH00100_DFP/component/</LogicalPath>
+          <PhysicalPath dnOrder="4">/../../packs/PIC32CM5164JH00100_DFP/component/</PhysicalPath>
+          <GeneratedChecksum dnOrder="5">AE8208B51E50EB44EEA66266843AC593</GeneratedChecksum>
+          <UserChecksum dnOrder="6">AE8208B51E50EB44EEA66266843AC593</UserChecksum>
+        </File>
+        <File dnOrder="37">
+          <Type dnOrder="0">HEADER</Type>
+          <Name dnOrder="1">mclk.h</Name>
+          <Security dnOrder="2">NON_SECURE</Security>
+          <LogicalPath dnOrder="3">packs/PIC32CM5164JH00100_DFP/component/</LogicalPath>
+          <PhysicalPath dnOrder="4">/../../packs/PIC32CM5164JH00100_DFP/component/</PhysicalPath>
+          <GeneratedChecksum dnOrder="5">10A43309AEB83C83C0FB48A1000E9B63</GeneratedChecksum>
+          <UserChecksum dnOrder="6">10A43309AEB83C83C0FB48A1000E9B63</UserChecksum>
+        </File>
+        <File dnOrder="38">
+          <Type dnOrder="0">HEADER</Type>
+          <Name dnOrder="1">mcramc.h</Name>
+          <Security dnOrder="2">NON_SECURE</Security>
+          <LogicalPath dnOrder="3">packs/PIC32CM5164JH00100_DFP/component/</LogicalPath>
+          <PhysicalPath dnOrder="4">/../../packs/PIC32CM5164JH00100_DFP/component/</PhysicalPath>
+          <GeneratedChecksum dnOrder="5">812258A51B53505B2CC97FAB1A8783CD</GeneratedChecksum>
+          <UserChecksum dnOrder="6">812258A51B53505B2CC97FAB1A8783CD</UserChecksum>
+        </File>
+        <File dnOrder="39">
+          <Type dnOrder="0">HEADER</Type>
+          <Name dnOrder="1">mpu_armv7.h</Name>
+          <Security dnOrder="2">NON_SECURE</Security>
+          <LogicalPath dnOrder="3">packs/CMSIS/CMSIS/Core/Include/</LogicalPath>
+          <PhysicalPath dnOrder="4">/../../packs/CMSIS/CMSIS/Core/Include/</PhysicalPath>
+          <GeneratedChecksum dnOrder="5">A0246C3B848A6A45D54CE5DA8DF3B9C8</GeneratedChecksum>
+          <UserChecksum dnOrder="6">A0246C3B848A6A45D54CE5DA8DF3B9C8</UserChecksum>
+        </File>
+        <File dnOrder="40">
+          <Type dnOrder="0">HEADER</Type>
+          <Name dnOrder="1">mtb.h</Name>
+          <Security dnOrder="2">NON_SECURE</Security>
+          <LogicalPath dnOrder="3">packs/PIC32CM5164JH00100_DFP/component/</LogicalPath>
+          <PhysicalPath dnOrder="4">/../../packs/PIC32CM5164JH00100_DFP/component/</PhysicalPath>
+          <GeneratedChecksum dnOrder="5">F2019AB021775874D7D534FAA2EFB7DA</GeneratedChecksum>
+          <UserChecksum dnOrder="6">F2019AB021775874D7D534FAA2EFB7DA</UserChecksum>
+        </File>
+        <File dnOrder="41">
+          <Type dnOrder="0">HEADER</Type>
+          <Name dnOrder="1">nvmctrl.h</Name>
+          <Security dnOrder="2">NON_SECURE</Security>
+          <LogicalPath dnOrder="3">packs/PIC32CM5164JH00100_DFP/component/</LogicalPath>
+          <PhysicalPath dnOrder="4">/../../packs/PIC32CM5164JH00100_DFP/component/</PhysicalPath>
+          <GeneratedChecksum dnOrder="5">2C66B5E75ED521C6FE7C14A129355AAB</GeneratedChecksum>
+          <UserChecksum dnOrder="6">2C66B5E75ED521C6FE7C14A129355AAB</UserChecksum>
+        </File>
+        <File dnOrder="42">
+          <Type dnOrder="0">HEADER</Type>
+          <Name dnOrder="1">osc32kctrl.h</Name>
+          <Security dnOrder="2">NON_SECURE</Security>
+          <LogicalPath dnOrder="3">packs/PIC32CM5164JH00100_DFP/component/</LogicalPath>
+          <PhysicalPath dnOrder="4">/../../packs/PIC32CM5164JH00100_DFP/component/</PhysicalPath>
+          <GeneratedChecksum dnOrder="5">4914027E453BE261FA211A3B894FE54A</GeneratedChecksum>
+          <UserChecksum dnOrder="6">4914027E453BE261FA211A3B894FE54A</UserChecksum>
+        </File>
+        <File dnOrder="43">
+          <Type dnOrder="0">HEADER</Type>
+          <Name dnOrder="1">oscctrl.h</Name>
+          <Security dnOrder="2">NON_SECURE</Security>
+          <LogicalPath dnOrder="3">packs/PIC32CM5164JH00100_DFP/component/</LogicalPath>
+          <PhysicalPath dnOrder="4">/../../packs/PIC32CM5164JH00100_DFP/component/</PhysicalPath>
+          <GeneratedChecksum dnOrder="5">FEBEC5754A62695F53086715A4CDDB2A</GeneratedChecksum>
+          <UserChecksum dnOrder="6">FEBEC5754A62695F53086715A4CDDB2A</UserChecksum>
+        </File>
+        <File dnOrder="44">
+          <Type dnOrder="0">HEADER</Type>
+          <Name dnOrder="1">pac.h</Name>
+          <Security dnOrder="2">NON_SECURE</Security>
+          <LogicalPath dnOrder="3">packs/PIC32CM5164JH00100_DFP/component/</LogicalPath>
+          <PhysicalPath dnOrder="4">/../../packs/PIC32CM5164JH00100_DFP/component/</PhysicalPath>
+          <GeneratedChecksum dnOrder="5">75D6F68A6FC9020D4EF4114E7F4DDBE1</GeneratedChecksum>
+          <UserChecksum dnOrder="6">75D6F68A6FC9020D4EF4114E7F4DDBE1</UserChecksum>
+        </File>
+        <File dnOrder="45">
+          <Type dnOrder="0">HEADER</Type>
+          <Name dnOrder="1">pdec.h</Name>
+          <Security dnOrder="2">NON_SECURE</Security>
+          <LogicalPath dnOrder="3">packs/PIC32CM5164JH00100_DFP/component/</LogicalPath>
+          <PhysicalPath dnOrder="4">/../../packs/PIC32CM5164JH00100_DFP/component/</PhysicalPath>
+          <GeneratedChecksum dnOrder="5">A5C11AC7805923DAECCEDAAD5B212352</GeneratedChecksum>
+          <UserChecksum dnOrder="6">A5C11AC7805923DAECCEDAAD5B212352</UserChecksum>
+        </File>
+        <File dnOrder="46">
+          <Type dnOrder="0">HEADER</Type>
+          <Name dnOrder="1">pic32cm5164jh00100.h</Name>
+          <Security dnOrder="2">NON_SECURE</Security>
+          <LogicalPath dnOrder="3">packs/PIC32CM5164JH00100_DFP/</LogicalPath>
+          <PhysicalPath dnOrder="4">/../../packs/PIC32CM5164JH00100_DFP/</PhysicalPath>
+          <GeneratedChecksum dnOrder="5">75252223E112FD8FD288EDBAF26F5524</GeneratedChecksum>
+          <UserChecksum dnOrder="6">75252223E112FD8FD288EDBAF26F5524</UserChecksum>
+        </File>
+        <File dnOrder="47">
+          <Type dnOrder="0">HEADER</Type>
+          <Name dnOrder="1">pic32cm5164jh00100.h</Name>
+          <Security dnOrder="2">NON_SECURE</Security>
+          <LogicalPath dnOrder="3">packs/PIC32CM5164JH00100_DFP/pio/</LogicalPath>
+          <PhysicalPath dnOrder="4">/../../packs/PIC32CM5164JH00100_DFP/pio/</PhysicalPath>
+          <GeneratedChecksum dnOrder="5">FB488EE22B791F7616106009342C0DF6</GeneratedChecksum>
+          <UserChecksum dnOrder="6">FB488EE22B791F7616106009342C0DF6</UserChecksum>
+        </File>
+        <File dnOrder="48">
+          <Type dnOrder="0">HEADER</Type>
+          <Name dnOrder="1">plib_clock.h</Name>
+          <Security dnOrder="2">NON_SECURE</Security>
+          <LogicalPath dnOrder="3">config/pic32cm_jh00_jh01/peripheral/clock/</LogicalPath>
+          <PhysicalPath dnOrder="4">/peripheral/clock/</PhysicalPath>
+          <GeneratedChecksum dnOrder="5">0416F129713FDF989ACC1FC57065125C</GeneratedChecksum>
+          <UserChecksum dnOrder="6">0416F129713FDF989ACC1FC57065125C</UserChecksum>
+        </File>
+        <File dnOrder="49">
+          <Type dnOrder="0">HEADER</Type>
+          <Name dnOrder="1">plib_divas.h</Name>
+          <Security dnOrder="2">NON_SECURE</Security>
+          <LogicalPath dnOrder="3">config/pic32cm_jh00_jh01/peripheral/divas/</LogicalPath>
+          <PhysicalPath dnOrder="4">/peripheral/divas/</PhysicalPath>
+          <GeneratedChecksum dnOrder="5">93519BAA114B7A187F0A4F56022C4681</GeneratedChecksum>
+          <UserChecksum dnOrder="6">93519BAA114B7A187F0A4F56022C4681</UserChecksum>
+        </File>
+        <File dnOrder="50">
+          <Type dnOrder="0">HEADER</Type>
+          <Name dnOrder="1">plib_evsys.h</Name>
+          <Security dnOrder="2">NON_SECURE</Security>
+          <LogicalPath dnOrder="3">config/pic32cm_jh00_jh01/peripheral/evsys</LogicalPath>
+          <PhysicalPath dnOrder="4">/peripheral/evsys/</PhysicalPath>
+          <GeneratedChecksum dnOrder="5">CCAEF942C66AF995876DFD85CEFF611F</GeneratedChecksum>
+          <UserChecksum dnOrder="6">CCAEF942C66AF995876DFD85CEFF611F</UserChecksum>
+        </File>
+        <File dnOrder="51">
+          <Type dnOrder="0">HEADER</Type>
+          <Name dnOrder="1">plib_nvic.h</Name>
+          <Security dnOrder="2">NON_SECURE</Security>
+          <LogicalPath dnOrder="3">config/pic32cm_jh00_jh01/peripheral/nvic/</LogicalPath>
+          <PhysicalPath dnOrder="4">/peripheral/nvic/</PhysicalPath>
+          <GeneratedChecksum dnOrder="5">E95AB23B866AA0CE6F0ABF637E9E2C83</GeneratedChecksum>
+          <UserChecksum dnOrder="6">E95AB23B866AA0CE6F0ABF637E9E2C83</UserChecksum>
+        </File>
+        <File dnOrder="52">
+          <Type dnOrder="0">HEADER</Type>
+          <Name dnOrder="1">plib_nvmctrl.h</Name>
+          <Security dnOrder="2">NON_SECURE</Security>
+          <LogicalPath dnOrder="3">config/pic32cm_jh00_jh01/peripheral/nvmctrl/</LogicalPath>
+          <PhysicalPath dnOrder="4">/peripheral/nvmctrl/</PhysicalPath>
+          <GeneratedChecksum dnOrder="5">4F7FEBF22339EDD5572B587F6773DF48</GeneratedChecksum>
+          <UserChecksum dnOrder="6">4F7FEBF22339EDD5572B587F6773DF48</UserChecksum>
+        </File>
+        <File dnOrder="53">
+          <Type dnOrder="0">HEADER</Type>
+          <Name dnOrder="1">plib_port.h</Name>
+          <Security dnOrder="2">NON_SECURE</Security>
+          <LogicalPath dnOrder="3">config/pic32cm_jh00_jh01/peripheral/port/</LogicalPath>
+          <PhysicalPath dnOrder="4">/peripheral/port/</PhysicalPath>
+          <GeneratedChecksum dnOrder="5">3CB0596D3C62F0586B203908BF9152D5</GeneratedChecksum>
+          <UserChecksum dnOrder="6">3CB0596D3C62F0586B203908BF9152D5</UserChecksum>
+        </File>
+        <File dnOrder="54">
+          <Type dnOrder="0">HEADER</Type>
+          <Name dnOrder="1">plib_sercom4_usart.h</Name>
+          <Security dnOrder="2">NON_SECURE</Security>
+          <LogicalPath dnOrder="3">config/pic32cm_jh00_jh01/peripheral/sercom/usart/</LogicalPath>
+          <PhysicalPath dnOrder="4">/peripheral/sercom/usart/</PhysicalPath>
+          <GeneratedChecksum dnOrder="5">9FBA3F467C089B1E11229145DD066D02</GeneratedChecksum>
+          <UserChecksum dnOrder="6">9FBA3F467C089B1E11229145DD066D02</UserChecksum>
+        </File>
+        <File dnOrder="55">
+          <Type dnOrder="0">HEADER</Type>
+          <Name dnOrder="1">plib_sercom_usart_common.h</Name>
+          <Security dnOrder="2">NON_SECURE</Security>
+          <LogicalPath dnOrder="3">config/pic32cm_jh00_jh01/peripheral/sercom/usart/</LogicalPath>
+          <PhysicalPath dnOrder="4">/peripheral/sercom/usart/</PhysicalPath>
+          <GeneratedChecksum dnOrder="5">9B409E836AF212CD11C4BB20B1B7C26E</GeneratedChecksum>
+          <UserChecksum dnOrder="6">9B409E836AF212CD11C4BB20B1B7C26E</UserChecksum>
+        </File>
+        <File dnOrder="56">
+          <Type dnOrder="0">HEADER</Type>
+          <Name dnOrder="1">pm.h</Name>
+          <Security dnOrder="2">NON_SECURE</Security>
+          <LogicalPath dnOrder="3">packs/PIC32CM5164JH00100_DFP/component/</LogicalPath>
+          <PhysicalPath dnOrder="4">/../../packs/PIC32CM5164JH00100_DFP/component/</PhysicalPath>
+          <GeneratedChecksum dnOrder="5">4CACF5557FF4B585ECDBD27881DD91F4</GeneratedChecksum>
+          <UserChecksum dnOrder="6">4CACF5557FF4B585ECDBD27881DD91F4</UserChecksum>
+        </File>
+        <File dnOrder="57">
+          <Type dnOrder="0">HEADER</Type>
+          <Name dnOrder="1">port.h</Name>
+          <Security dnOrder="2">NON_SECURE</Security>
+          <LogicalPath dnOrder="3">packs/PIC32CM5164JH00100_DFP/component/</LogicalPath>
+          <PhysicalPath dnOrder="4">/../../packs/PIC32CM5164JH00100_DFP/component/</PhysicalPath>
+          <GeneratedChecksum dnOrder="5">BA3ADD3B35B5506863140E03F3F55731</GeneratedChecksum>
+          <UserChecksum dnOrder="6">BA3ADD3B35B5506863140E03F3F55731</UserChecksum>
+        </File>
+        <File dnOrder="58">
+          <Type dnOrder="0">HEADER</Type>
+          <Name dnOrder="1">ptc.h</Name>
+          <Security dnOrder="2">NON_SECURE</Security>
+          <LogicalPath dnOrder="3">packs/PIC32CM5164JH00100_DFP/component/</LogicalPath>
+          <PhysicalPath dnOrder="4">/../../packs/PIC32CM5164JH00100_DFP/component/</PhysicalPath>
+          <GeneratedChecksum dnOrder="5">97B2EF52492FBA2B24BD08118B63EFF5</GeneratedChecksum>
+          <UserChecksum dnOrder="6">97B2EF52492FBA2B24BD08118B63EFF5</UserChecksum>
+        </File>
+        <File dnOrder="59">
+          <Type dnOrder="0">HEADER</Type>
+          <Name dnOrder="1">rstc.h</Name>
+          <Security dnOrder="2">NON_SECURE</Security>
+          <LogicalPath dnOrder="3">packs/PIC32CM5164JH00100_DFP/component/</LogicalPath>
+          <PhysicalPath dnOrder="4">/../../packs/PIC32CM5164JH00100_DFP/component/</PhysicalPath>
+          <GeneratedChecksum dnOrder="5">7FE5D143F44555A0081F5625E57982D4</GeneratedChecksum>
+          <UserChecksum dnOrder="6">7FE5D143F44555A0081F5625E57982D4</UserChecksum>
+        </File>
+        <File dnOrder="60">
+          <Type dnOrder="0">HEADER</Type>
+          <Name dnOrder="1">rtc.h</Name>
+          <Security dnOrder="2">NON_SECURE</Security>
+          <LogicalPath dnOrder="3">packs/PIC32CM5164JH00100_DFP/component/</LogicalPath>
+          <PhysicalPath dnOrder="4">/../../packs/PIC32CM5164JH00100_DFP/component/</PhysicalPath>
+          <GeneratedChecksum dnOrder="5">31FC1FA933E7E46043CBF86355399D97</GeneratedChecksum>
+          <UserChecksum dnOrder="6">31FC1FA933E7E46043CBF86355399D97</UserChecksum>
+        </File>
+        <File dnOrder="61">
+          <Type dnOrder="0">HEADER</Type>
+          <Name dnOrder="1">sercom.h</Name>
+          <Security dnOrder="2">NON_SECURE</Security>
+          <LogicalPath dnOrder="3">packs/PIC32CM5164JH00100_DFP/component/</LogicalPath>
+          <PhysicalPath dnOrder="4">/../../packs/PIC32CM5164JH00100_DFP/component/</PhysicalPath>
+          <GeneratedChecksum dnOrder="5">FD1E0FFDA47E5FCAAE5C486967BD6F2C</GeneratedChecksum>
+          <UserChecksum dnOrder="6">FD1E0FFDA47E5FCAAE5C486967BD6F2C</UserChecksum>
+        </File>
+        <File dnOrder="62">
+          <Type dnOrder="0">HEADER</Type>
+          <Name dnOrder="1">smbist.h</Name>
+          <Security dnOrder="2">NON_SECURE</Security>
+          <LogicalPath dnOrder="3">packs/PIC32CM5164JH00100_DFP/component/</LogicalPath>
+          <PhysicalPath dnOrder="4">/../../packs/PIC32CM5164JH00100_DFP/component/</PhysicalPath>
+          <GeneratedChecksum dnOrder="5">488EE9BB7F7BFE22D28636CB7CDE4408</GeneratedChecksum>
+          <UserChecksum dnOrder="6">488EE9BB7F7BFE22D28636CB7CDE4408</UserChecksum>
+        </File>
+        <File dnOrder="63">
+          <Type dnOrder="0">HEADER</Type>
+          <Name dnOrder="1">supc.h</Name>
+          <Security dnOrder="2">NON_SECURE</Security>
+          <LogicalPath dnOrder="3">packs/PIC32CM5164JH00100_DFP/component/</LogicalPath>
+          <PhysicalPath dnOrder="4">/../../packs/PIC32CM5164JH00100_DFP/component/</PhysicalPath>
+          <GeneratedChecksum dnOrder="5">8F5BA6CAB574DC7D6B3F06B305B8832B</GeneratedChecksum>
+          <UserChecksum dnOrder="6">8F5BA6CAB574DC7D6B3F06B305B8832B</UserChecksum>
+        </File>
+        <File dnOrder="64">
+          <Type dnOrder="0">HEADER</Type>
+          <Name dnOrder="1">tc.h</Name>
+          <Security dnOrder="2">NON_SECURE</Security>
+          <LogicalPath dnOrder="3">packs/PIC32CM5164JH00100_DFP/component/</LogicalPath>
+          <PhysicalPath dnOrder="4">/../../packs/PIC32CM5164JH00100_DFP/component/</PhysicalPath>
+          <GeneratedChecksum dnOrder="5">7DFDD6EECFDB38384BCF734D670E5638</GeneratedChecksum>
+          <UserChecksum dnOrder="6">7DFDD6EECFDB38384BCF734D670E5638</UserChecksum>
+        </File>
+        <File dnOrder="65">
+          <Type dnOrder="0">HEADER</Type>
+          <Name dnOrder="1">tcc.h</Name>
+          <Security dnOrder="2">NON_SECURE</Security>
+          <LogicalPath dnOrder="3">packs/PIC32CM5164JH00100_DFP/component/</LogicalPath>
+          <PhysicalPath dnOrder="4">/../../packs/PIC32CM5164JH00100_DFP/component/</PhysicalPath>
+          <GeneratedChecksum dnOrder="5">AB444F3DF91CB2514FB623B7106B4604</GeneratedChecksum>
+          <UserChecksum dnOrder="6">AB444F3DF91CB2514FB623B7106B4604</UserChecksum>
+        </File>
+        <File dnOrder="66">
+          <Type dnOrder="0">HEADER</Type>
+          <Name dnOrder="1">toolchain_specifics.h</Name>
+          <Security dnOrder="2">NON_SECURE</Security>
+          <LogicalPath dnOrder="3">config/pic32cm_jh00_jh01/</LogicalPath>
+          <PhysicalPath dnOrder="4">/</PhysicalPath>
+          <GeneratedChecksum dnOrder="5">5D5CDFD3AB0E678AACDD28A3276C8099</GeneratedChecksum>
+          <UserChecksum dnOrder="6">5D5CDFD3AB0E678AACDD28A3276C8099</UserChecksum>
+        </File>
+        <File dnOrder="67">
+          <Type dnOrder="0">HEADER</Type>
+          <Name dnOrder="1">wdt.h</Name>
+          <Security dnOrder="2">NON_SECURE</Security>
+          <LogicalPath dnOrder="3">packs/PIC32CM5164JH00100_DFP/component/</LogicalPath>
+          <PhysicalPath dnOrder="4">/../../packs/PIC32CM5164JH00100_DFP/component/</PhysicalPath>
+          <GeneratedChecksum dnOrder="5">CE0EA135D7C1950934023874F55C4249</GeneratedChecksum>
+          <UserChecksum dnOrder="6">CE0EA135D7C1950934023874F55C4249</UserChecksum>
+        </File>
+      </Files>
+      <Settings dnOrder="1">
+        <Setting append="true" category="C32" delimiter=";" dnOrder="0" key="extra-include-directories" security="NON_SECURE" value="../src;../src/config/pic32cm_jh00_jh01;../src/packs/PIC32CM5164JH00100_DFP;../src/packs/CMSIS/CMSIS/Core/Include;../src/packs/CMSIS/"/>
+        <Setting category="C32-LD" dnOrder="1" key="heap-size" security="NON_SECURE" value="512"/>
+        <Setting category="C32-LD" dnOrder="2" key="no-device-startup-code" security="NON_SECURE" value="true"/>
+        <Setting append="true" category="C32-LD" delimiter=";" dnOrder="3" key="preprocessor-macros" security="NON_SECURE" value=""/>
+      </Settings>
+    </Manifest>
+    <Settings dnOrder="5">
+      <Setting dnOrder="0" key="CMSISPath" value=".\dev_packs\arm\CMSIS\5.6.0"/>
+      <Setting dnOrder="1" key="DFPPath" value=".\dev_packs\Microchip\PIC32CM-JH_DFP\1.0.31\PIC32CM-JH00\atdf\PIC32CM5164JH00100.atdf"/>
+      <Setting dnOrder="2" key="FORCE_OPTIMIZATION" value="false"/>
+      <Setting dnOrder="3" key="GENERATE_BACKUP" value="true"/>
+      <Setting dnOrder="4" key="MERGE_STRATEGY" value="USER_ALL"/>
+      <Setting dnOrder="5" key="PackageFilter" value="bsp;core;csp;usb;"/>
+      <Setting dnOrder="6" key="TRUSTZONE" value="false"/>
+    </Settings>
+  </Configurator>
+</Configuration>
