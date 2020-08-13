@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <Configuration>
   <Configurator>
-    <Name dnOrder="0" value="pic32cm_jh00_jh01"/>
+    <Name dnOrder="0" value="pic32cm_jh01_curiosity_pro"/>
     <Processor dnOrder="1" value="PIC32CM5164JH00100"/>
     <Harmony dnOrder="2" path="../../../../.."/>
     <Folder_Name dnOrder="3" value=""/>
@@ -11,7 +11,7 @@
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">exceptions.c</Name>
           <Security dnOrder="2">NON_SECURE</Security>
-          <LogicalPath dnOrder="3">config/pic32cm_jh00_jh01/</LogicalPath>
+          <LogicalPath dnOrder="3">config/pic32cm_jh01_curiosity_pro/</LogicalPath>
           <PhysicalPath dnOrder="4">/</PhysicalPath>
           <GeneratedChecksum dnOrder="5">9DE4051D799EAFEBF2B648E71E7FCDAA</GeneratedChecksum>
           <UserChecksum dnOrder="6">9DE4051D799EAFEBF2B648E71E7FCDAA</UserChecksum>
@@ -20,7 +20,7 @@
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">initialization.c</Name>
           <Security dnOrder="2">NON_SECURE</Security>
-          <LogicalPath dnOrder="3">config/pic32cm_jh00_jh01/</LogicalPath>
+          <LogicalPath dnOrder="3">config/pic32cm_jh01_curiosity_pro/</LogicalPath>
           <PhysicalPath dnOrder="4">/</PhysicalPath>
           <GeneratedChecksum dnOrder="5">ACA2A9A23E510EB02EAF071BB7B433CE</GeneratedChecksum>
           <UserChecksum dnOrder="6">ACA2A9A23E510EB02EAF071BB7B433CE</UserChecksum>
@@ -29,7 +29,7 @@
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">interrupts.c</Name>
           <Security dnOrder="2">NON_SECURE</Security>
-          <LogicalPath dnOrder="3">config/pic32cm_jh00_jh01/</LogicalPath>
+          <LogicalPath dnOrder="3">config/pic32cm_jh01_curiosity_pro/</LogicalPath>
           <PhysicalPath dnOrder="4">/</PhysicalPath>
           <GeneratedChecksum dnOrder="5">E5DA26E77F66B6B16B12A24244A33661</GeneratedChecksum>
           <UserChecksum dnOrder="6">E5DA26E77F66B6B16B12A24244A33661</UserChecksum>
@@ -38,7 +38,7 @@
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">libc_syscalls.c</Name>
           <Security dnOrder="2">NON_SECURE</Security>
-          <LogicalPath dnOrder="3">config/pic32cm_jh00_jh01/</LogicalPath>
+          <LogicalPath dnOrder="3">config/pic32cm_jh01_curiosity_pro/</LogicalPath>
           <PhysicalPath dnOrder="4">/</PhysicalPath>
           <GeneratedChecksum dnOrder="5">328F1E09E0DD9BEE901C4562A3E5180A</GeneratedChecksum>
           <UserChecksum dnOrder="6">328F1E09E0DD9BEE901C4562A3E5180A</UserChecksum>
@@ -56,7 +56,7 @@
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">plib_clock.c</Name>
           <Security dnOrder="2">NON_SECURE</Security>
-          <LogicalPath dnOrder="3">config/pic32cm_jh00_jh01/peripheral/clock/</LogicalPath>
+          <LogicalPath dnOrder="3">config/pic32cm_jh01_curiosity_pro/peripheral/clock/</LogicalPath>
           <PhysicalPath dnOrder="4">/peripheral/clock/</PhysicalPath>
           <GeneratedChecksum dnOrder="5">10086A3C6A048CDBEC20BDFD3DD9F6CC</GeneratedChecksum>
           <UserChecksum dnOrder="6">10086A3C6A048CDBEC20BDFD3DD9F6CC</UserChecksum>
@@ -65,7 +65,7 @@
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">plib_eic.c</Name>
           <Security dnOrder="2">NON_SECURE</Security>
-          <LogicalPath dnOrder="3">config/pic32cm_jh00_jh01/peripheral/eic/</LogicalPath>
+          <LogicalPath dnOrder="3">config/pic32cm_jh01_curiosity_pro/peripheral/eic/</LogicalPath>
           <PhysicalPath dnOrder="4">/peripheral/eic/</PhysicalPath>
           <GeneratedChecksum dnOrder="5">B21B74D851CF66B219F6058BD2DBBF01</GeneratedChecksum>
           <UserChecksum dnOrder="6">B21B74D851CF66B219F6058BD2DBBF01</UserChecksum>
@@ -74,7 +74,7 @@
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">plib_evsys.c</Name>
           <Security dnOrder="2">NON_SECURE</Security>
-          <LogicalPath dnOrder="3">config/pic32cm_jh00_jh01/peripheral/evsys</LogicalPath>
+          <LogicalPath dnOrder="3">config/pic32cm_jh01_curiosity_pro/peripheral/evsys</LogicalPath>
           <PhysicalPath dnOrder="4">/peripheral/evsys/</PhysicalPath>
           <GeneratedChecksum dnOrder="5">9006720612F428A047FA3E488B310F23</GeneratedChecksum>
           <UserChecksum dnOrder="6">9006720612F428A047FA3E488B310F23</UserChecksum>
@@ -83,7 +83,7 @@
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">plib_nvic.c</Name>
           <Security dnOrder="2">NON_SECURE</Security>
-          <LogicalPath dnOrder="3">config/pic32cm_jh00_jh01/peripheral/nvic/</LogicalPath>
+          <LogicalPath dnOrder="3">config/pic32cm_jh01_curiosity_pro/peripheral/nvic/</LogicalPath>
           <PhysicalPath dnOrder="4">/peripheral/nvic/</PhysicalPath>
           <GeneratedChecksum dnOrder="5">D0684B5522FCD6E33EAAF787D58818BE</GeneratedChecksum>
           <UserChecksum dnOrder="6">D0684B5522FCD6E33EAAF787D58818BE</UserChecksum>
@@ -92,7 +92,7 @@
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">plib_nvmctrl.c</Name>
           <Security dnOrder="2">NON_SECURE</Security>
-          <LogicalPath dnOrder="3">config/pic32cm_jh00_jh01/peripheral/nvmctrl/</LogicalPath>
+          <LogicalPath dnOrder="3">config/pic32cm_jh01_curiosity_pro/peripheral/nvmctrl/</LogicalPath>
           <PhysicalPath dnOrder="4">/peripheral/nvmctrl/</PhysicalPath>
           <GeneratedChecksum dnOrder="5">6199352E96A4D76EB273FD2BA42D39B4</GeneratedChecksum>
           <UserChecksum dnOrder="6">6199352E96A4D76EB273FD2BA42D39B4</UserChecksum>
@@ -101,7 +101,7 @@
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">plib_port.c</Name>
           <Security dnOrder="2">NON_SECURE</Security>
-          <LogicalPath dnOrder="3">config/pic32cm_jh00_jh01/peripheral/port/</LogicalPath>
+          <LogicalPath dnOrder="3">config/pic32cm_jh01_curiosity_pro/peripheral/port/</LogicalPath>
           <PhysicalPath dnOrder="4">/peripheral/port/</PhysicalPath>
           <GeneratedChecksum dnOrder="5">9437B5A3E31CF6E2CCB2900558005891</GeneratedChecksum>
           <UserChecksum dnOrder="6">9437B5A3E31CF6E2CCB2900558005891</UserChecksum>
@@ -110,7 +110,7 @@
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">startup_xc32.c</Name>
           <Security dnOrder="2">NON_SECURE</Security>
-          <LogicalPath dnOrder="3">config/pic32cm_jh00_jh01/</LogicalPath>
+          <LogicalPath dnOrder="3">config/pic32cm_jh01_curiosity_pro/</LogicalPath>
           <PhysicalPath dnOrder="4">/</PhysicalPath>
           <GeneratedChecksum dnOrder="5">1D663AF01040F617CC298F9373DE9B57</GeneratedChecksum>
           <UserChecksum dnOrder="6">1D663AF01040F617CC298F9373DE9B57</UserChecksum>
@@ -119,7 +119,7 @@
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">xc32_monitor.c</Name>
           <Security dnOrder="2">NON_SECURE</Security>
-          <LogicalPath dnOrder="3">config/pic32cm_jh00_jh01/stdio/</LogicalPath>
+          <LogicalPath dnOrder="3">config/pic32cm_jh01_curiosity_pro/stdio/</LogicalPath>
           <PhysicalPath dnOrder="4">/stdio/</PhysicalPath>
           <GeneratedChecksum dnOrder="5">A9F55E7CB78F22D9000CA03DC635973C</GeneratedChecksum>
           <UserChecksum dnOrder="6">A9F55E7CB78F22D9000CA03DC635973C</UserChecksum>
@@ -236,7 +236,7 @@
           <Type dnOrder="0">HEADER</Type>
           <Name dnOrder="1">definitions.h</Name>
           <Security dnOrder="2">NON_SECURE</Security>
-          <LogicalPath dnOrder="3">config/pic32cm_jh00_jh01/</LogicalPath>
+          <LogicalPath dnOrder="3">config/pic32cm_jh01_curiosity_pro/</LogicalPath>
           <PhysicalPath dnOrder="4">/</PhysicalPath>
           <GeneratedChecksum dnOrder="5">947EE80134C37FC01CF5EDE2BE6E62E5</GeneratedChecksum>
           <UserChecksum dnOrder="6">947EE80134C37FC01CF5EDE2BE6E62E5</UserChecksum>
@@ -254,7 +254,7 @@
           <Type dnOrder="0">HEADER</Type>
           <Name dnOrder="1">device_cache.h</Name>
           <Security dnOrder="2">NON_SECURE</Security>
-          <LogicalPath dnOrder="3">config/pic32cm_jh00_jh01/</LogicalPath>
+          <LogicalPath dnOrder="3">config/pic32cm_jh01_curiosity_pro/</LogicalPath>
           <PhysicalPath dnOrder="4">/</PhysicalPath>
           <GeneratedChecksum dnOrder="5">85D3482D395C59BDFF268B01940CDDDE</GeneratedChecksum>
           <UserChecksum dnOrder="6">85D3482D395C59BDFF268B01940CDDDE</UserChecksum>
@@ -434,7 +434,7 @@
           <Type dnOrder="0">HEADER</Type>
           <Name dnOrder="1">plib_clock.h</Name>
           <Security dnOrder="2">NON_SECURE</Security>
-          <LogicalPath dnOrder="3">config/pic32cm_jh00_jh01/peripheral/clock/</LogicalPath>
+          <LogicalPath dnOrder="3">config/pic32cm_jh01_curiosity_pro/peripheral/clock/</LogicalPath>
           <PhysicalPath dnOrder="4">/peripheral/clock/</PhysicalPath>
           <GeneratedChecksum dnOrder="5">0416F129713FDF989ACC1FC57065125C</GeneratedChecksum>
           <UserChecksum dnOrder="6">0416F129713FDF989ACC1FC57065125C</UserChecksum>
@@ -443,7 +443,7 @@
           <Type dnOrder="0">HEADER</Type>
           <Name dnOrder="1">plib_eic.h</Name>
           <Security dnOrder="2">NON_SECURE</Security>
-          <LogicalPath dnOrder="3">config/pic32cm_jh00_jh01/peripheral/eic/</LogicalPath>
+          <LogicalPath dnOrder="3">config/pic32cm_jh01_curiosity_pro/peripheral/eic/</LogicalPath>
           <PhysicalPath dnOrder="4">/peripheral/eic/</PhysicalPath>
           <GeneratedChecksum dnOrder="5">2DE134D5AAC4B28A960493CA40900459</GeneratedChecksum>
           <UserChecksum dnOrder="6">2DE134D5AAC4B28A960493CA40900459</UserChecksum>
@@ -452,7 +452,7 @@
           <Type dnOrder="0">HEADER</Type>
           <Name dnOrder="1">plib_evsys.h</Name>
           <Security dnOrder="2">NON_SECURE</Security>
-          <LogicalPath dnOrder="3">config/pic32cm_jh00_jh01/peripheral/evsys</LogicalPath>
+          <LogicalPath dnOrder="3">config/pic32cm_jh01_curiosity_pro/peripheral/evsys</LogicalPath>
           <PhysicalPath dnOrder="4">/peripheral/evsys/</PhysicalPath>
           <GeneratedChecksum dnOrder="5">CCAEF942C66AF995876DFD85CEFF611F</GeneratedChecksum>
           <UserChecksum dnOrder="6">CCAEF942C66AF995876DFD85CEFF611F</UserChecksum>
@@ -461,7 +461,7 @@
           <Type dnOrder="0">HEADER</Type>
           <Name dnOrder="1">plib_nvic.h</Name>
           <Security dnOrder="2">NON_SECURE</Security>
-          <LogicalPath dnOrder="3">config/pic32cm_jh00_jh01/peripheral/nvic/</LogicalPath>
+          <LogicalPath dnOrder="3">config/pic32cm_jh01_curiosity_pro/peripheral/nvic/</LogicalPath>
           <PhysicalPath dnOrder="4">/peripheral/nvic/</PhysicalPath>
           <GeneratedChecksum dnOrder="5">E95AB23B866AA0CE6F0ABF637E9E2C83</GeneratedChecksum>
           <UserChecksum dnOrder="6">E95AB23B866AA0CE6F0ABF637E9E2C83</UserChecksum>
@@ -470,7 +470,7 @@
           <Type dnOrder="0">HEADER</Type>
           <Name dnOrder="1">plib_nvmctrl.h</Name>
           <Security dnOrder="2">NON_SECURE</Security>
-          <LogicalPath dnOrder="3">config/pic32cm_jh00_jh01/peripheral/nvmctrl/</LogicalPath>
+          <LogicalPath dnOrder="3">config/pic32cm_jh01_curiosity_pro/peripheral/nvmctrl/</LogicalPath>
           <PhysicalPath dnOrder="4">/peripheral/nvmctrl/</PhysicalPath>
           <GeneratedChecksum dnOrder="5">4F7FEBF22339EDD5572B587F6773DF48</GeneratedChecksum>
           <UserChecksum dnOrder="6">4F7FEBF22339EDD5572B587F6773DF48</UserChecksum>
@@ -479,7 +479,7 @@
           <Type dnOrder="0">HEADER</Type>
           <Name dnOrder="1">plib_port.h</Name>
           <Security dnOrder="2">NON_SECURE</Security>
-          <LogicalPath dnOrder="3">config/pic32cm_jh00_jh01/peripheral/port/</LogicalPath>
+          <LogicalPath dnOrder="3">config/pic32cm_jh01_curiosity_pro/peripheral/port/</LogicalPath>
           <PhysicalPath dnOrder="4">/peripheral/port/</PhysicalPath>
           <GeneratedChecksum dnOrder="5">FD590E1B7BECD75CE3E323D42FBA80A1</GeneratedChecksum>
           <UserChecksum dnOrder="6">FD590E1B7BECD75CE3E323D42FBA80A1</UserChecksum>
@@ -578,7 +578,7 @@
           <Type dnOrder="0">HEADER</Type>
           <Name dnOrder="1">toolchain_specifics.h</Name>
           <Security dnOrder="2">NON_SECURE</Security>
-          <LogicalPath dnOrder="3">config/pic32cm_jh00_jh01/</LogicalPath>
+          <LogicalPath dnOrder="3">config/pic32cm_jh01_curiosity_pro/</LogicalPath>
           <PhysicalPath dnOrder="4">/</PhysicalPath>
           <GeneratedChecksum dnOrder="5">5D5CDFD3AB0E678AACDD28A3276C8099</GeneratedChecksum>
           <UserChecksum dnOrder="6">5D5CDFD3AB0E678AACDD28A3276C8099</UserChecksum>
@@ -594,7 +594,7 @@
         </File>
       </Files>
       <Settings dnOrder="1">
-        <Setting append="true" category="C32" delimiter=";" dnOrder="0" key="extra-include-directories" security="NON_SECURE" value="../src;../src/config/pic32cm_jh00_jh01;../src/packs/PIC32CM5164JH00100_DFP;../src/packs/CMSIS/CMSIS/Core/Include;../src/packs/CMSIS/"/>
+        <Setting append="true" category="C32" delimiter=";" dnOrder="0" key="extra-include-directories" security="NON_SECURE" value="../src;../src/config/pic32cm_jh01_curiosity_pro;../src/packs/PIC32CM5164JH00100_DFP;../src/packs/CMSIS/CMSIS/Core/Include;../src/packs/CMSIS/"/>
         <Setting category="C32-LD" dnOrder="1" key="heap-size" security="NON_SECURE" value="512"/>
         <Setting category="C32-LD" dnOrder="2" key="no-device-startup-code" security="NON_SECURE" value="true"/>
         <Setting append="true" category="C32-LD" delimiter=";" dnOrder="3" key="preprocessor-macros" security="NON_SECURE" value=""/>
