@@ -54,7 +54,7 @@ The following table shows the target hardware for the application projects.
 
     |Board| MOSI pin | SCK pin  | CCL_OUT pin |
     |-----|----------|----------|-------------|
-    | [PIC32CM JH01 Curiosity Pro Evaluation Kit](https://www.microchip.com/developmenttools/ProductDetails/) | PA16 (EXT2 pin 17) | PA17 (EXT1 pin 15) | PA11 (EXT2 pin 6) |
+    | [PIC32CM JH01 Curiosity Pro Evaluation Kit](https://www.microchip.com/developmenttools/ProductDetails/) | PA18 (EXT1 pin 16) | PA19 (EXT1 pin 18) | PA11 (EXT1 pin 6) |
     ||||
 
 5. Build and Program the application using its IDE
