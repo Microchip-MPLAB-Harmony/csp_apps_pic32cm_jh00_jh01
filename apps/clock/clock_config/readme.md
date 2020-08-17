@@ -1,6 +1,6 @@
 ---
 parent: Harmony 3 peripheral library application examples for PIC32CM JH01 family
-title: Clock configuration 
+title: Clock configuration
 has_children: false
 has_toc: false
 ---
@@ -40,7 +40,7 @@ The following table shows the target hardware for the application projects.
 
 ### Setting up [PIC32CM JH01 Curiosity Pro Evaluation Kit](https://www.microchip.com/developmenttools/ProductDetails/)
 
-- Connect an oscilloscope to monitor the PORT pin PB23 (Pin number #8 on the EXT2)
+- Connect an oscilloscope to monitor the PORT pin PB23 (Pin number #8 on the EXT3)
 - Connect the Debug USB port on the board to the computer using a micro USB cable
 
 ## Running the Application
@@ -53,5 +53,5 @@ Refer to the following table for clock output pin and LED name for different boa
 
 | Board      | Clock output pin | LED Name |
 | ---------- | ---------------- |--------- |
-| [PIC32CM JH01 Curiosity Pro Evaluation Kit](https://www.microchip.com/developmenttools/ProductDetails/)    | PB23 (Pin #8 on the EXT2)  | LED0 |
+| [PIC32CM JH01 Curiosity Pro Evaluation Kit](https://www.microchip.com/developmenttools/ProductDetails/)    | PB23 (Pin #8 on the EXT3)  | LED0 |
 ||||

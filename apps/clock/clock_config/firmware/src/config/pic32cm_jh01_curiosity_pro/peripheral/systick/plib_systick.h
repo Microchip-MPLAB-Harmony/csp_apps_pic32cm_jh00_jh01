@@ -1,20 +1,19 @@
 /*******************************************************************************
-  System Exceptions File
+  Interface definition of SYSTICK PLIB.
+
+  Company:
+    Microchip Technology Inc.
 
   File Name:
-    exceptions.c
+    plib_systick.h
 
   Summary:
-    This file contains a function which overrides the default _weak_ exception
-    handlers provided by the interrupt.c file.
+    Interface definition of the System Timer Plib (SYSTICK).
 
   Description:
-    This file redefines the default _weak_  exception handler with a more debug
-    friendly one. If an unexpected exception occurs the code will stop in a
-    while(1) loop.
- *******************************************************************************/
+    This file defines the interface for the SYSTICK Plib.
+*******************************************************************************/
 
-// DOM-IGNORE-BEGIN
 /*******************************************************************************
 * Copyright (C) 2018 Microchip Technology Inc. and its subsidiaries.
 *
@@ -37,44 +36,50 @@
 * ANY WAY RELATED TO THIS SOFTWARE WILL NOT EXCEED THE AMOUNT OF FEES, IF ANY,
 * THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
 *******************************************************************************/
-// DOM-IGNORE-END
 
-// *****************************************************************************
-// *****************************************************************************
-// Section: Included Files
-// *****************************************************************************
-// *****************************************************************************
-#include "definitions.h"
+#ifndef PLIB_SYSTICK_H    // Guards against multiple inclusion
+#define PLIB_SYSTICK_H
 
-// *****************************************************************************
-// *****************************************************************************
-// Section: Exception Handling Routine
-// *****************************************************************************
-// *****************************************************************************
+#include <stdint.h>
+#include <stdbool.h>
+#include <stddef.h>
 
-/* Brief default interrupt handlers for core IRQs.*/
-
-void __attribute__((noreturn)) NonMaskableInt_Handler(void)
-{
-#if defined(__DEBUG) || defined(__DEBUG_D) && defined(__XC32)
-    __builtin_software_breakpoint();
+#ifdef __cplusplus // Provide C++ Compatibility
+	extern "C" {
 #endif
-    while (1)
-    {
-    }
-}
 
-void __attribute__((noreturn)) HardFault_Handler(void)
+
+// *****************************************************************************
+// *****************************************************************************
+// Section: Interface
+// *****************************************************************************
+// *****************************************************************************
+
+#define SYSTICK_FREQ	48000000
+
+#define SYSTICK_INTERRUPT_PERIOD_IN_US  (1000)
+	
+typedef void (*SYSTICK_CALLBACK)(uintptr_t context);
+
+typedef struct
 {
-#if defined(__DEBUG) || defined(__DEBUG_D) && defined(__XC32)
-   __builtin_software_breakpoint();
+	SYSTICK_CALLBACK          callback;
+	uintptr_t                 context;
+	volatile uint32_t         tickCounter;
+} SYSTICK_OBJECT ;
+/***************************** SYSTICK API *******************************/
+void SYSTICK_TimerInitialize ( void );
+void SYSTICK_TimerRestart ( void );
+void SYSTICK_TimerStart ( void );
+void SYSTICK_TimerStop ( void );
+void SYSTICK_TimerPeriodSet ( uint32_t period );
+uint32_t SYSTICK_TimerPeriodGet ( void );
+uint32_t SYSTICK_TimerCounterGet ( void );
+uint32_t SYSTICK_TimerFrequencyGet ( void );
+void SYSTICK_DelayMs ( uint32_t ms );
+void SYSTICK_TimerCallbackSet ( SYSTICK_CALLBACK callback, uintptr_t context );
+#ifdef __cplusplus // Provide C++ Compatibility
+ }
 #endif
-   while (1)
-   {
-   }
-}
 
-/*******************************************************************************
- End of File
- */
-
+#endif
