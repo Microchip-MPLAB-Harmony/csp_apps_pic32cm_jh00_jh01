@@ -64,11 +64,10 @@ void PM_Initialize( void )
 
 void PM_IdleModeEnter( void )
 {
-    PM_REGS->PM_SLEEPCFG &= ~PM_SLEEPCFG_SLEEPMODE_Msk;
-    PM_REGS->PM_SLEEPCFG |= PM_SLEEPCFG_SLEEPMODE(0);
+    PM_REGS->PM_SLEEPCFG = PM_SLEEPCFG_SLEEPMODE(0);
 
     /* Ensure that SLEEPMODE bits are configured with the given value */
-    while (!((PM_REGS->PM_SLEEPCFG & PM_SLEEPCFG_SLEEPMODE_Msk) == PM_SLEEPCFG_SLEEPMODE(0)));
+    while ((PM_REGS->PM_SLEEPCFG & PM_SLEEPCFG_SLEEPMODE_Msk) != PM_SLEEPCFG_SLEEPMODE(0));
     /* Wait for interrupt instruction execution */
     __WFI();
 }
