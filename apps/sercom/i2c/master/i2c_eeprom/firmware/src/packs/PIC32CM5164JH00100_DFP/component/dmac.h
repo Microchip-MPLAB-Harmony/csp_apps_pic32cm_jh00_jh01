@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2020-06-10T15:07:50Z */
+/* file generated from device description version 2020-08-03T13:07:11Z */
 #ifndef _PIC32CMJH00_DMAC_COMPONENT_H_
 #define _PIC32CMJH00_DMAC_COMPONENT_H_
 
@@ -665,8 +665,6 @@
 #define   DMAC_CHCTRLB_TRIGSRC_SERCOM4_TX_Val _U_(0xB)                                             /**< (DMAC_CHCTRLB) SERCOM4 TX Trigger  */
 #define   DMAC_CHCTRLB_TRIGSRC_SERCOM5_RX_Val _U_(0xC)                                             /**< (DMAC_CHCTRLB) SERCOM5 RX Trigger  */
 #define   DMAC_CHCTRLB_TRIGSRC_SERCOM5_TX_Val _U_(0xD)                                             /**< (DMAC_CHCTRLB) SERCOM5 TX Trigger  */
-#define   DMAC_CHCTRLB_TRIGSRC_CAN0_DEBUG_Val _U_(0xE)                                             /**< (DMAC_CHCTRLB) CAN0 Debug Trigger  */
-#define   DMAC_CHCTRLB_TRIGSRC_CAN1_DEBUG_Val _U_(0xF)                                             /**< (DMAC_CHCTRLB) CAN1 Debug Trigger  */
 #define   DMAC_CHCTRLB_TRIGSRC_TCC0_OVF_Val   _U_(0x10)                                            /**< (DMAC_CHCTRLB) TCC0 Overflow Trigger  */
 #define   DMAC_CHCTRLB_TRIGSRC_TCC0_MC0_Val   _U_(0x11)                                            /**< (DMAC_CHCTRLB) TCC0 Match/Compare 0 Trigger  */
 #define   DMAC_CHCTRLB_TRIGSRC_TCC0_MC1_Val   _U_(0x12)                                            /**< (DMAC_CHCTRLB) TCC0 Match/Compare 1 Trigger  */
@@ -725,8 +723,6 @@
 #define DMAC_CHCTRLB_TRIGSRC_SERCOM4_TX       (DMAC_CHCTRLB_TRIGSRC_SERCOM4_TX_Val << DMAC_CHCTRLB_TRIGSRC_Pos) /**< (DMAC_CHCTRLB) SERCOM4 TX Trigger Position  */
 #define DMAC_CHCTRLB_TRIGSRC_SERCOM5_RX       (DMAC_CHCTRLB_TRIGSRC_SERCOM5_RX_Val << DMAC_CHCTRLB_TRIGSRC_Pos) /**< (DMAC_CHCTRLB) SERCOM5 RX Trigger Position  */
 #define DMAC_CHCTRLB_TRIGSRC_SERCOM5_TX       (DMAC_CHCTRLB_TRIGSRC_SERCOM5_TX_Val << DMAC_CHCTRLB_TRIGSRC_Pos) /**< (DMAC_CHCTRLB) SERCOM5 TX Trigger Position  */
-#define DMAC_CHCTRLB_TRIGSRC_CAN0_DEBUG       (DMAC_CHCTRLB_TRIGSRC_CAN0_DEBUG_Val << DMAC_CHCTRLB_TRIGSRC_Pos) /**< (DMAC_CHCTRLB) CAN0 Debug Trigger Position  */
-#define DMAC_CHCTRLB_TRIGSRC_CAN1_DEBUG       (DMAC_CHCTRLB_TRIGSRC_CAN1_DEBUG_Val << DMAC_CHCTRLB_TRIGSRC_Pos) /**< (DMAC_CHCTRLB) CAN1 Debug Trigger Position  */
 #define DMAC_CHCTRLB_TRIGSRC_TCC0_OVF         (DMAC_CHCTRLB_TRIGSRC_TCC0_OVF_Val << DMAC_CHCTRLB_TRIGSRC_Pos) /**< (DMAC_CHCTRLB) TCC0 Overflow Trigger Position  */
 #define DMAC_CHCTRLB_TRIGSRC_TCC0_MC0         (DMAC_CHCTRLB_TRIGSRC_TCC0_MC0_Val << DMAC_CHCTRLB_TRIGSRC_Pos) /**< (DMAC_CHCTRLB) TCC0 Match/Compare 0 Trigger Position  */
 #define DMAC_CHCTRLB_TRIGSRC_TCC0_MC1         (DMAC_CHCTRLB_TRIGSRC_TCC0_MC1_Val << DMAC_CHCTRLB_TRIGSRC_Pos) /**< (DMAC_CHCTRLB) TCC0 Match/Compare 1 Trigger Position  */

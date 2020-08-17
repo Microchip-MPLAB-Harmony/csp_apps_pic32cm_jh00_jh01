@@ -4,26 +4,15 @@
 
 
 project: i2c_eeprom
-creation_date: 2020-06-12T21:51:48.261+05:30[Asia/Calcutta]    # ISO 8601 format: https://www.w3.org/TR/NOTE-datetime
+creation_date: 2020-08-17T14:13:08.720+05:30[Asia/Calcutta]    # ISO 8601 format: https://www.w3.org/TR/NOTE-datetime
 operating_system: Windows 10
-mhc_mode: IDE            # [IDE|Standalone|Headless]
-mplabx_version: v5.40        # if MPLAB X plugin only
-plugin_version: v3.5.0        # if MPLAB X plugin only
+mhc_mode: Headless            # [IDE|Standalone|Headless]
+mplabx_version: NA        # if MPLAB X plugin only
+plugin_version: NA        # if MPLAB X plugin only
+compiler: xc32
 
 modules:
-    - {name: "arpan_work", version: "unknown"}
-    - {name: "bsp", version: "unknown"}
-    - {name: "CMSIS-FreeRTOS", version: "unknown"}
-    - {name: "contentmanager", version: "v1.3.1"}
-    - {name: "core", version: "v3.7.1"}
     - {name: "csp", version: "unknown"}
-    - {name: "dev_packs", version: "unknown"}
-    - {name: "doc_o_matic_h3", version: "unknown"}
-    - {name: "h3_apps_regenerator", version: "unknown"}
-    - {name: "headers-generator", version: "unknown"}
-    - {name: "mhc", version: "unknown"}
-    - {name: "microchip-mplab-harmony.github.io.wiki", version: "unknown"}
-    - {name: "mplabx_plugin", version: "v3.5.0-rc.1"}
-    - {name: "packs", version: "unknown"}
-    - {name: "usb", version: "v3.5.0"}
+    - {name: "dev_packs", version: "v3.8.0-rc.2"}
+    - {name: "mhc", version: "v3.5.0-tc.1"}
 
