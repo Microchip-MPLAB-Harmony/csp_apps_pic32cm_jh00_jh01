@@ -4,33 +4,15 @@
 
 
 project: adc_sample
-creation_date: 2020-07-15T23:42:04.126+05:30[Asia/Calcutta]    # ISO 8601 format: https://www.w3.org/TR/NOTE-datetime
+creation_date: 2020-08-17T17:10:46.531+05:30[Asia/Calcutta]    # ISO 8601 format: https://www.w3.org/TR/NOTE-datetime
 operating_system: Windows 10
 mhc_mode: IDE            # [IDE|Standalone|Headless]
 mplabx_version: v5.40        # if MPLAB X plugin only
-plugin_version: v3.5.0        # if MPLAB X plugin only
+plugin_version: v3.6.0        # if MPLAB X plugin only
+compiler: XC32 (2.41)
 
 modules:
-    - {name: "apps", version: "unknown"}
-    - {name: "bsp", version: "unknown"}
-    - {name: "core", version: "unknown"}
-    - {name: "crypto", version: "unknown"}
     - {name: "csp", version: "unknown"}
-    - {name: "csp_apps_pic32cm_jh00_jh01", version: "unknown"}
-    - {name: "csp_apps_pic32cm_le00_ls00", version: "unknown"}
-    - {name: "csp_apps_pic32cm_mc00", version: "unknown"}
-    - {name: "csp_apps_pic32cx_bz24_bz25", version: "unknown"}
-    - {name: "csp_apps_sam_c20_c21", version: "unknown"}
-    - {name: "csp_apps_sam_l21", version: "unknown"}
-    - {name: "dev_packs", version: "unknown"}
-    - {name: "doc_o_matic_h3", version: "unknown"}
-    - {name: "gfx", version: "unknown"}
-    - {name: "h3_apps_regenerator", version: "unknown"}
-    - {name: "mhc", version: "v3.4.0"}
-    - {name: "motor_control", version: "unknown"}
-    - {name: "mplabx_plugin", version: "v3.5.0-tc.1"}
-    - {name: "packs", version: "unknown"}
-    - {name: "touch", version: "v3.6.0"}
-    - {name: "validation", version: "unknown"}
-    - {name: "x2c", version: "v1.0.0"}
+    - {name: "dev_packs", version: "v3.8.0-rc.2"}
+    - {name: "mhc", version: "v3.5.0-tc.1"}
 

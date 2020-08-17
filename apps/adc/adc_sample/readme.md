@@ -37,7 +37,7 @@ The following table shows the target hardware for the application projects.
 | pic32cm_jh00_curiosity_pro.X | [PIC32CM JH00 Curiosity Pro Evaluation Kit]()
 |||
 
-### Setting up [PIC32CM LE00 Curiosity Pro Evaluation Kit]()
+### Setting up [PIC32CM JH00 Curiosity Pro Evaluation Kit]()
 
 - Analog input (AIN10) is fed from the DAC output
   - Analog input "AIN10" is mapped to Port Pin "PA10" that is routed to "Pin 5 of the EXT1 header"
