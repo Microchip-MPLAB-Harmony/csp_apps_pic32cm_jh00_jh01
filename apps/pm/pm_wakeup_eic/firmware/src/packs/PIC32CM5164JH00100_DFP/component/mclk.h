@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2020-06-08T08:28:23Z */
+/* file generated from device description version 2020-08-03T13:07:11Z */
 #ifndef _PIC32CMJH00_MCLK_COMPONENT_H_
 #define _PIC32CMJH00_MCLK_COMPONENT_H_
 
@@ -107,12 +107,6 @@
 #define MCLK_AHBMASK_DMAC_Pos                 _U_(7)                                               /**< (MCLK_AHBMASK) DMAC AHB Clock Mask Position */
 #define MCLK_AHBMASK_DMAC_Msk                 (_U_(0x1) << MCLK_AHBMASK_DMAC_Pos)                  /**< (MCLK_AHBMASK) DMAC AHB Clock Mask Mask */
 #define MCLK_AHBMASK_DMAC(value)              (MCLK_AHBMASK_DMAC_Msk & ((value) << MCLK_AHBMASK_DMAC_Pos))
-#define MCLK_AHBMASK_CAN0_Pos                 _U_(8)                                               /**< (MCLK_AHBMASK) CAN0 AHB Clock Mask Position */
-#define MCLK_AHBMASK_CAN0_Msk                 (_U_(0x1) << MCLK_AHBMASK_CAN0_Pos)                  /**< (MCLK_AHBMASK) CAN0 AHB Clock Mask Mask */
-#define MCLK_AHBMASK_CAN0(value)              (MCLK_AHBMASK_CAN0_Msk & ((value) << MCLK_AHBMASK_CAN0_Pos))
-#define MCLK_AHBMASK_CAN1_Pos                 _U_(9)                                               /**< (MCLK_AHBMASK) CAN1 AHB Clock Mask Position */
-#define MCLK_AHBMASK_CAN1_Msk                 (_U_(0x1) << MCLK_AHBMASK_CAN1_Pos)                  /**< (MCLK_AHBMASK) CAN1 AHB Clock Mask Mask */
-#define MCLK_AHBMASK_CAN1(value)              (MCLK_AHBMASK_CAN1_Msk & ((value) << MCLK_AHBMASK_CAN1_Pos))
 #define MCLK_AHBMASK_PAC_Pos                  _U_(10)                                              /**< (MCLK_AHBMASK) PAC AHB Clock Mask Position */
 #define MCLK_AHBMASK_PAC_Msk                  (_U_(0x1) << MCLK_AHBMASK_PAC_Pos)                   /**< (MCLK_AHBMASK) PAC AHB Clock Mask Mask */
 #define MCLK_AHBMASK_PAC(value)               (MCLK_AHBMASK_PAC_Msk & ((value) << MCLK_AHBMASK_PAC_Pos))
@@ -125,11 +119,8 @@
 #define MCLK_AHBMASK_ICM_Pos                  _U_(14)                                              /**< (MCLK_AHBMASK) ICM AHB Clock Mask Position */
 #define MCLK_AHBMASK_ICM_Msk                  (_U_(0x1) << MCLK_AHBMASK_ICM_Pos)                   /**< (MCLK_AHBMASK) ICM AHB Clock Mask Mask */
 #define MCLK_AHBMASK_ICM(value)               (MCLK_AHBMASK_ICM_Msk & ((value) << MCLK_AHBMASK_ICM_Pos))
-#define MCLK_AHBMASK_Msk                      _U_(0x000077FF)                                      /**< (MCLK_AHBMASK) Register Mask  */
+#define MCLK_AHBMASK_Msk                      _U_(0x000074FF)                                      /**< (MCLK_AHBMASK) Register Mask  */
 
-#define MCLK_AHBMASK_CAN_Pos                  _U_(8)                                               /**< (MCLK_AHBMASK Position) CANx AHB Clock Mask */
-#define MCLK_AHBMASK_CAN_Msk                  (_U_(0x3) << MCLK_AHBMASK_CAN_Pos)                   /**< (MCLK_AHBMASK Mask) CAN */
-#define MCLK_AHBMASK_CAN(value)               (MCLK_AHBMASK_CAN_Msk & ((value) << MCLK_AHBMASK_CAN_Pos)) 
 
 /* -------- MCLK_APBAMASK : (MCLK Offset: 0x14) (R/W 32) APBA Mask -------- */
 #define MCLK_APBAMASK_RESETVALUE              _U_(0x1FFF)                                          /**<  (MCLK_APBAMASK) APBA Mask  Reset Value */
