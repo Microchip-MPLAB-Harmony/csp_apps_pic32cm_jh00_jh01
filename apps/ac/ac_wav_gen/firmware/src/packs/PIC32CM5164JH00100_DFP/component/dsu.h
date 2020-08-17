@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2020-06-17T10:13:03Z */
+/* file generated from device description version 2020-08-03T13:07:11Z */
 #ifndef _PIC32CMJH00_DSU_COMPONENT_H_
 #define _PIC32CMJH00_DSU_COMPONENT_H_
 
