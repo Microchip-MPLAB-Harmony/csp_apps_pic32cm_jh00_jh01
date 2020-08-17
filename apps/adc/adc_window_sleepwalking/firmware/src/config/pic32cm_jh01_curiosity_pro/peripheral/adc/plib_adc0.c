@@ -62,6 +62,12 @@
 // *****************************************************************************
 ADC_CALLBACK_OBJ ADC0_CallbackObject;
 
+#define ADC0_LINEARITY_POS  (0)
+#define ADC0_LINEARITY_Msk   (0x7 << ADC0_LINEARITY_POS)
+
+#define ADC0_BIASCAL_POS  (3)
+#define ADC0_BIASCAL_Msk   (0x7 << ADC0_BIASCAL_POS)
+
 
 // *****************************************************************************
 // *****************************************************************************
@@ -80,6 +86,9 @@ void ADC0_Initialize( void )
     {
         /* Wait for Synchronization */
     }
+    /* Write linearity calibration in BIASREFBUF and bias calibration in BIASCOMP */
+    ADC0_REGS->ADC_CALIB = (uint32_t)(ADC_CALIB_BIASREFBUF(((*(uint64_t*)OTP5_ADDR) & ADC0_LINEARITY_Msk))) \
+        | ADC_CALIB_BIASCOMP((((*(uint64_t*)OTP5_ADDR) & ADC0_BIASCAL_Msk) >> ADC0_BIASCAL_POS));
 
     /* Prescaler */
     ADC0_REGS->ADC_CTRLB = ADC_CTRLB_PRESCALER_DIV8;
