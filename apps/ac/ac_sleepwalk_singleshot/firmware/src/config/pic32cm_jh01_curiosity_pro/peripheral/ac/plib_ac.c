@@ -63,7 +63,10 @@ void AC_Initialize(void)
     {
         /* Wait for Synchronization */
     }
-     /* Disable the module and configure COMPCTRL */
+     
+
+    /******************** Comparator 2 configurations ********************/
+    /* Disable the module and configure COMPCTRL */
     while((AC_REGS->AC_SYNCBUSY & AC_SYNCBUSY_COMPCTRL2_Msk) == AC_SYNCBUSY_COMPCTRL2_Msk)
     {
         /* Wait for Synchronization */
@@ -74,7 +77,7 @@ void AC_Initialize(void)
     {
         /* Wait for Synchronization */
     }
-    AC_REGS->AC_COMPCTRL[2] = AC_COMPCTRL_MUXPOS_AIN7 | AC_COMPCTRL_MUXNEG_INTREF | AC_COMPCTRL_INTSEL_EOC | AC_COMPCTRL_OUT_OFF | AC_COMPCTRL_SPEED(0) | AC_COMPCTRL_SINGLE_Msk | AC_COMPCTRL_RUNSTDBY_Msk;
+    AC_REGS->AC_COMPCTRL[2] = AC_COMPCTRL_MUXPOS_AIN7 | AC_COMPCTRL_MUXNEG_INTREF | AC_COMPCTRL_INTSEL_EOC | AC_COMPCTRL_OUT_OFF | AC_COMPCTRL_SPEED(0) | AC_COMPCTRL_FLEN_OFF | AC_COMPCTRL_SINGLE_Msk | AC_COMPCTRL_RUNSTDBY_Msk;
 
     AC_REGS->AC_COMPCTRL[2] |= AC_COMPCTRL_ENABLE_Msk;
     AC_REGS->AC_SCALER[2] = 0;
@@ -116,6 +119,27 @@ void AC_SwapInputs( AC_CHANNEL channel_id )
     /* Swap inputs of the given comparator */
     AC_REGS->AC_COMPCTRL[channel_id] = AC_COMPCTRL_SWAP_Msk;
     AC_REGS->AC_COMPCTRL[channel_id] |= AC_COMPCTRL_ENABLE_Msk;
+}
+
+void AC_ChannelSelect( AC_CHANNEL channel_id , AC_POSINPUT positiveInput, AC_NEGINPUT negativeInput)
+{
+    /* Disable comparator before swapping */
+    AC_REGS->AC_COMPCTRL[channel_id] &= ~AC_COMPCTRL_ENABLE_Msk;
+    /* Check Synchronization to ensure that the comparator is disabled */
+    while((AC_REGS->AC_SYNCBUSY & AC_SYNCBUSY_Msk) == AC_SYNCBUSY_Msk)
+    {
+        /* Wait for Synchronization */
+    }
+    AC_REGS->AC_COMPCTRL[channel_id] &= ~(AC_COMPCTRL_MUXPOS_Msk | AC_COMPCTRL_MUXNEG_Msk);
+    AC_REGS->AC_COMPCTRL[channel_id] |= (positiveInput | negativeInput);
+
+    /* Enable comparator channel */
+    AC_REGS->AC_COMPCTRL[channel_id] |= AC_COMPCTRL_ENABLE_Msk;
+    while((AC_REGS->AC_SYNCBUSY & AC_SYNCBUSY_Msk) == AC_SYNCBUSY_Msk)
+    {
+        /* Wait for Synchronization */
+    }   
+
 }
 
 bool AC_StatusGet (AC_CHANNEL channel)
