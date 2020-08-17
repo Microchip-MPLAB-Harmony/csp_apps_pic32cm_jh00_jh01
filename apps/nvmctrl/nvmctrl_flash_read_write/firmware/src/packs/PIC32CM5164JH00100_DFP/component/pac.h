@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2020-06-08T08:28:23Z */
+/* file generated from device description version 2020-08-03T13:07:11Z */
 #ifndef _PIC32CMJH00_PAC_COMPONENT_H_
 #define _PIC32CMJH00_PAC_COMPONENT_H_
 
@@ -204,12 +204,6 @@
 #define PAC_INTFLAGC_SERCOM5_Pos              _U_(6)                                               /**< (PAC_INTFLAGC) SERCOM5 Position */
 #define PAC_INTFLAGC_SERCOM5_Msk              (_U_(0x1) << PAC_INTFLAGC_SERCOM5_Pos)               /**< (PAC_INTFLAGC) SERCOM5 Mask */
 #define PAC_INTFLAGC_SERCOM5(value)           (PAC_INTFLAGC_SERCOM5_Msk & ((value) << PAC_INTFLAGC_SERCOM5_Pos))
-#define PAC_INTFLAGC_CAN0_Pos                 _U_(7)                                               /**< (PAC_INTFLAGC) CAN0 Position */
-#define PAC_INTFLAGC_CAN0_Msk                 (_U_(0x1) << PAC_INTFLAGC_CAN0_Pos)                  /**< (PAC_INTFLAGC) CAN0 Mask */
-#define PAC_INTFLAGC_CAN0(value)              (PAC_INTFLAGC_CAN0_Msk & ((value) << PAC_INTFLAGC_CAN0_Pos))
-#define PAC_INTFLAGC_CAN1_Pos                 _U_(8)                                               /**< (PAC_INTFLAGC) CAN1 Position */
-#define PAC_INTFLAGC_CAN1_Msk                 (_U_(0x1) << PAC_INTFLAGC_CAN1_Pos)                  /**< (PAC_INTFLAGC) CAN1 Mask */
-#define PAC_INTFLAGC_CAN1(value)              (PAC_INTFLAGC_CAN1_Msk & ((value) << PAC_INTFLAGC_CAN1_Pos))
 #define PAC_INTFLAGC_TCC0_Pos                 _U_(9)                                               /**< (PAC_INTFLAGC) TCC0 Position */
 #define PAC_INTFLAGC_TCC0_Msk                 (_U_(0x1) << PAC_INTFLAGC_TCC0_Pos)                  /**< (PAC_INTFLAGC) TCC0 Mask */
 #define PAC_INTFLAGC_TCC0(value)              (PAC_INTFLAGC_TCC0_Msk & ((value) << PAC_INTFLAGC_TCC0_Pos))
@@ -261,14 +255,11 @@
 #define PAC_INTFLAGC_SMBIST_Pos               _U_(27)                                              /**< (PAC_INTFLAGC) SMBIST Position */
 #define PAC_INTFLAGC_SMBIST_Msk               (_U_(0x1) << PAC_INTFLAGC_SMBIST_Pos)                /**< (PAC_INTFLAGC) SMBIST Mask */
 #define PAC_INTFLAGC_SMBIST(value)            (PAC_INTFLAGC_SMBIST_Msk & ((value) << PAC_INTFLAGC_SMBIST_Pos))
-#define PAC_INTFLAGC_Msk                      _U_(0x0E7FFFFF)                                      /**< (PAC_INTFLAGC) Register Mask  */
+#define PAC_INTFLAGC_Msk                      _U_(0x0E7FFE7F)                                      /**< (PAC_INTFLAGC) Register Mask  */
 
 #define PAC_INTFLAGC_SERCOM_Pos               _U_(1)                                               /**< (PAC_INTFLAGC Position) SERCOMx */
 #define PAC_INTFLAGC_SERCOM_Msk               (_U_(0x3F) << PAC_INTFLAGC_SERCOM_Pos)               /**< (PAC_INTFLAGC Mask) SERCOM */
 #define PAC_INTFLAGC_SERCOM(value)            (PAC_INTFLAGC_SERCOM_Msk & ((value) << PAC_INTFLAGC_SERCOM_Pos)) 
-#define PAC_INTFLAGC_CAN_Pos                  _U_(7)                                               /**< (PAC_INTFLAGC Position) CANx */
-#define PAC_INTFLAGC_CAN_Msk                  (_U_(0x3) << PAC_INTFLAGC_CAN_Pos)                   /**< (PAC_INTFLAGC Mask) CAN */
-#define PAC_INTFLAGC_CAN(value)               (PAC_INTFLAGC_CAN_Msk & ((value) << PAC_INTFLAGC_CAN_Pos)) 
 #define PAC_INTFLAGC_TCC_Pos                  _U_(9)                                               /**< (PAC_INTFLAGC Position) TCCx */
 #define PAC_INTFLAGC_TCC_Msk                  (_U_(0x7) << PAC_INTFLAGC_TCC_Pos)                   /**< (PAC_INTFLAGC Mask) TCC */
 #define PAC_INTFLAGC_TCC(value)               (PAC_INTFLAGC_TCC_Msk & ((value) << PAC_INTFLAGC_TCC_Pos)) 
@@ -399,12 +390,6 @@
 #define PAC_STATUSC_SERCOM5_Pos               _U_(6)                                               /**< (PAC_STATUSC) SERCOM5 APB Protect Enable Position */
 #define PAC_STATUSC_SERCOM5_Msk               (_U_(0x1) << PAC_STATUSC_SERCOM5_Pos)                /**< (PAC_STATUSC) SERCOM5 APB Protect Enable Mask */
 #define PAC_STATUSC_SERCOM5(value)            (PAC_STATUSC_SERCOM5_Msk & ((value) << PAC_STATUSC_SERCOM5_Pos))
-#define PAC_STATUSC_CAN0_Pos                  _U_(7)                                               /**< (PAC_STATUSC) CAN0 APB Protect Enable Position */
-#define PAC_STATUSC_CAN0_Msk                  (_U_(0x1) << PAC_STATUSC_CAN0_Pos)                   /**< (PAC_STATUSC) CAN0 APB Protect Enable Mask */
-#define PAC_STATUSC_CAN0(value)               (PAC_STATUSC_CAN0_Msk & ((value) << PAC_STATUSC_CAN0_Pos))
-#define PAC_STATUSC_CAN1_Pos                  _U_(8)                                               /**< (PAC_STATUSC) CAN1 APB Protect Enable Position */
-#define PAC_STATUSC_CAN1_Msk                  (_U_(0x1) << PAC_STATUSC_CAN1_Pos)                   /**< (PAC_STATUSC) CAN1 APB Protect Enable Mask */
-#define PAC_STATUSC_CAN1(value)               (PAC_STATUSC_CAN1_Msk & ((value) << PAC_STATUSC_CAN1_Pos))
 #define PAC_STATUSC_TCC0_Pos                  _U_(9)                                               /**< (PAC_STATUSC) TCC0 APB Protect Enable Position */
 #define PAC_STATUSC_TCC0_Msk                  (_U_(0x1) << PAC_STATUSC_TCC0_Pos)                   /**< (PAC_STATUSC) TCC0 APB Protect Enable Mask */
 #define PAC_STATUSC_TCC0(value)               (PAC_STATUSC_TCC0_Msk & ((value) << PAC_STATUSC_TCC0_Pos))
@@ -456,14 +441,11 @@
 #define PAC_STATUSC_SMBIST_Pos                _U_(27)                                              /**< (PAC_STATUSC) SMBIST APB Protect Enable Position */
 #define PAC_STATUSC_SMBIST_Msk                (_U_(0x1) << PAC_STATUSC_SMBIST_Pos)                 /**< (PAC_STATUSC) SMBIST APB Protect Enable Mask */
 #define PAC_STATUSC_SMBIST(value)             (PAC_STATUSC_SMBIST_Msk & ((value) << PAC_STATUSC_SMBIST_Pos))
-#define PAC_STATUSC_Msk                       _U_(0x0E7FFFFF)                                      /**< (PAC_STATUSC) Register Mask  */
+#define PAC_STATUSC_Msk                       _U_(0x0E7FFE7F)                                      /**< (PAC_STATUSC) Register Mask  */
 
 #define PAC_STATUSC_SERCOM_Pos                _U_(1)                                               /**< (PAC_STATUSC Position) SERCOMx APB Protect Enable */
 #define PAC_STATUSC_SERCOM_Msk                (_U_(0x3F) << PAC_STATUSC_SERCOM_Pos)                /**< (PAC_STATUSC Mask) SERCOM */
 #define PAC_STATUSC_SERCOM(value)             (PAC_STATUSC_SERCOM_Msk & ((value) << PAC_STATUSC_SERCOM_Pos)) 
-#define PAC_STATUSC_CAN_Pos                   _U_(7)                                               /**< (PAC_STATUSC Position) CANx APB Protect Enable */
-#define PAC_STATUSC_CAN_Msk                   (_U_(0x3) << PAC_STATUSC_CAN_Pos)                    /**< (PAC_STATUSC Mask) CAN */
-#define PAC_STATUSC_CAN(value)                (PAC_STATUSC_CAN_Msk & ((value) << PAC_STATUSC_CAN_Pos)) 
 #define PAC_STATUSC_TCC_Pos                   _U_(9)                                               /**< (PAC_STATUSC Position) TCCx APB Protect Enable */
 #define PAC_STATUSC_TCC_Msk                   (_U_(0x7) << PAC_STATUSC_TCC_Pos)                    /**< (PAC_STATUSC Mask) TCC */
 #define PAC_STATUSC_TCC(value)                (PAC_STATUSC_TCC_Msk & ((value) << PAC_STATUSC_TCC_Pos)) 

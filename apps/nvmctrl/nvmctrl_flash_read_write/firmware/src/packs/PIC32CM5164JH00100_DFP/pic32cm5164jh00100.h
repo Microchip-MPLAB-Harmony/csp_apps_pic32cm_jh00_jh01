@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2020-06-08T08:28:23Z */
+/* file generated from device description version 2020-08-03T13:07:11Z */
 #ifndef _PIC32CM5164JH00100_H_
 #define _PIC32CM5164JH00100_H_
 
@@ -30,12 +30,12 @@
 #define HEADER_FORMAT_VERSION_MAJOR (2)
 #define HEADER_FORMAT_VERSION_MINOR (0)
 
-/** \addtogroup PIC32CM5164JH00100_definitions PIC32CM5164JH00100 definitions
+/** \addtogroup PIC32CM5164JH00100_definitions b'PIC32CM5164JH00100 definitions
   This file defines all structures and symbols for PIC32CM5164JH00100:
     - registers and bitfields
     - peripheral base address
     - peripheral ID
-    - PIO definitions
+    - PIO definitions'
  *  @{
  */
 
@@ -65,7 +65,7 @@
 #  define _UL_(x) x   /**< Assembler: Unsigned Long integer literal constant value */
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 #endif /* SKIP_INTEGER_LITERALS */
-/** @}  end of Atmel Global Defines */
+/** @}  b'end of Atmel Global Defines' */
 
 /* ************************************************************************** */
 /*   CMSIS DEFINITIONS FOR PIC32CM5164JH00100                                 */
@@ -121,8 +121,7 @@ typedef enum IRQn
   DAC_IRQn                  =  28, /**< 28  Digital Analog Converter (DAC)      */
   PDEC_IRQn                 =  29, /**< 29  Quadrature Decodeur (PDEC)          */
   PTC_IRQn                  =  30, /**< 30  Peripheral Touch Controller (PTC)   */
-  PORT_IRQn                 =  31, /**< 31  Shared between ICM PORT (PORT)      */
-  ICM_IRQn                  =  31, /**< 31  Shared between ICM PORT (ICM)       */
+  ICM_IRQn                  =  31, /**< 31  Integrity Check Monitor (ICM)       */
 
   PERIPH_MAX_IRQn           =  31  /**< Max peripheral ID */
 } IRQn_Type;
@@ -133,7 +132,7 @@ typedef struct _DeviceVectors
 {
   /* Stack pointer */
   void* pvStack;
-  /* Cortex-M handlers */
+  /* CORTEX-M0PLUS handlers */
   void* pfnReset_Handler;                        /* -15 Reset Vector, invoked on Power up and warm reset */
   void* pfnNonMaskableInt_Handler;               /* -14 Non maskable Interrupt, cannot be stopped or preempted */
   void* pfnHardFault_Handler;                    /* -13 Hard Fault, all classes of Fault */
@@ -182,14 +181,8 @@ typedef struct _DeviceVectors
   void* pfnDAC_Handler;                          /*  28 Digital Analog Converter (DAC) */
   void* pfnPDEC_Handler;                         /*  29 Quadrature Decodeur (PDEC) */
   void* pfnPTC_Handler;                          /*  30 Peripheral Touch Controller (PTC) */
-  void* pfnICM_Handler;                          /*  31 Integrity Check Monitor (ICM PORT) */
+  void* pfnICM_Handler;                          /*  31 Integrity Check Monitor (ICM) */
 } DeviceVectors;
-
-/* Defines for Deprecated Interrupt and Exceptions handler names */
-#define pfnMemManage_Handler      pfnMemoryManagement_Handler     /**< \deprecated  Backward compatibility for ASF*/
-#define pfnDebugMon_Handler       pfnDebugMonitor_Handler         /**< \deprecated  Backward compatibility for ASF*/
-#define pfnNMI_Handler            pfnNonMaskableInt_Handler       /**< \deprecated  Backward compatibility for ASF*/
-#define pfnSVC_Handler            pfnSVCall_Handler               /**< \deprecated  Backward compatibility for ASF*/
 
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
@@ -237,17 +230,9 @@ void PDEC_Handler                  ( void );
 void PTC_Handler                   ( void );
 void ICM_Handler                   ( void );
 #endif /* DONT_USE_PREDEFINED_PERIPHERALS_HANDLERS */
-/* Defines for Deprecated Interrupt and Exceptions handler names */
-#define MemManage_Handler         MemoryManagement_Handler        /**< \deprecated  Backward compatibility*/
-#define DebugMon_Handler          DebugMonitor_Handler            /**< \deprecated  Backward compatibility*/
-#define NMI_Handler               NonMaskableInt_Handler          /**< \deprecated  Backward compatibility*/
-#define SVC_Handler               SVCall_Handler                  /**< \deprecated  Backward compatibility*/
-
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
-/*
- * \brief Configuration of the CORTEX-M0PLUS Processor and Core Peripherals
- */
+/** \brief Configuration of the CORTEX-M0PLUS Processor and Core Peripherals */
 #define __MPU_PRESENT                  1 /**< MPU present or not                                                        */
 #define __NVIC_PRIO_BITS               2 /**< Number of Bits used for Priority Levels                                   */
 #define __VTOR_PRESENT                 1 /**< Vector Table Offset Register present or not                               */
@@ -263,7 +248,7 @@ void ICM_Handler                   ( void );
 #include "system_pic32cmjh00.h"
 #endif /* USE_CMSIS_INIT */
 
-/** \defgroup PIC32CM5164JH00100_api Peripheral Software API
+/** \defgroup PIC32CM5164JH00100_api b'Peripheral Software API'
  *  @{
  */
 
@@ -301,9 +286,9 @@ void ICM_Handler                   ( void );
 #include "component/tc.h"
 #include "component/tcc.h"
 #include "component/wdt.h"
-/** @}  end of Peripheral Software API */
+/** @}  b'end of Peripheral Software API' */
 
-/** \addtogroup PIC32CM5164JH00100_id Peripheral Ids Definitions
+/** \addtogroup PIC32CM5164JH00100_id b'Peripheral Ids Definitions'
  *  @{
  */
 
@@ -359,9 +344,9 @@ void ICM_Handler                   ( void );
 #define ID_TC7           (100) /**< \brief Instance index for TC7 (TC7) */
 
 #define ID_PERIPH_MAX    (100) /**< \brief Number of peripheral IDs */
-/** @}  end of Peripheral Ids Definitions */
+/** @}  b'end of Peripheral Ids Definitions' */
 
-/** \addtogroup PIC32CM5164JH00100_base Peripheral Base Address Definitions
+/** \addtogroup PIC32CM5164JH00100_base b'Peripheral Base Address Definitions'
  *  @{
  */
 
@@ -421,9 +406,9 @@ void ICM_Handler                   ( void );
 #define TCC2_REGS                        ((tcc_registers_t*)0x42002c00)                /**< \brief TCC2 Registers Address       */
 #define WDT_REGS                         ((wdt_registers_t*)0x40002000)                /**< \brief WDT Registers Address        */
 #endif /* (defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
-/** @}  end of Peripheral Base Address Definitions */
+/** @}  b'end of Peripheral Base Address Definitions' */
 
-/** \addtogroup PIC32CM5164JH00100_base Peripheral Base Address Definitions
+/** \addtogroup PIC32CM5164JH00100_base b'Peripheral Base Address Definitions'
  *  @{
  */
 
@@ -481,9 +466,9 @@ void ICM_Handler                   ( void );
 #define TCC1_BASE_ADDRESS                _UL_(0x42002800)                              /**< \brief TCC1 Base Address */
 #define TCC2_BASE_ADDRESS                _UL_(0x42002c00)                              /**< \brief TCC2 Base Address */
 #define WDT_BASE_ADDRESS                 _UL_(0x40002000)                              /**< \brief WDT Base Address */
-/** @}  end of Peripheral Base Address Definitions */
+/** @}  b'end of Peripheral Base Address Definitions' */
 
-/** \addtogroup PIC32CM5164JH00100_pio Peripheral Pio Definitions
+/** \addtogroup PIC32CM5164JH00100_pio b'Peripheral Pio Definitions'
  *  @{
  */
 
@@ -491,7 +476,7 @@ void ICM_Handler                   ( void );
 /*   PIO DEFINITIONS FOR PIC32CM5164JH00100                                   */
 /* ************************************************************************** */
 #include "pio/pic32cm5164jh00100.h"
-/** @}  end of Peripheral Pio Definitions */
+/** @}  b'end of Peripheral Pio Definitions' */
 
 /* ************************************************************************** */
 /*   MEMORY MAPPING DEFINITIONS FOR PIC32CM5164JH00100                        */
@@ -713,7 +698,7 @@ void ICM_Handler                   ( void );
 }
 #endif
 
-/** @}  end of PIC32CM5164JH00100 definitions */
+/** @}  b'end of PIC32CM5164JH00100 definitions' */
 
 
 #endif /* _PIC32CM5164JH00100_H_ */

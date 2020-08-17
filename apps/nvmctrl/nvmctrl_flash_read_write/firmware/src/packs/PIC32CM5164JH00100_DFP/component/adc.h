@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2020-06-08T08:28:23Z */
+/* file generated from device description version 2020-08-03T13:07:11Z */
 #ifndef _PIC32CMJH00_ADC_COMPONENT_H_
 #define _PIC32CMJH00_ADC_COMPONENT_H_
 
@@ -283,9 +283,9 @@
 #define ADC_CTRLC_DUALSEL_Msk                 (_U_(0x3) << ADC_CTRLC_DUALSEL_Pos)                  /**< (ADC_CTRLC) Dual Mode Trigger Selection Mask */
 #define ADC_CTRLC_DUALSEL(value)              (ADC_CTRLC_DUALSEL_Msk & ((value) << ADC_CTRLC_DUALSEL_Pos))
 #define   ADC_CTRLC_DUALSEL_BOTH_Val          _U_(0x0)                                             /**< (ADC_CTRLC) Start event or software trigger will start a conversion on both ADCs  */
-#define   ADC_CTRLC_DUALSEL_INTERLEAVE_Val    _U_(0x1)                                             /**< (ADC_CTRLC) START event or software trigger will alternatingly start a conversion on ADC0 and ADC1  */
+#define   ADC_CTRLC_DUALSEL_INTERLEAVE_Val    _U_(0x1)                                             /**< (ADC_CTRLC) START event or software trigger will alternatively start a conversion on ADC0 and ADC1  */
 #define ADC_CTRLC_DUALSEL_BOTH                (ADC_CTRLC_DUALSEL_BOTH_Val << ADC_CTRLC_DUALSEL_Pos) /**< (ADC_CTRLC) Start event or software trigger will start a conversion on both ADCs Position  */
-#define ADC_CTRLC_DUALSEL_INTERLEAVE          (ADC_CTRLC_DUALSEL_INTERLEAVE_Val << ADC_CTRLC_DUALSEL_Pos) /**< (ADC_CTRLC) START event or software trigger will alternatingly start a conversion on ADC0 and ADC1 Position  */
+#define ADC_CTRLC_DUALSEL_INTERLEAVE          (ADC_CTRLC_DUALSEL_INTERLEAVE_Val << ADC_CTRLC_DUALSEL_Pos) /**< (ADC_CTRLC) START event or software trigger will alternatively start a conversion on ADC0 and ADC1 Position  */
 #define ADC_CTRLC_Msk                         _U_(0x37BF)                                          /**< (ADC_CTRLC) Register Mask  */
 
 
