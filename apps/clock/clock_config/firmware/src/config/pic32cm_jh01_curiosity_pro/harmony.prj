@@ -58,8 +58,8 @@
           <Security dnOrder="2">NON_SECURE</Security>
           <LogicalPath dnOrder="3">config/pic32cm_jh01_curiosity_pro/peripheral/clock/</LogicalPath>
           <PhysicalPath dnOrder="4">/peripheral/clock/</PhysicalPath>
-          <GeneratedChecksum dnOrder="5">2DFC565F40ECD6498771726563B5CA87</GeneratedChecksum>
-          <UserChecksum dnOrder="6">2DFC565F40ECD6498771726563B5CA87</UserChecksum>
+          <GeneratedChecksum dnOrder="5">9D00F47FEE9ACD757B08844FE4296E69</GeneratedChecksum>
+          <UserChecksum dnOrder="6">9D00F47FEE9ACD757B08844FE4296E69</UserChecksum>
         </File>
         <File dnOrder="6">
           <Type dnOrder="0">SOURCE</Type>
@@ -76,8 +76,8 @@
           <Security dnOrder="2">NON_SECURE</Security>
           <LogicalPath dnOrder="3">config/pic32cm_jh01_curiosity_pro/peripheral/nvic/</LogicalPath>
           <PhysicalPath dnOrder="4">/peripheral/nvic/</PhysicalPath>
-          <GeneratedChecksum dnOrder="5">D0684B5522FCD6E33EAAF787D58818BE</GeneratedChecksum>
-          <UserChecksum dnOrder="6">D0684B5522FCD6E33EAAF787D58818BE</UserChecksum>
+          <GeneratedChecksum dnOrder="5">6B223F9D652989C89A527F18FDF95008</GeneratedChecksum>
+          <UserChecksum dnOrder="6">6B223F9D652989C89A527F18FDF95008</UserChecksum>
         </File>
         <File dnOrder="8">
           <Type dnOrder="0">SOURCE</Type>
@@ -601,6 +601,15 @@
           <GeneratedChecksum dnOrder="5">FDE9FA19CE12AA90B43F2A67877ECE45</GeneratedChecksum>
           <UserChecksum dnOrder="6">FDE9FA19CE12AA90B43F2A67877ECE45</UserChecksum>
         </File>
+        <File dnOrder="66">
+          <Type dnOrder="0">LINKER</Type>
+          <Name dnOrder="1">PIC32CM5164JH00100.ld</Name>
+          <Security dnOrder="2">NON_SECURE</Security>
+          <LogicalPath dnOrder="3">config/pic32cm_jh01_curiosity_pro/</LogicalPath>
+          <PhysicalPath dnOrder="4">/</PhysicalPath>
+          <GeneratedChecksum dnOrder="5">9383EB7495EADA931261DE617CB673DD</GeneratedChecksum>
+          <UserChecksum dnOrder="6">9383EB7495EADA931261DE617CB673DD</UserChecksum>
+        </File>
       </Files>
       <Settings dnOrder="1">
         <Setting append="true" category="C32" delimiter=";" dnOrder="0" key="extra-include-directories" security="NON_SECURE" value="../src;../src/config/pic32cm_jh01_curiosity_pro;../src/packs/PIC32CM5164JH00100_DFP;../src/packs/CMSIS/CMSIS/Core/Include;../src/packs/CMSIS/"/>
@@ -611,12 +620,12 @@
       </Settings>
     </Manifest>
     <Settings dnOrder="5">
-      <Setting dnOrder="0" key="CMSISPath" value=".\dev_packs\arm\CMSIS\5.6.0"/>
-      <Setting dnOrder="1" key="DFPPath" value=".\dev_packs\Microchip\PIC32CM-JH_DFP\1.0.39\PIC32CM-JH00\atdf\PIC32CM5164JH00100.atdf"/>
+      <Setting dnOrder="0" key="CMSISPath" value=".\dev_packs\arm\CMSIS\5.7.0"/>
+      <Setting dnOrder="1" key="DFPPath" value=".\dev_packs\Microchip\PIC32CM-JH_DFP\1.0.59\PIC32CM-JH00\atdf\PIC32CM5164JH00100.atdf"/>
       <Setting dnOrder="2" key="FORCE_OPTIMIZATION" value="false"/>
       <Setting dnOrder="3" key="GENERATE_BACKUP" value="true"/>
       <Setting dnOrder="4" key="MERGE_STRATEGY" value="USER_ALL"/>
-      <Setting dnOrder="5" key="PackageFilter" value="bsp;core;csp;usb;"/>
+      <Setting dnOrder="5" key="PackageFilter" value="bootloader;bootloader_apps_i2c;bootloader_apps_usb;bsp;core;core_apps_pic32cm_jh00_jh01;core_apps_sam_g55;csp;csp_apps_pic32cm_jh00_jh01;csp_apps_pic32cm_mc00;csp_apps_pic32mk;csp_apps_pic32mx;csp_apps_pic32mz_ef;csp_apps_sam_d10;csp_apps_sam_d11;csp_apps_sam_d20;csp_apps_sam_d21_da1;csp_apps_sam_g55;csp_apps_sam_ha1;usb;"/>
       <Setting dnOrder="6" key="TRUSTZONE" value="false"/>
     </Settings>
   </Configurator>
