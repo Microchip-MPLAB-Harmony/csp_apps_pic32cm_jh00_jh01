@@ -1,6 +1,6 @@
 ---
 parent: Harmony 3 peripheral library application examples for PIC32CM JH01 family
-title: WDT timeout 
+title: WDT timeout
 has_children: false
 has_toc: false
 ---
@@ -62,6 +62,7 @@ The following table shows the target hardware for the application projects.
     ![output](images/output_wdt_timeout_2.png)
 
 7. WDT will reset the device in four seconds and the demonstration should restart
+8. Once the demo is completed, do a power on reset to ensure WDT can be disabled for next program.
 
 Refer the table below for details of switch and LED:
 
