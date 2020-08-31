@@ -59,8 +59,9 @@ void NVIC_Initialize( void )
      * from within the "Interrupt Manager" of MHC. */
     NVIC_SetPriority(DMAC_IRQn, 3);
     NVIC_EnableIRQ(DMAC_IRQn);
+    NVIC_SetPriority(TC0_IRQn, 3);
+    NVIC_EnableIRQ(TC0_IRQn);
 
 
 
-    return;
 }

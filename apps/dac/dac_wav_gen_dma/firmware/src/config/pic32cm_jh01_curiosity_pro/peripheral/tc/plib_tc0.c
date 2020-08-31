@@ -61,6 +61,7 @@
 // *****************************************************************************
 // *****************************************************************************
 
+TC_TIMER_CALLBACK_OBJ TC0_CallbackObject;
 
 // *****************************************************************************
 // *****************************************************************************
@@ -81,17 +82,20 @@ void TC0_TimerInitialize( void )
     }
 
     /* Configure counter mode & prescaler */
-    TC0_REGS->COUNT16.TC_CTRLA = TC_CTRLA_MODE_COUNT16 | TC_CTRLA_PRESCALER_DIV64 | TC_CTRLA_PRESCSYNC_PRESC ;
+    TC0_REGS->COUNT16.TC_CTRLA = TC_CTRLA_MODE_COUNT16 | TC_CTRLA_PRESCALER_DIV1 | TC_CTRLA_PRESCSYNC_PRESC ;
 
     /* Configure in Match Frequency Mode */
     TC0_REGS->COUNT16.TC_WAVE = TC_WAVE_WAVEGEN_MPWM;
 
     /* Configure timer period */
-    TC0_REGS->COUNT16.TC_CC[0U] = 1U;
+    TC0_REGS->COUNT16.TC_CC[0U] = 96U;
 
     /* Clear all interrupt flags */
     TC0_REGS->COUNT16.TC_INTFLAG = TC_INTFLAG_Msk;
 
+    TC0_CallbackObject.callback = NULL;
+    /* Enable interrupt*/
+    TC0_REGS->COUNT16.TC_INTENSET = TC_INTENSET_OVF_Msk;
 
     TC0_REGS->COUNT16.TC_EVCTRL = TC_EVCTRL_OVFEO_Msk;
 
@@ -123,7 +127,7 @@ void TC0_TimerStop( void )
 
 uint32_t TC0_TimerFrequencyGet( void )
 {
-    return (uint32_t)(750000UL);
+    return (uint32_t)(48000000UL);
 }
 
 void TC0_TimerCommandSet(TC_COMMAND command)
@@ -184,11 +188,27 @@ uint16_t TC0_Timer16bitPeriodGet( void )
 
 
 
-/* Polling method to check if timer period interrupt flag is set */
-bool TC0_TimerPeriodHasExpired( void )
+/* Register callback function */
+void TC0_TimerCallbackRegister( TC_TIMER_CALLBACK callback, uintptr_t context )
 {
-    bool timer_status;
-    timer_status = ((TC0_REGS->COUNT16.TC_INTFLAG) & TC_INTFLAG_OVF_Msk);
-    TC0_REGS->COUNT16.TC_INTFLAG = timer_status;
-    return timer_status;
+    TC0_CallbackObject.callback = callback;
+
+    TC0_CallbackObject.context = context;
 }
+
+/* Timer Interrupt handler */
+void TC0_TimerInterruptHandler( void )
+{
+    if (TC0_REGS->COUNT16.TC_INTENSET != 0)
+    {
+        TC_TIMER_STATUS status;
+        status = (TC_TIMER_STATUS) TC0_REGS->COUNT16.TC_INTFLAG;
+        /* Clear interrupt flags */
+        TC0_REGS->COUNT16.TC_INTFLAG = TC_INTFLAG_Msk;
+        if((status != TC_TIMER_STATUS_NONE) && TC0_CallbackObject.callback != NULL)
+        {
+            TC0_CallbackObject.callback(status, TC0_CallbackObject.context);
+        }
+    }
+}
+
