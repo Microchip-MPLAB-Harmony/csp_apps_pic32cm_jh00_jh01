@@ -47,7 +47,7 @@ The following table shows the target hardware for the application projects.
 | pic32cm_jh00_curiosity_pro.X | [PIC32CM JH00 Curiosity Pro Evaluation Kit]()
 |||
 
-### Setting up [PIC32CM LE00 Curiosity Pro Evaluation Kit]()
+### Setting up [PIC32CM JH00 Curiosity Pro Evaluation Kit]()
 
 - Connect the Debug USB port on the board to the computer using a micro USB cable
 
