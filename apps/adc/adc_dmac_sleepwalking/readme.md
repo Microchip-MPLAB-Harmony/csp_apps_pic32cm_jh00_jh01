@@ -26,7 +26,7 @@ To build the application, refer to the following table and open the project usin
 
 | Project Name      | Description                                    |
 | ----------------- | ---------------------------------------------- |
-| pic32cm_jh00_curiosity_pro.X | MPLABX project for [PIC32CM JH00 Curiosity Pro Evaluation Kit]() |
+| pic32cm_jh01_curiosity_pro.X | MPLABX project for [PIC32CM JH01 Curiosity Pro Evaluation Kit]() |
 |||
 
 ## Setting up the hardware
@@ -35,10 +35,10 @@ The following table shows the target hardware for the application projects.
 
 | Project Name| Board|
 |:---------|:---------:|
-| pic32cm_jh00_curiosity_pro.X  | [PIC32CM JH00 Curiosity Pro Evaluation Kit]()
+| pic32cm_jh01_curiosity_pro.X  | [PIC32CM JH01 Curiosity Pro Evaluation Kit]()
 |||
 
-### Setting up [PIC32CM JH00 Curiosity Pro Evaluation Kit]()
+### Setting up [PIC32CM JH01 Curiosity Pro Evaluation Kit]()
 
 - Connect a voltage below the selected ADC reference voltage (VDDANA) to pin 5 (PA10 – ADC0_AIN10) of the EXT1 connector
 - Connect the Debug USB port on the board to the computer using a micro USB cable
@@ -63,5 +63,5 @@ Refer to the table below for details of LED:
 
 | Board| LED name|
 |------|---------|
-| [PIC32CM JH00 Curiosity Pro Evaluation Kit]() | LED0 |
+| [PIC32CM JH01 Curiosity Pro Evaluation Kit]() | LED0 |
 |||

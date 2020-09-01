@@ -26,7 +26,7 @@ To build the application, refer to the following table and open the project usin
 
 | Project Name      | Description                                    |
 | ----------------- | ---------------------------------------------- |
-| pic32cm_jh00_curiosity_pro | MPLABX project for [PIC32CM JH00 Curiosity Pro Evaluation Kit]() |
+| pic32cm_jh00_curiosity_pro | MPLABX project for [PIC32CM JH01 Curiosity Pro Evaluation Kit]() |
 |||
 
 ## Setting up the hardware
@@ -35,10 +35,10 @@ The following table shows the target hardware for the application projects.
 
 | Project Name| Board|
 |:---------|:---------:|
-| pic32cm_jh00_curiosity_pro | [PIC32CM JH00 Curiosity Pro Evaluation Kit]()
+| pic32cm_jh00_curiosity_pro | [PIC32CM JH01 Curiosity Pro Evaluation Kit]()
 |||
 
-### Setting up [PIC32CM JH00 Curiosity Pro Evaluation Kit]()
+### Setting up [PIC32CM JH01 Curiosity Pro Evaluation Kit]()
 
 - Connect the Debug USB port on the board to the computer using a micro USB cable
 
@@ -51,5 +51,5 @@ Following table provides the LED name:
 
 | Board      | LED Name |
 | ---------- | ---------------- |
-| [PIC32CM JH00 Curiosity Pro Evaluation Kit]() | LED0 |
+| [PIC32CM JH01 Curiosity Pro Evaluation Kit]() | LED0 |
 |||

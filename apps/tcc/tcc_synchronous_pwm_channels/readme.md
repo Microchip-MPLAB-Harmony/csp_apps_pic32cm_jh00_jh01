@@ -26,7 +26,7 @@ To build the application, refer to the following table and open the project usin
 
 | Project Name      | Description                                    |
 | ----------------- | ---------------------------------------------- |
-| pic32cm_jh00_curiosity_pro.X  | MPLABX project for [PIC32CM JH00 Curiosity Pro Evaluation Kit]() |
+| pic32cm_jh01_curiosity_pro.X  | MPLABX project for [PIC32CM JH01 Curiosity Pro Evaluation Kit]() |
 |||
 
 ## Setting up the hardware
@@ -35,10 +35,10 @@ The following table shows the target hardware for the application projects.
 
 | Project Name| Board|
 |:---------|:---------:|
-| pic32cm_jh00_curiosity_pro.X | [PIC32CM JH00 Curiosity Pro Evaluation Kit]()
+| pic32cm_jh01_curiosity_pro.X | [PIC32CM JH01 Curiosity Pro Evaluation Kit]()
 |||
 
-### Setting up [PIC32CM JH00 Curiosity Pro Evaluation Kit]()
+### Setting up [PIC32CM JH01 Curiosity Pro Evaluation Kit]()
 
 - Connect the Debug USB port on the board to the computer using a micro USB cable
 
@@ -49,7 +49,7 @@ The following table shows the target hardware for the application projects.
 3. Observe the dead time between the high side and the low side
 4. Observe the pwm frequency to be 10 KHz
 
-[PIC32CM JH00 Curiosity Pro Evaluation Kit]() pin details:
+[PIC32CM JH01 Curiosity Pro Evaluation Kit]() pin details:
 
 |Signal Name| Pad   | Pin |
 |-----------|-------|-----|
