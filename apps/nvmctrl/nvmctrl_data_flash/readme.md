@@ -1,6 +1,6 @@
 ---
 parent: Harmony 3 peripheral library application examples for PIC32CM JH01 family
-title: NVMCTRL data flash 
+title: NVMCTRL data flash
 has_children: false
 has_toc: false
 ---
@@ -63,3 +63,5 @@ The following table shows the target hardware for the application projects.
 5. Observe output message in console as follows:
 
     ![output](images/output_nvmctrl_data_flash.png)
+
+    NOTE: Value of Flag incremented while erase is happening from data flash area may vary
