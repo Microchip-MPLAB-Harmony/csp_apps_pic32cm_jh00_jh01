@@ -85,8 +85,8 @@
           <Security dnOrder="2">NON_SECURE</Security>
           <LogicalPath dnOrder="3">config/pic32cm_jh01_curiosity_pro/peripheral/nvic/</LogicalPath>
           <PhysicalPath dnOrder="4">/peripheral/nvic/</PhysicalPath>
-          <GeneratedChecksum dnOrder="5">088A614EAD59D080289A6B91B70AE897</GeneratedChecksum>
-          <UserChecksum dnOrder="6">088A614EAD59D080289A6B91B70AE897</UserChecksum>
+          <GeneratedChecksum dnOrder="5">C85733AE0F4FF7CAA64AB30F9C21940A</GeneratedChecksum>
+          <UserChecksum dnOrder="6">C85733AE0F4FF7CAA64AB30F9C21940A</UserChecksum>
         </File>
         <File dnOrder="9">
           <Type dnOrder="0">SOURCE</Type>
@@ -121,8 +121,8 @@
           <Security dnOrder="2">NON_SECURE</Security>
           <LogicalPath dnOrder="3">config/pic32cm_jh01_curiosity_pro/peripheral/sercom/usart/</LogicalPath>
           <PhysicalPath dnOrder="4">/peripheral/sercom/usart/</PhysicalPath>
-          <GeneratedChecksum dnOrder="5">F1E62FAFD2467832A87E870E2D0F6CB4</GeneratedChecksum>
-          <UserChecksum dnOrder="6">F1E62FAFD2467832A87E870E2D0F6CB4</UserChecksum>
+          <GeneratedChecksum dnOrder="5">D9068F6C5888E113723C77B68CB00455</GeneratedChecksum>
+          <UserChecksum dnOrder="6">D9068F6C5888E113723C77B68CB00455</UserChecksum>
         </File>
         <File dnOrder="13">
           <Type dnOrder="0">SOURCE</Type>
@@ -664,6 +664,15 @@
           <GeneratedChecksum dnOrder="5">FDE9FA19CE12AA90B43F2A67877ECE45</GeneratedChecksum>
           <UserChecksum dnOrder="6">FDE9FA19CE12AA90B43F2A67877ECE45</UserChecksum>
         </File>
+        <File dnOrder="73">
+          <Type dnOrder="0">LINKER</Type>
+          <Name dnOrder="1">PIC32CM5164JH00100.ld</Name>
+          <Security dnOrder="2">NON_SECURE</Security>
+          <LogicalPath dnOrder="3">config/pic32cm_jh01_curiosity_pro/</LogicalPath>
+          <PhysicalPath dnOrder="4">/</PhysicalPath>
+          <GeneratedChecksum dnOrder="5">9383EB7495EADA931261DE617CB673DD</GeneratedChecksum>
+          <UserChecksum dnOrder="6">9383EB7495EADA931261DE617CB673DD</UserChecksum>
+        </File>
       </Files>
       <Settings dnOrder="1">
         <Setting append="true" category="C32" delimiter=";" dnOrder="0" key="extra-include-directories" security="NON_SECURE" value="../src;../src/config/pic32cm_jh01_curiosity_pro;../src/packs/PIC32CM5164JH00100_DFP;../src/packs/CMSIS/CMSIS/Core/Include;../src/packs/CMSIS/"/>
@@ -674,12 +683,12 @@
       </Settings>
     </Manifest>
     <Settings dnOrder="5">
-      <Setting dnOrder="0" key="CMSISPath" value=".\dev_packs\arm\CMSIS\5.6.0"/>
-      <Setting dnOrder="1" key="DFPPath" value=".\dev_packs\Microchip\PIC32CM-JH_DFP\1.0.31\PIC32CM-JH00\atdf\PIC32CM5164JH00100.atdf"/>
+      <Setting dnOrder="0" key="CMSISPath" value=".\dev_packs\arm\CMSIS\5.7.0"/>
+      <Setting dnOrder="1" key="DFPPath" value=".\dev_packs\Microchip\PIC32CM-JH_DFP\1.0.59\PIC32CM-JH00\atdf\PIC32CM5164JH00100.atdf"/>
       <Setting dnOrder="2" key="FORCE_OPTIMIZATION" value="false"/>
       <Setting dnOrder="3" key="GENERATE_BACKUP" value="true"/>
-      <Setting dnOrder="4" key="MERGE_STRATEGY" value="ALL"/>
-      <Setting dnOrder="5" key="PackageFilter" value="bsp;core;csp;usb;"/>
+      <Setting dnOrder="4" key="MERGE_STRATEGY" value="USER_ALL"/>
+      <Setting dnOrder="5" key="PackageFilter" value="bootloader;bootloader_apps_ethernet;bootloader_apps_i2c;bootloader_apps_sdcard;bootloader_apps_uart;bootloader_apps_usb;bsp;core;core_apps_pic32cm_le00_ls00;core_apps_pic32cm_mc00;core_apps_pic32mx;core_apps_pic32mz_da;core_apps_pic32mz_w1;core_apps_sam_c20_c21;core_apps_sam_d20;core_apps_sam_d21_da1;core_apps_sam_d5x_e5x;core_apps_sam_e70_s70_v70_v71;core_apps_sam_l10_l11;core_apps_sam_l21;core_apps_sam_l22;crypto;cryptoauthlib;cryptoauthlib_apps;csp;csp_apps_pic32cm_jh00_jh01;csp_apps_pic32cm_le_ls;csp_apps_pic32cm_mc00;csp_apps_pic32mk;csp_apps_pic32mx;csp_apps_pic32mz_w1;csp_apps_sam_c20_c21;csp_apps_sam_d20;csp_apps_sam_d21_da1;csp_apps_sam_d5x_e5x;csp_apps_sam_e70_s70_v70_v71;csp_apps_sam_l10_l11;csp_apps_sam_l21;csp_apps_sam_l22;gfx;gfx_apps;micrium_ucos3;net;touch;usb;"/>
       <Setting dnOrder="6" key="TRUSTZONE" value="false"/>
     </Settings>
   </Configurator>
