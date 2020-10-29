@@ -99,6 +99,12 @@ typedef enum
     /* Instance Id for Peripheral ADC1 */
     PAC_PERIPHERAL_ADC1 = ID_ADC1,
 
+    /* Instance Id for Peripheral CAN0 */
+    PAC_PERIPHERAL_CAN0 = ID_CAN0,
+
+    /* Instance Id for Peripheral CAN1 */
+    PAC_PERIPHERAL_CAN1 = ID_CAN1,
+
     /* Instance Id for Peripheral CCL */
     PAC_PERIPHERAL_CCL = ID_CCL,
 

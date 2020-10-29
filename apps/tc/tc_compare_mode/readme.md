@@ -1,6 +1,6 @@
 ---
 parent: Harmony 3 peripheral library application examples for PIC32CM JH01 family
-title: TC compare mode 
+title: TC compare mode
 has_children: false
 has_toc: false
 ---
@@ -58,7 +58,7 @@ The following table shows the target hardware for the application projects.
 
 | Timer Channel   | Pin      | Observable characteristic of the waveform
 | ----------------| ---------| -----------------------------------------|
-| TC0_WO1 | PB09 (Pin 3 of EXT1)  | Active low ouptut with 75 Hz frequency |
+| TC0_WO1 | PB09 (Pin 4 of EXT3)  | Active low ouptut with 75 Hz frequency |
 | TC2_WO1 | PB03 (Pin 15 of EXT2)  | Active high output with 75 Hz frequency |
 | TC3_WO0 | PB00 (Pin 16 of EXT2)  | Toggle output with 37.5 Hz frequency |
 ||||

@@ -1,6 +1,6 @@
 ---
 parent: Harmony 3 peripheral library application examples for PIC32CM JH01 family
-title: ADC Sample 
+title: ADC Sample
 has_children: false
 has_toc: false
 ---
@@ -46,9 +46,9 @@ The following table shows the target hardware for the application projects.
 ### Setting up [PIC32CM JH01 Curiosity Pro Evaluation Kit]()
 
 - Analog input (AIN10) is fed from the DAC output
-  - Analog input "AIN10" is mapped to Port Pin "PA10" that is routed to "Pin 5 of the EXT1 header"
+  - Analog input "AIN10" is mapped to Port Pin "PA10" that is routed to "A4 of J803"
   - DAC output "DAC" is mapped to Port Pin "PA02" that is routed to "Pin 1 of the DAC-OUT header"
-  - Use a jumper wire to Connect "Pin 5 of the EXT1 header" to "Pin 1 of the DAC-OUT header"
+  - Use a jumper wire to Connect "A4 of J803" to "Pin 1 of the DAC-OUT header"
 - Connect the Debug USB port on the board to the computer using a micro USB cable
 
 ## Running the Application

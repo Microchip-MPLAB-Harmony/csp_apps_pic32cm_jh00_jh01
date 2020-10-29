@@ -205,6 +205,21 @@ uint16_t ADC0_ConversionResultGet( void )
     return (uint16_t)ADC0_REGS->ADC_RESULT;
 }
 
+void ADC0_InterruptsClear(ADC_STATUS interruptMask)
+{
+    ADC0_REGS->ADC_INTFLAG = interruptMask;
+}
+
+void ADC0_InterruptsEnable(ADC_STATUS interruptMask)
+{
+    ADC0_REGS->ADC_INTENSET = interruptMask;
+}
+
+void ADC0_InterruptsDisable(ADC_STATUS interruptMask)
+{
+    ADC0_REGS->ADC_INTENCLR = interruptMask;
+}
+
 /* Register callback function */
 void ADC0_CallbackRegister( ADC_CALLBACK callback, uintptr_t context )
 {

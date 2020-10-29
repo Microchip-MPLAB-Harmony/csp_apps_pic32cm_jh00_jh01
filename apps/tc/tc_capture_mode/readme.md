@@ -1,6 +1,6 @@
 ---
 parent: Harmony 3 peripheral library application examples for PIC32CM JH01 family
-title: TC capture mode 
+title: TC capture mode
 has_children: false
 has_toc: false
 ---
@@ -44,7 +44,7 @@ The following table shows the target hardware for the application projects.
   - TC0 output is routed using EIC and EVSYS to TC1 input event line
 - TC1 is configured in capture mode
   - Capture trigger is provided by input event line
-- Use a jumper wire to connect "Pin 3 of EXT1 (TC0_W01)" to "Pin 4 of EXT1 (EIC_EXTINT8)"
+- Use a jumper wire to connect "Pin 4 of EXT3 (TC0_W01)" to "Pin 4 of EXT1 (EIC_EXTINT8)"
 - Connect the Debug USB port on the board to the computer using a micro USB cable
 
 ## Running the Application

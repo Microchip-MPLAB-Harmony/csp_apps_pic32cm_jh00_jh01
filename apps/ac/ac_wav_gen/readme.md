@@ -1,6 +1,6 @@
 ---
 parent: Harmony 3 peripheral library application examples for PIC32CM JH01 family
-title: AC PWM generation 
+title: AC PWM generation
 has_children: false
 has_toc: false
 ---
@@ -40,8 +40,8 @@ The following table shows the target hardware for the application projects.
 
 ### Setting up [PIC32CM JH01 Curiosity Pro Evaluation Kit]()
 
-- Use a jumper wire to connect pin PB06 "Pin 4 of the EXT3 connector" and PA02 "Pin DAC_VOUT on the DAC Header"
-- Use the Logic Analyzer/Oscilloscope and probe PB12 pin (Pin 7 of the EXT2 header) to observe the PWM output
+- Use a jumper wire to connect pin PB06 "Pin 3 of the EXT3 connector" and PA02 "Pin DAC_VOUT on the DAC Header"
+- Use the Logic Analyzer/Oscilloscope and probe PB30 pin (Pin 7 of the EXT2 header) to observe the PWM output
 - Connect the Debug USB port on the board to the computer using a micro USB cable
 
 ## Running the Application
@@ -57,5 +57,5 @@ Refer to the following table for pwm output and switch details:
 
 | Board | PWM output pin | Switch|
 |------|----------------| ------ |
-| [PIC32CM JH01 Curiosity Pro Evaluation Kit]() | PB12 pin (Pin 7 of the EXT2 header) | SW0 ||
+| [PIC32CM JH01 Curiosity Pro Evaluation Kit]() | PB30 pin (Pin 7 of the EXT2 header) | SW0 ||
 |||

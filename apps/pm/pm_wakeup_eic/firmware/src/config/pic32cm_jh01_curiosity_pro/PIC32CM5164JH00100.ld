@@ -1,5 +1,5 @@
 /*--------------------------------------------------------------------------
- * MPLAB XC32 Compiler -  PIC32CM5164JH00100 linker script
+ * MPLAB XC32 Compiler -  PIC32CM5164JH01100 linker script
  * 
  * Copyright (c) 2020, Microchip Technology Inc. and its subsidiaries ("Microchip")
  * All rights reserved.

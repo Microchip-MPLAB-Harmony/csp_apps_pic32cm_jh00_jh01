@@ -40,9 +40,9 @@ The following table shows the target hardware for the application projects.
 
 ### Setting up [PIC32CM JH01 Curiosity Pro Evaluation Kit](https://www.microchip.com/developmenttools/ProductDetails/)
 
-- Use jumper from PA19 (EXT1 pin 18) to PA10 (EXT1 pin 5). This routes SCK signal to CCL_IN5
+- Use jumper from PA19 (EXT1 pin 18) to PA10 (A4 of J803). This routes SCK signal to CCL_IN5
 - Use jumper from PA18 (EXT1 pin 16) to PC27 (EXT1 pin 17). This routes MOSI signal to CCL_IN4
-- PA11 (EXT1 pin 6) has CCL output (CCL_OUT1)
+- PA11 (EXT1 pin 3) has CCL output (CCL_OUT1)
 - Connect the Debug USB port on the board to the computer using a micro USB cable
 
 ## Running the Application
@@ -54,7 +54,7 @@ The following table shows the target hardware for the application projects.
 
     |Board| MOSI pin | SCK pin  | CCL_OUT pin |
     |-----|----------|----------|-------------|
-    | [PIC32CM JH01 Curiosity Pro Evaluation Kit](https://www.microchip.com/developmenttools/ProductDetails/) | PA18 (EXT1 pin 16) | PA19 (EXT1 pin 18) | PA11 (EXT1 pin 6) |
+    | [PIC32CM JH01 Curiosity Pro Evaluation Kit](https://www.microchip.com/developmenttools/ProductDetails/) | PA18 (EXT1 pin 16) | PA19 (EXT1 pin 18) | PA11 (EXT1 pin 3) |
     ||||
 
 5. Build and Program the application using its IDE

@@ -1,6 +1,6 @@
 ---
 parent: Harmony 3 peripheral library application examples for PIC32CM JH01 family
-title: AC Sleepwalking 
+title: AC Sleepwalking
 has_children: false
 has_toc: false
 ---
@@ -40,7 +40,7 @@ The following table shows the target hardware for the application projects.
 
 ### Setting up [PIC32CM JH01 Curiosity Pro Evaluation Kit]()
 
-- Connect a voltage below VDD to pin 4 of the EXT3 connector
+- Connect a voltage below VDD to pin 3 of the EXT3 connector
 - Connect the Debug USB port on the board to the computer using a micro USB cable
 
 ## Running the Application
@@ -64,5 +64,5 @@ Below table shows the AC input pin and LED name for the board
 
 | Board| AC input pin | LED name|
 |------|----------|---------|
-| [PIC32CM JH01 Curiosity Pro Evaluation Kit]() | pin 4 of the EXT3 connector | LED0 |
+| [PIC32CM JH01 Curiosity Pro Evaluation Kit]() | pin 3 of the EXT3 connector | LED0 |
 |||

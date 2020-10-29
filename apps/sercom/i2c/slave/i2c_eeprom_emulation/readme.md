@@ -1,6 +1,6 @@
 ---
 parent: Harmony 3 peripheral library application examples for PIC32CM JH01 family
-title: SERCOM I2C EEPROM emulation (I2C slave) 
+title: SERCOM I2C EEPROM emulation (I2C slave)
 has_children: false
 has_toc: false
 ---
@@ -55,8 +55,8 @@ Hardware setup requires two boards, one acting as the I2C Master and the other a
 
 ### Setting up [PIC32CM JH01 Curiosity Pro Evaluation Kit](https://www.microchip.com/developmenttools/ProductDetails/)
 
-- On EXT1 header, connect I2C SDA line on Pin 11 (PA12) and I2C SCL line on Pin 12 (PA13) with the corresponding SDA and SCL lines of the I2C master
-- Connect a ground wire from Pin 2 of EXT1 to the ground of the I2C master
+- On EXT3 header, connect I2C SDA line on Pin 11 (PA16) and I2C SCL line on Pin 12 (PA17) with the corresponding SDA and SCL lines of the I2C master
+- Connect a ground wire from slave to the ground of the I2C master
 - Connect the Debug USB port on the board to the computer using a micro USB cable
 
 ## Running the Application

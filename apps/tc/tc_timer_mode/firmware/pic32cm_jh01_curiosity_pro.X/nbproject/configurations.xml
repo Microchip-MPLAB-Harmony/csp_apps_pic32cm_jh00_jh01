@@ -1,136 +1,160 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <configurationDescriptor version="65">
-  <logicalFolder displayName="root" name="root" projectFiles="true">
-    <logicalFolder displayName="Header Files" name="HeaderFiles" projectFiles="true">
-      <logicalFolder displayName="config" name="f1" projectFiles="true">
-        <logicalFolder displayName="pic32cm_jh01_curiosity_pro" name="f1" projectFiles="true">
-          <logicalFolder displayName="peripheral" name="f1" projectFiles="true">
-            <logicalFolder displayName="nvmctrl" name="f1" projectFiles="true">
-              <itemPath>../src/config/pic32cm_jh01_curiosity_pro/peripheral/nvmctrl/plib_nvmctrl.h</itemPath>
+  <logicalFolder name="root" displayName="root" projectFiles="true">
+    <logicalFolder name="HeaderFiles"
+                   displayName="Header Files"
+                   projectFiles="true">
+      <logicalFolder name="f1" displayName="config" projectFiles="true">
+        <logicalFolder name="f1"
+                       displayName="pic32cm_jh01_curiosity_pro"
+                       projectFiles="true">
+          <logicalFolder name="f1" displayName="peripheral" projectFiles="true">
+            <logicalFolder name="f4" displayName="clock" projectFiles="true">
+              <itemPath>..\src\config\pic32cm_jh01_curiosity_pro\peripheral\clock\plib_clock.h</itemPath>
             </logicalFolder>
-            <logicalFolder displayName="evsys" name="f2" projectFiles="true">
-              <itemPath>../src/config/pic32cm_jh01_curiosity_pro/peripheral/evsys/plib_evsys.h</itemPath>
+            <logicalFolder name="f2" displayName="evsys" projectFiles="true">
+              <itemPath>..\src\config\pic32cm_jh01_curiosity_pro\peripheral\evsys\plib_evsys.h</itemPath>
             </logicalFolder>
-            <logicalFolder displayName="port" name="f3" projectFiles="true">
-              <itemPath>../src/config/pic32cm_jh01_curiosity_pro/peripheral/port/plib_port.h</itemPath>
+            <logicalFolder name="f5" displayName="nvic" projectFiles="true">
+              <itemPath>..\src\config\pic32cm_jh01_curiosity_pro\peripheral\nvic\plib_nvic.h</itemPath>
             </logicalFolder>
-            <logicalFolder displayName="clock" name="f4" projectFiles="true">
-              <itemPath>../src/config/pic32cm_jh01_curiosity_pro/peripheral/clock/plib_clock.h</itemPath>
+            <logicalFolder name="f1" displayName="nvmctrl" projectFiles="true">
+              <itemPath>..\src\config\pic32cm_jh01_curiosity_pro\peripheral\nvmctrl\plib_nvmctrl.h</itemPath>
             </logicalFolder>
-            <logicalFolder displayName="nvic" name="f5" projectFiles="true">
-              <itemPath>../src/config/pic32cm_jh01_curiosity_pro/peripheral/nvic/plib_nvic.h</itemPath>
+            <logicalFolder name="f3" displayName="port" projectFiles="true">
+              <itemPath>..\src\config\pic32cm_jh01_curiosity_pro\peripheral\port\plib_port.h</itemPath>
             </logicalFolder>
-            <logicalFolder displayName="tc" name="f6" projectFiles="true">
-              <itemPath>../src/config/pic32cm_jh01_curiosity_pro/peripheral/tc/plib_tc_common.h</itemPath>
-              <itemPath>../src/config/pic32cm_jh01_curiosity_pro/peripheral/tc/plib_tc0.h</itemPath>
+            <logicalFolder name="f6" displayName="tc" projectFiles="true">
+              <itemPath>..\src\config\pic32cm_jh01_curiosity_pro\peripheral\tc\plib_tc_common.h</itemPath>
+              <itemPath>..\src\config\pic32cm_jh01_curiosity_pro\peripheral\tc\plib_tc0.h</itemPath>
             </logicalFolder>
           </logicalFolder>
-          <itemPath>../src/config/pic32cm_jh01_curiosity_pro/device_cache.h</itemPath>
-          <itemPath>../src/config/pic32cm_jh01_curiosity_pro/toolchain_specifics.h</itemPath>
-          <itemPath>../src/config/pic32cm_jh01_curiosity_pro/definitions.h</itemPath>
-          <itemPath>../src/config/pic32cm_jh01_curiosity_pro/device.h</itemPath>
+          <itemPath>..\src\config\pic32cm_jh01_curiosity_pro\device_cache.h</itemPath>
+          <itemPath>..\src\config\pic32cm_jh01_curiosity_pro\toolchain_specifics.h</itemPath>
+          <itemPath>..\src\config\pic32cm_jh01_curiosity_pro\definitions.h</itemPath>
+          <itemPath>..\src\config\pic32cm_jh01_curiosity_pro\device.h</itemPath>
         </logicalFolder>
       </logicalFolder>
-      <logicalFolder displayName="packs" name="f2" projectFiles="true">
-        <logicalFolder displayName="PIC32CM5164JH00100_DFP" name="f1" projectFiles="true">
-          <logicalFolder displayName="component" name="f1" projectFiles="true">
-            <itemPath>../src/packs/PIC32CM5164JH00100_DFP/component/ac.h</itemPath>
-            <itemPath>../src/packs/PIC32CM5164JH00100_DFP/component/adc.h</itemPath>
-            <itemPath>../src/packs/PIC32CM5164JH00100_DFP/component/ccl.h</itemPath>
-            <itemPath>../src/packs/PIC32CM5164JH00100_DFP/component/dac.h</itemPath>
-            <itemPath>../src/packs/PIC32CM5164JH00100_DFP/component/divas.h</itemPath>
-            <itemPath>../src/packs/PIC32CM5164JH00100_DFP/component/dmac.h</itemPath>
-            <itemPath>../src/packs/PIC32CM5164JH00100_DFP/component/dsu.h</itemPath>
-            <itemPath>../src/packs/PIC32CM5164JH00100_DFP/component/eic.h</itemPath>
-            <itemPath>../src/packs/PIC32CM5164JH00100_DFP/component/evsys.h</itemPath>
-            <itemPath>../src/packs/PIC32CM5164JH00100_DFP/component/freqm.h</itemPath>
-            <itemPath>../src/packs/PIC32CM5164JH00100_DFP/component/gclk.h</itemPath>
-            <itemPath>../src/packs/PIC32CM5164JH00100_DFP/component/icm.h</itemPath>
-            <itemPath>../src/packs/PIC32CM5164JH00100_DFP/component/mclk.h</itemPath>
-            <itemPath>../src/packs/PIC32CM5164JH00100_DFP/component/mcramc.h</itemPath>
-            <itemPath>../src/packs/PIC32CM5164JH00100_DFP/component/mtb.h</itemPath>
-            <itemPath>../src/packs/PIC32CM5164JH00100_DFP/component/nvmctrl.h</itemPath>
-            <itemPath>../src/packs/PIC32CM5164JH00100_DFP/component/osc32kctrl.h</itemPath>
-            <itemPath>../src/packs/PIC32CM5164JH00100_DFP/component/oscctrl.h</itemPath>
-            <itemPath>../src/packs/PIC32CM5164JH00100_DFP/component/pac.h</itemPath>
-            <itemPath>../src/packs/PIC32CM5164JH00100_DFP/component/pdec.h</itemPath>
-            <itemPath>../src/packs/PIC32CM5164JH00100_DFP/component/pm.h</itemPath>
-            <itemPath>../src/packs/PIC32CM5164JH00100_DFP/component/port.h</itemPath>
-            <itemPath>../src/packs/PIC32CM5164JH00100_DFP/component/ptc.h</itemPath>
-            <itemPath>../src/packs/PIC32CM5164JH00100_DFP/component/rstc.h</itemPath>
-            <itemPath>../src/packs/PIC32CM5164JH00100_DFP/component/rtc.h</itemPath>
-            <itemPath>../src/packs/PIC32CM5164JH00100_DFP/component/sercom.h</itemPath>
-            <itemPath>../src/packs/PIC32CM5164JH00100_DFP/component/smbist.h</itemPath>
-            <itemPath>../src/packs/PIC32CM5164JH00100_DFP/component/supc.h</itemPath>
-            <itemPath>../src/packs/PIC32CM5164JH00100_DFP/component/tc.h</itemPath>
-            <itemPath>../src/packs/PIC32CM5164JH00100_DFP/component/tcc.h</itemPath>
-            <itemPath>../src/packs/PIC32CM5164JH00100_DFP/component/wdt.h</itemPath>
-          </logicalFolder>
-          <logicalFolder displayName="pio" name="f2" projectFiles="true">
-            <itemPath>../src/packs/PIC32CM5164JH00100_DFP/pio/pic32cm5164jh00100.h</itemPath>
-          </logicalFolder>
-          <itemPath>../src/packs/PIC32CM5164JH00100_DFP/pic32cm5164jh00100.h</itemPath>
-        </logicalFolder>
-        <logicalFolder displayName="CMSIS" name="f2" projectFiles="true">
-          <logicalFolder displayName="CMSIS" name="f1" projectFiles="true">
-            <logicalFolder displayName="Core" name="f1" projectFiles="true">
-              <logicalFolder displayName="Include" name="f1" projectFiles="true">
-                <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/cmsis_version.h</itemPath>
-                <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/cmsis_compiler.h</itemPath>
-                <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/cmsis_iccarm.h</itemPath>
-                <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/cmsis_gcc.h</itemPath>
-                <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/cmsis_armcc.h</itemPath>
-                <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/cmsis_armclang.h</itemPath>
-                <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/cmsis_armclang_ltm.h</itemPath>
-                <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/core_cm0plus.h</itemPath>
-                <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/mpu_armv7.h</itemPath>
-                <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/cachel1_armv7.h</itemPath>
+      <logicalFolder name="f2" displayName="packs" projectFiles="true">
+        <logicalFolder name="f2" displayName="CMSIS" projectFiles="true">
+          <logicalFolder name="f1" displayName="CMSIS" projectFiles="true">
+            <logicalFolder name="f1" displayName="Core" projectFiles="true">
+              <logicalFolder name="f1" displayName="Include" projectFiles="true">
+                <itemPath>..\src\packs\CMSIS\CMSIS\Core\Include\cmsis_version.h</itemPath>
+                <itemPath>..\src\packs\CMSIS\CMSIS\Core\Include\cmsis_compiler.h</itemPath>
+                <itemPath>..\src\packs\CMSIS\CMSIS\Core\Include\cmsis_iccarm.h</itemPath>
+                <itemPath>..\src\packs\CMSIS\CMSIS\Core\Include\cmsis_gcc.h</itemPath>
+                <itemPath>..\src\packs\CMSIS\CMSIS\Core\Include\cmsis_armcc.h</itemPath>
+                <itemPath>..\src\packs\CMSIS\CMSIS\Core\Include\cmsis_armclang.h</itemPath>
+                <itemPath>..\src\packs\CMSIS\CMSIS\Core\Include\cmsis_armclang_ltm.h</itemPath>
+                <itemPath>..\src\packs\CMSIS\CMSIS\Core\Include\core_cm0plus.h</itemPath>
+                <itemPath>..\src\packs\CMSIS\CMSIS\Core\Include\mpu_armv7.h</itemPath>
+                <itemPath>..\src\packs\CMSIS\CMSIS\Core\Include\cachel1_armv7.h</itemPath>
               </logicalFolder>
             </logicalFolder>
           </logicalFolder>
         </logicalFolder>
-      </logicalFolder>
-    </logicalFolder>
-    <logicalFolder displayName="Linker Files" name="LinkerScript" projectFiles="true"/>
-    <logicalFolder displayName="Source Files" name="SourceFiles" projectFiles="true">
-      <logicalFolder displayName="config" name="f1" projectFiles="true">
-        <logicalFolder displayName="pic32cm_jh01_curiosity_pro" name="f1" projectFiles="true">
-          <logicalFolder displayName="peripheral" name="f1" projectFiles="true">
-            <logicalFolder displayName="nvmctrl" name="f1" projectFiles="true">
-              <itemPath>../src/config/pic32cm_jh01_curiosity_pro/peripheral/nvmctrl/plib_nvmctrl.c</itemPath>
-            </logicalFolder>
-            <logicalFolder displayName="evsys" name="f2" projectFiles="true">
-              <itemPath>../src/config/pic32cm_jh01_curiosity_pro/peripheral/evsys/plib_evsys.c</itemPath>
-            </logicalFolder>
-            <logicalFolder displayName="port" name="f3" projectFiles="true">
-              <itemPath>../src/config/pic32cm_jh01_curiosity_pro/peripheral/port/plib_port.c</itemPath>
-            </logicalFolder>
-            <logicalFolder displayName="clock" name="f4" projectFiles="true">
-              <itemPath>../src/config/pic32cm_jh01_curiosity_pro/peripheral/clock/plib_clock.c</itemPath>
-            </logicalFolder>
-            <logicalFolder displayName="nvic" name="f5" projectFiles="true">
-              <itemPath>../src/config/pic32cm_jh01_curiosity_pro/peripheral/nvic/plib_nvic.c</itemPath>
-            </logicalFolder>
-            <logicalFolder displayName="tc" name="f6" projectFiles="true">
-              <itemPath>../src/config/pic32cm_jh01_curiosity_pro/peripheral/tc/plib_tc0.c</itemPath>
-            </logicalFolder>
+        <logicalFolder name="f1"
+                       displayName="PIC32CM5164JH01100_DFP"
+                       projectFiles="true">
+          <logicalFolder name="f1" displayName="component" projectFiles="true">
+            <itemPath>..\src\packs\PIC32CM5164JH01100_DFP\component\ac.h</itemPath>
+            <itemPath>..\src\packs\PIC32CM5164JH01100_DFP\component\adc.h</itemPath>
+            <itemPath>..\src\packs\PIC32CM5164JH01100_DFP\component\ccl.h</itemPath>
+            <itemPath>..\src\packs\PIC32CM5164JH01100_DFP\component\dac.h</itemPath>
+            <itemPath>..\src\packs\PIC32CM5164JH01100_DFP\component\divas.h</itemPath>
+            <itemPath>..\src\packs\PIC32CM5164JH01100_DFP\component\dmac.h</itemPath>
+            <itemPath>..\src\packs\PIC32CM5164JH01100_DFP\component\dsu.h</itemPath>
+            <itemPath>..\src\packs\PIC32CM5164JH01100_DFP\component\eic.h</itemPath>
+            <itemPath>..\src\packs\PIC32CM5164JH01100_DFP\component\evsys.h</itemPath>
+            <itemPath>..\src\packs\PIC32CM5164JH01100_DFP\component\freqm.h</itemPath>
+            <itemPath>..\src\packs\PIC32CM5164JH01100_DFP\component\gclk.h</itemPath>
+            <itemPath>..\src\packs\PIC32CM5164JH01100_DFP\component\icm.h</itemPath>
+            <itemPath>..\src\packs\PIC32CM5164JH01100_DFP\component\mclk.h</itemPath>
+            <itemPath>..\src\packs\PIC32CM5164JH01100_DFP\component\mcramc.h</itemPath>
+            <itemPath>..\src\packs\PIC32CM5164JH01100_DFP\component\mtb.h</itemPath>
+            <itemPath>..\src\packs\PIC32CM5164JH01100_DFP\component\nvmctrl.h</itemPath>
+            <itemPath>..\src\packs\PIC32CM5164JH01100_DFP\component\osc32kctrl.h</itemPath>
+            <itemPath>..\src\packs\PIC32CM5164JH01100_DFP\component\oscctrl.h</itemPath>
+            <itemPath>..\src\packs\PIC32CM5164JH01100_DFP\component\pac.h</itemPath>
+            <itemPath>..\src\packs\PIC32CM5164JH01100_DFP\component\pdec.h</itemPath>
+            <itemPath>..\src\packs\PIC32CM5164JH01100_DFP\component\pm.h</itemPath>
+            <itemPath>..\src\packs\PIC32CM5164JH01100_DFP\component\port.h</itemPath>
+            <itemPath>..\src\packs\PIC32CM5164JH01100_DFP\component\ptc.h</itemPath>
+            <itemPath>..\src\packs\PIC32CM5164JH01100_DFP\component\rstc.h</itemPath>
+            <itemPath>..\src\packs\PIC32CM5164JH01100_DFP\component\rtc.h</itemPath>
+            <itemPath>..\src\packs\PIC32CM5164JH01100_DFP\component\sercom.h</itemPath>
+            <itemPath>..\src\packs\PIC32CM5164JH01100_DFP\component\smbist.h</itemPath>
+            <itemPath>..\src\packs\PIC32CM5164JH01100_DFP\component\supc.h</itemPath>
+            <itemPath>..\src\packs\PIC32CM5164JH01100_DFP\component\tc.h</itemPath>
+            <itemPath>..\src\packs\PIC32CM5164JH01100_DFP\component\tcc.h</itemPath>
+            <itemPath>..\src\packs\PIC32CM5164JH01100_DFP\component\wdt.h</itemPath>
+            <itemPath>..\src\packs\PIC32CM5164JH01100_DFP\component\can.h</itemPath>
           </logicalFolder>
-          <logicalFolder displayName="stdio" name="f2" projectFiles="true">
-            <itemPath>../src/config/pic32cm_jh01_curiosity_pro/stdio/xc32_monitor.c</itemPath>
+          <logicalFolder name="f2" displayName="pio" projectFiles="true">
+            <itemPath>..\src\packs\PIC32CM5164JH01100_DFP\pio\pic32cm5164jh01100.h</itemPath>
           </logicalFolder>
-          <itemPath>../src/config/pic32cm_jh01_curiosity_pro/initialization.c</itemPath>
-          <itemPath>../src/config/pic32cm_jh01_curiosity_pro/interrupts.c</itemPath>
-          <itemPath>../src/config/pic32cm_jh01_curiosity_pro/exceptions.c</itemPath>
-          <itemPath>../src/config/pic32cm_jh01_curiosity_pro/startup_xc32.c</itemPath>
-          <itemPath>../src/config/pic32cm_jh01_curiosity_pro/libc_syscalls.c</itemPath>
+          <itemPath>..\src\packs\PIC32CM5164JH01100_DFP\pic32cm5164jh01100.h</itemPath>
         </logicalFolder>
       </logicalFolder>
-      <itemPath>../src/main.c</itemPath>
     </logicalFolder>
-    <logicalFolder displayName="Important Files" name="ExternalFiles" projectFiles="true">
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="true">
       <itemPath>Makefile</itemPath>
-      <itemPath>../src/config/pic32cm_jh01_curiosity_pro/harmony.prj</itemPath>
-      <itemPath>../../../../../../mhc/../csp_apps_pic32cm_jh00_jh01/apps/tc/tc_timer_mode/firmware/src/config/pic32cm_jh01_curiosity_pro/pic32cm_jh01_curiosity_pro.xml</itemPath>
+      <itemPath>..\src\config\pic32cm_jh01_curiosity_pro\harmony.prj</itemPath>
+      <itemPath>..\..\..\..\..\..\csp_apps_pic32cm_jh00_jh01\apps\tc\tc_timer_mode\firmware\src\config\pic32cm_jh01_curiosity_pro\pic32cm_jh01_curiosity_pro.xml</itemPath>
+      <itemPath>..\src\config\pic32cm_jh01_curiosity_pro\harmony-manifest-success.yml</itemPath>
+    </logicalFolder>
+    <logicalFolder name="LinkerScript"
+                   displayName="Linker Files"
+                   projectFiles="true">
+      <logicalFolder name="f1" displayName="config" projectFiles="true">
+        <logicalFolder name="f1"
+                       displayName="pic32cm_jh01_curiosity_pro"
+                       projectFiles="true">
+          <itemPath>..\src\config\pic32cm_jh01_curiosity_pro\PIC32CM5164JH01100.ld</itemPath>
+        </logicalFolder>
+      </logicalFolder>
+    </logicalFolder>
+    <logicalFolder name="SourceFiles"
+                   displayName="Source Files"
+                   projectFiles="true">
+      <logicalFolder name="f1" displayName="config" projectFiles="true">
+        <logicalFolder name="f1"
+                       displayName="pic32cm_jh01_curiosity_pro"
+                       projectFiles="true">
+          <logicalFolder name="f1" displayName="peripheral" projectFiles="true">
+            <logicalFolder name="f4" displayName="clock" projectFiles="true">
+              <itemPath>..\src\config\pic32cm_jh01_curiosity_pro\peripheral\clock\plib_clock.c</itemPath>
+            </logicalFolder>
+            <logicalFolder name="f2" displayName="evsys" projectFiles="true">
+              <itemPath>..\src\config\pic32cm_jh01_curiosity_pro\peripheral\evsys\plib_evsys.c</itemPath>
+            </logicalFolder>
+            <logicalFolder name="f5" displayName="nvic" projectFiles="true">
+              <itemPath>..\src\config\pic32cm_jh01_curiosity_pro\peripheral\nvic\plib_nvic.c</itemPath>
+            </logicalFolder>
+            <logicalFolder name="f1" displayName="nvmctrl" projectFiles="true">
+              <itemPath>..\src\config\pic32cm_jh01_curiosity_pro\peripheral\nvmctrl\plib_nvmctrl.c</itemPath>
+            </logicalFolder>
+            <logicalFolder name="f3" displayName="port" projectFiles="true">
+              <itemPath>..\src\config\pic32cm_jh01_curiosity_pro\peripheral\port\plib_port.c</itemPath>
+            </logicalFolder>
+            <logicalFolder name="f6" displayName="tc" projectFiles="true">
+              <itemPath>..\src\config\pic32cm_jh01_curiosity_pro\peripheral\tc\plib_tc0.c</itemPath>
+            </logicalFolder>
+          </logicalFolder>
+          <logicalFolder name="f2" displayName="stdio" projectFiles="true">
+            <itemPath>..\src\config\pic32cm_jh01_curiosity_pro\stdio\xc32_monitor.c</itemPath>
+          </logicalFolder>
+          <itemPath>..\src\config\pic32cm_jh01_curiosity_pro\initialization.c</itemPath>
+          <itemPath>..\src\config\pic32cm_jh01_curiosity_pro\interrupts.c</itemPath>
+          <itemPath>..\src\config\pic32cm_jh01_curiosity_pro\exceptions.c</itemPath>
+          <itemPath>..\src\config\pic32cm_jh01_curiosity_pro\startup_xc32.c</itemPath>
+          <itemPath>..\src\config\pic32cm_jh01_curiosity_pro\libc_syscalls.c</itemPath>
+        </logicalFolder>
+      </logicalFolder>
+      <itemPath>..\src\main.c</itemPath>
     </logicalFolder>
   </logicalFolder>
   <sourceRootList>
@@ -141,16 +165,16 @@
     <conf name="pic32cm_jh01_curiosity_pro" type="2">
       <toolsSet>
         <developmentServer>localhost</developmentServer>
-        <targetDevice>PIC32CM5164JH00100</targetDevice>
-        <targetHeader/>
-        <targetPluginBoard/>
-        <platformTool>ICD4Tool</platformTool>
+        <targetDevice>PIC32CM5164JH01100</targetDevice>
+        <targetHeader></targetHeader>
+        <targetPluginBoard></targetPluginBoard>
+        <platformTool>EdbgTool</platformTool>
         <languageToolchain>XC32</languageToolchain>
         <languageToolchainVersion>2.41</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
-        <pack name="PIC32CM-JH_DFP" vendor="Microchip" version="1.0.52"/>
+        <pack name="PIC32CM-JH_DFP" vendor="Microchip" version="1.0.62"/>
       </packs>
       <ScriptingSettings>
       </ScriptingSettings>
@@ -164,16 +188,17 @@
         <loading>
           <useAlternateLoadableFile>false</useAlternateLoadableFile>
           <parseOnProdLoad>false</parseOnProdLoad>
-          <alternateLoadableFile/>
+          <alternateLoadableFile></alternateLoadableFile>
         </loading>
         <subordinates>
         </subordinates>
       </compileType>
       <makeCustomizationType>
         <makeCustomizationPreStepEnabled>false</makeCustomizationPreStepEnabled>
-        <makeCustomizationPreStep/>
+        <makeUseCleanTarget>false</makeUseCleanTarget>
+        <makeCustomizationPreStep></makeCustomizationPreStep>
         <makeCustomizationPostStepEnabled>false</makeCustomizationPostStepEnabled>
-        <makeCustomizationPostStep/>
+        <makeCustomizationPostStep></makeCustomizationPostStep>
         <makeCustomizationPutChecksumInUserID>false</makeCustomizationPutChecksumInUserID>
         <makeCustomizationEnableLongLines>false</makeCustomizationEnableLongLines>
         <makeCustomizationNormalizeHexFile>false</makeCustomizationNormalizeHexFile>
@@ -190,7 +215,8 @@
         <property key="memories.eeprom" value="true"/>
         <property key="memories.flashdata" value="true"/>
         <property key="memories.id" value="true"/>
-        <property key="memories.instruction.ram.ranges" value="${memories.instruction.ram.ranges}"/>
+        <property key="memories.instruction.ram.ranges"
+                  value="${memories.instruction.ram.ranges}"/>
         <property key="memories.programmemory" value="true"/>
         <property key="memories.programmemory.ranges" value="0x400000-0x5fffff"/>
         <property key="programoptions.eraseb4program" value="false"/>
@@ -209,7 +235,8 @@
         <property key="enable-symbols" value="true"/>
         <property key="enable-unroll-loops" value="false"/>
         <property key="exclude-floating-point" value="false"/>
-        <property key="extra-include-directories" value="../src;../src/config/pic32cm_jh01_curiosity_pro;../src/packs/PIC32CM5164JH00100_DFP;../src/packs/CMSIS/CMSIS/Core/Include;../src/packs/CMSIS/"/>
+        <property key="extra-include-directories"
+                  value="../src;../src/config/pic32cm_jh01_curiosity_pro;../src/packs/PIC32CM5164JH01100_DFP;../src/packs/CMSIS/CMSIS/Core/Include;../src/packs/CMSIS/"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>
@@ -304,7 +331,8 @@
         <property key="enable-unroll-loops" value="false"/>
         <property key="exceptions" value="true"/>
         <property key="exclude-floating-point" value="false"/>
-        <property key="extra-include-directories" value="../src;../src/config/pic32cm_jh01_curiosity_pro;../src/packs/PIC32CM5164JH00100_DFP;../src/packs/CMSIS/CMSIS/Core/Include;../src/packs/CMSIS/"/>
+        <property key="extra-include-directories"
+                  value="../src;../src/config/pic32cm_jh01_curiosity_pro;../src/packs/PIC32CM5164JH01100_DFP;../src/packs/CMSIS/CMSIS/Core/Include;../src/packs/CMSIS/"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>
@@ -342,8 +370,10 @@
         <property key="communication.interface" value="swd"/>
         <property key="communication.speed" value="2.000"/>
         <property key="debugoptions.useswbreakpoints" value="false"/>
-        <property key="firmware.path" value="Press to browse for a specific firmware version"/>
-        <property key="firmware.toolpack" value="Press to select which tool pack to use"/>
+        <property key="firmware.path"
+                  value="Press to browse for a specific firmware version"/>
+        <property key="firmware.toolpack"
+                  value="Press to select which tool pack to use"/>
         <property key="firmware.update.action" value="firmware.update.use.latest"/>
         <property key="lastid" value=""/>
         <property key="memories.aux" value="false"/>
@@ -355,13 +385,15 @@
         <property key="memories.exclude.configurationmemory" value="true"/>
         <property key="memories.flashdata" value="true"/>
         <property key="memories.id" value="true"/>
-        <property key="memories.instruction.ram.ranges" value="${memories.instruction.ram.ranges}"/>
+        <property key="memories.instruction.ram.ranges"
+                  value="${memories.instruction.ram.ranges}"/>
         <property key="memories.programmemory" value="true"/>
         <property key="memories.programmemory.ranges" value="0-7ffff"/>
         <property key="poweroptions.powerenable" value="false"/>
         <property key="programoptions.eraseb4program" value="true"/>
         <property key="programoptions.preservedataflash" value="false"/>
-        <property key="programoptions.preservedataflash.ranges" value="${memories.dataflash.default}"/>
+        <property key="programoptions.preservedataflash.ranges"
+                  value="${memories.dataflash.default}"/>
         <property key="programoptions.preserveeeprom" value="false"/>
         <property key="programoptions.preserveeeprom.ranges" value=""/>
         <property key="programoptions.preserveprogram.ranges" value=""/>
@@ -371,16 +403,21 @@
         <property key="script.log_level" value="0"/>
         <property key="script.reset_delay" value="0"/>
         <property key="script.show_output" value="false"/>
-        <property key="toolpack.updateoptions" value="toolpack.updateoptions.uselatestoolpack"/>
-        <property key="toolpack.updateoptions.packversion" value="Press to select which tool pack to use"/>
+        <property key="toolpack.updateoptions"
+                  value="toolpack.updateoptions.uselatestoolpack"/>
+        <property key="toolpack.updateoptions.packversion"
+                  value="Press to select which tool pack to use"/>
         <property key="voltagevalue" value=""/>
       </EdbgTool>
       <ICD4Tool>
         <property key="AutoSelectMemRanges" value="auto"/>
         <property key="SecureSegment.SegmentProgramming" value="FullChipProgramming"/>
-        <property key="ToolFirmwareFilePath" value="Press to browse for a specific firmware version"/>
-        <property key="ToolFirmwareOption.UpdateOptions" value="ToolFirmwareOption.UseLatest"/>
-        <property key="ToolFirmwareToolPack" value="Press to select which tool pack to use"/>
+        <property key="ToolFirmwareFilePath"
+                  value="Press to browse for a specific firmware version"/>
+        <property key="ToolFirmwareOption.UpdateOptions"
+                  value="ToolFirmwareOption.UseLatest"/>
+        <property key="ToolFirmwareToolPack"
+                  value="Press to select which tool pack to use"/>
         <property key="communication.interface.jtag" value="2wire"/>
         <property key="debugoptions.useswbreakpoints" value="false"/>
         <property key="hwtoolclock.frcindebug" value="false"/>
@@ -393,7 +430,8 @@
         <property key="memories.exclude.configurationmemory" value="true"/>
         <property key="memories.flashdata" value="true"/>
         <property key="memories.id" value="true"/>
-        <property key="memories.instruction.ram.ranges" value="${memories.instruction.ram.ranges}"/>
+        <property key="memories.instruction.ram.ranges"
+                  value="${memories.instruction.ram.ranges}"/>
         <property key="memories.programmemory" value="true"/>
         <property key="memories.programmemory.ranges" value="0-7ffff"/>
         <property key="poweroptions.powerenable" value="false"/>
@@ -407,7 +445,8 @@
         <property key="programoptions.pgmentry.voltage" value="low"/>
         <property key="programoptions.pgmspeed" value="Med"/>
         <property key="programoptions.preservedataflash" value="false"/>
-        <property key="programoptions.preservedataflash.ranges" value="${memories.dataflash.default}"/>
+        <property key="programoptions.preservedataflash.ranges"
+                  value="${memories.dataflash.default}"/>
         <property key="programoptions.preserveeeprom" value="false"/>
         <property key="programoptions.preserveeeprom.ranges" value=""/>
         <property key="programoptions.preserveprogram.ranges" value=""/>
@@ -416,8 +455,10 @@
         <property key="programoptions.programcalmem" value="false"/>
         <property key="programoptions.programuserotp" value="false"/>
         <property key="programoptions.testmodeentrymethod" value="VDDFirst"/>
-        <property key="toolpack.updateoptions" value="toolpack.updateoptions.uselatestoolpack"/>
-        <property key="toolpack.updateoptions.packversion" value="Press to select which tool pack to use"/>
+        <property key="toolpack.updateoptions"
+                  value="toolpack.updateoptions.uselatestoolpack"/>
+        <property key="toolpack.updateoptions.packversion"
+                  value="Press to select which tool pack to use"/>
         <property key="voltagevalue" value="5.0"/>
       </ICD4Tool>
       <PICkit3PlatformTool>
@@ -451,7 +492,8 @@
         <property key="TIMER3" value="true"/>
         <property key="TIMER4" value="true"/>
         <property key="TIMER5" value="true"/>
-        <property key="ToolFirmwareFilePath" value="Press to browse for a specific firmware version"/>
+        <property key="ToolFirmwareFilePath"
+                  value="Press to browse for a specific firmware version"/>
         <property key="ToolFirmwareOption.UseLatestFirmware" value="true"/>
         <property key="UART1" value="true"/>
         <property key="UART2" value="true"/>

@@ -1,6 +1,6 @@
 ---
 parent: Harmony 3 peripheral library application examples for PIC32CM JH01 family
-title: TCC PWM generation 
+title: TCC PWM generation
 has_children: false
 has_toc: false
 ---
@@ -53,11 +53,11 @@ The following table shows the target hardware for the application projects.
 
 |Signal Name| Pad   | Pin |
 |-----------|-------|-----|
-| ch0-PWMH  | PA08  | Pin 3 of EXT2 connector |
-| ch0-PWML  | PA22  | Pin 9 of EXT1 connector  |
-| ch1-PWMH  | PA09  | Pin 4 of EXT2 connector |
-| ch1-PWML  | PA23  | Pin 10 of EXT1 connector |
-| ch2-PWMH  | PA10  | Pin 5 of EXT1 connector |
+| ch0-PWMH  | PA08  | Pin A2 of J803 connector |
+| ch0-PWML  | PA22  | Pin 11 of EXT1 connector  |
+| ch1-PWMH  | PA09  | Pin A3 of J803 connector |
+| ch1-PWML  | PA23  | Pin 12 of EXT1 connector |
+| ch2-PWMH  | PA10  | Pin A4 of J803 connector |
 | ch2-PWML  | PA20  | Pin 5 of EXT2 connector |
 ||||
 

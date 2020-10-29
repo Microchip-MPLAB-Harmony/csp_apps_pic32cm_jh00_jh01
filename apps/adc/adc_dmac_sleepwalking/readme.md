@@ -1,6 +1,6 @@
 ---
 parent: Harmony 3 peripheral library application examples for PIC32CM JH01 family
-title: ADC DMA sleepwalking 
+title: ADC DMA sleepwalking
 has_children: false
 has_toc: false
 ---
@@ -40,7 +40,7 @@ The following table shows the target hardware for the application projects.
 
 ### Setting up [PIC32CM JH01 Curiosity Pro Evaluation Kit]()
 
-- Connect a voltage below the selected ADC reference voltage (VDDANA) to pin 5 (PA10 – ADC0_AIN10) of the EXT1 connector
+- Connect a voltage below the selected ADC reference voltage (VDDANA) to pin A4 of the J803 connector (PA10 – ADC0_AIN10)
 - Connect the Debug USB port on the board to the computer using a micro USB cable
 
 ## Running the Application
