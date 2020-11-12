@@ -1,0 +1,77 @@
+{
+	"metaDataVersion": "1.0.0",
+	"category": "com.microchip.ide.project",
+	"content": {
+		"metaDataVersion": "1.1.0",
+		"name": "com.microchip.mcu32.mplabx.project.csp_apps_pic32cm_jh00_jh01_tc_timer_mode",
+		"version": "3.0.1",
+		"displayName": "TC timer mode Example for PIC32CM JH Family",
+		"projectName": "tc_timer_mode_pic32cm_jh01_curiosity_pro",
+		"shortDescription": "This example shows how to use the TC module in timer mode to generate periodic interrupt.",
+		"ide": {
+			"name": "MPLABX",
+			"semverRange": ">=5.40.0"
+		},
+		"compiler": [
+			{
+				"name": "XC32",
+				"semverRange": ">=2.40.0"
+			}
+		],
+		"dfp": {
+			"name": "PIC32CM-JH_DFP",
+			"semverRange": "^1.0.52"
+		},
+		"configurator": {
+			"name": "MHC",
+			"semverRange": ">=3.5.1"
+		},
+		"device": {
+			"metaDataVersion": "1.0.0",
+			"category": "com.microchip.portal.contentRef",
+			"content": {
+				"metaDataVersion": "1.0.0",
+				"category": "com.microchip.device",
+				"name": "PIC32CM5164JH00100",
+				"versionRange": "*"
+			}
+		},
+		"author": "Microchip",
+		"subcategories": [
+			[
+				"Development Kit", "PIC32CM JH01 Curiosity Pro Evaluation Kit"
+			],
+			[
+				"Harmony", "Peripherals", "TC"
+			],
+			[
+				"Peripherals", "TC"
+			]
+		],
+		"peripherals": [
+			"TC"
+		],
+		"keywords": [
+			"MHC",
+			"Harmony",
+			"PIC32CM5164JH00100",
+			"PIC32CM JH Family",
+			"TC",
+			"TCC",
+			"TMR",
+			"Timer",
+			"Counter"
+		],
+		"additionalData": {
+			"longDescription": {
+				"metaDataVersion": "1.0.0",
+				"category": "com.microchip.portal.fileRef",
+				"content": {
+					"metaDataVersion": "1.0.0",
+					"fileName": "./../../readme.md",
+					"mimeType": "text/markdown"
+				}
+			}
+		}
+	}
+}
