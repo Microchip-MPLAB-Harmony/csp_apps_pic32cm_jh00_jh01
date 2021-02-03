@@ -181,7 +181,7 @@ void CAN1_Initialize(void)
     /* Receive Buffer / FIFO Element Size Configuration Register */
     CAN1_REGS->CAN_RXESC = 0UL  | CAN_RXESC_F0DS(7UL) | CAN_RXESC_F1DS(7UL) | CAN_RXESC_RBDS(7UL);
     /*lint -e{9048} PC lint incorrectly reports a missing 'U' Suffix */
-    CAN1_REGS->CAN_NDAT1 = CAN_NDAT1_Msk; 
+    CAN1_REGS->CAN_NDAT1 = CAN_NDAT1_Msk;
     /*lint -e{9048} PC lint incorrectly reports a missing 'U' Suffix */
     CAN1_REGS->CAN_NDAT2 = CAN_NDAT2_Msk;
 
@@ -260,7 +260,7 @@ bool CAN1_MessageTransmit(uint32_t id, uint8_t length, uint8_t* data, CAN_MODE m
             {
                 tfqpi = (uint8_t)((CAN1_REGS->CAN_TXFQS & CAN_TXFQS_TFQPI_Msk) >> CAN_TXFQS_TFQPI_Pos);
                 fifo = (can_txbe_registers_t *) ((uint8_t*)can1Obj.msgRAMConfig.txBuffersAddress + ((uint32_t)tfqpi * CAN1_TX_FIFO_BUFFER_ELEMENT_SIZE));
-                op_success = true;            
+                op_success = true;
             }
             break;
         default:
@@ -316,7 +316,7 @@ bool CAN1_MessageTransmit(uint32_t id, uint8_t length, uint8_t* data, CAN_MODE m
         }
 
         messageMarker++;
-        fifo->CAN_TXBE_1 |= (((uint32_t)(messageMarker) << CAN_TXBE_1_MM_Pos) & CAN_TXBE_1_MM_Msk);
+        fifo->CAN_TXBE_1 |= (((uint32_t)(messageMarker) << CAN_TXBE_1_MM_Pos) & CAN_TXBE_1_MM_Msk) | CAN_TXBE_1_EFC_Msk;
 
         CAN1_REGS->CAN_TXBTIE = 1UL << tfqpi;
 
@@ -823,6 +823,29 @@ bool CAN1_ExtendedFilterElementGet(uint8_t filterNumber, can_xidfe_registers_t *
     return true;
 }
 
+void CAN1_SleepModeEnter(void)
+{
+    CAN1_REGS->CAN_CCCR |=  CAN_CCCR_CSR_Msk;
+    while ((CAN1_REGS->CAN_CCCR & CAN_CCCR_CSA_Msk) != CAN_CCCR_CSA_Msk)
+    {
+        /* Wait for clock stop request to complete */
+    }
+}
+
+void CAN1_SleepModeExit(void)
+{
+    CAN1_REGS->CAN_CCCR &=  ~CAN_CCCR_CSR_Msk;
+    while ((CAN1_REGS->CAN_CCCR & CAN_CCCR_CSA_Msk) == CAN_CCCR_CSA_Msk)
+    {
+        /* Wait for no clock stop */
+    }
+    CAN1_REGS->CAN_CCCR &= ~CAN_CCCR_INIT_Msk;
+    while ((CAN1_REGS->CAN_CCCR & CAN_CCCR_INIT_Msk) == CAN_CCCR_INIT_Msk)
+    {
+        /* Wait for initialization complete */
+    }
+}
+
 // *****************************************************************************
 /* Function:
     void CAN1_TxCallbackRegister(CAN_CALLBACK callback, uintptr_t contextHandle)
@@ -936,7 +959,7 @@ void CAN1_InterruptHandler(void)
         CAN1_REGS->CAN_IR = CAN_IR_RF0N_Msk;
         CAN1_REGS->CAN_IE &= (~CAN_IE_RF0NE_Msk);
 
-        if ((CAN1_REGS->CAN_RXF0S & CAN_RXF0S_F0FL_Msk) != 0U) 
+        if ((CAN1_REGS->CAN_RXF0S & CAN_RXF0S_F0FL_Msk) != 0U)
         {
             /* Read data from the Rx FIFO0 */
             rxgi = (uint8_t)((CAN1_REGS->CAN_RXF0S & CAN_RXF0S_F0GI_Msk) >> CAN_RXF0S_F0GI_Pos);
@@ -1056,7 +1079,7 @@ void CAN1_InterruptHandler(void)
                 if ((CAN1_REGS->CAN_NDAT1 & (1UL << rxgi)) == (1UL << rxgi))
                 {
                     break;
-                }     
+                }
             }
         }
         else
