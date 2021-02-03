@@ -9,23 +9,23 @@
                        displayName="pic32cm_jh01_curiosity_pro"
                        projectFiles="true">
           <logicalFolder name="f1" displayName="peripheral" projectFiles="true">
-            <logicalFolder name="f3" displayName="can" projectFiles="true">
+            <logicalFolder name="f1" displayName="can" projectFiles="true">
               <itemPath>../src/config/pic32cm_jh01_curiosity_pro/peripheral/can/plib_can_common.h</itemPath>
               <itemPath>../src/config/pic32cm_jh01_curiosity_pro/peripheral/can/plib_can1.h</itemPath>
             </logicalFolder>
-            <logicalFolder name="f5" displayName="clock" projectFiles="true">
+            <logicalFolder name="f2" displayName="clock" projectFiles="true">
               <itemPath>../src/config/pic32cm_jh01_curiosity_pro/peripheral/clock/plib_clock.h</itemPath>
             </logicalFolder>
-            <logicalFolder name="f2" displayName="evsys" projectFiles="true">
+            <logicalFolder name="f3" displayName="evsys" projectFiles="true">
               <itemPath>../src/config/pic32cm_jh01_curiosity_pro/peripheral/evsys/plib_evsys.h</itemPath>
             </logicalFolder>
-            <logicalFolder name="f6" displayName="nvic" projectFiles="true">
+            <logicalFolder name="f4" displayName="nvic" projectFiles="true">
               <itemPath>../src/config/pic32cm_jh01_curiosity_pro/peripheral/nvic/plib_nvic.h</itemPath>
             </logicalFolder>
-            <logicalFolder name="f1" displayName="nvmctrl" projectFiles="true">
+            <logicalFolder name="f5" displayName="nvmctrl" projectFiles="true">
               <itemPath>../src/config/pic32cm_jh01_curiosity_pro/peripheral/nvmctrl/plib_nvmctrl.h</itemPath>
             </logicalFolder>
-            <logicalFolder name="f4" displayName="port" projectFiles="true">
+            <logicalFolder name="f6" displayName="port" projectFiles="true">
               <itemPath>../src/config/pic32cm_jh01_curiosity_pro/peripheral/port/plib_port.h</itemPath>
             </logicalFolder>
             <logicalFolder name="f7" displayName="sercom" projectFiles="true">
@@ -44,7 +44,7 @@
         </logicalFolder>
       </logicalFolder>
       <logicalFolder name="f2" displayName="packs" projectFiles="true">
-        <logicalFolder name="f2" displayName="CMSIS" projectFiles="true">
+        <logicalFolder name="f1" displayName="CMSIS" projectFiles="true">
           <logicalFolder name="f1" displayName="CMSIS" projectFiles="true">
             <logicalFolder name="f1" displayName="Core" projectFiles="true">
               <logicalFolder name="f1" displayName="Include" projectFiles="true">
@@ -62,7 +62,7 @@
             </logicalFolder>
           </logicalFolder>
         </logicalFolder>
-        <logicalFolder name="f1"
+        <logicalFolder name="f2"
                        displayName="PIC32CM5164JH01100_DFP"
                        projectFiles="true">
           <logicalFolder name="f1" displayName="component" projectFiles="true">
@@ -99,12 +99,85 @@
             <itemPath>../src/packs/PIC32CM5164JH01100_DFP/component/tcc.h</itemPath>
             <itemPath>../src/packs/PIC32CM5164JH01100_DFP/component/wdt.h</itemPath>
           </logicalFolder>
+          <logicalFolder name="f3" displayName="instance" projectFiles="true">
+            <itemPath>../src/packs/PIC32CM5164JH01100_DFP/instance/ac.h</itemPath>
+            <itemPath>../src/packs/PIC32CM5164JH01100_DFP/instance/adc0.h</itemPath>
+            <itemPath>../src/packs/PIC32CM5164JH01100_DFP/instance/adc1.h</itemPath>
+            <itemPath>../src/packs/PIC32CM5164JH01100_DFP/instance/can0.h</itemPath>
+            <itemPath>../src/packs/PIC32CM5164JH01100_DFP/instance/can1.h</itemPath>
+            <itemPath>../src/packs/PIC32CM5164JH01100_DFP/instance/ccl.h</itemPath>
+            <itemPath>../src/packs/PIC32CM5164JH01100_DFP/instance/dac.h</itemPath>
+            <itemPath>../src/packs/PIC32CM5164JH01100_DFP/instance/divas.h</itemPath>
+            <itemPath>../src/packs/PIC32CM5164JH01100_DFP/instance/dmac.h</itemPath>
+            <itemPath>../src/packs/PIC32CM5164JH01100_DFP/instance/dsu.h</itemPath>
+            <itemPath>../src/packs/PIC32CM5164JH01100_DFP/instance/eic.h</itemPath>
+            <itemPath>../src/packs/PIC32CM5164JH01100_DFP/instance/evsys.h</itemPath>
+            <itemPath>../src/packs/PIC32CM5164JH01100_DFP/instance/freqm.h</itemPath>
+            <itemPath>../src/packs/PIC32CM5164JH01100_DFP/instance/gclk.h</itemPath>
+            <itemPath>../src/packs/PIC32CM5164JH01100_DFP/instance/icm.h</itemPath>
+            <itemPath>../src/packs/PIC32CM5164JH01100_DFP/instance/mclk.h</itemPath>
+            <itemPath>../src/packs/PIC32CM5164JH01100_DFP/instance/mcramc.h</itemPath>
+            <itemPath>../src/packs/PIC32CM5164JH01100_DFP/instance/mtb.h</itemPath>
+            <itemPath>../src/packs/PIC32CM5164JH01100_DFP/instance/nvmctrl.h</itemPath>
+            <itemPath>../src/packs/PIC32CM5164JH01100_DFP/instance/osc32kctrl.h</itemPath>
+            <itemPath>../src/packs/PIC32CM5164JH01100_DFP/instance/oscctrl.h</itemPath>
+            <itemPath>../src/packs/PIC32CM5164JH01100_DFP/instance/pac.h</itemPath>
+            <itemPath>../src/packs/PIC32CM5164JH01100_DFP/instance/pdec.h</itemPath>
+            <itemPath>../src/packs/PIC32CM5164JH01100_DFP/instance/pm.h</itemPath>
+            <itemPath>../src/packs/PIC32CM5164JH01100_DFP/instance/port.h</itemPath>
+            <itemPath>../src/packs/PIC32CM5164JH01100_DFP/instance/ptc.h</itemPath>
+            <itemPath>../src/packs/PIC32CM5164JH01100_DFP/instance/rstc.h</itemPath>
+            <itemPath>../src/packs/PIC32CM5164JH01100_DFP/instance/rtc.h</itemPath>
+            <itemPath>../src/packs/PIC32CM5164JH01100_DFP/instance/sercom0.h</itemPath>
+            <itemPath>../src/packs/PIC32CM5164JH01100_DFP/instance/sercom1.h</itemPath>
+            <itemPath>../src/packs/PIC32CM5164JH01100_DFP/instance/sercom2.h</itemPath>
+            <itemPath>../src/packs/PIC32CM5164JH01100_DFP/instance/sercom3.h</itemPath>
+            <itemPath>../src/packs/PIC32CM5164JH01100_DFP/instance/sercom4.h</itemPath>
+            <itemPath>../src/packs/PIC32CM5164JH01100_DFP/instance/sercom5.h</itemPath>
+            <itemPath>../src/packs/PIC32CM5164JH01100_DFP/instance/sercom6.h</itemPath>
+            <itemPath>../src/packs/PIC32CM5164JH01100_DFP/instance/sercom7.h</itemPath>
+            <itemPath>../src/packs/PIC32CM5164JH01100_DFP/instance/smbist.h</itemPath>
+            <itemPath>../src/packs/PIC32CM5164JH01100_DFP/instance/supc.h</itemPath>
+            <itemPath>../src/packs/PIC32CM5164JH01100_DFP/instance/tc0.h</itemPath>
+            <itemPath>../src/packs/PIC32CM5164JH01100_DFP/instance/tc1.h</itemPath>
+            <itemPath>../src/packs/PIC32CM5164JH01100_DFP/instance/tc2.h</itemPath>
+            <itemPath>../src/packs/PIC32CM5164JH01100_DFP/instance/tc3.h</itemPath>
+            <itemPath>../src/packs/PIC32CM5164JH01100_DFP/instance/tc4.h</itemPath>
+            <itemPath>../src/packs/PIC32CM5164JH01100_DFP/instance/tc5.h</itemPath>
+            <itemPath>../src/packs/PIC32CM5164JH01100_DFP/instance/tc6.h</itemPath>
+            <itemPath>../src/packs/PIC32CM5164JH01100_DFP/instance/tc7.h</itemPath>
+            <itemPath>../src/packs/PIC32CM5164JH01100_DFP/instance/tcc0.h</itemPath>
+            <itemPath>../src/packs/PIC32CM5164JH01100_DFP/instance/tcc1.h</itemPath>
+            <itemPath>../src/packs/PIC32CM5164JH01100_DFP/instance/tcc2.h</itemPath>
+            <itemPath>../src/packs/PIC32CM5164JH01100_DFP/instance/wdt.h</itemPath>
+          </logicalFolder>
           <logicalFolder name="f2" displayName="pio" projectFiles="true">
             <itemPath>../src/packs/PIC32CM5164JH01100_DFP/pio/pic32cm5164jh01100.h</itemPath>
           </logicalFolder>
           <itemPath>../src/packs/PIC32CM5164JH01100_DFP/pic32cm5164jh01100.h</itemPath>
         </logicalFolder>
       </logicalFolder>
+    </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="true">
+      <logicalFolder name="f1"
+                     displayName="pic32cm_jh01_curiosity_pro.mhc"
+                     projectFiles="true">
+        <itemPath>../src/config/pic32cm_jh01_curiosity_pro/pic32cm_jh01_curiosity_pro.mhc/can1.yml</itemPath>
+        <itemPath>../src/config/pic32cm_jh01_curiosity_pro/pic32cm_jh01_curiosity_pro.mhc/cmsis.yml</itemPath>
+        <itemPath>../src/config/pic32cm_jh01_curiosity_pro/pic32cm_jh01_curiosity_pro.mhc/core.yml</itemPath>
+        <itemPath>../src/config/pic32cm_jh01_curiosity_pro/pic32cm_jh01_curiosity_pro.mhc/dfp.yml</itemPath>
+        <itemPath>../src/config/pic32cm_jh01_curiosity_pro/pic32cm_jh01_curiosity_pro.mhc/evsys.yml</itemPath>
+        <itemPath>../src/config/pic32cm_jh01_curiosity_pro/pic32cm_jh01_curiosity_pro.mhc/GraphSettings.yml</itemPath>
+        <itemPath>../src/config/pic32cm_jh01_curiosity_pro/pic32cm_jh01_curiosity_pro.mhc/nvmctrl.yml</itemPath>
+        <itemPath>../src/config/pic32cm_jh01_curiosity_pro/pic32cm_jh01_curiosity_pro.mhc/project.yml</itemPath>
+        <itemPath>../src/config/pic32cm_jh01_curiosity_pro/pic32cm_jh01_curiosity_pro.mhc/sercom4.yml</itemPath>
+        <itemPath>../src/config/pic32cm_jh01_curiosity_pro/pic32cm_jh01_curiosity_pro.mhc/settings.yml</itemPath>
+        <itemPath>../src/config/pic32cm_jh01_curiosity_pro/pic32cm_jh01_curiosity_pro.mhc/stdio.yml</itemPath>
+      </logicalFolder>
+      <itemPath>Makefile</itemPath>
+      <itemPath>../src/config/pic32cm_jh01_curiosity_pro/harmony-manifest-success.yml</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -125,22 +198,22 @@
                        displayName="pic32cm_jh01_curiosity_pro"
                        projectFiles="true">
           <logicalFolder name="f1" displayName="peripheral" projectFiles="true">
-            <logicalFolder name="f3" displayName="can" projectFiles="true">
+            <logicalFolder name="f1" displayName="can" projectFiles="true">
               <itemPath>../src/config/pic32cm_jh01_curiosity_pro/peripheral/can/plib_can1.c</itemPath>
             </logicalFolder>
-            <logicalFolder name="f5" displayName="clock" projectFiles="true">
+            <logicalFolder name="f2" displayName="clock" projectFiles="true">
               <itemPath>../src/config/pic32cm_jh01_curiosity_pro/peripheral/clock/plib_clock.c</itemPath>
             </logicalFolder>
-            <logicalFolder name="f2" displayName="evsys" projectFiles="true">
+            <logicalFolder name="f3" displayName="evsys" projectFiles="true">
               <itemPath>../src/config/pic32cm_jh01_curiosity_pro/peripheral/evsys/plib_evsys.c</itemPath>
             </logicalFolder>
-            <logicalFolder name="f6" displayName="nvic" projectFiles="true">
+            <logicalFolder name="f4" displayName="nvic" projectFiles="true">
               <itemPath>../src/config/pic32cm_jh01_curiosity_pro/peripheral/nvic/plib_nvic.c</itemPath>
             </logicalFolder>
-            <logicalFolder name="f1" displayName="nvmctrl" projectFiles="true">
+            <logicalFolder name="f5" displayName="nvmctrl" projectFiles="true">
               <itemPath>../src/config/pic32cm_jh01_curiosity_pro/peripheral/nvmctrl/plib_nvmctrl.c</itemPath>
             </logicalFolder>
-            <logicalFolder name="f4" displayName="port" projectFiles="true">
+            <logicalFolder name="f6" displayName="port" projectFiles="true">
               <itemPath>../src/config/pic32cm_jh01_curiosity_pro/peripheral/port/plib_port.c</itemPath>
             </logicalFolder>
             <logicalFolder name="f7" displayName="sercom" projectFiles="true">
@@ -161,27 +234,6 @@
       </logicalFolder>
       <itemPath>../src/main.c</itemPath>
     </logicalFolder>
-    <logicalFolder name="ExternalFiles"
-                   displayName="Important Files"
-                   projectFiles="false">
-      <logicalFolder name="f1"
-                     displayName="pic32cm_jh01_curiosity_pro.mhc"
-                     projectFiles="true">
-        <itemPath>../src/config/pic32cm_jh01_curiosity_pro/pic32cm_jh01_curiosity_pro.mhc/can1.yml</itemPath>
-        <itemPath>../src/config/pic32cm_jh01_curiosity_pro/pic32cm_jh01_curiosity_pro.mhc/cmsis.yml</itemPath>
-        <itemPath>../src/config/pic32cm_jh01_curiosity_pro/pic32cm_jh01_curiosity_pro.mhc/core.yml</itemPath>
-        <itemPath>../src/config/pic32cm_jh01_curiosity_pro/pic32cm_jh01_curiosity_pro.mhc/dfp.yml</itemPath>
-        <itemPath>../src/config/pic32cm_jh01_curiosity_pro/pic32cm_jh01_curiosity_pro.mhc/evsys.yml</itemPath>
-        <itemPath>../src/config/pic32cm_jh01_curiosity_pro/pic32cm_jh01_curiosity_pro.mhc/GraphSettings.yml</itemPath>
-        <itemPath>../src/config/pic32cm_jh01_curiosity_pro/pic32cm_jh01_curiosity_pro.mhc/nvmctrl.yml</itemPath>
-        <itemPath>../src/config/pic32cm_jh01_curiosity_pro/pic32cm_jh01_curiosity_pro.mhc/project.yml</itemPath>
-        <itemPath>../src/config/pic32cm_jh01_curiosity_pro/pic32cm_jh01_curiosity_pro.mhc/sercom4.yml</itemPath>
-        <itemPath>../src/config/pic32cm_jh01_curiosity_pro/pic32cm_jh01_curiosity_pro.mhc/settings.yml</itemPath>
-        <itemPath>../src/config/pic32cm_jh01_curiosity_pro/pic32cm_jh01_curiosity_pro.mhc/stdio.yml</itemPath>
-      </logicalFolder>
-      <itemPath>Makefile</itemPath>
-      <itemPath>../src/config/pic32cm_jh01_curiosity_pro/harmony-manifest-success.yml</itemPath>
-    </logicalFolder>
   </logicalFolder>
   <sourceRootList>
     <Elem>../src</Elem>
@@ -201,7 +253,7 @@
       </toolsSet>
       <packs>
         <pack name="CMSIS" vendor="ARM" version="5.4.0"/>
-        <pack name="PIC32CM-JH_DFP" vendor="Microchip" version="1.0.52"/>
+        <pack name="PIC32CM-JH_DFP" vendor="Microchip" version="1.0.65"/>
       </packs>
       <ScriptingSettings>
       </ScriptingSettings>
@@ -263,7 +315,7 @@
         <property key="enable-unroll-loops" value="false"/>
         <property key="exclude-floating-point" value="false"/>
         <property key="extra-include-directories"
-                  value="../src;../src/config/pic32cm_jh01_curiosity_pro;../src/packs/PIC32CM5164JH01100_DFP;../src/packs/CMSIS/CMSIS/Core/Include;../src/packs/CMSIS/"/>
+                  value="../src;../src/config/pic32cm_jh01_curiosity_pro;../src/packs/PIC32CM5164JH01100_DFP;../src/packs/CMSIS/CMSIS/Core/Include;../src/packs/CMSIS/;"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>
@@ -360,7 +412,7 @@
         <property key="exceptions" value="true"/>
         <property key="exclude-floating-point" value="false"/>
         <property key="extra-include-directories"
-                  value="../src;../src/config/pic32cm_jh01_curiosity_pro;../src/packs/PIC32CM5164JH01100_DFP;../src/packs/CMSIS/CMSIS/Core/Include;../src/packs/CMSIS/"/>
+                  value="../src;../src/config/pic32cm_jh01_curiosity_pro;../src/packs/PIC32CM5164JH01100_DFP;../src/packs/CMSIS/CMSIS/Core/Include;../src/packs/CMSIS/;"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>
