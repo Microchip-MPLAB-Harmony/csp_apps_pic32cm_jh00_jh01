@@ -39,6 +39,12 @@ children:
   - type: Long
     attributes: {id: TC_TIMER_PERIOD}
     children:
+    - type: Attributes
+      children:
+      - type: Long
+        attributes: {id: max}
+        children:
+        - {type: Value, value: '65535'}
     - type: Values
       children:
       - type: Dynamic
@@ -51,7 +57,7 @@ children:
       - type: Float
         attributes: {id: max}
         children:
-        - {type: Value, value: '1398.08'}
+        - {type: Value, value: '1398.1013'}
     - type: Values
       children:
       - type: User
