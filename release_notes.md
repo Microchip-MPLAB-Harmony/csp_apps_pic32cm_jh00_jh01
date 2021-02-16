@@ -8,6 +8,32 @@ nav_order: 99
 
 # Microchip MPLAB® Harmony 3 Release Notes
 
+## Harmony 3 peripheral library application examples for PIC32CM JH01 family  v3.1.0
+
+### Development kit and demo application support
+
+Following table provides number of peripheral library examples available for different development kits.
+
+| Development Kits  | MPLABx applications |
+|:-----------------:|:-------------------:|
+| [PIC32CM JH01 Curiosity Pro Evaluation Kit]()  | 34 |
+
+### New Features
+
+- Same as v3.0.1
+
+
+### Known Issues
+
+- None
+
+### Development Tools
+
+- [MPLAB® X IDE v5.45](https://www.microchip.com/mplab/mplab-x-ide)
+- MPLAB® X IDE plug-ins:
+  - MPLAB® Harmony Configurator (MHC) v3.7.0
+- [MPLAB® XC32 C/C++ Compiler v2.50](https://www.microchip.com/mplab/compilers)
+
 ## Harmony 3 peripheral library application examples for PIC32CM JH01 family  v3.0.1
 
 ### New Features
@@ -20,7 +46,10 @@ nav_order: 99
 - Same as v3.0.0
 
 ### Development Tools
-- Same as v3.0.0
+- [MPLAB® X IDE v5.45](https://www.microchip.com/mplab/mplab-x-ide)
+- MPLAB® X IDE plug-ins:
+  - MPLAB® Harmony Configurator (MHC) v3.7.0
+- [MPLAB® XC32 C/C++ Compiler v2.41](https://www.microchip.com/mplab/compilers)
 
 ## Harmony 3 peripheral library application examples for PIC32CM JH01 family  v3.0.0
 
