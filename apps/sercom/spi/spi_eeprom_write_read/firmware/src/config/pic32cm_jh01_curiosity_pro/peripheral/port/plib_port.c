@@ -74,6 +74,7 @@ void PORT_Initialize(void)
    /************************** GROUP 0 Initialization *************************/
    PORT_REGS->GROUP[0].PORT_DIR = 0x400;
    PORT_REGS->GROUP[0].PORT_OUT = 0x400;
+   PORT_REGS->GROUP[0].PORT_PINCFG[10] = 0x0;
    PORT_REGS->GROUP[0].PORT_PINCFG[18] = 0x1;
    PORT_REGS->GROUP[0].PORT_PINCFG[19] = 0x1;
 
@@ -82,12 +83,15 @@ void PORT_Initialize(void)
    /************************** GROUP 1 Initialization *************************/
    PORT_REGS->GROUP[1].PORT_DIR = 0x1000;
    PORT_REGS->GROUP[1].PORT_OUT = 0x1000;
+   PORT_REGS->GROUP[1].PORT_PINCFG[12] = 0x0;
 
 
    /************************** GROUP 2 Initialization *************************/
    PORT_REGS->GROUP[2].PORT_DIR = 0x10000020;
    PORT_REGS->GROUP[2].PORT_OUT = 0x10000000;
+   PORT_REGS->GROUP[2].PORT_PINCFG[5] = 0x0;
    PORT_REGS->GROUP[2].PORT_PINCFG[27] = 0x1;
+   PORT_REGS->GROUP[2].PORT_PINCFG[28] = 0x0;
 
    PORT_REGS->GROUP[2].PORT_PMUX[13] = 0x30;
 
@@ -302,7 +306,7 @@ void PORT_PinPeripheralFunctionConfig(PORT_PIN pin, PERIPHERAL_FUNCTION function
     PORT_GROUP group = GET_PORT_GROUP(pin);
     uint32_t pin_num = ((uint32_t)pin) & 0x1FU;
     uint32_t pinmux_val = (uint32_t)((port_group_registers_t*)group)->PORT_PMUX[(pin_num >> 1)];
-    
+
     /* For odd pins */
     if (0U != (pin_num & 0x01U))
     {
@@ -313,7 +317,7 @@ void PORT_PinPeripheralFunctionConfig(PORT_PIN pin, PERIPHERAL_FUNCTION function
         pinmux_val = (pinmux_val & ~0x0FU) | periph_func;
     }
     ((port_group_registers_t*)group)->PORT_PMUX[(pin_num >> 1)] = (uint8_t)pinmux_val;
-    
+
     /* Enable peripheral control of the pin */
     ((port_group_registers_t*)group)->PORT_PINCFG[pin_num] |= (uint8_t)PORT_PINCFG_PMUXEN_Msk;
 }
