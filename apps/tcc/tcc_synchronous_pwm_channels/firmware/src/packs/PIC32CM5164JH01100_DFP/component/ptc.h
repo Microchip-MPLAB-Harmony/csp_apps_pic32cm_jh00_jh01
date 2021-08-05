@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2020-08-03T13:07:40Z */
+/* file generated from device description version 2021-02-12T15:11:42Z */
 #ifndef _PIC32CMJH01_PTC_COMPONENT_H_
 #define _PIC32CMJH01_PTC_COMPONENT_H_
 
