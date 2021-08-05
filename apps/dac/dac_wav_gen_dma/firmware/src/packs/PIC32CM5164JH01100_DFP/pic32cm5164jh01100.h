@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2020-08-03T13:07:40Z */
+/* file generated from device description version 2021-02-12T15:11:42Z */
 #ifndef _PIC32CM5164JH01100_H_
 #define _PIC32CM5164JH01100_H_
 
@@ -270,6 +270,7 @@ void ICM_Handler                   ( void );
 #include "component/eic.h"
 #include "component/evsys.h"
 #include "component/freqm.h"
+#include "component/fuses.h"
 #include "component/gclk.h"
 #include "component/icm.h"
 #include "component/mclk.h"
@@ -309,6 +310,7 @@ void ICM_Handler                   ( void );
 #include "instance/eic.h"
 #include "instance/evsys.h"
 #include "instance/freqm.h"
+#include "instance/fuses.h"
 #include "instance/gclk.h"
 #include "instance/icm.h"
 #include "instance/mclk.h"
@@ -437,6 +439,13 @@ void ICM_Handler                   ( void );
 #define MCRAMC_REGS                      ((mcramc_registers_t*)0x40003000)             /**< \brief MCRAMC Registers Address     */
 #define MTB_REGS                         ((mtb_registers_t*)0x41008000)                /**< \brief MTB Registers Address        */
 #define NVMCTRL_REGS                     ((nvmctrl_registers_t*)0x41004000)            /**< \brief NVMCTRL Registers Address    */
+#define LOCKBIT_FUSES_REGS               ((fuses_lockbit_fuses_registers_t*)0x00802000) /**< \brief FUSES Registers Address      */
+#define OTP1_FUSES_REGS                  ((fuses_otp1_fuses_registers_t*)0x00806000)   /**< \brief FUSES Registers Address      */
+#define OTP2_FUSES_REGS                  ((fuses_otp2_fuses_registers_t*)0x00806008)   /**< \brief FUSES Registers Address      */
+#define OTP3_FUSES_REGS                  ((fuses_otp3_fuses_registers_t*)0x00806010)   /**< \brief FUSES Registers Address      */
+#define OTP4_FUSES_REGS                  ((fuses_otp4_fuses_registers_t*)0x00806018)   /**< \brief FUSES Registers Address      */
+#define OTP5_FUSES_REGS                  ((fuses_otp5_fuses_registers_t*)0x00806020)   /**< \brief FUSES Registers Address      */
+#define USER_FUSES_REGS                  ((fuses_user_fuses_registers_t*)0x00804000)   /**< \brief FUSES Registers Address      */
 #define OSC32KCTRL_REGS                  ((osc32kctrl_registers_t*)0x40001400)         /**< \brief OSC32KCTRL Registers Address */
 #define OSCCTRL_REGS                     ((oscctrl_registers_t*)0x40001000)            /**< \brief OSCCTRL Registers Address    */
 #define PAC_REGS                         ((pac_registers_t*)0x40000000)                /**< \brief PAC Registers Address        */
@@ -500,6 +509,13 @@ void ICM_Handler                   ( void );
 #define MCRAMC_BASE_ADDRESS              _UL_(0x40003000)                              /* MCRAMC Base Address */
 #define MTB_BASE_ADDRESS                 _UL_(0x41008000)                              /* MTB Base Address */
 #define NVMCTRL_BASE_ADDRESS             _UL_(0x41004000)                              /* NVMCTRL Base Address */
+#define LOCKBIT_FUSES_BASE_ADDRESS       _UL_(0x00802000)                              /* FUSES Base Address */
+#define OTP1_FUSES_BASE_ADDRESS          _UL_(0x00806000)                              /* FUSES Base Address */
+#define OTP2_FUSES_BASE_ADDRESS          _UL_(0x00806008)                              /* FUSES Base Address */
+#define OTP3_FUSES_BASE_ADDRESS          _UL_(0x00806010)                              /* FUSES Base Address */
+#define OTP4_FUSES_BASE_ADDRESS          _UL_(0x00806018)                              /* FUSES Base Address */
+#define OTP5_FUSES_BASE_ADDRESS          _UL_(0x00806020)                              /* FUSES Base Address */
+#define USER_FUSES_BASE_ADDRESS          _UL_(0x00804000)                              /* FUSES Base Address */
 #define OSC32KCTRL_BASE_ADDRESS          _UL_(0x40001400)                              /* OSC32KCTRL Base Address */
 #define OSCCTRL_BASE_ADDRESS             _UL_(0x40001000)                              /* OSCCTRL Base Address */
 #define PAC_BASE_ADDRESS                 _UL_(0x40000000)                              /* PAC Base Address */
