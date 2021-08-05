@@ -21,14 +21,7 @@
  */
 
 /* file generated from device description version 2021-02-12T15:11:42Z */
-#ifndef _PIC32CMJH01_SUPC_INSTANCE_
-#define _PIC32CMJH01_SUPC_INSTANCE_
+#ifndef _PIC32CMJH01_FUSES_INSTANCE_
+#define _PIC32CMJH01_FUSES_INSTANCE_
 
-
-/* ========== Instance Parameter definitions for SUPC peripheral ========== */
-#define SUPC_BODCORE_CALIB_MSB                   _UL_(5)    
-#define SUPC_BODVDD_CALIB_MSB                    _UL_(5)    
-#define SUPC_SUPC_OUT_NUM_MSB                    _UL_(1)    /* MSB of backup output pad Number */
-#define SUPC_INSTANCE_ID                         _UL_(6)    /* Instance index for SUPC */
-
-#endif /* _PIC32CMJH01_SUPC_INSTANCE_ */
+#endif /* _PIC32CMJH01_FUSES_INSTANCE_ */
