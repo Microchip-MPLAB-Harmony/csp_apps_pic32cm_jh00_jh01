@@ -58,7 +58,7 @@ void RTC_Initialize(void)
 
     RTC_REGS->MODE0.RTC_CTRLA = (uint16_t)(RTC_MODE0_CTRLA_MODE(0UL) | RTC_MODE0_CTRLA_PRESCALER(0x1UL) | RTC_MODE0_CTRLA_COUNTSYNC_Msk |RTC_MODE0_CTRLA_MATCHCLR_Msk );
 
-   RTC_REGS->MODE0.RTC_COMP = 0x100U;
+   RTC_REGS->MODE0.RTC_COMP0 = 0x100U;
 
     RTC_REGS->MODE0.RTC_EVCTRL = 0x100U;
 }
@@ -137,7 +137,7 @@ void RTC_Timer32CounterSet ( uint32_t count )
 
 void RTC_Timer32CompareSet ( uint32_t compareValue )
 {
-    RTC_REGS->MODE0.RTC_COMP = compareValue;
+    RTC_REGS->MODE0.RTC_COMP0 = compareValue;
 
     while((RTC_REGS->MODE0.RTC_SYNCBUSY & RTC_MODE0_SYNCBUSY_COMP0_Msk) == RTC_MODE0_SYNCBUSY_COMP0_Msk)
     {

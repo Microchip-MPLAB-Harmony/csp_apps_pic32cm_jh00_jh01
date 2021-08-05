@@ -66,17 +66,6 @@ void AC_Initialize(void)
      
 
     /******************** Comparator 2 configurations ********************/
-    /* Disable the module and configure COMPCTRL */
-    while((AC_REGS->AC_SYNCBUSY & AC_SYNCBUSY_COMPCTRL2_Msk) == AC_SYNCBUSY_COMPCTRL2_Msk)
-    {
-        /* Wait for Synchronization */
-    }
-    AC_REGS->AC_COMPCTRL[2] &= ~(AC_COMPCTRL_ENABLE_Msk);
-    /* Check Synchronization to ensure that the comparator is disabled */
-    while((AC_REGS->AC_SYNCBUSY & AC_SYNCBUSY_COMPCTRL2_Msk) == AC_SYNCBUSY_COMPCTRL2_Msk)
-    {
-        /* Wait for Synchronization */
-    }
     AC_REGS->AC_COMPCTRL[2] = AC_COMPCTRL_MUXPOS_AIN7 | AC_COMPCTRL_MUXNEG_INTREF | AC_COMPCTRL_INTSEL_EOC | AC_COMPCTRL_OUT_OFF | AC_COMPCTRL_SPEED(0UL) | AC_COMPCTRL_FLEN_OFF | AC_COMPCTRL_SINGLE_Msk | AC_COMPCTRL_RUNSTDBY_Msk;
 
     AC_REGS->AC_COMPCTRL[2] |= AC_COMPCTRL_ENABLE_Msk;
