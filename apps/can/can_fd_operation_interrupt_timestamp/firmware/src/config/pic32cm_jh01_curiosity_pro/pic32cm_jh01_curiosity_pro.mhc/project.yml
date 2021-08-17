@@ -62,13 +62,13 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: 10C19D239A2946FDD6D95DD8FC5CA11C
-- generatedChecksum: 89D9EF9A272A9B4AA94B52DB47147ECF
+- generatedChecksum: 63496D29C5236CF17FB4A2F8A5128E75
   logicalPath: config/pic32cm_jh01_curiosity_pro/peripheral/nvmctrl
   name: plib_nvmctrl.c
   physicalPath: peripheral/nvmctrl
   security: NON_SECURE
   type: SOURCE
-  userChecksum: 89D9EF9A272A9B4AA94B52DB47147ECF
+  userChecksum: 63496D29C5236CF17FB4A2F8A5128E75
 - generatedChecksum: 843132DA42162C6A7F05EE8053B0D250
   logicalPath: config/pic32cm_jh01_curiosity_pro/peripheral/port
   name: plib_port.c
@@ -573,13 +573,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: 55ECCC7FA71BD15B46EF80DC0515ED7A
-- generatedChecksum: E202F7AE26B67871CE1137A01A594483
+- generatedChecksum: 42CD35850D82ACED4CF1FDDE7436D450
   logicalPath: config/pic32cm_jh01_curiosity_pro/peripheral/nvmctrl
   name: plib_nvmctrl.h
   physicalPath: peripheral/nvmctrl
   security: NON_SECURE
   type: HEADER
-  userChecksum: E202F7AE26B67871CE1137A01A594483
+  userChecksum: 42CD35850D82ACED4CF1FDDE7436D450
 - generatedChecksum: 6D6F67DF2CF0AD133B26D8B0968A53C9
   logicalPath: config/pic32cm_jh01_curiosity_pro/peripheral/port
   name: plib_port.h
@@ -853,13 +853,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: EBF20EEC1A678444BC43B9961DBF3F6C
-- generatedChecksum: 20E829A99B86C2889E4E2E536161C27A
+- generatedChecksum: 5A6CE947CB477E5554790DE371B7FBAB
   logicalPath: config/pic32cm_jh01_curiosity_pro
   name: toolchain_specifics.h
   physicalPath: ''
   security: NON_SECURE
   type: HEADER
-  userChecksum: 20E829A99B86C2889E4E2E536161C27A
+  userChecksum: 5A6CE947CB477E5554790DE371B7FBAB
 - generatedChecksum: CD05E7165CA7992C31465A2BA300D68F
   logicalPath: packs/PIC32CM5164JH01100_DFP/component
   name: wdt.h
