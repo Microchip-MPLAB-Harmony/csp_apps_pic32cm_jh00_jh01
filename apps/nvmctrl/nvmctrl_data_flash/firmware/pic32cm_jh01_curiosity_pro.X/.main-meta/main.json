@@ -4,18 +4,18 @@
 	"content": {
 		"metaDataVersion": "1.1.0",
 		"name": "com.microchip.mcu32.mplabx.project.csp_apps_pic32cm_jh00_jh01_nvmctrl_data_flash",
-		"version": "3.1.0",
+		"version": "3.2.0",
 		"displayName": "NVMCTRL data flash Example for PIC32CM JH Family",
 		"projectName": "nvmctrl_data_flash_pic32cm_jh01_curiosity_pro",
 		"shortDescription": "This example application demonstrates code execution from the main Flash memory while performing erase operation in data flash section.",
 		"ide": {
 			"name": "MPLABX",
-			"semverRange": ">=5.45.0"
+			"semverRange": ">=5.50.0"
 		},
 		"compiler": [
 			{
 				"name": "XC32",
-				"semverRange": ">=2.50.0"
+				"semverRange": ">=3.01.0"
 			}
 		],
 		"dfp": {
@@ -24,7 +24,7 @@
 		},
 		"configurator": {
 			"name": "MHC",
-			"semverRange": ">=3.7.0"
+			"semverRange": ">=3.8.0"
 		},
 		"device": {
 			"metaDataVersion": "1.0.0",
