@@ -47,6 +47,7 @@ uint8_t syndrome = 0;
 uint32_t data [NVMCTRL_PAGE_SIZE] = {0};
 uint32_t data_read [NVMCTRL_PAGE_SIZE] = {0};
 uint32_t data_length = 32;
+volatile uint32_t intFlag = 0;
 
 enum
 {
@@ -64,67 +65,9 @@ void display_menu (void)
     printf("\n\n\r");
 }
 
-void NVMCTRL_InterruptRoutine (uintptr_t context)
+void NVMCTRL_EventHandler (uintptr_t context)
 {
-    NVMCTRL_REGS->NVMCTRL_INTENCLR = NVMCTRL_INTENCLR_Msk;
-    
-    if (NVMCTRL_REGS->NVMCTRL_INTFLAG & NVMCTRL_INTFLAG_SERR_Msk)
-    {        
-        LED0_Toggle ();
-    }
-    else if (NVMCTRL_REGS->NVMCTRL_INTFLAG & NVMCTRL_INTFLAG_DERR_Msk)
-    {
-        printf ("Please RESET the device by pressing the RESET button\n\r");
-    }
-}
-
-void configure_nvmctrl_for_ecc_testing ( uint32_t address, uint8_t fault_injection_type )
-{
-    // Erase the row to test
-    if (address == FLASH_WRITE_ADDR)
-        NVMCTRL_RowErase (FLASH_WRITE_ADDR);
-    else
-        NVMCTRL_DATA_FLASH_RowErase (DATAFLASH_WRITE_ADDR);
-    
-    // Reset ECC Fault Injection Control Register
-    NVMCTRL_REGS->NVMCTRL_FLTCTRL = (uint32_t)(NVMCTRL_FLTCTRL_FLTRST_Msk);
-    
-    /* ECC Fault Injection Pointer configuration
-     * FLT1PTR = 0x3 - Fault is injected for DATA[0]
-     * FLT2PTR = 0x5 - Fault is injected for DATA[1] */
-    NVMCTRL_REGS->NVMCTRL_FFLTPTR = (uint32_t)(NVMCTRL_FFLTPTR_FLT1PTR (0x3) | NVMCTRL_FFLTPTR_FLT2PTR (0x5));
-    
-    // Defines where fault injection will be applied
-    NVMCTRL_REGS->NVMCTRL_FFLTADR = (uint32_t)(NVMCTRL_FFLTADR_FLTADR (address));
-    
-    /* ECC Fault Injection Control configuration
-     * FLTMD = 0x6 - Single Fault Injection (at bit selected in FLT1PTR) upon Writes
-     * FLTEN = 0x1 - Fault Injection Enable */
-    if (fault_injection_type == SINGLE_FAULT_INJECTION)
-    {
-        NVMCTRL_REGS->NVMCTRL_FLTCTRL = (uint32_t)(NVMCTRL_FLTCTRL_FLTMD (0x6) | NVMCTRL_FLTCTRL_FLTEN_En);
-        // Dummy Read back for synchronization purpose
-        while (NVMCTRL_REGS->NVMCTRL_FLTCTRL != (NVMCTRL_FLTCTRL_FLTMD(0x6) | NVMCTRL_FLTCTRL_FLTEN_En));
-    }
-    /* ECC Fault Injection Control configuration
-     * FLTMD = 0x7 - Double Fault Injection (at bit selected in FLT1PTR and FLT2PTR) upon Writes
-     * FLTEN = 0x1 - Fault Injection Enable */
-    else if (fault_injection_type == DOUBLE_FAULT_INJECTION)
-    {
-        NVMCTRL_REGS->NVMCTRL_FLTCTRL = (uint32_t)(NVMCTRL_FLTCTRL_FLTMD (0x7) | NVMCTRL_FLTCTRL_FLTEN_En);
-        // Dummy Read back for synchronization purpose
-        while (NVMCTRL_REGS->NVMCTRL_FLTCTRL != (NVMCTRL_FLTCTRL_FLTMD(0x7) | NVMCTRL_FLTCTRL_FLTEN_En));
-    }
-    /* ECC Fault Injection Control configuration
-     * FLTMD = 0x6 - Single Fault Injection (at bit selected in FLT1PTR) upon Writes
-     * FLTEN = 0x1 - Fault Injection Enable */
-    else
-    {
-        printf ("The entered value does not match. Single Fault Injection is selected by default.\n\r");
-        NVMCTRL_REGS->NVMCTRL_FLTCTRL = (uint32_t)(NVMCTRL_FLTCTRL_FLTMD (0x6) | NVMCTRL_FLTCTRL_FLTEN_En);
-        // Dummy Read back for synchronization purpose
-        while (NVMCTRL_REGS->NVMCTRL_FLTCTRL != (NVMCTRL_FLTCTRL_FLTMD(0x6) | NVMCTRL_FLTCTRL_FLTEN_En));
-    }
+    intFlag = NVMCTRL_InterruptFlagGet();    
 }
 
 void fault_injection_routine ( uint32_t address )
@@ -139,39 +82,42 @@ void fault_injection_routine ( uint32_t address )
     NVMCTRL_PageBufferCommit (address);
     
     // Wait for INTFLAG.READY bit meaning NVMCTRL is ready to accept a new command
-    while ((NVMCTRL_REGS->NVMCTRL_INTFLAG & NVMCTRL_INTFLAG_READY_Msk) != 1);
-    
-    if (cmd == DOUBLE_FAULT_INJECTION)
-        printf ("Programming Error Fault due to Double Fault Injection will occur. Please RESET the device by pressing the RESET button\n\n\r");
+    while (NVMCTRL_IsBusy() == true)
+    {
+        
+    }
     
     // Read physical value contained in Flash (or Data Flash) memory at defined address. This value is corrected on the fly as ECC feature is enabled.
-    NVMCTRL_Read (data_read, data_length, address);
+    *((uint64_t*)&data_read[0]) = *(uint64_t*)address;
+    
+    if (intFlag & NVMCTRL_INTFLAG_SERR_Msk)
+    {
+        printf ("Single Fault Detected !\n\r");
+        intFlag = 0;
+    }
     
     printf ("Value Read at address 0x%X: 0x%X is corrected on the fly\n\r", (uint)(address), (uint)data_read[0]);
     printf ("Value Read at address 0x%X: 0x%X is corrected on the fly\n\r", (uint)(address + 4), (uint)data_read[1]);
     
-    // Read updated SECIN value and display result on terminal
-    secin = NVMCTRL_REGS->NVMCTRL_FFLTPAR & NVMCTRL_FFLTPAR_SECIN_Msk;
+    // Read updated SECIN value and display result on terminal (SECIN is the ECC read from memory. This was calculated on un-corrupted data and written upon a flash write operation)
+    secin = NVMCTRL_ECC_SECIN_FaultParityGet();
     printf ("The computed SECIN is 0x%X\n\r", (uint)secin); 
     
-    // Read updated SECOUT value and display result on terminal
-    secout = (NVMCTRL_REGS->NVMCTRL_FFLTPAR & NVMCTRL_FFLTPAR_SECOUT_Msk) >> 16;
+    // Read updated SECOUT value and display result on terminal (SECOUT is the ECC calculated on the corrupted data upon a read operation)
+    secout = NVMCTRL_ECC_SECOUT_FaultParityGet();
     printf ("The new computed SECOUT is 0x%X\n\r", (uint)secout);
     
     // Read updated Syndrome value and display result on terminal
-    syndrome = NVMCTRL_REGS->NVMCTRL_FFLTSYN & NVMCTRL_FFLTSYN_SECSYN_Msk;
-    printf ("The syndrome is 0x%X\n\n\r", (uint)syndrome);
-    
-    // Write INTFLAG.SERR bit to clear the flag
-    NVMCTRL_REGS->NVMCTRL_INTFLAG = (uint32_t)(NVMCTRL_INTFLAG_SERR_Msk);
+    syndrome = NVMCTRL_ECC_FaultSyndromeGet();
+    printf ("The syndrome is 0x%X\n\n\r", (uint)syndrome);      
     
     if (address == FLASH_WRITE_ADDR)
-        NVMCTRL_REGS->NVMCTRL_ECCCTRL = (uint32_t)(NVMCTRL_ECCCTRL_SECCNT (0x0) | NVMCTRL_ECCCTRL_ECCDIS_Dis);
+        NVMCTRL_ECC_MainArrayDisable();
     else
-        NVMCTRL_REGS->NVMCTRL_ECCCTRL = (uint32_t)(NVMCTRL_ECCCTRL_SECCNT (0x0) | NVMCTRL_ECCCTRL_ECCDFDIS_Dis);
+        NVMCTRL_ECC_DataFlashDisable();
     
     // Read physical value contained in Flash (or Data Flash) memory at defined address. This value is returned raw as ECC feature is disabled
-    NVMCTRL_Read (data_read, data_length, address);
+    *((uint64_t*)&data_read[0]) = *(uint64_t*)address;
     
     printf ("Physical value at address 0x%X: 0x%X \n\r", (uint)(address), (uint)data_read[0]);
     printf ("Physical value at address 0x%X: 0x%X \n\n\r", (uint)(address + 4), (uint)data_read[1]);
@@ -194,15 +140,8 @@ int main ( void )
     printf ("*** NVMCTRL ECC with Fault Injection Testing ***\n\r");
     printf ("************************************************\n\n\r");
     
-    /* ECC Control configuration
-     * SECCNT = 0x0
-     * ECCDFDIS = 0x1 - Data Flash ECC is enabled 
-     * ECCDIS = 0x1 - Flash main array ECC is enabled */
-    NVMCTRL_REGS->NVMCTRL_ECCCTRL = (uint32_t)(NVMCTRL_ECCCTRL_SECCNT (0x0) | NVMCTRL_ECCCTRL_ECCDFDIS_En | NVMCTRL_ECCCTRL_ECCDIS_En);
-    
     // Enable CallBack Register routine upon SERR or DERR interrupt for NVMCTRL 
-    NVMCTRL_CallbackRegister (NVMCTRL_InterruptRoutine, 0);
-    NVMCTRL_REGS->NVMCTRL_INTENSET = NVMCTRL_INTENSET_SERR_Msk | NVMCTRL_INTENSET_DERR_Msk;
+    NVMCTRL_CallbackRegister (NVMCTRL_EventHandler, 0);
     
     display_menu ();
     
@@ -218,13 +157,22 @@ int main ( void )
                 case (SINGLE_FAULT_INJECTION):
                     printf ("Single Fault Injection for Flash memory on writes\n\r");
                     // Configure NVMCTRL for ECC testing on writes for Flash memory
-                    configure_nvmctrl_for_ecc_testing (FLASH_WRITE_ADDR, cmd);
+                    
+                    // Erase the row to test
+                    NVMCTRL_RowErase (FLASH_WRITE_ADDR);
+
+                    NVMCTRL_ECC_SingleBitFaultInject(FLASH_WRITE_ADDR, 0x5, NVMCTRL_ECC_FLT_MODE_ON_WRITE);
+                    
                     // Launch Single Fault Injection routine for Flash memory on writes
                     fault_injection_routine (FLASH_WRITE_ADDR);                 
 
                     printf ("Single Fault Injection for Data Flash memory on writes\n\r");
+                    
+                    NVMCTRL_DATA_FLASH_RowErase (DATAFLASH_WRITE_ADDR);
+                    
                     // Configure NVMCTRL for ECC testing on writes for Flash memory
-                    configure_nvmctrl_for_ecc_testing (DATAFLASH_WRITE_ADDR, cmd);
+                    NVMCTRL_ECC_SingleBitFaultInject(DATAFLASH_WRITE_ADDR, 0x5, NVMCTRL_ECC_FLT_MODE_ON_WRITE);
+                    
                     // Launch Single Fault Injection routine for Flash memory on writes
                     fault_injection_routine (DATAFLASH_WRITE_ADDR);
 
@@ -235,7 +183,7 @@ int main ( void )
                 case (DOUBLE_FAULT_INJECTION):
                     printf ("Double Fault Injection for Flash memory on writes\n\r");
                     // Configure NVMCTRL for ECC testing on writes for Flash memory
-                    configure_nvmctrl_for_ecc_testing (FLASH_WRITE_ADDR, cmd);
+                    NVMCTRL_ECC_DoubleBitFaultInject(FLASH_WRITE_ADDR, 0x03, 0x5, NVMCTRL_ECC_FLT_MODE_ON_WRITE);
                     // Launch Double Fault Injection routine for Flash memory on writes
                     fault_injection_routine (FLASH_WRITE_ADDR);
                     

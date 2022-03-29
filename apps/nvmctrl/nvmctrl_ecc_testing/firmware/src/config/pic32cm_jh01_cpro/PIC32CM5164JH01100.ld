@@ -1,7 +1,7 @@
- /*--------------------------------------------------------------------------
+/*--------------------------------------------------------------------------
  * MPLAB XC32 Compiler -  PIC32CM5164JH01100 linker script
  * 
- * Copyright (c) 2021, Microchip Technology Inc. and its subsidiaries ("Microchip")
+ * Copyright (c) 2022, Microchip Technology Inc. and its subsidiaries ("Microchip")
  * All rights reserved.
  * 
  * This software is developed by Microchip Technology Inc. and its
@@ -79,6 +79,7 @@ ENTRY(__XC32_RESET_HANDLER_NAME)
 #endif
   
 
+
 /*************************************************************************
  * Memory-Region Definitions
  * The MEMORY command describes the location and size of blocks of memory
@@ -120,7 +121,7 @@ MEMORY
 #endif
 #ifndef DATA_REGION
 # define DATA_REGION ram
-#endif
+#endif 
 #ifndef VECTOR_REGION
 # define VECTOR_REGION CODE_REGION
 #endif

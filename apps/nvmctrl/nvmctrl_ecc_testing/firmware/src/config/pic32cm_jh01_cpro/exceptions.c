@@ -70,6 +70,10 @@ void __attribute__((noreturn)) HardFault_Handler(void)
 #if defined(__DEBUG) || defined(__DEBUG_D) && defined(__XC32)
    __builtin_software_breakpoint();
 #endif
+   if (NVMCTRL_InterruptFlagGet() & NVMCTRL_INTFLAG_DERR_Msk)
+    {
+        printf ("Bus Error Fault occured due to Double Fault Injection. Please RESET the board.\n\r");
+    }
    while (true)
    {
    }

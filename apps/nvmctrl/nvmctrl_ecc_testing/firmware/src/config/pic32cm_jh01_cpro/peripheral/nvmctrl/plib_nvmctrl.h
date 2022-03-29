@@ -66,45 +66,49 @@
 #define NVMCTRL_FLASH_PAGESIZE             (64U)
 #define NVMCTRL_FLASH_ROWSIZE              (256U)
 
+
+/* No error */
+#define   NVMCTRL_ERROR_NONE     ( 0x0U )
+
+/* NVMCTRL invalid commands and/or bad keywords error */
+#define    NVMCTRL_ERROR_PROG    ( 0x4U )
+
+/* NVMCTRL lock error */
+#define   NVMCTRL_ERROR_LOCK     ( 0x8U )
+
+/* NVMCTRL programming or erase error */
+#define    NVMCTRL_ERROR_NVM     ( 0x10U )
+
+typedef uint16_t NVMCTRL_ERROR;
+
 #define NVMCTRL_DATAFLASH_START_ADDRESS    (0x00400000U)
 #define NVMCTRL_DATAFLASH_PAGESIZE         (64U)
 #define NVMCTRL_DATAFLASH_ROWSIZE          (256U)
 
-#define NVMCTRL_USERROW_START_ADDRESS    	(0x00804000U)
-#define NVMCTRL_USERROW_SIZE         		(0x100U)
-#define NVMCTRL_USERROW_PAGESIZE    		(64U)
+#define NVMCTRL_USERROW_START_ADDRESS     (0x00804000U)
+#define NVMCTRL_USERROW_SIZE              (0x100U)
+#define NVMCTRL_USERROW_PAGESIZE          (64U)
 
 
+#define NVMCTRL_ECC_FLT_MODE_ON_READ 0
+#define NVMCTRL_ECC_FLT_MODE_ON_WRITE 0
 
-typedef enum
-{
-    /* No error */
-    NVMCTRL_ERROR_NONE = 0x0,
+typedef uint32_t NVMCTRL_ECC_FLT_MODE;
 
-    /* NVMCTRL invalid commands and/or bad keywords error */
-    NVMCTRL_ERROR_PROG = 0x4,
-
-    /* NVMCTRL lock error */
-    NVMCTRL_ERROR_LOCK = 0x8,
-
-    /* NVMCTRL programming or erase error */
-    NVMCTRL_ERROR_NVM = 0x10,
-
-} NVMCTRL_ERROR;
 
 typedef void (*NVMCTRL_CALLBACK)(uintptr_t context);
 
 void NVMCTRL_Initialize(void);
 
-bool NVMCTRL_Read( uint32_t *data, uint32_t length, uint32_t address );
+bool NVMCTRL_Read( uint32_t *data, uint32_t length, const uint32_t address );
 
-bool NVMCTRL_PageWrite( uint32_t* data, uint32_t address );
+bool NVMCTRL_PageWrite( uint32_t* data, const uint32_t address );
 
 bool NVMCTRL_RowErase( uint32_t address );
 
 bool NVMCTRL_DATA_FLASH_Read( uint32_t *data, uint32_t length, const uint32_t address );
 
-bool NVMCTRL_DATA_FLASH_PageWrite( uint32_t* data, uint32_t address );
+bool NVMCTRL_DATA_FLASH_PageWrite( uint32_t* data, const uint32_t address );
 
 bool NVMCTRL_DATA_FLASH_RowErase ( uint32_t address );
 
@@ -116,6 +120,8 @@ void NVMCTRL_RegionLock (uint32_t address);
 
 void NVMCTRL_RegionUnlock (uint32_t address);
 
+void NVMCTRL_SecurityBitSet(void);
+
 void NVMCTRL_CallbackRegister ( NVMCTRL_CALLBACK callback, uintptr_t context );
 
 bool NVMCTRL_PageBufferWrite( uint32_t *data, const uint32_t address);
@@ -123,9 +129,32 @@ bool NVMCTRL_PageBufferWrite( uint32_t *data, const uint32_t address);
 bool NVMCTRL_PageBufferCommit( const uint32_t address);
 
 bool NVMCTRL_USER_ROW_PageWrite( uint32_t *data, const uint32_t address );
+
 bool NVMCTRL_USER_ROW_RowErase( uint32_t address );
 
 void NVMCTRL_CacheInvalidate ( void );
+
+uint32_t NVMCTRL_InterruptFlagGet(void);
+
+void NVMCTRL_ECC_SingleBitFaultInject(uint32_t fltaddr, uint8_t fltBitPtr, NVMCTRL_ECC_FLT_MODE fltOnReadOrWrite);
+
+void NVMCTRL_ECC_DoubleBitFaultInject(uint32_t fltaddr, uint8_t flt1BitPtr, uint8_t flt2BitPtr, NVMCTRL_ECC_FLT_MODE fltOnReadOrWrite);
+
+void NVMCTRL_ECC_MainArrayDisable(void);
+
+void NVMCTRL_ECC_DataFlashDisable(void);
+
+uint32_t NVMCTRL_ECC_FaultCaptureAddrGet(void);
+
+uint8_t NVMCTRL_ECC_FaultSyndromeGet(void);
+
+uint8_t NVMCTRL_ECC_SECIN_FaultParityGet(void);
+
+uint8_t NVMCTRL_ECC_SECOUT_FaultParityGet(void);
+
+void NVMCTRL_ECC_SECErrorCountSet(uint8_t errorCount);
+
+void NVMCTRL_ECC_FaultLogicReset(void);
 
 // DOM-IGNORE-BEGIN
 #ifdef __cplusplus // Provide C++ Compatibility

@@ -53,5 +53,3 @@ The following table shows the target hardware for the application projects.
 	- 'b': Double Fault Injection is chosen and following message is displayed on console:
 	
 	![output](images/nvmctrl_double_fault_injection_display.png)
-	
-3. The on-board LED blink each time a SERR interrupt occurs
