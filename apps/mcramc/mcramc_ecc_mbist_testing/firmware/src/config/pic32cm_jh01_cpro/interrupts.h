@@ -60,7 +60,7 @@
 void Reset_Handler (void);
 void NonMaskableInt_Handler (void);
 void HardFault_Handler (void);
-void MCRAMC_InterruptHandler (void);
+void RAM_ECC_InterruptHandler (void);
 
 
 

@@ -70,7 +70,7 @@ void __attribute__((noreturn)) HardFault_Handler(void)
 #if defined(__DEBUG) || defined(__DEBUG_D) && defined(__XC32)
    __builtin_software_breakpoint();
 #endif
-   if (MCRAMC_STATUS_DERR)
+   if (MCRAMC_REGS->MCRAMC_INTSTA & MCRAMC_INTSTA_DERR_Msk)
    {
        printf ("Bus Error Fault occurred due to Double Fault Injection. Please RESET the board.\n\r");         
    }

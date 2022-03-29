@@ -1,24 +1,26 @@
 /*******************************************************************************
-  SERCOM Universal Synchronous/Asynchrnous Receiver/Transmitter PLIB
+  Reset Controller(RSTC) PLIB
 
   Company
     Microchip Technology Inc.
 
   File Name
-    plib_sercom4_usart.h
+    plib_rstc.h
 
   Summary
-    USART peripheral library interface.
+    RSTC PLIB Header File.
 
   Description
-    This file defines the interface to the USART peripheral library. This
-    library provides access to and control of the associated peripheral
-    instance.
+    This file defines the interface to the RSTC peripheral library.
+    This library provides access to and control of the associated
+    Reset Controller.
 
   Remarks:
     None.
+
 *******************************************************************************/
 
+// DOM-IGNORE-BEGIN
 /*******************************************************************************
 * Copyright (C) 2018 Microchip Technology Inc. and its subsidiaries.
 *
@@ -41,17 +43,22 @@
 * ANY WAY RELATED TO THIS SOFTWARE WILL NOT EXCEED THE AMOUNT OF FEES, IF ANY,
 * THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
 *******************************************************************************/
+// DOM-IGNORE-END
 
-#ifndef PLIB_SERCOM4_USART_H // Guards against multiple inclusion
-#define PLIB_SERCOM4_USART_H
+#ifndef PLIB_RSTC_H      // Guards against multiple inclusion
+#define PLIB_RSTC_H
 
 // *****************************************************************************
 // *****************************************************************************
 // Section: Included Files
 // *****************************************************************************
 // *****************************************************************************
+/* This section lists the other files that are included in this file.
+*/
 
-#include "plib_sercom_usart_common.h"
+#include <stdbool.h>
+#include <stddef.h>
+#include "device.h"
 
 // DOM-IGNORE-BEGIN
 #ifdef __cplusplus // Provide C++ Compatibility
@@ -63,41 +70,51 @@
 
 // *****************************************************************************
 // *****************************************************************************
-// Section: Interface Routines
+// Section:Preprocessor macros
 // *****************************************************************************
 // *****************************************************************************
 
-void SERCOM4_USART_Initialize( void );
+#define RSTC_RESET_CAUSE_POR_RESET  RSTC_RCAUSE_POR_Msk
 
-bool SERCOM4_USART_SerialSetup( USART_SERIAL_SETUP * serialSetup, uint32_t clkFrequency );
+#define RSTC_RESET_CAUSE_BODCORE_RESET  RSTC_RCAUSE_BODCORE_Msk
 
-void SERCOM4_USART_TransmitterEnable( void );
+#define RSTC_RESET_CAUSE_BODVDD_RESET  RSTC_RCAUSE_BODVDD_Msk
 
-void SERCOM4_USART_TransmitterDisable( void );
+#define RSTC_RESET_CAUSE_EXT_RESET  RSTC_RCAUSE_EXT_Msk
 
-bool SERCOM4_USART_Write( void *buffer, const size_t size );
+#define RSTC_RESET_CAUSE_WDT_RESET  RSTC_RCAUSE_WDT_Msk
 
-bool SERCOM4_USART_TransmitComplete( void );
-
-
-bool SERCOM4_USART_TransmitterIsReady( void );
-
-void SERCOM4_USART_WriteByte( int data );
+#define RSTC_RESET_CAUSE_SYST_RESET  RSTC_RCAUSE_SYST_Msk
 
 
-void SERCOM4_USART_ReceiverEnable( void );
 
-void SERCOM4_USART_ReceiverDisable( void );
 
-bool SERCOM4_USART_Read( void *buffer, const size_t size );
+// *****************************************************************************
+// *****************************************************************************
+// Section: Data Types
+// *****************************************************************************
+// *****************************************************************************
+/* The following data type definitions are used by the functions in this
+    interface and should be considered part it.
+*/
 
-bool SERCOM4_USART_ReceiverIsReady( void );
+// *****************************************************************************
+/* User Reset type
 
-int SERCOM4_USART_ReadByte( void );
+  Summary:
+    Identifies the type of reset.
 
-USART_ERROR SERCOM4_USART_ErrorGet( void );
+  Description:
+    This enums identifies either General, Backup, Watchdog, Software
+    or User Reset.
 
-uint32_t SERCOM4_USART_FrequencyGet( void );
+  Remarks:
+    Refer to the specific device data sheet to determine availability.
+*/
+
+typedef uint32_t RSTC_RESET_CAUSE;
+
+RSTC_RESET_CAUSE RSTC_ResetCauseGet (void);
 
 // DOM-IGNORE-BEGIN
 #ifdef __cplusplus  // Provide C++ Compatibility
@@ -105,6 +122,5 @@ uint32_t SERCOM4_USART_FrequencyGet( void );
     }
 
 #endif
-// DOM-IGNORE-END
 
-#endif //PLIB_SERCOM4_USART_H
+#endif /* PLIB_RSTC_H */

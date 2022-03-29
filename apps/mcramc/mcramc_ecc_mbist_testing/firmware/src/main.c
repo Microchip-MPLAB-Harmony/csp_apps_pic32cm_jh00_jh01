@@ -31,10 +31,9 @@
 
 uint8_t cmd = 0;
 
-uint32_t data [MCRAMC_SRAM_PAGESIZE] = {0};
-uint32_t data_read [MCRAMC_SRAM_PAGESIZE] = {0};
+uint32_t data = 0;
+uint32_t data_read = 0;
 
-uint32_t data_length = 32;
 uint8_t syndrome = 0;
 uint8_t parity_bits = 0;
 uint8_t mbist_test_result = 0;
@@ -55,100 +54,59 @@ void display_menu ( void )
     printf("\n\n\r");
 }
 
-void MCRAMC_CallbackRoutine (MCRAMC_STATUS status, uintptr_t context)
-{
-    MCRAMC_REGS->MCRAMC_INTENCLR = MCRAMC_INTENCLR_Msk;
-    
-    if (status & MCRAMC_STATUS_SERR)
+void RAM_CallbackRoutine (RAM_ECC_STATUS status, uintptr_t context)
+{   
+    if (status & RAM_ECC_STATUS_SERR)
     {
         LED0_Toggle ();
     }
 }
 
-void configure_mcramc_for_ecc_testing ( uint32_t address, uint8_t fault_injection_type )
-{
-    // Software Rest on MCRAMC ECC for testing
-    MCRAMC_REGS->MCRAMC_CTRLA = (uint32_t) MCRAMC_CTRLA_SWRST_Msk;
-    
-    // Disable ECC for MCRAMC
-    MCRAMC_REGS->MCRAMC_CTRLA &= ~MCRAMC_CTRLA_ENABLE_Msk;
-    
-    /* ECC Fault Injection Pointer configuration
-     * FLT1PTR = 0x0 - Fault is injected for DATA[0] 
-     * FLT2PTR = 0x1 - Fault is injected for DATA[1] */
-    MCRAMC_REGS->MCRAMC_FLTPTR = (uint32_t)(MCRAMC_FLTPTR_FLT1PTR (0x0) | MCRAMC_FLTPTR_FLT2PTR (0x1));
-    
-    MCRAMC_REGS->MCRAMC_FLTADR = (uint32_t)(MCRAMC_FLTADR_FLTADR (address));
-    
-    /* ECC Fault Injection Control configuration
-     * FLTMD = 0x1 - Single Fault Injection (at bit selected in FLT1PTR) for Writes
-     * FLTEN = 0x1 - Fault Injection Enable */
-    if (fault_injection_type == SINGLE_FAULT_INJECTION)
-    {
-        // Enable Single Fault Injection
-        MCRAMC_REGS->MCRAMC_FLTCTRL = (uint32_t)(MCRAMC_FLTCTRL_FLTMD (0x1) | MCRAMC_FLTCTRL_FLTEN_Msk);
-        // Dummy Read back for synchronization purpose
-        while  (MCRAMC_REGS->MCRAMC_FLTCTRL != (MCRAMC_FLTCTRL_FLTMD_SINGLE | MCRAMC_FLTCTRL_FLTEN_Msk));        
-    }
-    /* ECC Fault Injection Control configuration
-     * FLTMD = 0x2 - Double Fault Injection (at bit selected in FLT1PTR and FLT2PTR) for Writes
-     * FLTEN = 0x1 - Fault Injection Enable */
-    else if (fault_injection_type == DOUBLE_FAULT_INJECTION)
-    {
-        // Enable Double Fault Injection
-        MCRAMC_REGS->MCRAMC_FLTCTRL = (uint32_t)(MCRAMC_FLTCTRL_FLTMD (0x2) | MCRAMC_FLTCTRL_FLTEN_Msk);
-        // Dummy Read back for synchronization purpose
-        while  (MCRAMC_REGS->MCRAMC_FLTCTRL != (MCRAMC_FLTCTRL_FLTMD_DOUBLE | MCRAMC_FLTCTRL_FLTEN_Msk));
-    }
-    /* ECC Fault Injection Control configuration
-     * FLTMD = 0x1 - Single Fault Injection (at bit selected in FLT1PTR) for Writes
-     * FLTEN = 0x1 - Fault Injection Enable */
-    else
-    {
-        printf ("The entered value does not match. Single Fault Injection will be chosen by default.\n\r");
-        // Enable Single Fault Injection
-        MCRAMC_REGS->MCRAMC_FLTCTRL = (uint32_t)(MCRAMC_FLTCTRL_FLTMD (0x1) | MCRAMC_FLTCTRL_FLTEN_Msk);
-        // Dummy Read back for synchronization purpose
-        while  (MCRAMC_REGS->MCRAMC_FLTCTRL != (MCRAMC_FLTCTRL_FLTMD_SINGLE | MCRAMC_FLTCTRL_FLTEN_Msk));
-    }
-    
-    // Enable ECC for MCRAMC
-    MCRAMC_REGS->MCRAMC_CTRLA = (uint32_t) MCRAMC_CTRLA_ENABLE_Msk;
-}
-
 void fault_injection_routine ( uint32_t address )
-{
-    data[0] = 0xA5A5A5A5;
+{    
+
+    data = 0xA5A5A5A5;
     
     if (address < 0x20000000)
         address = 0x20000000 + address;
     
+    printf("Injecting Fault at address 0x%X\r\n", (uint)address);
+    
     // Write RAM memory with data at address
-    RAM_Write (data, data_length, address);
+    *((uint32_t*)address) = data;
     
-    // Read physical value contained in SRAM memory at defined address. The value is corrected on the fly as ECC feature is enabled
-    RAM_Read (data_read, data_length, address);    
+    // Disable ECC for MCRAMC
+    RAM_ECC_Disable();
     
-    printf ("Value Read from SRAM at address 0x%X: 0x%X is corrected on the fly\n\r", (uint)(address), (uint)data_read[0]);
+    printf("ECC Decoding Disabled ..\r\n");
+    
+    // Read physical value contained in SRAM memory at defined address. This should read corrupted value as ECC decoding is disabled.
+    data_read = *((uint32_t*)address);
+    
+    printf ("Value Read from SRAM at address 0x%X is 0x%X\n\n\r", (uint)(address), (uint)data_read);
+    
+    // Enabling ECC for MCRAMC
+    RAM_ECC_Enable();
+    
+    // Disabling fault injection
+    RAM_ECC_FaultDisable();
+    
+    printf("ECC Decoding enabled ..\r\n");
+    
+    // Read physical value contained in SRAM memory at defined address. The should read corrected value as ECC decoding is enabled.
+    data_read = *((uint32_t*)address);   
+    
+    printf ("Value Read from SRAM at address 0x%X is 0x%X, corrected on the fly\n\r", (uint)(address), (uint)data_read); 
     
     // Read parity bit 
-    parity_bits = (MCRAMC_REGS->MCRAMC_ERRCPAR & MCRAMC_ERRCPAR_ERCPAR_Msk);
+    parity_bits = RAM_ECC_FaultCaptureParityGet();
     printf ("The parity bits are 0x%X\n\r", (uint)parity_bits);
 
     // Read syndrome value
-    syndrome = (MCRAMC_REGS->MCRAMC_ERRCSYN & MCRAMC_ERRCSYN_ERCSYN_Msk);
-    printf ("The syndrome is 0x%X\n\n\r", (uint)syndrome);
+    syndrome = RAM_ECC_FaultCaptureSyndromeGet();
+    printf ("The syndrome is 0x%X\n\n\r", (uint)syndrome);       
     
-    // Clear MCRAMC INTSTA register bits
-    MCRAMC_REGS->MCRAMC_INTSTA = (uint32_t)(MCRAMC_INTSTA_Msk);
-    
-    // Disable MCRAMC ECC feature
-    MCRAMC_REGS->MCRAMC_CTRLA = (uint32_t)(MCRAMC_CTRLA_ENABLE_0);
-    
-    // Read physical value contained in SRAM memory at defined address. The value is given raw as ECC feature is disabled
-    RAM_Read (data_read, data_length, address);    
-    
-    printf ("Physical value contained in SRAM at address 0x%X: 0x%X\n\n\r", (uint)(address), (uint)data_read[0]);
+           
 }
 
 // *****************************************************************************
@@ -174,9 +132,11 @@ int main ( void )
     else
         printf ("MBIST Test on SRAM succeeded.\n\n\r");
     
+    // Disable ECC for MCRAMC (It is enabled by default on POR)
+    RAM_ECC_Disable();
+    
     // Enable SERR and DERR interrupts
-    MCRAMC_CallbackRegister (MCRAMC_CallbackRoutine, 0);
-    MCRAMC_REGS->MCRAMC_INTENSET = (uint32_t)(MCRAMC_INTENSET_SERREN_Msk | MCRAMC_INTENSET_DERREN_Msk);
+    RAM_ECC_CallbackRegister (RAM_CallbackRoutine, 0);    
     
     display_menu ();
 
@@ -184,10 +144,10 @@ int main ( void )
     {
         switch (cmd)
         {
-            case (SINGLE_FAULT_INJECTION):
+            case (SINGLE_FAULT_INJECTION):                                
                 printf ("Single Fault Injection for SRAM memory\n\r");
                 // Configures MCRAMC for ECC testing for RAM
-                configure_mcramc_for_ecc_testing (MCRAMC_PAGE_ADDR, cmd);
+                RAM_ECC_SingleBitFaultInject(MCRAMC_PAGE_ADDR, 1);
                 // Launch Single Fault Injection routine for SRAM memory
                 fault_injection_routine (MCRAMC_PAGE_ADDR);
 
@@ -197,7 +157,7 @@ int main ( void )
             case (DOUBLE_FAULT_INJECTION):
                 printf ("Double Fault Injection for SRAM memory\n\r");
                 // Configure SRAM for ECC testing for SRAM memory
-                configure_mcramc_for_ecc_testing (MCRAMC_PAGE_ADDR, cmd);
+                RAM_ECC_DoubleBitFaultInject(MCRAMC_PAGE_ADDR, 2, 3);
                 // Launch Double Fault Injection routine for SRAM memory
                 fault_injection_routine (MCRAMC_PAGE_ADDR);
 

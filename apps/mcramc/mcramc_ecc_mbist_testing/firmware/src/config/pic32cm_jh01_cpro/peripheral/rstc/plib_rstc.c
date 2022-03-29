@@ -1,20 +1,26 @@
 /*******************************************************************************
- Debug Console Source file
+  Reset Controller(RSTC) PLIB
 
-  Company:
+  Company
     Microchip Technology Inc.
 
-  File Name:
-    xc32_monitor.c
+  File Name
+    plib_rstc.c
 
-  Summary:
-    debug console Source File
+  Summary
+    RSTC PLIB Implementation File.
 
-  Description:
-    None
+  Description
+    This file defines the interface to the RSTC peripheral library.
+    This library provides access to and control of the associated
+    Reset Controller.
+
+  Remarks:
+    None.
 
 *******************************************************************************/
 
+// DOM-IGNORE-BEGIN
 /*******************************************************************************
 * Copyright (C) 2018 Microchip Technology Inc. and its subsidiaries.
 *
@@ -37,41 +43,25 @@
 * ANY WAY RELATED TO THIS SOFTWARE WILL NOT EXCEED THE AMOUNT OF FEES, IF ANY,
 * THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
 *******************************************************************************/
-#include <stddef.h>
-#include "definitions.h"
+// DOM-IGNORE-END
 
-/* Declaration of these functions are missing in stdio.h for ARM parts*/
-/* MISRAC 2012 deviation block start */
-/* MISRA C-2012 Rule 21.2 deviated four times.  Deviation record ID -  H3_MISRAC_2012_R_21_2_DR_1 */
+// *****************************************************************************
+// *****************************************************************************
+// Section: Included Files
+// *****************************************************************************
+// *****************************************************************************
+/* This section lists the other files that are included in this file.
+*/
 
+#include "plib_rstc.h"
 
-int read(int handle, void *buffer, unsigned int len)
+// *****************************************************************************
+// *****************************************************************************
+// Section: RSTC Implementation
+// *****************************************************************************
+// *****************************************************************************
+RSTC_RESET_CAUSE RSTC_ResetCauseGet( void )
 {
-    int nChars = 0;
-    bool success = false;
-    (void)len;
-    if ((handle == 0)  && (len > 0))
-    {
-        do
-        {
-            success = SERCOM4_USART_Read(buffer, 1);
-        }while( !success);
-        nChars = 1;
-    }
-    return nChars;
+    return ( RSTC_RESET_CAUSE ) RSTC_REGS->RSTC_RCAUSE;
 }
 
-int write(int handle, void * buffer, size_t count)
-{
-   bool success = false;
-   if (handle == 1)
-   {
-       do
-       {
-           success = SERCOM4_USART_Write(buffer, count);
-       }while( !success);
-   }
-   return count;
-}
-
-/* MISRAC 2012 deviation block end */

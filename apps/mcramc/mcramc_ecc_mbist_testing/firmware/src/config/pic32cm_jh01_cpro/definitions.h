@@ -56,6 +56,7 @@
 #include "peripheral/nvic/plib_nvic.h"
 #include "peripheral/ram/plib_ram.h"
 #include "peripheral/sercom/usart/plib_sercom4_usart.h"
+#include "peripheral/rstc/plib_rstc.h"
 
 // DOM-IGNORE-BEGIN
 #ifdef __cplusplus  // Provide C++ Compatibility

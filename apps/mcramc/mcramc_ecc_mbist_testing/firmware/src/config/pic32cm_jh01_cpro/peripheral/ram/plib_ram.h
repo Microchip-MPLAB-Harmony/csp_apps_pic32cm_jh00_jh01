@@ -60,38 +60,52 @@
 #ifdef __cplusplus // Provide C++ Compatibility
 extern "C" {
 #endif
-    
-#define MCRAMC_SRAM_START_ADDRESS          (0x20000000U)
-#define MCRAMC_SRAM_PAGESIZE               (32U)
-    
-#define MCRAMC_STATUS_NONE      0U
+
+
+#define RAM_ECC_STATUS_NONE      0U
 // Single Bit Error
-#define MCRAMC_STATUS_SERR      MCRAMC_INTSTA_SERR_Msk
+#define RAM_ECC_STATUS_SERR      MCRAMC_INTSTA_SERR_Msk
 // Double Bit Error
-#define MCRAMC_STATUS_DERR      MCRAMC_INTSTA_DERR_Msk
-    
-#define MCRAMC_STATUS_MSK       (MCRAMC_STATUS_SERR | MCRAMC_STATUS_DERR)
-    
-// Invalid Status
-#define MCRAMC_STATUS_INVALID   0xFFFFFFFFU
-    
-    
-typedef uint32_t MCRAMC_STATUS;
-typedef void (*MCRAMC_CALLBACK)(MCRAMC_STATUS status, uintptr_t context);
+#define RAM_ECC_STATUS_DERR      MCRAMC_INTSTA_DERR_Msk
+
+typedef uint32_t RAM_ECC_STATUS;
+
+typedef void (*RAM_ECC_CALLBACK)(RAM_ECC_STATUS status, uintptr_t context);
 
 typedef struct
 {
-    MCRAMC_CALLBACK callback;
+    RAM_ECC_CALLBACK callback;
     uintptr_t context;
-}MCRAMC_CALLBACK_OBJ;
+}RAM_ECC_CALLBACK_OBJ;
+
+void RAM_ECC_Initialize(void);
+
+void RAM_ECC_SingleBitFaultInject(uint32_t fltaddr, uint8_t fltBitPtr);
+
+void RAM_ECC_DoubleBitFaultInject(uint32_t fltaddr, uint8_t flt1BitPtr, uint8_t flt2BitPtr);
+
+void RAM_ECC_Enable(void);
+
+void RAM_ECC_Disable(void);
+
+void RAM_ECC_FaultEnable(void);
+
+void RAM_ECC_FaultDisable(void);
+
+uint32_t RAM_ECC_FaultCaptureAddrGet(void);
+
+uint8_t RAM_ECC_FaultCaptureSyndromeGet(void);
+
+uint8_t RAM_ECC_FaultCaptureParityGet(void);
+
+void RAM_ECC_CallbackRegister (RAM_ECC_CALLBACK callback, uintptr_t context);
+
 
 bool RAM_Read( uint32_t *data, uint32_t length, const uint32_t address );
 
 bool RAM_Write( uint32_t *data, uint32_t length, uint32_t address );
 
 bool RAM_IsBusy(void);
-
-void MCRAMC_CallbackRegister (MCRAMC_CALLBACK callback, uintptr_t context);
 
 #ifdef __cplusplus  // Provide C++ Compatibility
 }

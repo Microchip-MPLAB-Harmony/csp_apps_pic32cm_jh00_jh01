@@ -44,44 +44,135 @@
 #include <string.h>
 #include "plib_ram.h"
 
-static MCRAMC_CALLBACK_OBJ MCRAMC_CallbackObject;
+
+static RAM_ECC_CALLBACK_OBJ RAM_ECC_CallbackObject;
+
+
+void RAM_ECC_Initialize(void)
+{
+
+    MCRAMC_REGS->MCRAMC_INTENSET = MCRAMC_INTENSET_SERREN_Msk | MCRAMC_INTENSET_DERREN_Msk;
+}
+
+void RAM_ECC_SingleBitFaultInject(uint32_t fltaddr, uint8_t fltBitPtr)
+{
+    /* Disable fault injection */
+    MCRAMC_REGS->MCRAMC_FLTCTRL &= ~MCRAMC_FLTCTRL_FLTEN_Msk;
+
+    // Dummy Read back for synchronization purpose
+    while  (MCRAMC_REGS->MCRAMC_FLTCTRL & MCRAMC_FLTCTRL_FLTEN_Msk);
+
+    /* Set the fault address */
+    MCRAMC_REGS->MCRAMC_FLTADR = MCRAMC_FLTADR_FLTADR (fltaddr);
+
+    /* Set the fault bit position */
+    MCRAMC_REGS->MCRAMC_FLTPTR = MCRAMC_FLTPTR_FLT1PTR (fltBitPtr);
+
+    /* Set the single bit fault mode */
+    MCRAMC_REGS->MCRAMC_FLTCTRL = (MCRAMC_REGS->MCRAMC_FLTCTRL & ~MCRAMC_FLTCTRL_FLTMD_Msk) | MCRAMC_FLTCTRL_FLTMD(0x1) | MCRAMC_FLTCTRL_FLTEN_Msk;
+
+    // Dummy Read back for synchronization purpose
+    while  (MCRAMC_REGS->MCRAMC_FLTCTRL != (MCRAMC_FLTCTRL_FLTMD(0x1) | MCRAMC_FLTCTRL_FLTEN_Msk));
+}
+
+void RAM_ECC_DoubleBitFaultInject(uint32_t fltaddr, uint8_t flt1BitPtr, uint8_t flt2BitPtr)
+{
+    /* Disable fault injection */
+    MCRAMC_REGS->MCRAMC_FLTCTRL &= ~MCRAMC_FLTCTRL_FLTEN_Msk;
+
+    // Dummy Read back for synchronization purpose
+    while  (MCRAMC_REGS->MCRAMC_FLTCTRL & MCRAMC_FLTCTRL_FLTEN_Msk);
+
+    /* Set the fault address */
+    MCRAMC_REGS->MCRAMC_FLTADR = MCRAMC_FLTADR_FLTADR (fltaddr);
+
+    /* Set the fault bit position */
+    MCRAMC_REGS->MCRAMC_FLTPTR = MCRAMC_FLTPTR_FLT1PTR (flt1BitPtr) | MCRAMC_FLTPTR_FLT2PTR (flt2BitPtr);
+
+    /* Set the double bit fault mode */
+    MCRAMC_REGS->MCRAMC_FLTCTRL = (MCRAMC_REGS->MCRAMC_FLTCTRL & ~MCRAMC_FLTCTRL_FLTMD_Msk) | MCRAMC_FLTCTRL_FLTMD(0x2) | MCRAMC_FLTCTRL_FLTEN_Msk;
+
+    // Dummy Read back for synchronization purpose
+    while  (MCRAMC_REGS->MCRAMC_FLTCTRL != (MCRAMC_FLTCTRL_FLTMD(0x2) | MCRAMC_FLTCTRL_FLTEN_Msk));
+}
+
+void RAM_ECC_Enable(void)
+{
+    MCRAMC_REGS->MCRAMC_CTRLA |= MCRAMC_CTRLA_ENABLE_Msk;
+}
+
+void RAM_ECC_Disable(void)
+{
+    MCRAMC_REGS->MCRAMC_CTRLA &= ~MCRAMC_CTRLA_ENABLE_Msk;
+}
+
+void RAM_ECC_FaultEnable(void)
+{
+    MCRAMC_REGS->MCRAMC_FLTCTRL |= MCRAMC_FLTCTRL_FLTEN_Msk;
+}
+
+void RAM_ECC_FaultDisable(void)
+{
+    MCRAMC_REGS->MCRAMC_FLTCTRL &= ~MCRAMC_FLTCTRL_FLTEN_Msk;
+}
+
+uint32_t RAM_ECC_FaultCaptureAddrGet(void)
+{
+    return MCRAMC_REGS->MCRAMC_ERRCADR;
+}
+
+uint8_t RAM_ECC_FaultCaptureSyndromeGet(void)
+{
+    return (MCRAMC_REGS->MCRAMC_ERRCSYN & MCRAMC_ERRCSYN_ERCSYN_Msk);
+}
+
+uint8_t RAM_ECC_FaultCaptureParityGet(void)
+{
+    return (MCRAMC_REGS->MCRAMC_ERRCPAR & MCRAMC_ERRCPAR_ERCPAR_Msk);
+}
+
+void RAM_ECC_CallbackRegister (RAM_ECC_CALLBACK callback, uintptr_t context)
+{
+    /* Register callback function */
+    RAM_ECC_CallbackObject.callback = callback;
+    RAM_ECC_CallbackObject.context = context;
+}
+
+void RAM_ECC_InterruptHandler ( void )
+{
+    if (MCRAMC_REGS->MCRAMC_INTENSET != 0U)
+    {
+        RAM_ECC_STATUS status;
+        status = MCRAMC_REGS->MCRAMC_INTSTA;
+
+        /* Clear interrupt */
+        MCRAMC_REGS->MCRAMC_INTSTA = status;
+        while (MCRAMC_REGS->MCRAMC_INTSTA & status)
+        {
+            /* Wait for the interrupt status to clear */
+        }
+        if ((status != RAM_ECC_STATUS_NONE) && (RAM_ECC_CallbackObject.callback != NULL))
+        {
+            RAM_ECC_CallbackObject.callback(status, RAM_ECC_CallbackObject.context);
+        }
+    }
+}
 
 bool RAM_Read( uint32_t *data, uint32_t length, const uint32_t address )
 {
-    memcpy((void *)data, (void *)address, length);
-    
+    (void) memcpy((void *)data, (void *)address, length);
+
     return true;
 }
 
 bool RAM_Write( uint32_t *data, uint32_t length, uint32_t address )
 {
-    memcpy((void *)address, (void *)data, length);
-    
+    (void) memcpy((void *)address, (void *)data, length);
+
     return true;
 }
 
 bool RAM_IsBusy(void)
 {
     return false;
-}
-
-void MCRAMC_CallbackRegister (MCRAMC_CALLBACK callback, uintptr_t context)
-{
-    // Register callback function
-    MCRAMC_CallbackObject.callback = callback;
-    MCRAMC_CallbackObject.context = context;
-}
-
-void MCRAMC_InterruptHandler ( void )
-{
-    if (MCRAMC_REGS->MCRAMC_INTENSET != 0U)
-    {
-        MCRAMC_STATUS status;
-        status = MCRAMC_REGS->MCRAMC_INTSTA;
-        
-        // Clear interrupt
-        MCRAMC_REGS->MCRAMC_INTSTA = (uint32_t)MCRAMC_INTSTA_Msk;
-        if ((status != MCRAMC_STATUS_NONE) && MCRAMC_CallbackObject.callback != NULL)
-            MCRAMC_CallbackObject.callback(status, MCRAMC_CallbackObject.context);
-    }
 }

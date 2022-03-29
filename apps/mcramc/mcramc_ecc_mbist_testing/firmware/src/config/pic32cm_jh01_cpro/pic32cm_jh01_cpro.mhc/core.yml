@@ -198,12 +198,33 @@ children:
       - type: Dynamic
         attributes: {id: core, value: '0x8000020'}
   - type: Boolean
+    attributes: {id: MCRAMC_INTERRUPT_ENABLE}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: ram, value: 'true'}
+  - type: Boolean
     attributes: {id: MCRAMC_INTERRUPT_ENABLE_UPDATE}
     children:
     - type: Values
       children:
       - type: Dynamic
         attributes: {id: core, value: 'false'}
+  - type: String
+    attributes: {id: MCRAMC_INTERRUPT_HANDLER}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: ram, value: RAM_ECC_InterruptHandler}
+  - type: Boolean
+    attributes: {id: MCRAMC_INTERRUPT_HANDLER_LOCK}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: ram, value: 'true'}
   - type: Boolean
     attributes: {id: NVIC_13_0_ENABLE}
     children:
@@ -232,15 +253,22 @@ children:
     children:
     - type: Values
       children:
-      - type: User
-        attributes: {value: 'true'}
+      - type: Dynamic
+        attributes: {id: core, value: 'true'}
   - type: String
     attributes: {id: NVIC_5_0_HANDLER}
     children:
     - type: Values
       children:
-      - type: User
-        attributes: {value: MCRAMC_InterruptHandler}
+      - type: Dynamic
+        attributes: {id: core, value: RAM_ECC_InterruptHandler}
+  - type: Boolean
+    attributes: {id: NVIC_5_0_HANDLER_LOCK}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: core, value: 'true'}
   - type: String
     attributes: {id: PIN_21_DIR}
     children:
@@ -269,6 +297,13 @@ children:
       children:
       - type: User
         attributes: {value: ''}
+  - type: String
+    attributes: {id: PIN_21_LAT}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: High}
   - type: String
     attributes: {id: PIN_21_MODE}
     children:
@@ -397,6 +432,13 @@ children:
         attributes: {id: core, value: 'true'}
   - type: String
     attributes: {id: PORT_GROUP_2_DIR}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: core, value: '0x20'}
+  - type: String
+    attributes: {id: PORT_GROUP_2_OUT}
     children:
     - type: Values
       children:
