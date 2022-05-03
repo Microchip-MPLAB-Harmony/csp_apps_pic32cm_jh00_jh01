@@ -256,7 +256,7 @@
         <platform>3</platform>
       </toolsSet>
       <packs>
-        <pack name="PIC32CM-JH_DFP" vendor="Microchip" version="1.0.82"/>
+        <pack name="PIC32CM-JH_DFP" vendor="Microchip" version="1.0.85"/>
         <pack name="CMSIS" vendor="ARM" version="5.4.0"/>
       </packs>
       <ScriptingSettings>
@@ -484,7 +484,7 @@
         <property key="memories.programmemory.ranges" value="0-7ffff"/>
         <property key="poweroptions.powerenable" value="false"/>
         <property key="programmerToGoFilePath"
-                  value="C:/h3_csp_apps/csp_apps_pic32cm_jh00_jh01/apps/mcramc/mcramc_ecc_mbist_testing/firmware/pic32cm_jh01_cpro.X/debug/pic32cm_jh01_cpro/pic32cm_jh01_cpro_ptg"/>
+                  value="C:/DDs_Git/karma-pic32cm_jh/sram_ecc_mbist_testing_jh01/firmware/pic32cm_jh01_cpro.X/debug/pic32cm_jh01_cpro/pic32cm_jh01_cpro_ptg"/>
         <property key="programoptions.eraseb4program" value="true"/>
         <property key="programoptions.preservedataflash" value="false"/>
         <property key="programoptions.preservedataflash.ranges"

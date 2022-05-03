@@ -16,6 +16,31 @@
     machines of all modules in the system
  *******************************************************************************/
 
+// DOM-IGNORE-BEGIN
+/*******************************************************************************
+* Copyright (C) 2022 Microchip Technology Inc. and its subsidiaries.
+*
+* Subject to your compliance with these terms, you may use Microchip software
+* and any derivatives exclusively with Microchip products. It is your
+* responsibility to comply with third party license terms applicable to your
+* use of third party software (including open source software) that may
+* accompany Microchip software.
+*
+* THIS SOFTWARE IS SUPPLIED BY MICROCHIP "AS IS". NO WARRANTIES, WHETHER
+* EXPRESS, IMPLIED OR STATUTORY, APPLY TO THIS SOFTWARE, INCLUDING ANY IMPLIED
+* WARRANTIES OF NON-INFRINGEMENT, MERCHANTABILITY, AND FITNESS FOR A
+* PARTICULAR PURPOSE.
+*
+* IN NO EVENT WILL MICROCHIP BE LIABLE FOR ANY INDIRECT, SPECIAL, PUNITIVE,
+* INCIDENTAL OR CONSEQUENTIAL LOSS, DAMAGE, COST OR EXPENSE OF ANY KIND
+* WHATSOEVER RELATED TO THE SOFTWARE, HOWEVER CAUSED, EVEN IF MICROCHIP HAS
+* BEEN ADVISED OF THE POSSIBILITY OR THE DAMAGES ARE FORESEEABLE. TO THE
+* FULLEST EXTENT ALLOWED BY LAW, MICROCHIP'S TOTAL LIABILITY ON ALL CLAIMS IN
+* ANY WAY RELATED TO THIS SOFTWARE WILL NOT EXCEED THE AMOUNT OF FEES, IF ANY,
+* THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
+ *******************************************************************************/
+// DOM-IGNORE-END
+
 // *****************************************************************************
 // *****************************************************************************
 // Section: Included Files
@@ -147,7 +172,7 @@ int main ( void )
             case (SINGLE_FAULT_INJECTION):                                
                 printf ("Single Fault Injection for SRAM memory\n\r");
                 // Configures MCRAMC for ECC testing for RAM
-                RAM_ECC_SingleBitFaultInject(MCRAMC_PAGE_ADDR, 1);
+                RAM_ECC_SingleBitFaultInject(MCRAMC_PAGE_ADDR, 0);
                 // Launch Single Fault Injection routine for SRAM memory
                 fault_injection_routine (MCRAMC_PAGE_ADDR);
 
@@ -157,7 +182,7 @@ int main ( void )
             case (DOUBLE_FAULT_INJECTION):
                 printf ("Double Fault Injection for SRAM memory\n\r");
                 // Configure SRAM for ECC testing for SRAM memory
-                RAM_ECC_DoubleBitFaultInject(MCRAMC_PAGE_ADDR, 2, 3);
+                RAM_ECC_DoubleBitFaultInject(MCRAMC_PAGE_ADDR, 0, 1);
                 // Launch Double Fault Injection routine for SRAM memory
                 fault_injection_routine (MCRAMC_PAGE_ADDR);
 
