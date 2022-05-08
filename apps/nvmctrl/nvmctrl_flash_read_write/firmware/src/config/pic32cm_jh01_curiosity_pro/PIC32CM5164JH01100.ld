@@ -1,7 +1,7 @@
 /*--------------------------------------------------------------------------
  * MPLAB XC32 Compiler -  PIC32CM5164JH01100 linker script
  * 
- * Copyright (c) 2021, Microchip Technology Inc. and its subsidiaries ("Microchip")
+ * Copyright (c) 2022, Microchip Technology Inc. and its subsidiaries ("Microchip")
  * All rights reserved.
  * 
  * This software is developed by Microchip Technology Inc. and its
@@ -78,6 +78,7 @@ ENTRY(__XC32_RESET_HANDLER_NAME)
 #  error RAM_LENGTH is greater than the max size of 0x10000
 #endif
   
+
 
 /*************************************************************************
  * Memory-Region Definitions
