@@ -1,7 +1,7 @@
-/**
- * \brief Component description for DMAC
+/*
+ * Component description for DMAC
  *
- * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2021-02-12T15:11:42Z */
+/* file generated from device description version 2022-01-18T09:31:06Z */
 #ifndef _PIC32CMJH01_DMAC_COMPONENT_H_
 #define _PIC32CMJH01_DMAC_COMPONENT_H_
 
@@ -854,34 +854,34 @@
 
 
 /** \brief DMAC register offsets definitions */
-#define DMAC_BTCTRL_REG_OFST           (0x00)              /**< (DMAC_BTCTRL) Block Transfer Control Offset */
-#define DMAC_BTCNT_REG_OFST            (0x02)              /**< (DMAC_BTCNT) Block Transfer Count Offset */
-#define DMAC_SRCADDR_REG_OFST          (0x04)              /**< (DMAC_SRCADDR) Block Transfer Source Address Offset */
-#define DMAC_DSTADDR_REG_OFST          (0x08)              /**< (DMAC_DSTADDR) Block Transfer Destination Address Offset */
-#define DMAC_DESCADDR_REG_OFST         (0x0C)              /**< (DMAC_DESCADDR) Next Descriptor Address Offset */
-#define DMAC_CTRL_REG_OFST             (0x00)              /**< (DMAC_CTRL) Control Offset */
-#define DMAC_CRCCTRL_REG_OFST          (0x02)              /**< (DMAC_CRCCTRL) CRC Control Offset */
-#define DMAC_CRCDATAIN_REG_OFST        (0x04)              /**< (DMAC_CRCDATAIN) CRC Data Input Offset */
-#define DMAC_CRCCHKSUM_REG_OFST        (0x08)              /**< (DMAC_CRCCHKSUM) CRC Checksum Offset */
-#define DMAC_CRCSTATUS_REG_OFST        (0x0C)              /**< (DMAC_CRCSTATUS) CRC Status Offset */
-#define DMAC_DBGCTRL_REG_OFST          (0x0D)              /**< (DMAC_DBGCTRL) Debug Control Offset */
-#define DMAC_QOSCTRL_REG_OFST          (0x0E)              /**< (DMAC_QOSCTRL) QOS Control Offset */
-#define DMAC_SWTRIGCTRL_REG_OFST       (0x10)              /**< (DMAC_SWTRIGCTRL) Software Trigger Control Offset */
-#define DMAC_PRICTRL0_REG_OFST         (0x14)              /**< (DMAC_PRICTRL0) Priority Control Offset */
-#define DMAC_INTPEND_REG_OFST          (0x20)              /**< (DMAC_INTPEND) Interrupt Pending Offset */
-#define DMAC_INTSTATUS_REG_OFST        (0x24)              /**< (DMAC_INTSTATUS) Interrupt Status Offset */
-#define DMAC_BUSYCH_REG_OFST           (0x28)              /**< (DMAC_BUSYCH) Busy Channels Offset */
-#define DMAC_PENDCH_REG_OFST           (0x2C)              /**< (DMAC_PENDCH) Pending Channels Offset */
-#define DMAC_ACTIVE_REG_OFST           (0x30)              /**< (DMAC_ACTIVE) Active Channel and Levels Offset */
-#define DMAC_BASEADDR_REG_OFST         (0x34)              /**< (DMAC_BASEADDR) Descriptor Memory Section Base Address Offset */
-#define DMAC_WRBADDR_REG_OFST          (0x38)              /**< (DMAC_WRBADDR) Write-Back Memory Section Base Address Offset */
-#define DMAC_CHID_REG_OFST             (0x3F)              /**< (DMAC_CHID) Channel ID Offset */
-#define DMAC_CHCTRLA_REG_OFST          (0x40)              /**< (DMAC_CHCTRLA) Channel Control A Offset */
-#define DMAC_CHCTRLB_REG_OFST          (0x44)              /**< (DMAC_CHCTRLB) Channel Control B Offset */
-#define DMAC_CHINTENCLR_REG_OFST       (0x4C)              /**< (DMAC_CHINTENCLR) Channel Interrupt Enable Clear Offset */
-#define DMAC_CHINTENSET_REG_OFST       (0x4D)              /**< (DMAC_CHINTENSET) Channel Interrupt Enable Set Offset */
-#define DMAC_CHINTFLAG_REG_OFST        (0x4E)              /**< (DMAC_CHINTFLAG) Channel Interrupt Flag Status and Clear Offset */
-#define DMAC_CHSTATUS_REG_OFST         (0x4F)              /**< (DMAC_CHSTATUS) Channel Status Offset */
+#define DMAC_BTCTRL_REG_OFST           (0x00)              /* (DMAC_BTCTRL) Block Transfer Control Offset */
+#define DMAC_BTCNT_REG_OFST            (0x02)              /* (DMAC_BTCNT) Block Transfer Count Offset */
+#define DMAC_SRCADDR_REG_OFST          (0x04)              /* (DMAC_SRCADDR) Block Transfer Source Address Offset */
+#define DMAC_DSTADDR_REG_OFST          (0x08)              /* (DMAC_DSTADDR) Block Transfer Destination Address Offset */
+#define DMAC_DESCADDR_REG_OFST         (0x0C)              /* (DMAC_DESCADDR) Next Descriptor Address Offset */
+#define DMAC_CTRL_REG_OFST             (0x00)              /* (DMAC_CTRL) Control Offset */
+#define DMAC_CRCCTRL_REG_OFST          (0x02)              /* (DMAC_CRCCTRL) CRC Control Offset */
+#define DMAC_CRCDATAIN_REG_OFST        (0x04)              /* (DMAC_CRCDATAIN) CRC Data Input Offset */
+#define DMAC_CRCCHKSUM_REG_OFST        (0x08)              /* (DMAC_CRCCHKSUM) CRC Checksum Offset */
+#define DMAC_CRCSTATUS_REG_OFST        (0x0C)              /* (DMAC_CRCSTATUS) CRC Status Offset */
+#define DMAC_DBGCTRL_REG_OFST          (0x0D)              /* (DMAC_DBGCTRL) Debug Control Offset */
+#define DMAC_QOSCTRL_REG_OFST          (0x0E)              /* (DMAC_QOSCTRL) QOS Control Offset */
+#define DMAC_SWTRIGCTRL_REG_OFST       (0x10)              /* (DMAC_SWTRIGCTRL) Software Trigger Control Offset */
+#define DMAC_PRICTRL0_REG_OFST         (0x14)              /* (DMAC_PRICTRL0) Priority Control Offset */
+#define DMAC_INTPEND_REG_OFST          (0x20)              /* (DMAC_INTPEND) Interrupt Pending Offset */
+#define DMAC_INTSTATUS_REG_OFST        (0x24)              /* (DMAC_INTSTATUS) Interrupt Status Offset */
+#define DMAC_BUSYCH_REG_OFST           (0x28)              /* (DMAC_BUSYCH) Busy Channels Offset */
+#define DMAC_PENDCH_REG_OFST           (0x2C)              /* (DMAC_PENDCH) Pending Channels Offset */
+#define DMAC_ACTIVE_REG_OFST           (0x30)              /* (DMAC_ACTIVE) Active Channel and Levels Offset */
+#define DMAC_BASEADDR_REG_OFST         (0x34)              /* (DMAC_BASEADDR) Descriptor Memory Section Base Address Offset */
+#define DMAC_WRBADDR_REG_OFST          (0x38)              /* (DMAC_WRBADDR) Write-Back Memory Section Base Address Offset */
+#define DMAC_CHID_REG_OFST             (0x3F)              /* (DMAC_CHID) Channel ID Offset */
+#define DMAC_CHCTRLA_REG_OFST          (0x40)              /* (DMAC_CHCTRLA) Channel Control A Offset */
+#define DMAC_CHCTRLB_REG_OFST          (0x44)              /* (DMAC_CHCTRLB) Channel Control B Offset */
+#define DMAC_CHINTENCLR_REG_OFST       (0x4C)              /* (DMAC_CHINTENCLR) Channel Interrupt Enable Clear Offset */
+#define DMAC_CHINTENSET_REG_OFST       (0x4D)              /* (DMAC_CHINTENSET) Channel Interrupt Enable Set Offset */
+#define DMAC_CHINTFLAG_REG_OFST        (0x4E)              /* (DMAC_CHINTFLAG) Channel Interrupt Flag Status and Clear Offset */
+#define DMAC_CHSTATUS_REG_OFST         (0x4F)              /* (DMAC_CHSTATUS) Channel Status Offset */
 
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
 /** \brief DMAC_DESCRIPTOR register API structure */
