@@ -1,7 +1,7 @@
-/**
- * \brief Component description for TCC
+/*
+ * Component description for TCC
  *
- * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2021-02-12T15:11:42Z */
+/* file generated from device description version 2022-01-18T09:31:06Z */
 #ifndef _PIC32CMJH01_TCC_COMPONENT_H_
 #define _PIC32CMJH01_TCC_COMPONENT_H_
 
@@ -1271,36 +1271,36 @@
 
 
 /** \brief TCC register offsets definitions */
-#define TCC_CTRLA_REG_OFST             (0x00)              /**< (TCC_CTRLA) Control A Offset */
-#define TCC_CTRLBCLR_REG_OFST          (0x04)              /**< (TCC_CTRLBCLR) Control B Clear Offset */
-#define TCC_CTRLBSET_REG_OFST          (0x05)              /**< (TCC_CTRLBSET) Control B Set Offset */
-#define TCC_SYNCBUSY_REG_OFST          (0x08)              /**< (TCC_SYNCBUSY) Synchronization Busy Offset */
-#define TCC_FCTRLA_REG_OFST            (0x0C)              /**< (TCC_FCTRLA) Recoverable Fault A Configuration Offset */
-#define TCC_FCTRLB_REG_OFST            (0x10)              /**< (TCC_FCTRLB) Recoverable Fault B Configuration Offset */
-#define TCC_WEXCTRL_REG_OFST           (0x14)              /**< (TCC_WEXCTRL) Waveform Extension Configuration Offset */
-#define TCC_DRVCTRL_REG_OFST           (0x18)              /**< (TCC_DRVCTRL) Driver Control Offset */
-#define TCC_DBGCTRL_REG_OFST           (0x1E)              /**< (TCC_DBGCTRL) Debug Control Offset */
-#define TCC_EVCTRL_REG_OFST            (0x20)              /**< (TCC_EVCTRL) Event Control Offset */
-#define TCC_INTENCLR_REG_OFST          (0x24)              /**< (TCC_INTENCLR) Interrupt Enable Clear Offset */
-#define TCC_INTENSET_REG_OFST          (0x28)              /**< (TCC_INTENSET) Interrupt Enable Set Offset */
-#define TCC_INTFLAG_REG_OFST           (0x2C)              /**< (TCC_INTFLAG) Interrupt Flag Status and Clear Offset */
-#define TCC_STATUS_REG_OFST            (0x30)              /**< (TCC_STATUS) Status Offset */
-#define TCC_COUNT_REG_OFST             (0x34)              /**< (TCC_COUNT) Count Offset */
-#define TCC_PATT_REG_OFST              (0x38)              /**< (TCC_PATT) Pattern Offset */
-#define TCC_WAVE_REG_OFST              (0x3C)              /**< (TCC_WAVE) Waveform Control Offset */
-#define TCC_PER_REG_OFST               (0x40)              /**< (TCC_PER) Period Offset */
-#define TCC_CC_REG_OFST                (0x44)              /**< (TCC_CC) Compare and Capture Offset */
-#define TCC_CC0_REG_OFST               (0x44)              /**< (TCC_CC0) Compare and Capture Offset */
-#define TCC_CC1_REG_OFST               (0x48)              /**< (TCC_CC1) Compare and Capture Offset */
-#define TCC_CC2_REG_OFST               (0x4C)              /**< (TCC_CC2) Compare and Capture Offset */
-#define TCC_CC3_REG_OFST               (0x50)              /**< (TCC_CC3) Compare and Capture Offset */
-#define TCC_PATTBUF_REG_OFST           (0x64)              /**< (TCC_PATTBUF) Pattern Buffer Offset */
-#define TCC_PERBUF_REG_OFST            (0x6C)              /**< (TCC_PERBUF) Period Buffer Offset */
-#define TCC_CCBUF_REG_OFST             (0x70)              /**< (TCC_CCBUF) Compare and Capture Buffer Offset */
-#define TCC_CCBUF0_REG_OFST            (0x70)              /**< (TCC_CCBUF0) Compare and Capture Buffer Offset */
-#define TCC_CCBUF1_REG_OFST            (0x74)              /**< (TCC_CCBUF1) Compare and Capture Buffer Offset */
-#define TCC_CCBUF2_REG_OFST            (0x78)              /**< (TCC_CCBUF2) Compare and Capture Buffer Offset */
-#define TCC_CCBUF3_REG_OFST            (0x7C)              /**< (TCC_CCBUF3) Compare and Capture Buffer Offset */
+#define TCC_CTRLA_REG_OFST             (0x00)              /* (TCC_CTRLA) Control A Offset */
+#define TCC_CTRLBCLR_REG_OFST          (0x04)              /* (TCC_CTRLBCLR) Control B Clear Offset */
+#define TCC_CTRLBSET_REG_OFST          (0x05)              /* (TCC_CTRLBSET) Control B Set Offset */
+#define TCC_SYNCBUSY_REG_OFST          (0x08)              /* (TCC_SYNCBUSY) Synchronization Busy Offset */
+#define TCC_FCTRLA_REG_OFST            (0x0C)              /* (TCC_FCTRLA) Recoverable Fault A Configuration Offset */
+#define TCC_FCTRLB_REG_OFST            (0x10)              /* (TCC_FCTRLB) Recoverable Fault B Configuration Offset */
+#define TCC_WEXCTRL_REG_OFST           (0x14)              /* (TCC_WEXCTRL) Waveform Extension Configuration Offset */
+#define TCC_DRVCTRL_REG_OFST           (0x18)              /* (TCC_DRVCTRL) Driver Control Offset */
+#define TCC_DBGCTRL_REG_OFST           (0x1E)              /* (TCC_DBGCTRL) Debug Control Offset */
+#define TCC_EVCTRL_REG_OFST            (0x20)              /* (TCC_EVCTRL) Event Control Offset */
+#define TCC_INTENCLR_REG_OFST          (0x24)              /* (TCC_INTENCLR) Interrupt Enable Clear Offset */
+#define TCC_INTENSET_REG_OFST          (0x28)              /* (TCC_INTENSET) Interrupt Enable Set Offset */
+#define TCC_INTFLAG_REG_OFST           (0x2C)              /* (TCC_INTFLAG) Interrupt Flag Status and Clear Offset */
+#define TCC_STATUS_REG_OFST            (0x30)              /* (TCC_STATUS) Status Offset */
+#define TCC_COUNT_REG_OFST             (0x34)              /* (TCC_COUNT) Count Offset */
+#define TCC_PATT_REG_OFST              (0x38)              /* (TCC_PATT) Pattern Offset */
+#define TCC_WAVE_REG_OFST              (0x3C)              /* (TCC_WAVE) Waveform Control Offset */
+#define TCC_PER_REG_OFST               (0x40)              /* (TCC_PER) Period Offset */
+#define TCC_CC_REG_OFST                (0x44)              /* (TCC_CC) Compare and Capture Offset */
+#define TCC_CC0_REG_OFST               (0x44)              /* (TCC_CC0) Compare and Capture Offset */
+#define TCC_CC1_REG_OFST               (0x48)              /* (TCC_CC1) Compare and Capture Offset */
+#define TCC_CC2_REG_OFST               (0x4C)              /* (TCC_CC2) Compare and Capture Offset */
+#define TCC_CC3_REG_OFST               (0x50)              /* (TCC_CC3) Compare and Capture Offset */
+#define TCC_PATTBUF_REG_OFST           (0x64)              /* (TCC_PATTBUF) Pattern Buffer Offset */
+#define TCC_PERBUF_REG_OFST            (0x6C)              /* (TCC_PERBUF) Period Buffer Offset */
+#define TCC_CCBUF_REG_OFST             (0x70)              /* (TCC_CCBUF) Compare and Capture Buffer Offset */
+#define TCC_CCBUF0_REG_OFST            (0x70)              /* (TCC_CCBUF0) Compare and Capture Buffer Offset */
+#define TCC_CCBUF1_REG_OFST            (0x74)              /* (TCC_CCBUF1) Compare and Capture Buffer Offset */
+#define TCC_CCBUF2_REG_OFST            (0x78)              /* (TCC_CCBUF2) Compare and Capture Buffer Offset */
+#define TCC_CCBUF3_REG_OFST            (0x7C)              /* (TCC_CCBUF3) Compare and Capture Buffer Offset */
 
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
 /** \brief TCC register API structure */
