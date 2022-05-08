@@ -1,7 +1,7 @@
-/**
- * \brief Component description for MTB
+/*
+ * Component description for MTB
  *
- * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2021-02-12T15:11:42Z */
+/* file generated from device description version 2022-01-18T09:31:06Z */
 #ifndef _PIC32CMJH01_MTB_COMPONENT_H_
 #define _PIC32CMJH01_MTB_COMPONENT_H_
 
@@ -169,31 +169,31 @@
 
 
 /** \brief MTB register offsets definitions */
-#define MTB_POSITION_REG_OFST          (0x00)              /**< (MTB_POSITION) MTB Position Offset */
-#define MTB_MASTER_REG_OFST            (0x04)              /**< (MTB_MASTER) MTB Master Offset */
-#define MTB_FLOW_REG_OFST              (0x08)              /**< (MTB_FLOW) MTB Flow Offset */
-#define MTB_BASE_REG_OFST              (0x0C)              /**< (MTB_BASE) MTB Base Offset */
-#define MTB_ITCTRL_REG_OFST            (0xF00)             /**< (MTB_ITCTRL) MTB Integration Mode Control Offset */
-#define MTB_CLAIMSET_REG_OFST          (0xFA0)             /**< (MTB_CLAIMSET) MTB Claim Set Offset */
-#define MTB_CLAIMCLR_REG_OFST          (0xFA4)             /**< (MTB_CLAIMCLR) MTB Claim Clear Offset */
-#define MTB_LOCKACCESS_REG_OFST        (0xFB0)             /**< (MTB_LOCKACCESS) MTB Lock Access Offset */
-#define MTB_LOCKSTATUS_REG_OFST        (0xFB4)             /**< (MTB_LOCKSTATUS) MTB Lock Status Offset */
-#define MTB_AUTHSTATUS_REG_OFST        (0xFB8)             /**< (MTB_AUTHSTATUS) MTB Authentication Status Offset */
-#define MTB_DEVARCH_REG_OFST           (0xFBC)             /**< (MTB_DEVARCH) MTB Device Architecture Offset */
-#define MTB_DEVID_REG_OFST             (0xFC8)             /**< (MTB_DEVID) MTB Device Configuration Offset */
-#define MTB_DEVTYPE_REG_OFST           (0xFCC)             /**< (MTB_DEVTYPE) MTB Device Type Offset */
-#define MTB_PID4_REG_OFST              (0xFD0)             /**< (MTB_PID4) Peripheral Identification 4 Offset */
-#define MTB_PID5_REG_OFST              (0xFD4)             /**< (MTB_PID5) Peripheral Identification 5 Offset */
-#define MTB_PID6_REG_OFST              (0xFD8)             /**< (MTB_PID6) Peripheral Identification 6 Offset */
-#define MTB_PID7_REG_OFST              (0xFDC)             /**< (MTB_PID7) Peripheral Identification 7 Offset */
-#define MTB_PID0_REG_OFST              (0xFE0)             /**< (MTB_PID0) Peripheral Identification 0 Offset */
-#define MTB_PID1_REG_OFST              (0xFE4)             /**< (MTB_PID1) Peripheral Identification 1 Offset */
-#define MTB_PID2_REG_OFST              (0xFE8)             /**< (MTB_PID2) Peripheral Identification 2 Offset */
-#define MTB_PID3_REG_OFST              (0xFEC)             /**< (MTB_PID3) Peripheral Identification 3 Offset */
-#define MTB_CID0_REG_OFST              (0xFF0)             /**< (MTB_CID0) Component Identification 0 Offset */
-#define MTB_CID1_REG_OFST              (0xFF4)             /**< (MTB_CID1) Component Identification 1 Offset */
-#define MTB_CID2_REG_OFST              (0xFF8)             /**< (MTB_CID2) Component Identification 2 Offset */
-#define MTB_CID3_REG_OFST              (0xFFC)             /**< (MTB_CID3) Component Identification 3 Offset */
+#define MTB_POSITION_REG_OFST          (0x00)              /* (MTB_POSITION) MTB Position Offset */
+#define MTB_MASTER_REG_OFST            (0x04)              /* (MTB_MASTER) MTB Master Offset */
+#define MTB_FLOW_REG_OFST              (0x08)              /* (MTB_FLOW) MTB Flow Offset */
+#define MTB_BASE_REG_OFST              (0x0C)              /* (MTB_BASE) MTB Base Offset */
+#define MTB_ITCTRL_REG_OFST            (0xF00)             /* (MTB_ITCTRL) MTB Integration Mode Control Offset */
+#define MTB_CLAIMSET_REG_OFST          (0xFA0)             /* (MTB_CLAIMSET) MTB Claim Set Offset */
+#define MTB_CLAIMCLR_REG_OFST          (0xFA4)             /* (MTB_CLAIMCLR) MTB Claim Clear Offset */
+#define MTB_LOCKACCESS_REG_OFST        (0xFB0)             /* (MTB_LOCKACCESS) MTB Lock Access Offset */
+#define MTB_LOCKSTATUS_REG_OFST        (0xFB4)             /* (MTB_LOCKSTATUS) MTB Lock Status Offset */
+#define MTB_AUTHSTATUS_REG_OFST        (0xFB8)             /* (MTB_AUTHSTATUS) MTB Authentication Status Offset */
+#define MTB_DEVARCH_REG_OFST           (0xFBC)             /* (MTB_DEVARCH) MTB Device Architecture Offset */
+#define MTB_DEVID_REG_OFST             (0xFC8)             /* (MTB_DEVID) MTB Device Configuration Offset */
+#define MTB_DEVTYPE_REG_OFST           (0xFCC)             /* (MTB_DEVTYPE) MTB Device Type Offset */
+#define MTB_PID4_REG_OFST              (0xFD0)             /* (MTB_PID4) Peripheral Identification 4 Offset */
+#define MTB_PID5_REG_OFST              (0xFD4)             /* (MTB_PID5) Peripheral Identification 5 Offset */
+#define MTB_PID6_REG_OFST              (0xFD8)             /* (MTB_PID6) Peripheral Identification 6 Offset */
+#define MTB_PID7_REG_OFST              (0xFDC)             /* (MTB_PID7) Peripheral Identification 7 Offset */
+#define MTB_PID0_REG_OFST              (0xFE0)             /* (MTB_PID0) Peripheral Identification 0 Offset */
+#define MTB_PID1_REG_OFST              (0xFE4)             /* (MTB_PID1) Peripheral Identification 1 Offset */
+#define MTB_PID2_REG_OFST              (0xFE8)             /* (MTB_PID2) Peripheral Identification 2 Offset */
+#define MTB_PID3_REG_OFST              (0xFEC)             /* (MTB_PID3) Peripheral Identification 3 Offset */
+#define MTB_CID0_REG_OFST              (0xFF0)             /* (MTB_CID0) Component Identification 0 Offset */
+#define MTB_CID1_REG_OFST              (0xFF4)             /* (MTB_CID1) Component Identification 1 Offset */
+#define MTB_CID2_REG_OFST              (0xFF8)             /* (MTB_CID2) Component Identification 2 Offset */
+#define MTB_CID3_REG_OFST              (0xFFC)             /* (MTB_CID3) Component Identification 3 Offset */
 
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
 /** \brief MTB register API structure */

@@ -1,7 +1,7 @@
-/**
- * \brief Component description for CAN
+/*
+ * Component description for CAN
  *
- * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2021-02-12T15:11:42Z */
+/* file generated from device description version 2022-01-18T09:31:06Z */
 #ifndef _PIC32CMJH01_CAN_COMPONENT_H_
 #define _PIC32CMJH01_CAN_COMPONENT_H_
 
@@ -2317,70 +2317,70 @@
 
 
 /** \brief CAN register offsets definitions */
-#define CAN_RXBE_0_REG_OFST            (0x00)              /**< (CAN_RXBE_0) Rx Buffer Element 0 Offset */
-#define CAN_RXBE_1_REG_OFST            (0x04)              /**< (CAN_RXBE_1) Rx Buffer Element 1 Offset */
-#define CAN_RXBE_DATA_REG_OFST         (0x08)              /**< (CAN_RXBE_DATA) Rx Buffer Element Data Offset */
-#define CAN_RXF0E_0_REG_OFST           (0x00)              /**< (CAN_RXF0E_0) Rx FIFO 0 Element 0 Offset */
-#define CAN_RXF0E_1_REG_OFST           (0x04)              /**< (CAN_RXF0E_1) Rx FIFO 0 Element 1 Offset */
-#define CAN_RXF0E_DATA_REG_OFST        (0x08)              /**< (CAN_RXF0E_DATA) Rx FIFO 0 Element Data Offset */
-#define CAN_RXF1E_0_REG_OFST           (0x00)              /**< (CAN_RXF1E_0) Rx FIFO 1 Element 0 Offset */
-#define CAN_RXF1E_1_REG_OFST           (0x04)              /**< (CAN_RXF1E_1) Rx FIFO 1 Element 1 Offset */
-#define CAN_RXF1E_DATA_REG_OFST        (0x08)              /**< (CAN_RXF1E_DATA) Rx FIFO 1 Element Data Offset */
-#define CAN_TXBE_0_REG_OFST            (0x00)              /**< (CAN_TXBE_0) Tx Buffer Element 0 Offset */
-#define CAN_TXBE_1_REG_OFST            (0x04)              /**< (CAN_TXBE_1) Tx Buffer Element 1 Offset */
-#define CAN_TXBE_DATA_REG_OFST         (0x08)              /**< (CAN_TXBE_DATA) Tx Buffer Element Data Offset */
-#define CAN_TXEFE_0_REG_OFST           (0x00)              /**< (CAN_TXEFE_0) Tx Event FIFO Element 0 Offset */
-#define CAN_TXEFE_1_REG_OFST           (0x04)              /**< (CAN_TXEFE_1) Tx Event FIFO Element 1 Offset */
-#define CAN_SIDFE_0_REG_OFST           (0x00)              /**< (CAN_SIDFE_0) Standard Message ID Filter Element 0 Offset */
-#define CAN_XIDFE_0_REG_OFST           (0x00)              /**< (CAN_XIDFE_0) Extended Message ID Filter Element 0 Offset */
-#define CAN_XIDFE_1_REG_OFST           (0x04)              /**< (CAN_XIDFE_1) Extended Message ID Filter Element 1 Offset */
-#define CAN_CREL_REG_OFST              (0x00)              /**< (CAN_CREL) Core Release Offset */
-#define CAN_ENDN_REG_OFST              (0x04)              /**< (CAN_ENDN) Endian Offset */
-#define CAN_MRCFG_REG_OFST             (0x08)              /**< (CAN_MRCFG) Message RAM Configuration Offset */
-#define CAN_DBTP_REG_OFST              (0x0C)              /**< (CAN_DBTP) Fast Bit Timing and Prescaler Offset */
-#define CAN_TEST_REG_OFST              (0x10)              /**< (CAN_TEST) Test Offset */
-#define CAN_RWD_REG_OFST               (0x14)              /**< (CAN_RWD) RAM Watchdog Offset */
-#define CAN_CCCR_REG_OFST              (0x18)              /**< (CAN_CCCR) CC Control Offset */
-#define CAN_NBTP_REG_OFST              (0x1C)              /**< (CAN_NBTP) Nominal Bit Timing and Prescaler Offset */
-#define CAN_TSCC_REG_OFST              (0x20)              /**< (CAN_TSCC) Timestamp Counter Configuration Offset */
-#define CAN_TSCV_REG_OFST              (0x24)              /**< (CAN_TSCV) Timestamp Counter Value Offset */
-#define CAN_TOCC_REG_OFST              (0x28)              /**< (CAN_TOCC) Timeout Counter Configuration Offset */
-#define CAN_TOCV_REG_OFST              (0x2C)              /**< (CAN_TOCV) Timeout Counter Value Offset */
-#define CAN_ECR_REG_OFST               (0x40)              /**< (CAN_ECR) Error Counter Offset */
-#define CAN_PSR_REG_OFST               (0x44)              /**< (CAN_PSR) Protocol Status Offset */
-#define CAN_TDCR_REG_OFST              (0x48)              /**< (CAN_TDCR) Extended ID Filter Configuration Offset */
-#define CAN_IR_REG_OFST                (0x50)              /**< (CAN_IR) Interrupt Offset */
-#define CAN_IE_REG_OFST                (0x54)              /**< (CAN_IE) Interrupt Enable Offset */
-#define CAN_ILS_REG_OFST               (0x58)              /**< (CAN_ILS) Interrupt Line Select Offset */
-#define CAN_ILE_REG_OFST               (0x5C)              /**< (CAN_ILE) Interrupt Line Enable Offset */
-#define CAN_GFC_REG_OFST               (0x80)              /**< (CAN_GFC) Global Filter Configuration Offset */
-#define CAN_SIDFC_REG_OFST             (0x84)              /**< (CAN_SIDFC) Standard ID Filter Configuration Offset */
-#define CAN_XIDFC_REG_OFST             (0x88)              /**< (CAN_XIDFC) Extended ID Filter Configuration Offset */
-#define CAN_XIDAM_REG_OFST             (0x90)              /**< (CAN_XIDAM) Extended ID AND Mask Offset */
-#define CAN_HPMS_REG_OFST              (0x94)              /**< (CAN_HPMS) High Priority Message Status Offset */
-#define CAN_NDAT1_REG_OFST             (0x98)              /**< (CAN_NDAT1) New Data 1 Offset */
-#define CAN_NDAT2_REG_OFST             (0x9C)              /**< (CAN_NDAT2) New Data 2 Offset */
-#define CAN_RXF0C_REG_OFST             (0xA0)              /**< (CAN_RXF0C) Rx FIFO 0 Configuration Offset */
-#define CAN_RXF0S_REG_OFST             (0xA4)              /**< (CAN_RXF0S) Rx FIFO 0 Status Offset */
-#define CAN_RXF0A_REG_OFST             (0xA8)              /**< (CAN_RXF0A) Rx FIFO 0 Acknowledge Offset */
-#define CAN_RXBC_REG_OFST              (0xAC)              /**< (CAN_RXBC) Rx Buffer Configuration Offset */
-#define CAN_RXF1C_REG_OFST             (0xB0)              /**< (CAN_RXF1C) Rx FIFO 1 Configuration Offset */
-#define CAN_RXF1S_REG_OFST             (0xB4)              /**< (CAN_RXF1S) Rx FIFO 1 Status Offset */
-#define CAN_RXF1A_REG_OFST             (0xB8)              /**< (CAN_RXF1A) Rx FIFO 1 Acknowledge Offset */
-#define CAN_RXESC_REG_OFST             (0xBC)              /**< (CAN_RXESC) Rx Buffer / FIFO Element Size Configuration Offset */
-#define CAN_TXBC_REG_OFST              (0xC0)              /**< (CAN_TXBC) Tx Buffer Configuration Offset */
-#define CAN_TXFQS_REG_OFST             (0xC4)              /**< (CAN_TXFQS) Tx FIFO / Queue Status Offset */
-#define CAN_TXESC_REG_OFST             (0xC8)              /**< (CAN_TXESC) Tx Buffer Element Size Configuration Offset */
-#define CAN_TXBRP_REG_OFST             (0xCC)              /**< (CAN_TXBRP) Tx Buffer Request Pending Offset */
-#define CAN_TXBAR_REG_OFST             (0xD0)              /**< (CAN_TXBAR) Tx Buffer Add Request Offset */
-#define CAN_TXBCR_REG_OFST             (0xD4)              /**< (CAN_TXBCR) Tx Buffer Cancellation Request Offset */
-#define CAN_TXBTO_REG_OFST             (0xD8)              /**< (CAN_TXBTO) Tx Buffer Transmission Occurred Offset */
-#define CAN_TXBCF_REG_OFST             (0xDC)              /**< (CAN_TXBCF) Tx Buffer Cancellation Finished Offset */
-#define CAN_TXBTIE_REG_OFST            (0xE0)              /**< (CAN_TXBTIE) Tx Buffer Transmission Interrupt Enable Offset */
-#define CAN_TXBCIE_REG_OFST            (0xE4)              /**< (CAN_TXBCIE) Tx Buffer Cancellation Finished Interrupt Enable Offset */
-#define CAN_TXEFC_REG_OFST             (0xF0)              /**< (CAN_TXEFC) Tx Event FIFO Configuration Offset */
-#define CAN_TXEFS_REG_OFST             (0xF4)              /**< (CAN_TXEFS) Tx Event FIFO Status Offset */
-#define CAN_TXEFA_REG_OFST             (0xF8)              /**< (CAN_TXEFA) Tx Event FIFO Acknowledge Offset */
+#define CAN_RXBE_0_REG_OFST            (0x00)              /* (CAN_RXBE_0) Rx Buffer Element 0 Offset */
+#define CAN_RXBE_1_REG_OFST            (0x04)              /* (CAN_RXBE_1) Rx Buffer Element 1 Offset */
+#define CAN_RXBE_DATA_REG_OFST         (0x08)              /* (CAN_RXBE_DATA) Rx Buffer Element Data Offset */
+#define CAN_RXF0E_0_REG_OFST           (0x00)              /* (CAN_RXF0E_0) Rx FIFO 0 Element 0 Offset */
+#define CAN_RXF0E_1_REG_OFST           (0x04)              /* (CAN_RXF0E_1) Rx FIFO 0 Element 1 Offset */
+#define CAN_RXF0E_DATA_REG_OFST        (0x08)              /* (CAN_RXF0E_DATA) Rx FIFO 0 Element Data Offset */
+#define CAN_RXF1E_0_REG_OFST           (0x00)              /* (CAN_RXF1E_0) Rx FIFO 1 Element 0 Offset */
+#define CAN_RXF1E_1_REG_OFST           (0x04)              /* (CAN_RXF1E_1) Rx FIFO 1 Element 1 Offset */
+#define CAN_RXF1E_DATA_REG_OFST        (0x08)              /* (CAN_RXF1E_DATA) Rx FIFO 1 Element Data Offset */
+#define CAN_TXBE_0_REG_OFST            (0x00)              /* (CAN_TXBE_0) Tx Buffer Element 0 Offset */
+#define CAN_TXBE_1_REG_OFST            (0x04)              /* (CAN_TXBE_1) Tx Buffer Element 1 Offset */
+#define CAN_TXBE_DATA_REG_OFST         (0x08)              /* (CAN_TXBE_DATA) Tx Buffer Element Data Offset */
+#define CAN_TXEFE_0_REG_OFST           (0x00)              /* (CAN_TXEFE_0) Tx Event FIFO Element 0 Offset */
+#define CAN_TXEFE_1_REG_OFST           (0x04)              /* (CAN_TXEFE_1) Tx Event FIFO Element 1 Offset */
+#define CAN_SIDFE_0_REG_OFST           (0x00)              /* (CAN_SIDFE_0) Standard Message ID Filter Element 0 Offset */
+#define CAN_XIDFE_0_REG_OFST           (0x00)              /* (CAN_XIDFE_0) Extended Message ID Filter Element 0 Offset */
+#define CAN_XIDFE_1_REG_OFST           (0x04)              /* (CAN_XIDFE_1) Extended Message ID Filter Element 1 Offset */
+#define CAN_CREL_REG_OFST              (0x00)              /* (CAN_CREL) Core Release Offset */
+#define CAN_ENDN_REG_OFST              (0x04)              /* (CAN_ENDN) Endian Offset */
+#define CAN_MRCFG_REG_OFST             (0x08)              /* (CAN_MRCFG) Message RAM Configuration Offset */
+#define CAN_DBTP_REG_OFST              (0x0C)              /* (CAN_DBTP) Fast Bit Timing and Prescaler Offset */
+#define CAN_TEST_REG_OFST              (0x10)              /* (CAN_TEST) Test Offset */
+#define CAN_RWD_REG_OFST               (0x14)              /* (CAN_RWD) RAM Watchdog Offset */
+#define CAN_CCCR_REG_OFST              (0x18)              /* (CAN_CCCR) CC Control Offset */
+#define CAN_NBTP_REG_OFST              (0x1C)              /* (CAN_NBTP) Nominal Bit Timing and Prescaler Offset */
+#define CAN_TSCC_REG_OFST              (0x20)              /* (CAN_TSCC) Timestamp Counter Configuration Offset */
+#define CAN_TSCV_REG_OFST              (0x24)              /* (CAN_TSCV) Timestamp Counter Value Offset */
+#define CAN_TOCC_REG_OFST              (0x28)              /* (CAN_TOCC) Timeout Counter Configuration Offset */
+#define CAN_TOCV_REG_OFST              (0x2C)              /* (CAN_TOCV) Timeout Counter Value Offset */
+#define CAN_ECR_REG_OFST               (0x40)              /* (CAN_ECR) Error Counter Offset */
+#define CAN_PSR_REG_OFST               (0x44)              /* (CAN_PSR) Protocol Status Offset */
+#define CAN_TDCR_REG_OFST              (0x48)              /* (CAN_TDCR) Extended ID Filter Configuration Offset */
+#define CAN_IR_REG_OFST                (0x50)              /* (CAN_IR) Interrupt Offset */
+#define CAN_IE_REG_OFST                (0x54)              /* (CAN_IE) Interrupt Enable Offset */
+#define CAN_ILS_REG_OFST               (0x58)              /* (CAN_ILS) Interrupt Line Select Offset */
+#define CAN_ILE_REG_OFST               (0x5C)              /* (CAN_ILE) Interrupt Line Enable Offset */
+#define CAN_GFC_REG_OFST               (0x80)              /* (CAN_GFC) Global Filter Configuration Offset */
+#define CAN_SIDFC_REG_OFST             (0x84)              /* (CAN_SIDFC) Standard ID Filter Configuration Offset */
+#define CAN_XIDFC_REG_OFST             (0x88)              /* (CAN_XIDFC) Extended ID Filter Configuration Offset */
+#define CAN_XIDAM_REG_OFST             (0x90)              /* (CAN_XIDAM) Extended ID AND Mask Offset */
+#define CAN_HPMS_REG_OFST              (0x94)              /* (CAN_HPMS) High Priority Message Status Offset */
+#define CAN_NDAT1_REG_OFST             (0x98)              /* (CAN_NDAT1) New Data 1 Offset */
+#define CAN_NDAT2_REG_OFST             (0x9C)              /* (CAN_NDAT2) New Data 2 Offset */
+#define CAN_RXF0C_REG_OFST             (0xA0)              /* (CAN_RXF0C) Rx FIFO 0 Configuration Offset */
+#define CAN_RXF0S_REG_OFST             (0xA4)              /* (CAN_RXF0S) Rx FIFO 0 Status Offset */
+#define CAN_RXF0A_REG_OFST             (0xA8)              /* (CAN_RXF0A) Rx FIFO 0 Acknowledge Offset */
+#define CAN_RXBC_REG_OFST              (0xAC)              /* (CAN_RXBC) Rx Buffer Configuration Offset */
+#define CAN_RXF1C_REG_OFST             (0xB0)              /* (CAN_RXF1C) Rx FIFO 1 Configuration Offset */
+#define CAN_RXF1S_REG_OFST             (0xB4)              /* (CAN_RXF1S) Rx FIFO 1 Status Offset */
+#define CAN_RXF1A_REG_OFST             (0xB8)              /* (CAN_RXF1A) Rx FIFO 1 Acknowledge Offset */
+#define CAN_RXESC_REG_OFST             (0xBC)              /* (CAN_RXESC) Rx Buffer / FIFO Element Size Configuration Offset */
+#define CAN_TXBC_REG_OFST              (0xC0)              /* (CAN_TXBC) Tx Buffer Configuration Offset */
+#define CAN_TXFQS_REG_OFST             (0xC4)              /* (CAN_TXFQS) Tx FIFO / Queue Status Offset */
+#define CAN_TXESC_REG_OFST             (0xC8)              /* (CAN_TXESC) Tx Buffer Element Size Configuration Offset */
+#define CAN_TXBRP_REG_OFST             (0xCC)              /* (CAN_TXBRP) Tx Buffer Request Pending Offset */
+#define CAN_TXBAR_REG_OFST             (0xD0)              /* (CAN_TXBAR) Tx Buffer Add Request Offset */
+#define CAN_TXBCR_REG_OFST             (0xD4)              /* (CAN_TXBCR) Tx Buffer Cancellation Request Offset */
+#define CAN_TXBTO_REG_OFST             (0xD8)              /* (CAN_TXBTO) Tx Buffer Transmission Occurred Offset */
+#define CAN_TXBCF_REG_OFST             (0xDC)              /* (CAN_TXBCF) Tx Buffer Cancellation Finished Offset */
+#define CAN_TXBTIE_REG_OFST            (0xE0)              /* (CAN_TXBTIE) Tx Buffer Transmission Interrupt Enable Offset */
+#define CAN_TXBCIE_REG_OFST            (0xE4)              /* (CAN_TXBCIE) Tx Buffer Cancellation Finished Interrupt Enable Offset */
+#define CAN_TXEFC_REG_OFST             (0xF0)              /* (CAN_TXEFC) Tx Event FIFO Configuration Offset */
+#define CAN_TXEFS_REG_OFST             (0xF4)              /* (CAN_TXEFS) Tx Event FIFO Status Offset */
+#define CAN_TXEFA_REG_OFST             (0xF8)              /* (CAN_TXEFA) Tx Event FIFO Acknowledge Offset */
 
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
 /** \brief CAN_RXBE register API structure */
