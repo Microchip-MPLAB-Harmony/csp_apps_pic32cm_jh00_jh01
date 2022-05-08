@@ -1,7 +1,7 @@
-/**
- * \brief Component description for MCLK
+/*
+ * Component description for MCLK
  *
- * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2021-02-12T15:11:42Z */
+/* file generated from device description version 2022-01-18T09:31:06Z */
 #ifndef _PIC32CMJH01_MCLK_COMPONENT_H_
 #define _PIC32CMJH01_MCLK_COMPONENT_H_
 
@@ -312,15 +312,15 @@
 #define MCLK_APBDMASK_TC(value)               (MCLK_APBDMASK_TC_Msk & ((value) << MCLK_APBDMASK_TC_Pos)) 
 
 /** \brief MCLK register offsets definitions */
-#define MCLK_INTENCLR_REG_OFST         (0x01)              /**< (MCLK_INTENCLR) Interrupt Enable Clear Offset */
-#define MCLK_INTENSET_REG_OFST         (0x02)              /**< (MCLK_INTENSET) Interrupt Enable Set Offset */
-#define MCLK_INTFLAG_REG_OFST          (0x03)              /**< (MCLK_INTFLAG) Interrupt Flag Status and Clear Offset */
-#define MCLK_CPUDIV_REG_OFST           (0x04)              /**< (MCLK_CPUDIV) CPU Clock Division Offset */
-#define MCLK_AHBMASK_REG_OFST          (0x10)              /**< (MCLK_AHBMASK) AHB Mask Offset */
-#define MCLK_APBAMASK_REG_OFST         (0x14)              /**< (MCLK_APBAMASK) APBA Mask Offset */
-#define MCLK_APBBMASK_REG_OFST         (0x18)              /**< (MCLK_APBBMASK) APBB Mask Offset */
-#define MCLK_APBCMASK_REG_OFST         (0x1C)              /**< (MCLK_APBCMASK) APBC Mask Offset */
-#define MCLK_APBDMASK_REG_OFST         (0x20)              /**< (MCLK_APBDMASK) APBD Mask Offset */
+#define MCLK_INTENCLR_REG_OFST         (0x01)              /* (MCLK_INTENCLR) Interrupt Enable Clear Offset */
+#define MCLK_INTENSET_REG_OFST         (0x02)              /* (MCLK_INTENSET) Interrupt Enable Set Offset */
+#define MCLK_INTFLAG_REG_OFST          (0x03)              /* (MCLK_INTFLAG) Interrupt Flag Status and Clear Offset */
+#define MCLK_CPUDIV_REG_OFST           (0x04)              /* (MCLK_CPUDIV) CPU Clock Division Offset */
+#define MCLK_AHBMASK_REG_OFST          (0x10)              /* (MCLK_AHBMASK) AHB Mask Offset */
+#define MCLK_APBAMASK_REG_OFST         (0x14)              /* (MCLK_APBAMASK) APBA Mask Offset */
+#define MCLK_APBBMASK_REG_OFST         (0x18)              /* (MCLK_APBBMASK) APBB Mask Offset */
+#define MCLK_APBCMASK_REG_OFST         (0x1C)              /* (MCLK_APBCMASK) APBC Mask Offset */
+#define MCLK_APBDMASK_REG_OFST         (0x20)              /* (MCLK_APBDMASK) APBD Mask Offset */
 
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
 /** \brief MCLK register API structure */
