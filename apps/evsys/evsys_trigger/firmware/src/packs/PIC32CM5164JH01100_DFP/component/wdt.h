@@ -1,7 +1,7 @@
-/**
- * \brief Component description for WDT
+/*
+ * Component description for WDT
  *
- * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2021-02-12T15:11:42Z */
+/* file generated from device description version 2022-01-18T09:31:06Z */
 #ifndef _PIC32CMJH01_WDT_COMPONENT_H_
 #define _PIC32CMJH01_WDT_COMPONENT_H_
 
@@ -191,14 +191,14 @@
 
 
 /** \brief WDT register offsets definitions */
-#define WDT_CTRLA_REG_OFST             (0x00)              /**< (WDT_CTRLA) Control Offset */
-#define WDT_CONFIG_REG_OFST            (0x01)              /**< (WDT_CONFIG) Configuration Offset */
-#define WDT_EWCTRL_REG_OFST            (0x02)              /**< (WDT_EWCTRL) Early Warning Interrupt Control Offset */
-#define WDT_INTENCLR_REG_OFST          (0x04)              /**< (WDT_INTENCLR) Interrupt Enable Clear Offset */
-#define WDT_INTENSET_REG_OFST          (0x05)              /**< (WDT_INTENSET) Interrupt Enable Set Offset */
-#define WDT_INTFLAG_REG_OFST           (0x06)              /**< (WDT_INTFLAG) Interrupt Flag Status and Clear Offset */
-#define WDT_SYNCBUSY_REG_OFST          (0x08)              /**< (WDT_SYNCBUSY) Synchronization Busy Offset */
-#define WDT_CLEAR_REG_OFST             (0x0C)              /**< (WDT_CLEAR) Clear Offset */
+#define WDT_CTRLA_REG_OFST             (0x00)              /* (WDT_CTRLA) Control Offset */
+#define WDT_CONFIG_REG_OFST            (0x01)              /* (WDT_CONFIG) Configuration Offset */
+#define WDT_EWCTRL_REG_OFST            (0x02)              /* (WDT_EWCTRL) Early Warning Interrupt Control Offset */
+#define WDT_INTENCLR_REG_OFST          (0x04)              /* (WDT_INTENCLR) Interrupt Enable Clear Offset */
+#define WDT_INTENSET_REG_OFST          (0x05)              /* (WDT_INTENSET) Interrupt Enable Set Offset */
+#define WDT_INTFLAG_REG_OFST           (0x06)              /* (WDT_INTFLAG) Interrupt Flag Status and Clear Offset */
+#define WDT_SYNCBUSY_REG_OFST          (0x08)              /* (WDT_SYNCBUSY) Synchronization Busy Offset */
+#define WDT_CLEAR_REG_OFST             (0x0C)              /* (WDT_CLEAR) Clear Offset */
 
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
 /** \brief WDT register API structure */
