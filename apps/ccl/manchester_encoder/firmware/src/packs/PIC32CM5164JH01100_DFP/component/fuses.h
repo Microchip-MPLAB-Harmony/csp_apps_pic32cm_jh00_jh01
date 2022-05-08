@@ -1,7 +1,7 @@
-/**
- * \brief Component description for FUSES
+/*
+ * Component description for FUSES
  *
- * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2021-02-12T15:11:42Z */
+/* file generated from device description version 2022-01-18T09:31:06Z */
 #ifndef _PIC32CMJH01_FUSES_COMPONENT_H_
 #define _PIC32CMJH01_FUSES_COMPONENT_H_
 
@@ -280,15 +280,15 @@
 
 
 /** \brief FUSES register offsets definitions */
-#define FUSES_LOCKBIT_WORD_0_REG_OFST  (0x00)              /**< (FUSES_LOCKBIT_WORD_0) LOCKBIT Page Word 0 Offset */
-#define FUSES_OTP1_WORD_0_REG_OFST     (0x00)              /**< (FUSES_OTP1_WORD_0) OTP1 Page Word 0 Offset */
-#define FUSES_OTP1_WORD_1_REG_OFST     (0x04)              /**< (FUSES_OTP1_WORD_1) OTP1 Page Word 1 Offset */
-#define FUSES_OTP2_WORD_1_REG_OFST     (0x04)              /**< (FUSES_OTP2_WORD_1) OTP2 Page Word 1 Offset */
-#define FUSES_OTP3_WORD_1_REG_OFST     (0x04)              /**< (FUSES_OTP3_WORD_1) OTP3 Page Word 1 Offset */
-#define FUSES_OTP4_WORD_1_REG_OFST     (0x04)              /**< (FUSES_OTP4_WORD_1) OTP4 Page Word 1 Offset */
-#define FUSES_OTP5_WORD_0_REG_OFST     (0x00)              /**< (FUSES_OTP5_WORD_0) OTP5 Page Word 0 Offset */
-#define FUSES_USER_WORD_0_REG_OFST     (0x00)              /**< (FUSES_USER_WORD_0) USER Page Word 0 Offset */
-#define FUSES_USER_WORD_1_REG_OFST     (0x04)              /**< (FUSES_USER_WORD_1) USER Page Word 1 Offset */
+#define FUSES_LOCKBIT_WORD_0_REG_OFST  (0x00)              /* (FUSES_LOCKBIT_WORD_0) LOCKBIT Page Word 0 Offset */
+#define FUSES_OTP1_WORD_0_REG_OFST     (0x00)              /* (FUSES_OTP1_WORD_0) OTP1 Page Word 0 Offset */
+#define FUSES_OTP1_WORD_1_REG_OFST     (0x04)              /* (FUSES_OTP1_WORD_1) OTP1 Page Word 1 Offset */
+#define FUSES_OTP2_WORD_1_REG_OFST     (0x04)              /* (FUSES_OTP2_WORD_1) OTP2 Page Word 1 Offset */
+#define FUSES_OTP3_WORD_1_REG_OFST     (0x04)              /* (FUSES_OTP3_WORD_1) OTP3 Page Word 1 Offset */
+#define FUSES_OTP4_WORD_1_REG_OFST     (0x04)              /* (FUSES_OTP4_WORD_1) OTP4 Page Word 1 Offset */
+#define FUSES_OTP5_WORD_0_REG_OFST     (0x00)              /* (FUSES_OTP5_WORD_0) OTP5 Page Word 0 Offset */
+#define FUSES_USER_WORD_0_REG_OFST     (0x00)              /* (FUSES_USER_WORD_0) USER Page Word 0 Offset */
+#define FUSES_USER_WORD_1_REG_OFST     (0x04)              /* (FUSES_USER_WORD_1) USER Page Word 1 Offset */
 
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
 /** \brief LOCKBIT_FUSES register API structure */
