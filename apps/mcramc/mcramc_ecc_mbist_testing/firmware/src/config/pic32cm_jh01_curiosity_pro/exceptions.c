@@ -73,9 +73,8 @@ void __attribute__((noreturn)) HardFault_Handler(void)
    if (MCRAMC_REGS->MCRAMC_INTSTA & MCRAMC_INTSTA_DERR_Msk)
    {
        printf ("Bus Error Fault occurred due to Double Fault Injection. Please RESET the board.\n\r");         
-   }
-   
-   while (true)
+   }  
+	while (true)
    {
    }
 }
@@ -83,4 +82,3 @@ void __attribute__((noreturn)) HardFault_Handler(void)
 /*******************************************************************************
  End of File
  */
-

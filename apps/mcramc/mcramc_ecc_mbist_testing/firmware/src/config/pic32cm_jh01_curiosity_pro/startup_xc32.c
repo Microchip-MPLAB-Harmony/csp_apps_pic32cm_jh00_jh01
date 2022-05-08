@@ -56,7 +56,7 @@
 extern void __attribute__((long_call)) __libc_init_array(void);
 
 /* Optional application-provided functions */
-//extern void __attribute__((weak,long_call, alias("Dummy_App_Func"))) _on_reset(void);
+extern void __attribute__((weak,long_call, alias("Dummy_App_Func"))) _on_reset(void);
 extern void __attribute__((weak,long_call, alias("Dummy_App_Func"))) _on_bootstrap(void);
 
 /* Reserved for use by the MPLAB XC32 Compiler */
@@ -125,19 +125,6 @@ __STATIC_INLINE void  __attribute__((optimize("-O1")))  RAM_Initialize(void)
     }
 }
 
-/* Optional application-provided functions */
-extern void __attribute__((weak,long_call, alias("Dummy_App_Func"))) _on_reset(void)
-{
-    // SMBIST is no longer PAC secure to perform SMBIST Test
-    PAC_REGS->PAC_WRCTRL = (uint32_t)(PAC_WRCTRL_KEY_CLR | PAC_WRCTRL_PERID (91));
-    
-    // Clear SMBIST Status Flags
-    SMBIST_REGS->SMBIST_STATUS = (uint32_t) SMBIST_STATUS_Msk;
-    // Launch the MBIST Test on SRAM
-    SMBIST_REGS->SMBIST_CTRL = (uint32_t)(SMBIST_CTRL_SMBISTP1_Msk | SMBIST_CTRL_SMBISTP2_Msk);
-    // Wait for Test to Finish
-    while ((SMBIST_REGS->SMBIST_STATUS & SMBIST_STATUS_DONE_Msk) == 0);
-}
 
 /* Brief default application function used as a weak reference */
 extern void Dummy_App_Func(void);
@@ -192,7 +179,7 @@ void __attribute__((optimize("-O1"), section(".text.Reset_Handler"), long_call, 
 
     /* Call the optional application-provided _on_bootstrap() function. */
     _on_bootstrap();
-    
+
     /* Reserved for use by MPLAB XC32. */
     __xc32_on_bootstrap();
 
@@ -205,6 +192,6 @@ void __attribute__((optimize("-O1"), section(".text.Reset_Handler"), long_call, 
 
     while (true)
     {
-    /* Infinite loop */
-}
+        /* Infinite loop */
+    }
 }
