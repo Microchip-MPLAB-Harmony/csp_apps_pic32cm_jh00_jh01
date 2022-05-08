@@ -1,7 +1,7 @@
-/**
- * \brief Component description for SMBIST
+/*
+ * Component description for SMBIST
  *
- * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2021-02-12T15:11:42Z */
+/* file generated from device description version 2022-01-18T09:31:06Z */
 #ifndef _PIC32CMJH01_SMBIST_COMPONENT_H_
 #define _PIC32CMJH01_SMBIST_COMPONENT_H_
 
@@ -56,8 +56,8 @@
 
 
 /** \brief SMBIST register offsets definitions */
-#define SMBIST_CTRL_REG_OFST           (0x00)              /**< (SMBIST_CTRL) Control Offset */
-#define SMBIST_STATUS_REG_OFST         (0x04)              /**< (SMBIST_STATUS) Status Offset */
+#define SMBIST_CTRL_REG_OFST           (0x00)              /* (SMBIST_CTRL) Control Offset */
+#define SMBIST_STATUS_REG_OFST         (0x04)              /* (SMBIST_STATUS) Status Offset */
 
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
 /** \brief SMBIST register API structure */

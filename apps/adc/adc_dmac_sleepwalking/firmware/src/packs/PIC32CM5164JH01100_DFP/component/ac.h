@@ -1,7 +1,7 @@
-/**
- * \brief Component description for AC
+/*
+ * Component description for AC
  *
- * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2021-02-12T15:11:42Z */
+/* file generated from device description version 2022-01-18T09:31:06Z */
 #ifndef _PIC32CMJH01_AC_COMPONENT_H_
 #define _PIC32CMJH01_AC_COMPONENT_H_
 
@@ -459,27 +459,27 @@
 #define AC_SYNCBUSY_COMPCTRL(value)           (AC_SYNCBUSY_COMPCTRL_Msk & ((value) << AC_SYNCBUSY_COMPCTRL_Pos)) 
 
 /** \brief AC register offsets definitions */
-#define AC_CTRLA_REG_OFST              (0x00)              /**< (AC_CTRLA) Control A Offset */
-#define AC_CTRLB_REG_OFST              (0x01)              /**< (AC_CTRLB) Control B Offset */
-#define AC_EVCTRL_REG_OFST             (0x02)              /**< (AC_EVCTRL) Event Control Offset */
-#define AC_INTENCLR_REG_OFST           (0x04)              /**< (AC_INTENCLR) Interrupt Enable Clear Offset */
-#define AC_INTENSET_REG_OFST           (0x05)              /**< (AC_INTENSET) Interrupt Enable Set Offset */
-#define AC_INTFLAG_REG_OFST            (0x06)              /**< (AC_INTFLAG) Interrupt Flag Status and Clear Offset */
-#define AC_STATUSA_REG_OFST            (0x07)              /**< (AC_STATUSA) Status A Offset */
-#define AC_STATUSB_REG_OFST            (0x08)              /**< (AC_STATUSB) Status B Offset */
-#define AC_DBGCTRL_REG_OFST            (0x09)              /**< (AC_DBGCTRL) Debug Control Offset */
-#define AC_WINCTRL_REG_OFST            (0x0A)              /**< (AC_WINCTRL) Window Control Offset */
-#define AC_SCALER_REG_OFST             (0x0C)              /**< (AC_SCALER) Scaler n Offset */
-#define AC_SCALER0_REG_OFST            (0x0C)              /**< (AC_SCALER0) Scaler n Offset */
-#define AC_SCALER1_REG_OFST            (0x0D)              /**< (AC_SCALER1) Scaler n Offset */
-#define AC_SCALER2_REG_OFST            (0x0E)              /**< (AC_SCALER2) Scaler n Offset */
-#define AC_SCALER3_REG_OFST            (0x0F)              /**< (AC_SCALER3) Scaler n Offset */
-#define AC_COMPCTRL_REG_OFST           (0x10)              /**< (AC_COMPCTRL) Comparator Control n Offset */
-#define AC_COMPCTRL0_REG_OFST          (0x10)              /**< (AC_COMPCTRL0) Comparator Control n Offset */
-#define AC_COMPCTRL1_REG_OFST          (0x14)              /**< (AC_COMPCTRL1) Comparator Control n Offset */
-#define AC_COMPCTRL2_REG_OFST          (0x18)              /**< (AC_COMPCTRL2) Comparator Control n Offset */
-#define AC_COMPCTRL3_REG_OFST          (0x1C)              /**< (AC_COMPCTRL3) Comparator Control n Offset */
-#define AC_SYNCBUSY_REG_OFST           (0x20)              /**< (AC_SYNCBUSY) Synchronization Busy Offset */
+#define AC_CTRLA_REG_OFST              (0x00)              /* (AC_CTRLA) Control A Offset */
+#define AC_CTRLB_REG_OFST              (0x01)              /* (AC_CTRLB) Control B Offset */
+#define AC_EVCTRL_REG_OFST             (0x02)              /* (AC_EVCTRL) Event Control Offset */
+#define AC_INTENCLR_REG_OFST           (0x04)              /* (AC_INTENCLR) Interrupt Enable Clear Offset */
+#define AC_INTENSET_REG_OFST           (0x05)              /* (AC_INTENSET) Interrupt Enable Set Offset */
+#define AC_INTFLAG_REG_OFST            (0x06)              /* (AC_INTFLAG) Interrupt Flag Status and Clear Offset */
+#define AC_STATUSA_REG_OFST            (0x07)              /* (AC_STATUSA) Status A Offset */
+#define AC_STATUSB_REG_OFST            (0x08)              /* (AC_STATUSB) Status B Offset */
+#define AC_DBGCTRL_REG_OFST            (0x09)              /* (AC_DBGCTRL) Debug Control Offset */
+#define AC_WINCTRL_REG_OFST            (0x0A)              /* (AC_WINCTRL) Window Control Offset */
+#define AC_SCALER_REG_OFST             (0x0C)              /* (AC_SCALER) Scaler n Offset */
+#define AC_SCALER0_REG_OFST            (0x0C)              /* (AC_SCALER0) Scaler n Offset */
+#define AC_SCALER1_REG_OFST            (0x0D)              /* (AC_SCALER1) Scaler n Offset */
+#define AC_SCALER2_REG_OFST            (0x0E)              /* (AC_SCALER2) Scaler n Offset */
+#define AC_SCALER3_REG_OFST            (0x0F)              /* (AC_SCALER3) Scaler n Offset */
+#define AC_COMPCTRL_REG_OFST           (0x10)              /* (AC_COMPCTRL) Comparator Control n Offset */
+#define AC_COMPCTRL0_REG_OFST          (0x10)              /* (AC_COMPCTRL0) Comparator Control n Offset */
+#define AC_COMPCTRL1_REG_OFST          (0x14)              /* (AC_COMPCTRL1) Comparator Control n Offset */
+#define AC_COMPCTRL2_REG_OFST          (0x18)              /* (AC_COMPCTRL2) Comparator Control n Offset */
+#define AC_COMPCTRL3_REG_OFST          (0x1C)              /* (AC_COMPCTRL3) Comparator Control n Offset */
+#define AC_SYNCBUSY_REG_OFST           (0x20)              /* (AC_SYNCBUSY) Synchronization Busy Offset */
 
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
 /** \brief AC register API structure */

@@ -1,7 +1,7 @@
-/**
- * \brief Component description for EIC
+/*
+ * Component description for EIC
  *
- * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2021-02-12T15:11:42Z */
+/* file generated from device description version 2022-01-18T09:31:06Z */
 #ifndef _PIC32CMJH01_EIC_COMPONENT_H_
 #define _PIC32CMJH01_EIC_COMPONENT_H_
 
@@ -928,20 +928,20 @@
 #define EIC_PINSTATE_PINSTATE(value)          (EIC_PINSTATE_PINSTATE_Msk & ((value) << EIC_PINSTATE_PINSTATE_Pos)) 
 
 /** \brief EIC register offsets definitions */
-#define EIC_CTRLA_REG_OFST             (0x00)              /**< (EIC_CTRLA) Control A Offset */
-#define EIC_NMICTRL_REG_OFST           (0x01)              /**< (EIC_NMICTRL) Non-Maskable Interrupt Control Offset */
-#define EIC_NMIFLAG_REG_OFST           (0x02)              /**< (EIC_NMIFLAG) Non-Maskable Interrupt Flag Status and Clear Offset */
-#define EIC_SYNCBUSY_REG_OFST          (0x04)              /**< (EIC_SYNCBUSY) Synchronization Busy Offset */
-#define EIC_EVCTRL_REG_OFST            (0x08)              /**< (EIC_EVCTRL) Event Control Offset */
-#define EIC_INTENCLR_REG_OFST          (0x0C)              /**< (EIC_INTENCLR) Interrupt Enable Clear Offset */
-#define EIC_INTENSET_REG_OFST          (0x10)              /**< (EIC_INTENSET) Interrupt Enable Set Offset */
-#define EIC_INTFLAG_REG_OFST           (0x14)              /**< (EIC_INTFLAG) Interrupt Flag Status and Clear Offset */
-#define EIC_ASYNCH_REG_OFST            (0x18)              /**< (EIC_ASYNCH) External Interrupt Asynchronous Mode Offset */
-#define EIC_CONFIG0_REG_OFST           (0x1C)              /**< (EIC_CONFIG0) External Interrupt Sense Configuration Offset */
-#define EIC_CONFIG1_REG_OFST           (0x20)              /**< (EIC_CONFIG1) External Interrupt Sense Configuration Offset */
-#define EIC_DEBOUNCEN_REG_OFST         (0x30)              /**< (EIC_DEBOUNCEN) Debouncer Enable Offset */
-#define EIC_DPRESCALER_REG_OFST        (0x34)              /**< (EIC_DPRESCALER) Debouncer Prescaler Offset */
-#define EIC_PINSTATE_REG_OFST          (0x38)              /**< (EIC_PINSTATE) Pin State Offset */
+#define EIC_CTRLA_REG_OFST             (0x00)              /* (EIC_CTRLA) Control A Offset */
+#define EIC_NMICTRL_REG_OFST           (0x01)              /* (EIC_NMICTRL) Non-Maskable Interrupt Control Offset */
+#define EIC_NMIFLAG_REG_OFST           (0x02)              /* (EIC_NMIFLAG) Non-Maskable Interrupt Flag Status and Clear Offset */
+#define EIC_SYNCBUSY_REG_OFST          (0x04)              /* (EIC_SYNCBUSY) Synchronization Busy Offset */
+#define EIC_EVCTRL_REG_OFST            (0x08)              /* (EIC_EVCTRL) Event Control Offset */
+#define EIC_INTENCLR_REG_OFST          (0x0C)              /* (EIC_INTENCLR) Interrupt Enable Clear Offset */
+#define EIC_INTENSET_REG_OFST          (0x10)              /* (EIC_INTENSET) Interrupt Enable Set Offset */
+#define EIC_INTFLAG_REG_OFST           (0x14)              /* (EIC_INTFLAG) Interrupt Flag Status and Clear Offset */
+#define EIC_ASYNCH_REG_OFST            (0x18)              /* (EIC_ASYNCH) External Interrupt Asynchronous Mode Offset */
+#define EIC_CONFIG0_REG_OFST           (0x1C)              /* (EIC_CONFIG0) External Interrupt Sense Configuration Offset */
+#define EIC_CONFIG1_REG_OFST           (0x20)              /* (EIC_CONFIG1) External Interrupt Sense Configuration Offset */
+#define EIC_DEBOUNCEN_REG_OFST         (0x30)              /* (EIC_DEBOUNCEN) Debouncer Enable Offset */
+#define EIC_DPRESCALER_REG_OFST        (0x34)              /* (EIC_DPRESCALER) Debouncer Prescaler Offset */
+#define EIC_PINSTATE_REG_OFST          (0x38)              /* (EIC_PINSTATE) Pin State Offset */
 
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
 /** \brief EIC register API structure */

@@ -1,7 +1,7 @@
-/**
- * \brief Component description for SUPC
+/*
+ * Component description for SUPC
  *
- * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2021-02-12T15:11:42Z */
+/* file generated from device description version 2022-01-18T09:31:06Z */
 #ifndef _PIC32CMJH01_SUPC_COMPONENT_H_
 #define _PIC32CMJH01_SUPC_COMPONENT_H_
 
@@ -193,13 +193,13 @@
 
 
 /** \brief SUPC register offsets definitions */
-#define SUPC_INTENCLR_REG_OFST         (0x00)              /**< (SUPC_INTENCLR) Interrupt Enable Clear Offset */
-#define SUPC_INTENSET_REG_OFST         (0x04)              /**< (SUPC_INTENSET) Interrupt Enable Set Offset */
-#define SUPC_INTFLAG_REG_OFST          (0x08)              /**< (SUPC_INTFLAG) Interrupt Flag Status and Clear Offset */
-#define SUPC_STATUS_REG_OFST           (0x0C)              /**< (SUPC_STATUS) Power and Clocks Status Offset */
-#define SUPC_BODVDD_REG_OFST           (0x10)              /**< (SUPC_BODVDD) BODVDD Control Offset */
-#define SUPC_VREG_REG_OFST             (0x18)              /**< (SUPC_VREG) VREG Control Offset */
-#define SUPC_VREF_REG_OFST             (0x1C)              /**< (SUPC_VREF) VREF Control Offset */
+#define SUPC_INTENCLR_REG_OFST         (0x00)              /* (SUPC_INTENCLR) Interrupt Enable Clear Offset */
+#define SUPC_INTENSET_REG_OFST         (0x04)              /* (SUPC_INTENSET) Interrupt Enable Set Offset */
+#define SUPC_INTFLAG_REG_OFST          (0x08)              /* (SUPC_INTFLAG) Interrupt Flag Status and Clear Offset */
+#define SUPC_STATUS_REG_OFST           (0x0C)              /* (SUPC_STATUS) Power and Clocks Status Offset */
+#define SUPC_BODVDD_REG_OFST           (0x10)              /* (SUPC_BODVDD) BODVDD Control Offset */
+#define SUPC_VREG_REG_OFST             (0x18)              /* (SUPC_VREG) VREG Control Offset */
+#define SUPC_VREF_REG_OFST             (0x1C)              /* (SUPC_VREF) VREF Control Offset */
 
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
 /** \brief SUPC register API structure */
