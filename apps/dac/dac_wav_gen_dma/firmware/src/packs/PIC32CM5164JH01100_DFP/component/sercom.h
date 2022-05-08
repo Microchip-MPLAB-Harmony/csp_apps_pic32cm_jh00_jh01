@@ -1,7 +1,7 @@
-/**
- * \brief Component description for SERCOM
+/*
+ * Component description for SERCOM
  *
- * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2021-02-12T15:11:42Z */
+/* file generated from device description version 2022-01-18T09:31:06Z */
 #ifndef _PIC32CMJH01_SERCOM_COMPONENT_H_
 #define _PIC32CMJH01_SERCOM_COMPONENT_H_
 
@@ -1729,72 +1729,72 @@
 
 
 /** \brief SERCOM register offsets definitions */
-#define SERCOM_I2CM_CTRLA_REG_OFST     (0x00)              /**< (SERCOM_I2CM_CTRLA) I2CM Control A Offset */
-#define SERCOM_I2CS_CTRLA_REG_OFST     (0x00)              /**< (SERCOM_I2CS_CTRLA) I2CS Control A Offset */
-#define SERCOM_SPIM_CTRLA_REG_OFST     (0x00)              /**< (SERCOM_SPIM_CTRLA) SPIM Control A Offset */
-#define SERCOM_SPIS_CTRLA_REG_OFST     (0x00)              /**< (SERCOM_SPIS_CTRLA) SPIS Control A Offset */
-#define SERCOM_USART_EXT_CTRLA_REG_OFST (0x00)              /**< (SERCOM_USART_EXT_CTRLA) USART_EXT Control A Offset */
-#define SERCOM_USART_INT_CTRLA_REG_OFST (0x00)              /**< (SERCOM_USART_INT_CTRLA) USART_INT Control A Offset */
-#define SERCOM_I2CM_CTRLB_REG_OFST     (0x04)              /**< (SERCOM_I2CM_CTRLB) I2CM Control B Offset */
-#define SERCOM_I2CS_CTRLB_REG_OFST     (0x04)              /**< (SERCOM_I2CS_CTRLB) I2CS Control B Offset */
-#define SERCOM_SPIM_CTRLB_REG_OFST     (0x04)              /**< (SERCOM_SPIM_CTRLB) SPIM Control B Offset */
-#define SERCOM_SPIS_CTRLB_REG_OFST     (0x04)              /**< (SERCOM_SPIS_CTRLB) SPIS Control B Offset */
-#define SERCOM_USART_EXT_CTRLB_REG_OFST (0x04)              /**< (SERCOM_USART_EXT_CTRLB) USART_EXT Control B Offset */
-#define SERCOM_USART_INT_CTRLB_REG_OFST (0x04)              /**< (SERCOM_USART_INT_CTRLB) USART_INT Control B Offset */
-#define SERCOM_USART_EXT_CTRLC_REG_OFST (0x08)              /**< (SERCOM_USART_EXT_CTRLC) USART_EXT Control C Offset */
-#define SERCOM_USART_INT_CTRLC_REG_OFST (0x08)              /**< (SERCOM_USART_INT_CTRLC) USART_INT Control C Offset */
-#define SERCOM_I2CM_BAUD_REG_OFST      (0x0C)              /**< (SERCOM_I2CM_BAUD) I2CM Baud Rate Offset */
-#define SERCOM_SPIM_BAUD_REG_OFST      (0x0C)              /**< (SERCOM_SPIM_BAUD) SPIM Baud Rate Offset */
-#define SERCOM_SPIS_BAUD_REG_OFST      (0x0C)              /**< (SERCOM_SPIS_BAUD) SPIS Baud Rate Offset */
-#define SERCOM_USART_EXT_BAUD_REG_OFST (0x0C)              /**< (SERCOM_USART_EXT_BAUD) USART_EXT Baud Rate Offset */
-#define SERCOM_USART_INT_BAUD_REG_OFST (0x0C)              /**< (SERCOM_USART_INT_BAUD) USART_INT Baud Rate Offset */
-#define SERCOM_USART_EXT_RXPL_REG_OFST (0x0E)              /**< (SERCOM_USART_EXT_RXPL) USART_EXT Receive Pulse Length Offset */
-#define SERCOM_USART_INT_RXPL_REG_OFST (0x0E)              /**< (SERCOM_USART_INT_RXPL) USART_INT Receive Pulse Length Offset */
-#define SERCOM_I2CM_INTENCLR_REG_OFST  (0x14)              /**< (SERCOM_I2CM_INTENCLR) I2CM Interrupt Enable Clear Offset */
-#define SERCOM_I2CS_INTENCLR_REG_OFST  (0x14)              /**< (SERCOM_I2CS_INTENCLR) I2CS Interrupt Enable Clear Offset */
-#define SERCOM_SPIM_INTENCLR_REG_OFST  (0x14)              /**< (SERCOM_SPIM_INTENCLR) SPIM Interrupt Enable Clear Offset */
-#define SERCOM_SPIS_INTENCLR_REG_OFST  (0x14)              /**< (SERCOM_SPIS_INTENCLR) SPIS Interrupt Enable Clear Offset */
-#define SERCOM_USART_EXT_INTENCLR_REG_OFST (0x14)              /**< (SERCOM_USART_EXT_INTENCLR) USART_EXT Interrupt Enable Clear Offset */
-#define SERCOM_USART_INT_INTENCLR_REG_OFST (0x14)              /**< (SERCOM_USART_INT_INTENCLR) USART_INT Interrupt Enable Clear Offset */
-#define SERCOM_I2CM_INTENSET_REG_OFST  (0x16)              /**< (SERCOM_I2CM_INTENSET) I2CM Interrupt Enable Set Offset */
-#define SERCOM_I2CS_INTENSET_REG_OFST  (0x16)              /**< (SERCOM_I2CS_INTENSET) I2CS Interrupt Enable Set Offset */
-#define SERCOM_SPIM_INTENSET_REG_OFST  (0x16)              /**< (SERCOM_SPIM_INTENSET) SPIM Interrupt Enable Set Offset */
-#define SERCOM_SPIS_INTENSET_REG_OFST  (0x16)              /**< (SERCOM_SPIS_INTENSET) SPIS Interrupt Enable Set Offset */
-#define SERCOM_USART_EXT_INTENSET_REG_OFST (0x16)              /**< (SERCOM_USART_EXT_INTENSET) USART_EXT Interrupt Enable Set Offset */
-#define SERCOM_USART_INT_INTENSET_REG_OFST (0x16)              /**< (SERCOM_USART_INT_INTENSET) USART_INT Interrupt Enable Set Offset */
-#define SERCOM_I2CM_INTFLAG_REG_OFST   (0x18)              /**< (SERCOM_I2CM_INTFLAG) I2CM Interrupt Flag Status and Clear Offset */
-#define SERCOM_I2CS_INTFLAG_REG_OFST   (0x18)              /**< (SERCOM_I2CS_INTFLAG) I2CS Interrupt Flag Status and Clear Offset */
-#define SERCOM_SPIM_INTFLAG_REG_OFST   (0x18)              /**< (SERCOM_SPIM_INTFLAG) SPIM Interrupt Flag Status and Clear Offset */
-#define SERCOM_SPIS_INTFLAG_REG_OFST   (0x18)              /**< (SERCOM_SPIS_INTFLAG) SPIS Interrupt Flag Status and Clear Offset */
-#define SERCOM_USART_EXT_INTFLAG_REG_OFST (0x18)              /**< (SERCOM_USART_EXT_INTFLAG) USART_EXT Interrupt Flag Status and Clear Offset */
-#define SERCOM_USART_INT_INTFLAG_REG_OFST (0x18)              /**< (SERCOM_USART_INT_INTFLAG) USART_INT Interrupt Flag Status and Clear Offset */
-#define SERCOM_I2CM_STATUS_REG_OFST    (0x1A)              /**< (SERCOM_I2CM_STATUS) I2CM Status Offset */
-#define SERCOM_I2CS_STATUS_REG_OFST    (0x1A)              /**< (SERCOM_I2CS_STATUS) I2CS Status Offset */
-#define SERCOM_SPIM_STATUS_REG_OFST    (0x1A)              /**< (SERCOM_SPIM_STATUS) SPIM Status Offset */
-#define SERCOM_SPIS_STATUS_REG_OFST    (0x1A)              /**< (SERCOM_SPIS_STATUS) SPIS Status Offset */
-#define SERCOM_USART_EXT_STATUS_REG_OFST (0x1A)              /**< (SERCOM_USART_EXT_STATUS) USART_EXT Status Offset */
-#define SERCOM_USART_INT_STATUS_REG_OFST (0x1A)              /**< (SERCOM_USART_INT_STATUS) USART_INT Status Offset */
-#define SERCOM_I2CM_SYNCBUSY_REG_OFST  (0x1C)              /**< (SERCOM_I2CM_SYNCBUSY) I2CM Synchronization Busy Offset */
-#define SERCOM_I2CS_SYNCBUSY_REG_OFST  (0x1C)              /**< (SERCOM_I2CS_SYNCBUSY) I2CS Synchronization Busy Offset */
-#define SERCOM_SPIM_SYNCBUSY_REG_OFST  (0x1C)              /**< (SERCOM_SPIM_SYNCBUSY) SPIM Synchronization Busy Offset */
-#define SERCOM_SPIS_SYNCBUSY_REG_OFST  (0x1C)              /**< (SERCOM_SPIS_SYNCBUSY) SPIS Synchronization Busy Offset */
-#define SERCOM_USART_EXT_SYNCBUSY_REG_OFST (0x1C)              /**< (SERCOM_USART_EXT_SYNCBUSY) USART_EXT Synchronization Busy Offset */
-#define SERCOM_USART_INT_SYNCBUSY_REG_OFST (0x1C)              /**< (SERCOM_USART_INT_SYNCBUSY) USART_INT Synchronization Busy Offset */
-#define SERCOM_I2CM_ADDR_REG_OFST      (0x24)              /**< (SERCOM_I2CM_ADDR) I2CM Address Offset */
-#define SERCOM_I2CS_ADDR_REG_OFST      (0x24)              /**< (SERCOM_I2CS_ADDR) I2CS Address Offset */
-#define SERCOM_SPIM_ADDR_REG_OFST      (0x24)              /**< (SERCOM_SPIM_ADDR) SPIM Address Offset */
-#define SERCOM_SPIS_ADDR_REG_OFST      (0x24)              /**< (SERCOM_SPIS_ADDR) SPIS Address Offset */
-#define SERCOM_I2CM_DATA_REG_OFST      (0x28)              /**< (SERCOM_I2CM_DATA) I2CM Data Offset */
-#define SERCOM_I2CS_DATA_REG_OFST      (0x28)              /**< (SERCOM_I2CS_DATA) I2CS Data Offset */
-#define SERCOM_SPIM_DATA_REG_OFST      (0x28)              /**< (SERCOM_SPIM_DATA) SPIM Data Offset */
-#define SERCOM_SPIS_DATA_REG_OFST      (0x28)              /**< (SERCOM_SPIS_DATA) SPIS Data Offset */
-#define SERCOM_USART_EXT_DATA_REG_OFST (0x28)              /**< (SERCOM_USART_EXT_DATA) USART_EXT Data Offset */
-#define SERCOM_USART_INT_DATA_REG_OFST (0x28)              /**< (SERCOM_USART_INT_DATA) USART_INT Data Offset */
-#define SERCOM_I2CM_DBGCTRL_REG_OFST   (0x30)              /**< (SERCOM_I2CM_DBGCTRL) I2CM Debug Control Offset */
-#define SERCOM_SPIM_DBGCTRL_REG_OFST   (0x30)              /**< (SERCOM_SPIM_DBGCTRL) SPIM Debug Control Offset */
-#define SERCOM_SPIS_DBGCTRL_REG_OFST   (0x30)              /**< (SERCOM_SPIS_DBGCTRL) SPIS Debug Control Offset */
-#define SERCOM_USART_EXT_DBGCTRL_REG_OFST (0x30)              /**< (SERCOM_USART_EXT_DBGCTRL) USART_EXT Debug Control Offset */
-#define SERCOM_USART_INT_DBGCTRL_REG_OFST (0x30)              /**< (SERCOM_USART_INT_DBGCTRL) USART_INT Debug Control Offset */
+#define SERCOM_I2CM_CTRLA_REG_OFST     (0x00)              /* (SERCOM_I2CM_CTRLA) I2CM Control A Offset */
+#define SERCOM_I2CS_CTRLA_REG_OFST     (0x00)              /* (SERCOM_I2CS_CTRLA) I2CS Control A Offset */
+#define SERCOM_SPIM_CTRLA_REG_OFST     (0x00)              /* (SERCOM_SPIM_CTRLA) SPIM Control A Offset */
+#define SERCOM_SPIS_CTRLA_REG_OFST     (0x00)              /* (SERCOM_SPIS_CTRLA) SPIS Control A Offset */
+#define SERCOM_USART_EXT_CTRLA_REG_OFST (0x00)              /* (SERCOM_USART_EXT_CTRLA) USART_EXT Control A Offset */
+#define SERCOM_USART_INT_CTRLA_REG_OFST (0x00)              /* (SERCOM_USART_INT_CTRLA) USART_INT Control A Offset */
+#define SERCOM_I2CM_CTRLB_REG_OFST     (0x04)              /* (SERCOM_I2CM_CTRLB) I2CM Control B Offset */
+#define SERCOM_I2CS_CTRLB_REG_OFST     (0x04)              /* (SERCOM_I2CS_CTRLB) I2CS Control B Offset */
+#define SERCOM_SPIM_CTRLB_REG_OFST     (0x04)              /* (SERCOM_SPIM_CTRLB) SPIM Control B Offset */
+#define SERCOM_SPIS_CTRLB_REG_OFST     (0x04)              /* (SERCOM_SPIS_CTRLB) SPIS Control B Offset */
+#define SERCOM_USART_EXT_CTRLB_REG_OFST (0x04)              /* (SERCOM_USART_EXT_CTRLB) USART_EXT Control B Offset */
+#define SERCOM_USART_INT_CTRLB_REG_OFST (0x04)              /* (SERCOM_USART_INT_CTRLB) USART_INT Control B Offset */
+#define SERCOM_USART_EXT_CTRLC_REG_OFST (0x08)              /* (SERCOM_USART_EXT_CTRLC) USART_EXT Control C Offset */
+#define SERCOM_USART_INT_CTRLC_REG_OFST (0x08)              /* (SERCOM_USART_INT_CTRLC) USART_INT Control C Offset */
+#define SERCOM_I2CM_BAUD_REG_OFST      (0x0C)              /* (SERCOM_I2CM_BAUD) I2CM Baud Rate Offset */
+#define SERCOM_SPIM_BAUD_REG_OFST      (0x0C)              /* (SERCOM_SPIM_BAUD) SPIM Baud Rate Offset */
+#define SERCOM_SPIS_BAUD_REG_OFST      (0x0C)              /* (SERCOM_SPIS_BAUD) SPIS Baud Rate Offset */
+#define SERCOM_USART_EXT_BAUD_REG_OFST (0x0C)              /* (SERCOM_USART_EXT_BAUD) USART_EXT Baud Rate Offset */
+#define SERCOM_USART_INT_BAUD_REG_OFST (0x0C)              /* (SERCOM_USART_INT_BAUD) USART_INT Baud Rate Offset */
+#define SERCOM_USART_EXT_RXPL_REG_OFST (0x0E)              /* (SERCOM_USART_EXT_RXPL) USART_EXT Receive Pulse Length Offset */
+#define SERCOM_USART_INT_RXPL_REG_OFST (0x0E)              /* (SERCOM_USART_INT_RXPL) USART_INT Receive Pulse Length Offset */
+#define SERCOM_I2CM_INTENCLR_REG_OFST  (0x14)              /* (SERCOM_I2CM_INTENCLR) I2CM Interrupt Enable Clear Offset */
+#define SERCOM_I2CS_INTENCLR_REG_OFST  (0x14)              /* (SERCOM_I2CS_INTENCLR) I2CS Interrupt Enable Clear Offset */
+#define SERCOM_SPIM_INTENCLR_REG_OFST  (0x14)              /* (SERCOM_SPIM_INTENCLR) SPIM Interrupt Enable Clear Offset */
+#define SERCOM_SPIS_INTENCLR_REG_OFST  (0x14)              /* (SERCOM_SPIS_INTENCLR) SPIS Interrupt Enable Clear Offset */
+#define SERCOM_USART_EXT_INTENCLR_REG_OFST (0x14)              /* (SERCOM_USART_EXT_INTENCLR) USART_EXT Interrupt Enable Clear Offset */
+#define SERCOM_USART_INT_INTENCLR_REG_OFST (0x14)              /* (SERCOM_USART_INT_INTENCLR) USART_INT Interrupt Enable Clear Offset */
+#define SERCOM_I2CM_INTENSET_REG_OFST  (0x16)              /* (SERCOM_I2CM_INTENSET) I2CM Interrupt Enable Set Offset */
+#define SERCOM_I2CS_INTENSET_REG_OFST  (0x16)              /* (SERCOM_I2CS_INTENSET) I2CS Interrupt Enable Set Offset */
+#define SERCOM_SPIM_INTENSET_REG_OFST  (0x16)              /* (SERCOM_SPIM_INTENSET) SPIM Interrupt Enable Set Offset */
+#define SERCOM_SPIS_INTENSET_REG_OFST  (0x16)              /* (SERCOM_SPIS_INTENSET) SPIS Interrupt Enable Set Offset */
+#define SERCOM_USART_EXT_INTENSET_REG_OFST (0x16)              /* (SERCOM_USART_EXT_INTENSET) USART_EXT Interrupt Enable Set Offset */
+#define SERCOM_USART_INT_INTENSET_REG_OFST (0x16)              /* (SERCOM_USART_INT_INTENSET) USART_INT Interrupt Enable Set Offset */
+#define SERCOM_I2CM_INTFLAG_REG_OFST   (0x18)              /* (SERCOM_I2CM_INTFLAG) I2CM Interrupt Flag Status and Clear Offset */
+#define SERCOM_I2CS_INTFLAG_REG_OFST   (0x18)              /* (SERCOM_I2CS_INTFLAG) I2CS Interrupt Flag Status and Clear Offset */
+#define SERCOM_SPIM_INTFLAG_REG_OFST   (0x18)              /* (SERCOM_SPIM_INTFLAG) SPIM Interrupt Flag Status and Clear Offset */
+#define SERCOM_SPIS_INTFLAG_REG_OFST   (0x18)              /* (SERCOM_SPIS_INTFLAG) SPIS Interrupt Flag Status and Clear Offset */
+#define SERCOM_USART_EXT_INTFLAG_REG_OFST (0x18)              /* (SERCOM_USART_EXT_INTFLAG) USART_EXT Interrupt Flag Status and Clear Offset */
+#define SERCOM_USART_INT_INTFLAG_REG_OFST (0x18)              /* (SERCOM_USART_INT_INTFLAG) USART_INT Interrupt Flag Status and Clear Offset */
+#define SERCOM_I2CM_STATUS_REG_OFST    (0x1A)              /* (SERCOM_I2CM_STATUS) I2CM Status Offset */
+#define SERCOM_I2CS_STATUS_REG_OFST    (0x1A)              /* (SERCOM_I2CS_STATUS) I2CS Status Offset */
+#define SERCOM_SPIM_STATUS_REG_OFST    (0x1A)              /* (SERCOM_SPIM_STATUS) SPIM Status Offset */
+#define SERCOM_SPIS_STATUS_REG_OFST    (0x1A)              /* (SERCOM_SPIS_STATUS) SPIS Status Offset */
+#define SERCOM_USART_EXT_STATUS_REG_OFST (0x1A)              /* (SERCOM_USART_EXT_STATUS) USART_EXT Status Offset */
+#define SERCOM_USART_INT_STATUS_REG_OFST (0x1A)              /* (SERCOM_USART_INT_STATUS) USART_INT Status Offset */
+#define SERCOM_I2CM_SYNCBUSY_REG_OFST  (0x1C)              /* (SERCOM_I2CM_SYNCBUSY) I2CM Synchronization Busy Offset */
+#define SERCOM_I2CS_SYNCBUSY_REG_OFST  (0x1C)              /* (SERCOM_I2CS_SYNCBUSY) I2CS Synchronization Busy Offset */
+#define SERCOM_SPIM_SYNCBUSY_REG_OFST  (0x1C)              /* (SERCOM_SPIM_SYNCBUSY) SPIM Synchronization Busy Offset */
+#define SERCOM_SPIS_SYNCBUSY_REG_OFST  (0x1C)              /* (SERCOM_SPIS_SYNCBUSY) SPIS Synchronization Busy Offset */
+#define SERCOM_USART_EXT_SYNCBUSY_REG_OFST (0x1C)              /* (SERCOM_USART_EXT_SYNCBUSY) USART_EXT Synchronization Busy Offset */
+#define SERCOM_USART_INT_SYNCBUSY_REG_OFST (0x1C)              /* (SERCOM_USART_INT_SYNCBUSY) USART_INT Synchronization Busy Offset */
+#define SERCOM_I2CM_ADDR_REG_OFST      (0x24)              /* (SERCOM_I2CM_ADDR) I2CM Address Offset */
+#define SERCOM_I2CS_ADDR_REG_OFST      (0x24)              /* (SERCOM_I2CS_ADDR) I2CS Address Offset */
+#define SERCOM_SPIM_ADDR_REG_OFST      (0x24)              /* (SERCOM_SPIM_ADDR) SPIM Address Offset */
+#define SERCOM_SPIS_ADDR_REG_OFST      (0x24)              /* (SERCOM_SPIS_ADDR) SPIS Address Offset */
+#define SERCOM_I2CM_DATA_REG_OFST      (0x28)              /* (SERCOM_I2CM_DATA) I2CM Data Offset */
+#define SERCOM_I2CS_DATA_REG_OFST      (0x28)              /* (SERCOM_I2CS_DATA) I2CS Data Offset */
+#define SERCOM_SPIM_DATA_REG_OFST      (0x28)              /* (SERCOM_SPIM_DATA) SPIM Data Offset */
+#define SERCOM_SPIS_DATA_REG_OFST      (0x28)              /* (SERCOM_SPIS_DATA) SPIS Data Offset */
+#define SERCOM_USART_EXT_DATA_REG_OFST (0x28)              /* (SERCOM_USART_EXT_DATA) USART_EXT Data Offset */
+#define SERCOM_USART_INT_DATA_REG_OFST (0x28)              /* (SERCOM_USART_INT_DATA) USART_INT Data Offset */
+#define SERCOM_I2CM_DBGCTRL_REG_OFST   (0x30)              /* (SERCOM_I2CM_DBGCTRL) I2CM Debug Control Offset */
+#define SERCOM_SPIM_DBGCTRL_REG_OFST   (0x30)              /* (SERCOM_SPIM_DBGCTRL) SPIM Debug Control Offset */
+#define SERCOM_SPIS_DBGCTRL_REG_OFST   (0x30)              /* (SERCOM_SPIS_DBGCTRL) SPIS Debug Control Offset */
+#define SERCOM_USART_EXT_DBGCTRL_REG_OFST (0x30)              /* (SERCOM_USART_EXT_DBGCTRL) USART_EXT Debug Control Offset */
+#define SERCOM_USART_INT_DBGCTRL_REG_OFST (0x30)              /* (SERCOM_USART_INT_DBGCTRL) USART_INT Debug Control Offset */
 
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
 /** \brief SERCOM register API structure */

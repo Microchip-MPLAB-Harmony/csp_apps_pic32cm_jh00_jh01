@@ -1,7 +1,7 @@
-/**
- * \brief Component description for DSU
+/*
+ * Component description for DSU
  *
- * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2021-02-12T15:11:42Z */
+/* file generated from device description version 2022-01-18T09:31:06Z */
 #ifndef _PIC32CMJH01_DSU_COMPONENT_H_
 #define _PIC32CMJH01_DSU_COMPONENT_H_
 
@@ -131,7 +131,7 @@
 
 
 /* -------- DSU_DID : (DSU Offset: 0x18) ( R/ 32) Device Identification -------- */
-#define DSU_DID_RESETVALUE                    _U_(0x11060000)                                      /**<  (DSU_DID) Device Identification  Reset Value */
+#define DSU_DID_RESETVALUE                    _U_(0x11060100)                                      /**<  (DSU_DID) Device Identification  Reset Value */
 
 #define DSU_DID_DEVSEL_Pos                    _U_(0)                                               /**< (DSU_DID) Device Select Position */
 #define DSU_DID_DEVSEL_Msk                    (_U_(0xFF) << DSU_DID_DEVSEL_Pos)                    /**< (DSU_DID) Device Select Mask */
@@ -349,32 +349,32 @@
 
 
 /** \brief DSU register offsets definitions */
-#define DSU_CTRL_REG_OFST              (0x00)              /**< (DSU_CTRL) Control Offset */
-#define DSU_STATUSA_REG_OFST           (0x01)              /**< (DSU_STATUSA) Status A Offset */
-#define DSU_STATUSB_REG_OFST           (0x02)              /**< (DSU_STATUSB) Status B Offset */
-#define DSU_ADDR_REG_OFST              (0x04)              /**< (DSU_ADDR) Address Offset */
-#define DSU_LENGTH_REG_OFST            (0x08)              /**< (DSU_LENGTH) Length Offset */
-#define DSU_DATA_REG_OFST              (0x0C)              /**< (DSU_DATA) Data Offset */
-#define DSU_DCC_REG_OFST               (0x10)              /**< (DSU_DCC) Debug Communication Channel n Offset */
-#define DSU_DCC0_REG_OFST              (0x10)              /**< (DSU_DCC0) Debug Communication Channel n Offset */
-#define DSU_DCC1_REG_OFST              (0x14)              /**< (DSU_DCC1) Debug Communication Channel n Offset */
-#define DSU_DID_REG_OFST               (0x18)              /**< (DSU_DID) Device Identification Offset */
-#define DSU_ENTRY0_REG_OFST            (0x1000)            /**< (DSU_ENTRY0) CoreSight ROM Table Entry 0 Offset */
-#define DSU_ENTRY1_REG_OFST            (0x1004)            /**< (DSU_ENTRY1) CoreSight ROM Table Entry 1 Offset */
-#define DSU_END_REG_OFST               (0x1008)            /**< (DSU_END) CoreSight ROM Table End Offset */
-#define DSU_MEMTYPE_REG_OFST           (0x1FCC)            /**< (DSU_MEMTYPE) CoreSight ROM Table Memory Type Offset */
-#define DSU_PID4_REG_OFST              (0x1FD0)            /**< (DSU_PID4) Peripheral Identification 4 Offset */
-#define DSU_PID5_REG_OFST              (0x1FD4)            /**< (DSU_PID5) Peripheral Identification 5 Offset */
-#define DSU_PID6_REG_OFST              (0x1FD8)            /**< (DSU_PID6) Peripheral Identification 6 Offset */
-#define DSU_PID7_REG_OFST              (0x1FDC)            /**< (DSU_PID7) Peripheral Identification 7 Offset */
-#define DSU_PID0_REG_OFST              (0x1FE0)            /**< (DSU_PID0) Peripheral Identification 0 Offset */
-#define DSU_PID1_REG_OFST              (0x1FE4)            /**< (DSU_PID1) Peripheral Identification 1 Offset */
-#define DSU_PID2_REG_OFST              (0x1FE8)            /**< (DSU_PID2) Peripheral Identification 2 Offset */
-#define DSU_PID3_REG_OFST              (0x1FEC)            /**< (DSU_PID3) Peripheral Identification 3 Offset */
-#define DSU_CID0_REG_OFST              (0x1FF0)            /**< (DSU_CID0) Component Identification 0 Offset */
-#define DSU_CID1_REG_OFST              (0x1FF4)            /**< (DSU_CID1) Component Identification 1 Offset */
-#define DSU_CID2_REG_OFST              (0x1FF8)            /**< (DSU_CID2) Component Identification 2 Offset */
-#define DSU_CID3_REG_OFST              (0x1FFC)            /**< (DSU_CID3) Component Identification 3 Offset */
+#define DSU_CTRL_REG_OFST              (0x00)              /* (DSU_CTRL) Control Offset */
+#define DSU_STATUSA_REG_OFST           (0x01)              /* (DSU_STATUSA) Status A Offset */
+#define DSU_STATUSB_REG_OFST           (0x02)              /* (DSU_STATUSB) Status B Offset */
+#define DSU_ADDR_REG_OFST              (0x04)              /* (DSU_ADDR) Address Offset */
+#define DSU_LENGTH_REG_OFST            (0x08)              /* (DSU_LENGTH) Length Offset */
+#define DSU_DATA_REG_OFST              (0x0C)              /* (DSU_DATA) Data Offset */
+#define DSU_DCC_REG_OFST               (0x10)              /* (DSU_DCC) Debug Communication Channel n Offset */
+#define DSU_DCC0_REG_OFST              (0x10)              /* (DSU_DCC0) Debug Communication Channel n Offset */
+#define DSU_DCC1_REG_OFST              (0x14)              /* (DSU_DCC1) Debug Communication Channel n Offset */
+#define DSU_DID_REG_OFST               (0x18)              /* (DSU_DID) Device Identification Offset */
+#define DSU_ENTRY0_REG_OFST            (0x1000)            /* (DSU_ENTRY0) CoreSight ROM Table Entry 0 Offset */
+#define DSU_ENTRY1_REG_OFST            (0x1004)            /* (DSU_ENTRY1) CoreSight ROM Table Entry 1 Offset */
+#define DSU_END_REG_OFST               (0x1008)            /* (DSU_END) CoreSight ROM Table End Offset */
+#define DSU_MEMTYPE_REG_OFST           (0x1FCC)            /* (DSU_MEMTYPE) CoreSight ROM Table Memory Type Offset */
+#define DSU_PID4_REG_OFST              (0x1FD0)            /* (DSU_PID4) Peripheral Identification 4 Offset */
+#define DSU_PID5_REG_OFST              (0x1FD4)            /* (DSU_PID5) Peripheral Identification 5 Offset */
+#define DSU_PID6_REG_OFST              (0x1FD8)            /* (DSU_PID6) Peripheral Identification 6 Offset */
+#define DSU_PID7_REG_OFST              (0x1FDC)            /* (DSU_PID7) Peripheral Identification 7 Offset */
+#define DSU_PID0_REG_OFST              (0x1FE0)            /* (DSU_PID0) Peripheral Identification 0 Offset */
+#define DSU_PID1_REG_OFST              (0x1FE4)            /* (DSU_PID1) Peripheral Identification 1 Offset */
+#define DSU_PID2_REG_OFST              (0x1FE8)            /* (DSU_PID2) Peripheral Identification 2 Offset */
+#define DSU_PID3_REG_OFST              (0x1FEC)            /* (DSU_PID3) Peripheral Identification 3 Offset */
+#define DSU_CID0_REG_OFST              (0x1FF0)            /* (DSU_CID0) Component Identification 0 Offset */
+#define DSU_CID1_REG_OFST              (0x1FF4)            /* (DSU_CID1) Component Identification 1 Offset */
+#define DSU_CID2_REG_OFST              (0x1FF8)            /* (DSU_CID2) Component Identification 2 Offset */
+#define DSU_CID3_REG_OFST              (0x1FFC)            /* (DSU_CID3) Component Identification 3 Offset */
 
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
 /** \brief DSU register API structure */
