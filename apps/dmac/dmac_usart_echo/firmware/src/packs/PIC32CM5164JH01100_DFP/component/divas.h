@@ -1,7 +1,7 @@
-/**
- * \brief Component description for DIVAS
+/*
+ * Component description for DIVAS
  *
- * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2021-02-12T15:11:42Z */
+/* file generated from device description version 2022-01-18T09:31:06Z */
 #ifndef _PIC32CMJH01_DIVAS_COMPONENT_H_
 #define _PIC32CMJH01_DIVAS_COMPONENT_H_
 
@@ -98,13 +98,13 @@
 
 
 /** \brief DIVAS register offsets definitions */
-#define DIVAS_CTRLA_REG_OFST           (0x00)              /**< (DIVAS_CTRLA) Control Offset */
-#define DIVAS_STATUS_REG_OFST          (0x04)              /**< (DIVAS_STATUS) Status Offset */
-#define DIVAS_DIVIDEND_REG_OFST        (0x08)              /**< (DIVAS_DIVIDEND) Dividend Offset */
-#define DIVAS_DIVISOR_REG_OFST         (0x0C)              /**< (DIVAS_DIVISOR) Divisor Offset */
-#define DIVAS_RESULT_REG_OFST          (0x10)              /**< (DIVAS_RESULT) Result Offset */
-#define DIVAS_REM_REG_OFST             (0x14)              /**< (DIVAS_REM) Remainder Offset */
-#define DIVAS_SQRNUM_REG_OFST          (0x18)              /**< (DIVAS_SQRNUM) Square Root Input Offset */
+#define DIVAS_CTRLA_REG_OFST           (0x00)              /* (DIVAS_CTRLA) Control Offset */
+#define DIVAS_STATUS_REG_OFST          (0x04)              /* (DIVAS_STATUS) Status Offset */
+#define DIVAS_DIVIDEND_REG_OFST        (0x08)              /* (DIVAS_DIVIDEND) Dividend Offset */
+#define DIVAS_DIVISOR_REG_OFST         (0x0C)              /* (DIVAS_DIVISOR) Divisor Offset */
+#define DIVAS_RESULT_REG_OFST          (0x10)              /* (DIVAS_RESULT) Result Offset */
+#define DIVAS_REM_REG_OFST             (0x14)              /* (DIVAS_REM) Remainder Offset */
+#define DIVAS_SQRNUM_REG_OFST          (0x18)              /* (DIVAS_SQRNUM) Square Root Input Offset */
 
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
 /** \brief DIVAS register API structure */
