@@ -1,9 +1,9 @@
-configName: pic32cm_jh01_cpro
-folderName: pic32cm_jh01_cpro
+configName: pic32cm_jh01_curiosity_pro
+folderName: pic32cm_jh01_curiosity_pro
 format_version: v1.0
 frameworkPath: ..\..\..\HF
 processor: PIC32CM5164JH01100
-projectName: nvmctrl_ecc_testing_pic32cm_jh01_cpro
+projectName: nvmctrl_ecc_testing_pic32cm_jh01_curiosity_pro
 settings:
   PackageFilter: bootloader;bsp;cec173x_soteria_lib;core;crypto;csp;Devices;dev_packs;harmony-services;net;quick_docs
   FORCE_OPTIMIZATION: 'false'

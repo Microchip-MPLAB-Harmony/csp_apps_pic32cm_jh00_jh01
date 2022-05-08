@@ -3,8 +3,8 @@
     <type>com.microchip.mplab.nbide.embedded.makeproject</type>
     <configuration>
         <data xmlns="http://www.netbeans.org/ns/make-project/1">
-            <name>nvmctrl_ecc_testing_pic32cm_jh01_cpro</name>
-            <creation-uuid>e54023e9-3948-44ef-bf6f-29d8b223e555</creation-uuid>
+            <name>usart_lin_slave_pic32cm_jh01_cpro</name>
+            <creation-uuid>c6377ee7-afe8-4397-9f04-5d2737c9b6f4</creation-uuid>
             <make-project-type>0</make-project-type>
             <c-extensions>c</c-extensions>
             <cpp-extensions/>
@@ -12,9 +12,7 @@
             <asminc-extensions/>
             <sourceEncoding>ISO-8859-1</sourceEncoding>
             <make-dep-projects/>
-            <sourceRootList>
-                <sourceRootElem>../src</sourceRootElem>
-            </sourceRootList>
+            <sourceRootList/>
             <confList>
                 <confElem>
                     <name>pic32cm_jh01_cpro</name>

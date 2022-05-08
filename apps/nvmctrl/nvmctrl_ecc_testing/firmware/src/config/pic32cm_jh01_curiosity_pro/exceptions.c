@@ -1,24 +1,22 @@
 /*******************************************************************************
-  (RAM) PLIB
-
-  Company:
-    Microchip Technology Inc.
+  System Exceptions File
 
   File Name:
-    plib_ram.h
+    exceptions.c
 
   Summary:
-    RAM PLIB Header file
+    This file contains a function which overrides the default _weak_ exception
+    handlers provided by the interrupt.c file.
 
   Description:
-    This file defines the interface to the RAM peripheral library. This
-    library provides access to and control of the associated peripheral
-    instance.
+    This file redefines the default _weak_  exception handler with a more debug
+    friendly one. If an unexpected exception occurs the code will stop in a
+    while(1) loop.
+ *******************************************************************************/
 
-*******************************************************************************/
 // DOM-IGNORE-BEGIN
 /*******************************************************************************
-* Copyright (C) 2021 Microchip Technology Inc. and its subsidiaries.
+* Copyright (C) 2018 Microchip Technology Inc. and its subsidiaries.
 *
 * Subject to your compliance with these terms, you may use Microchip software
 * and any derivatives exclusively with Microchip products. It is your
@@ -41,34 +39,46 @@
 *******************************************************************************/
 // DOM-IGNORE-END
 
-#ifndef PLIB_RAM_H
-#define PLIB_RAM_H
-
 // *****************************************************************************
 // *****************************************************************************
 // Section: Included Files
 // *****************************************************************************
 // *****************************************************************************
-/* This section lists the other files that are included in this file.
-*/
+#include "interrupts.h"
+#include "definitions.h"
 
-#include <stdint.h>
-#include <stdbool.h>
-#include <stddef.h>
-#include "device.h"
+// *****************************************************************************
+// *****************************************************************************
+// Section: Exception Handling Routine
+// *****************************************************************************
+// *****************************************************************************
 
-#ifdef __cplusplus // Provide C++ Compatibility
-extern "C" {
+/* Brief default interrupt handlers for core IRQs.*/
+
+void __attribute__((noreturn)) NonMaskableInt_Handler(void)
+{
+#if defined(__DEBUG) || defined(__DEBUG_D) && defined(__XC32)
+    __builtin_software_breakpoint();
 #endif
-
-bool RAM_Read( uint32_t *data, uint32_t length, const uint32_t address );
-
-bool RAM_Write( uint32_t *data, uint32_t length, uint32_t address );
-
-bool RAM_IsBusy(void);
-
-#ifdef __cplusplus  // Provide C++ Compatibility
+    while (true)
+    {
+    }
 }
-#endif
 
-#endif /* PLIB_RAM_H */
+void __attribute__((noreturn)) HardFault_Handler(void)
+{
+#if defined(__DEBUG) || defined(__DEBUG_D) && defined(__XC32)
+   __builtin_software_breakpoint();
+#endif
+   if (NVMCTRL_InterruptFlagGet() & NVMCTRL_INTFLAG_DERR_Msk)
+    {
+        printf ("Bus Error Fault occured due to Double Fault Injection. Please RESET the board.\n\r");
+    }
+   while (true)
+   {
+   }
+}
+
+/*******************************************************************************
+ End of File
+ */
