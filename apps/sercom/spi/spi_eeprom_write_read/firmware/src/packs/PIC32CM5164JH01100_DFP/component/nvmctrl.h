@@ -1,7 +1,7 @@
-/**
- * \brief Component description for NVMCTRL
+/*
+ * Component description for NVMCTRL
  *
- * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2021-02-12T15:11:42Z */
+/* file generated from device description version 2022-01-18T09:31:06Z */
 #ifndef _PIC32CMJH01_NVMCTRL_COMPONENT_H_
 #define _PIC32CMJH01_NVMCTRL_COMPONENT_H_
 
@@ -38,8 +38,6 @@
 #define   NVMCTRL_CTRLA_CMD_WP_Val            _U_(0x4)                                             /**< (NVMCTRL_CTRLA) Write Page - Writes the contents of the page buffer to the page addressed by the ADDR register.  */
 #define   NVMCTRL_CTRLA_CMD_EAR_Val           _U_(0x5)                                             /**< (NVMCTRL_CTRLA) Erase Auxiliary Row - Erases the auxiliary row addressed by the ADDR register. This command can be given only when the security bit is not set and only to the user configuration row.  */
 #define   NVMCTRL_CTRLA_CMD_WAP_Val           _U_(0x6)                                             /**< (NVMCTRL_CTRLA) Write Auxiliary Page - Writes the contents of the page buffer to the page addressed by the ADDR register. This command can be given only when the security bit is not set and only to the user configuration row.  */
-#define   NVMCTRL_CTRLA_CMD_SF_Val            _U_(0xA)                                             /**< (NVMCTRL_CTRLA) Security Flow Command  */
-#define   NVMCTRL_CTRLA_CMD_WL_Val            _U_(0xF)                                             /**< (NVMCTRL_CTRLA) Write lockbits  */
 #define   NVMCTRL_CTRLA_CMD_DFER_Val          _U_(0x1A)                                            /**< (NVMCTRL_CTRLA) Data Flash Erase Row - Erases the row addressed by the ADDR register.  */
 #define   NVMCTRL_CTRLA_CMD_DFWP_Val          _U_(0x1C)                                            /**< (NVMCTRL_CTRLA) Data Flash Write Page - Writes the contents of the page buffer to the page addressed by the ADDR register.  */
 #define   NVMCTRL_CTRLA_CMD_LR_Val            _U_(0x40)                                            /**< (NVMCTRL_CTRLA) Lock Region - Locks the region containing the address location in the ADDR register.  */
@@ -54,8 +52,6 @@
 #define NVMCTRL_CTRLA_CMD_WP                  (NVMCTRL_CTRLA_CMD_WP_Val << NVMCTRL_CTRLA_CMD_Pos)  /**< (NVMCTRL_CTRLA) Write Page - Writes the contents of the page buffer to the page addressed by the ADDR register. Position  */
 #define NVMCTRL_CTRLA_CMD_EAR                 (NVMCTRL_CTRLA_CMD_EAR_Val << NVMCTRL_CTRLA_CMD_Pos) /**< (NVMCTRL_CTRLA) Erase Auxiliary Row - Erases the auxiliary row addressed by the ADDR register. This command can be given only when the security bit is not set and only to the user configuration row. Position  */
 #define NVMCTRL_CTRLA_CMD_WAP                 (NVMCTRL_CTRLA_CMD_WAP_Val << NVMCTRL_CTRLA_CMD_Pos) /**< (NVMCTRL_CTRLA) Write Auxiliary Page - Writes the contents of the page buffer to the page addressed by the ADDR register. This command can be given only when the security bit is not set and only to the user configuration row. Position  */
-#define NVMCTRL_CTRLA_CMD_SF                  (NVMCTRL_CTRLA_CMD_SF_Val << NVMCTRL_CTRLA_CMD_Pos)  /**< (NVMCTRL_CTRLA) Security Flow Command Position  */
-#define NVMCTRL_CTRLA_CMD_WL                  (NVMCTRL_CTRLA_CMD_WL_Val << NVMCTRL_CTRLA_CMD_Pos)  /**< (NVMCTRL_CTRLA) Write lockbits Position  */
 #define NVMCTRL_CTRLA_CMD_DFER                (NVMCTRL_CTRLA_CMD_DFER_Val << NVMCTRL_CTRLA_CMD_Pos) /**< (NVMCTRL_CTRLA) Data Flash Erase Row - Erases the row addressed by the ADDR register. Position  */
 #define NVMCTRL_CTRLA_CMD_DFWP                (NVMCTRL_CTRLA_CMD_DFWP_Val << NVMCTRL_CTRLA_CMD_Pos) /**< (NVMCTRL_CTRLA) Data Flash Write Page - Writes the contents of the page buffer to the page addressed by the ADDR register. Position  */
 #define NVMCTRL_CTRLA_CMD_LR                  (NVMCTRL_CTRLA_CMD_LR_Val << NVMCTRL_CTRLA_CMD_Pos)  /**< (NVMCTRL_CTRLA) Lock Region - Locks the region containing the address location in the ADDR register. Position  */
@@ -416,25 +412,25 @@
 
 
 /** \brief NVMCTRL register offsets definitions */
-#define NVMCTRL_CTRLA_REG_OFST         (0x00)              /**< (NVMCTRL_CTRLA) Control A Offset */
-#define NVMCTRL_CTRLB_REG_OFST         (0x04)              /**< (NVMCTRL_CTRLB) Control B Offset */
-#define NVMCTRL_PARAM_REG_OFST         (0x08)              /**< (NVMCTRL_PARAM) NVM Parameter Offset */
-#define NVMCTRL_INTENCLR_REG_OFST      (0x0C)              /**< (NVMCTRL_INTENCLR) Interrupt Enable Clear Offset */
-#define NVMCTRL_INTENSET_REG_OFST      (0x10)              /**< (NVMCTRL_INTENSET) Interrupt Enable Set Offset */
-#define NVMCTRL_INTFLAG_REG_OFST       (0x14)              /**< (NVMCTRL_INTFLAG) Interrupt Flag Status and Clear Offset */
-#define NVMCTRL_STATUS_REG_OFST        (0x18)              /**< (NVMCTRL_STATUS) Status Offset */
-#define NVMCTRL_ADDR_REG_OFST          (0x1C)              /**< (NVMCTRL_ADDR) Address Offset */
-#define NVMCTRL_LOCK_REG_OFST          (0x20)              /**< (NVMCTRL_LOCK) Lock Section Offset */
-#define NVMCTRL_PBLDATA0_REG_OFST      (0x28)              /**< (NVMCTRL_PBLDATA0) Page Buffer Load Data 0 Offset */
-#define NVMCTRL_PBLDATA1_REG_OFST      (0x2C)              /**< (NVMCTRL_PBLDATA1) Page Buffer Load Data 1 Offset */
-#define NVMCTRL_ECCCTRL_REG_OFST       (0x80)              /**< (NVMCTRL_ECCCTRL) ECC control Offset */
-#define NVMCTRL_FLTCTRL_REG_OFST       (0x84)              /**< (NVMCTRL_FLTCTRL) Fault injection control Offset */
-#define NVMCTRL_FFLTPTR_REG_OFST       (0x88)              /**< (NVMCTRL_FFLTPTR) Fault injection pointer Offset */
-#define NVMCTRL_FFLTADR_REG_OFST       (0x8C)              /**< (NVMCTRL_FFLTADR) Fault injection address Offset */
-#define NVMCTRL_FFLTCAP_REG_OFST       (0x90)              /**< (NVMCTRL_FFLTCAP) Fault error capture addr Offset */
-#define NVMCTRL_FFLTPAR_REG_OFST       (0x94)              /**< (NVMCTRL_FFLTPAR) Fault parity Offset */
-#define NVMCTRL_FFLTSYN_REG_OFST       (0x98)              /**< (NVMCTRL_FFLTSYN) Fault ECC syndrome Offset */
-#define NVMCTRL_DBGCTRL_REG_OFST       (0x9C)              /**< (NVMCTRL_DBGCTRL) Debug control Offset */
+#define NVMCTRL_CTRLA_REG_OFST         (0x00)              /* (NVMCTRL_CTRLA) Control A Offset */
+#define NVMCTRL_CTRLB_REG_OFST         (0x04)              /* (NVMCTRL_CTRLB) Control B Offset */
+#define NVMCTRL_PARAM_REG_OFST         (0x08)              /* (NVMCTRL_PARAM) NVM Parameter Offset */
+#define NVMCTRL_INTENCLR_REG_OFST      (0x0C)              /* (NVMCTRL_INTENCLR) Interrupt Enable Clear Offset */
+#define NVMCTRL_INTENSET_REG_OFST      (0x10)              /* (NVMCTRL_INTENSET) Interrupt Enable Set Offset */
+#define NVMCTRL_INTFLAG_REG_OFST       (0x14)              /* (NVMCTRL_INTFLAG) Interrupt Flag Status and Clear Offset */
+#define NVMCTRL_STATUS_REG_OFST        (0x18)              /* (NVMCTRL_STATUS) Status Offset */
+#define NVMCTRL_ADDR_REG_OFST          (0x1C)              /* (NVMCTRL_ADDR) Address Offset */
+#define NVMCTRL_LOCK_REG_OFST          (0x20)              /* (NVMCTRL_LOCK) Lock Section Offset */
+#define NVMCTRL_PBLDATA0_REG_OFST      (0x28)              /* (NVMCTRL_PBLDATA0) Page Buffer Load Data 0 Offset */
+#define NVMCTRL_PBLDATA1_REG_OFST      (0x2C)              /* (NVMCTRL_PBLDATA1) Page Buffer Load Data 1 Offset */
+#define NVMCTRL_ECCCTRL_REG_OFST       (0x80)              /* (NVMCTRL_ECCCTRL) ECC control Offset */
+#define NVMCTRL_FLTCTRL_REG_OFST       (0x84)              /* (NVMCTRL_FLTCTRL) Fault injection control Offset */
+#define NVMCTRL_FFLTPTR_REG_OFST       (0x88)              /* (NVMCTRL_FFLTPTR) Fault injection pointer Offset */
+#define NVMCTRL_FFLTADR_REG_OFST       (0x8C)              /* (NVMCTRL_FFLTADR) Fault injection address Offset */
+#define NVMCTRL_FFLTCAP_REG_OFST       (0x90)              /* (NVMCTRL_FFLTCAP) Fault error capture addr Offset */
+#define NVMCTRL_FFLTPAR_REG_OFST       (0x94)              /* (NVMCTRL_FFLTPAR) Fault parity Offset */
+#define NVMCTRL_FFLTSYN_REG_OFST       (0x98)              /* (NVMCTRL_FFLTSYN) Fault ECC syndrome Offset */
+#define NVMCTRL_DBGCTRL_REG_OFST       (0x9C)              /* (NVMCTRL_DBGCTRL) Debug control Offset */
 
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
 /** \brief NVMCTRL register API structure */
