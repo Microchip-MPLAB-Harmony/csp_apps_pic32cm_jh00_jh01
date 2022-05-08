@@ -1,7 +1,7 @@
-/**
- * \brief Component description for ADC
+/*
+ * Component description for ADC
  *
- * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2021-02-12T15:11:42Z */
+/* file generated from device description version 2022-01-18T09:31:06Z */
 #ifndef _PIC32CMJH01_ADC_COMPONENT_H_
 #define _PIC32CMJH01_ADC_COMPONENT_H_
 
@@ -462,28 +462,28 @@
 
 
 /** \brief ADC register offsets definitions */
-#define ADC_CTRLA_REG_OFST             (0x00)              /**< (ADC_CTRLA) Control A Offset */
-#define ADC_CTRLB_REG_OFST             (0x01)              /**< (ADC_CTRLB) Control B Offset */
-#define ADC_REFCTRL_REG_OFST           (0x02)              /**< (ADC_REFCTRL) Reference Control Offset */
-#define ADC_EVCTRL_REG_OFST            (0x03)              /**< (ADC_EVCTRL) Event Control Offset */
-#define ADC_INTENCLR_REG_OFST          (0x04)              /**< (ADC_INTENCLR) Interrupt Enable Clear Offset */
-#define ADC_INTENSET_REG_OFST          (0x05)              /**< (ADC_INTENSET) Interrupt Enable Set Offset */
-#define ADC_INTFLAG_REG_OFST           (0x06)              /**< (ADC_INTFLAG) Interrupt Flag Status and Clear Offset */
-#define ADC_SEQSTATUS_REG_OFST         (0x07)              /**< (ADC_SEQSTATUS) Sequence Status Offset */
-#define ADC_INPUTCTRL_REG_OFST         (0x08)              /**< (ADC_INPUTCTRL) Input Control Offset */
-#define ADC_CTRLC_REG_OFST             (0x0A)              /**< (ADC_CTRLC) Control C Offset */
-#define ADC_AVGCTRL_REG_OFST           (0x0C)              /**< (ADC_AVGCTRL) Average Control Offset */
-#define ADC_SAMPCTRL_REG_OFST          (0x0D)              /**< (ADC_SAMPCTRL) Sample Time Control Offset */
-#define ADC_WINLT_REG_OFST             (0x0E)              /**< (ADC_WINLT) Window Monitor Lower Threshold Offset */
-#define ADC_WINUT_REG_OFST             (0x10)              /**< (ADC_WINUT) Window Monitor Upper Threshold Offset */
-#define ADC_GAINCORR_REG_OFST          (0x12)              /**< (ADC_GAINCORR) Gain Correction Offset */
-#define ADC_OFFSETCORR_REG_OFST        (0x14)              /**< (ADC_OFFSETCORR) Offset Correction Offset */
-#define ADC_SWTRIG_REG_OFST            (0x18)              /**< (ADC_SWTRIG) Software Trigger Offset */
-#define ADC_DBGCTRL_REG_OFST           (0x1C)              /**< (ADC_DBGCTRL) Debug Control Offset */
-#define ADC_SYNCBUSY_REG_OFST          (0x20)              /**< (ADC_SYNCBUSY) Synchronization Busy Offset */
-#define ADC_RESULT_REG_OFST            (0x24)              /**< (ADC_RESULT) Result Offset */
-#define ADC_SEQCTRL_REG_OFST           (0x28)              /**< (ADC_SEQCTRL) Sequence Control Offset */
-#define ADC_CALIB_REG_OFST             (0x2C)              /**< (ADC_CALIB) Calibration Offset */
+#define ADC_CTRLA_REG_OFST             (0x00)              /* (ADC_CTRLA) Control A Offset */
+#define ADC_CTRLB_REG_OFST             (0x01)              /* (ADC_CTRLB) Control B Offset */
+#define ADC_REFCTRL_REG_OFST           (0x02)              /* (ADC_REFCTRL) Reference Control Offset */
+#define ADC_EVCTRL_REG_OFST            (0x03)              /* (ADC_EVCTRL) Event Control Offset */
+#define ADC_INTENCLR_REG_OFST          (0x04)              /* (ADC_INTENCLR) Interrupt Enable Clear Offset */
+#define ADC_INTENSET_REG_OFST          (0x05)              /* (ADC_INTENSET) Interrupt Enable Set Offset */
+#define ADC_INTFLAG_REG_OFST           (0x06)              /* (ADC_INTFLAG) Interrupt Flag Status and Clear Offset */
+#define ADC_SEQSTATUS_REG_OFST         (0x07)              /* (ADC_SEQSTATUS) Sequence Status Offset */
+#define ADC_INPUTCTRL_REG_OFST         (0x08)              /* (ADC_INPUTCTRL) Input Control Offset */
+#define ADC_CTRLC_REG_OFST             (0x0A)              /* (ADC_CTRLC) Control C Offset */
+#define ADC_AVGCTRL_REG_OFST           (0x0C)              /* (ADC_AVGCTRL) Average Control Offset */
+#define ADC_SAMPCTRL_REG_OFST          (0x0D)              /* (ADC_SAMPCTRL) Sample Time Control Offset */
+#define ADC_WINLT_REG_OFST             (0x0E)              /* (ADC_WINLT) Window Monitor Lower Threshold Offset */
+#define ADC_WINUT_REG_OFST             (0x10)              /* (ADC_WINUT) Window Monitor Upper Threshold Offset */
+#define ADC_GAINCORR_REG_OFST          (0x12)              /* (ADC_GAINCORR) Gain Correction Offset */
+#define ADC_OFFSETCORR_REG_OFST        (0x14)              /* (ADC_OFFSETCORR) Offset Correction Offset */
+#define ADC_SWTRIG_REG_OFST            (0x18)              /* (ADC_SWTRIG) Software Trigger Offset */
+#define ADC_DBGCTRL_REG_OFST           (0x1C)              /* (ADC_DBGCTRL) Debug Control Offset */
+#define ADC_SYNCBUSY_REG_OFST          (0x20)              /* (ADC_SYNCBUSY) Synchronization Busy Offset */
+#define ADC_RESULT_REG_OFST            (0x24)              /* (ADC_RESULT) Result Offset */
+#define ADC_SEQCTRL_REG_OFST           (0x28)              /* (ADC_SEQCTRL) Sequence Control Offset */
+#define ADC_CALIB_REG_OFST             (0x2C)              /* (ADC_CALIB) Calibration Offset */
 
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
 /** \brief ADC register API structure */

@@ -161,9 +161,9 @@ void SYS_Initialize ( void* data )
 
     SUPC_Initialize();
 
-    AC_Initialize();
     RTC_Initialize();
 
+    AC_Initialize();
 
 
 
