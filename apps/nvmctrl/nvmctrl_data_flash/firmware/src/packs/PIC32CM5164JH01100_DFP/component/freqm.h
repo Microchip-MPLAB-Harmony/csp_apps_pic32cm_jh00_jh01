@@ -1,7 +1,7 @@
-/**
- * \brief Component description for FREQM
+/*
+ * Component description for FREQM
  *
- * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2021-02-12T15:11:42Z */
+/* file generated from device description version 2022-01-18T09:31:06Z */
 #ifndef _PIC32CMJH01_FREQM_COMPONENT_H_
 #define _PIC32CMJH01_FREQM_COMPONENT_H_
 
@@ -119,15 +119,15 @@
 
 
 /** \brief FREQM register offsets definitions */
-#define FREQM_CTRLA_REG_OFST           (0x00)              /**< (FREQM_CTRLA) Control A Register Offset */
-#define FREQM_CTRLB_REG_OFST           (0x01)              /**< (FREQM_CTRLB) Control B Register Offset */
-#define FREQM_CFGA_REG_OFST            (0x02)              /**< (FREQM_CFGA) Config A register Offset */
-#define FREQM_INTENCLR_REG_OFST        (0x08)              /**< (FREQM_INTENCLR) Interrupt Enable Clear Register Offset */
-#define FREQM_INTENSET_REG_OFST        (0x09)              /**< (FREQM_INTENSET) Interrupt Enable Set Register Offset */
-#define FREQM_INTFLAG_REG_OFST         (0x0A)              /**< (FREQM_INTFLAG) Interrupt Flag Register Offset */
-#define FREQM_STATUS_REG_OFST          (0x0B)              /**< (FREQM_STATUS) Status Register Offset */
-#define FREQM_SYNCBUSY_REG_OFST        (0x0C)              /**< (FREQM_SYNCBUSY) Synchronization Busy Register Offset */
-#define FREQM_VALUE_REG_OFST           (0x10)              /**< (FREQM_VALUE) Count Value Register Offset */
+#define FREQM_CTRLA_REG_OFST           (0x00)              /* (FREQM_CTRLA) Control A Register Offset */
+#define FREQM_CTRLB_REG_OFST           (0x01)              /* (FREQM_CTRLB) Control B Register Offset */
+#define FREQM_CFGA_REG_OFST            (0x02)              /* (FREQM_CFGA) Config A register Offset */
+#define FREQM_INTENCLR_REG_OFST        (0x08)              /* (FREQM_INTENCLR) Interrupt Enable Clear Register Offset */
+#define FREQM_INTENSET_REG_OFST        (0x09)              /* (FREQM_INTENSET) Interrupt Enable Set Register Offset */
+#define FREQM_INTFLAG_REG_OFST         (0x0A)              /* (FREQM_INTFLAG) Interrupt Flag Register Offset */
+#define FREQM_STATUS_REG_OFST          (0x0B)              /* (FREQM_STATUS) Status Register Offset */
+#define FREQM_SYNCBUSY_REG_OFST        (0x0C)              /* (FREQM_SYNCBUSY) Synchronization Busy Register Offset */
+#define FREQM_VALUE_REG_OFST           (0x10)              /* (FREQM_VALUE) Count Value Register Offset */
 
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
 /** \brief FREQM register API structure */
