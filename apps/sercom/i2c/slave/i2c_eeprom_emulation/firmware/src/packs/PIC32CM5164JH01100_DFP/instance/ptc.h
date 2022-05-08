@@ -1,7 +1,7 @@
-/**
- * \brief Instance header file for PIC32CM5164JH01100
+/*
+ * Instance header file for PIC32CM5164JH01100
  *
- * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,21 +20,21 @@
  *
  */
 
-/* file generated from device description version 2021-02-12T15:11:42Z */
+/* file generated from device description version 2022-05-20T08:40:47Z */
 #ifndef _PIC32CMJH01_PTC_INSTANCE_
 #define _PIC32CMJH01_PTC_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for PTC peripheral ========== */
-#define PTC_DMAC_ID_EOC                          _UL_(46)   /* Index of DMA EOC trigger */
-#define PTC_DMAC_ID_SEQ                          _UL_(48)   /* Index of DMA SEQ trigger */
-#define PTC_DMAC_ID_WCOMP                        _UL_(47)   /* Index of DMA WCOMP trigger */
-#define PTC_DS_LINES_MSB                         _UL_(31)   /* Number of DS lines */
-#define PTC_FUSEPRESENT                          _UL_(1)    /* Allows the Driven shield to be included or excluded with a fuse */
-#define PTC_GCLK_ID                              _UL_(39)   /* Index of Generic Clock */
-#define PTC_XY_LINES_MSB                         _UL_(47)   /* The number of x and y lines */
-#define PTC_X_LINES_MSB                          _UL_(15)   /* Number of X lines */
-#define PTC_Y_LINES_MSB                          _UL_(31)   /* Number of Y lines */
-#define PTC_INSTANCE_ID                          _UL_(85)   /* Instance index for PTC */
+#define PTC_DMAC_ID_EOC                          (46)       /* Index of DMA EOC trigger */
+#define PTC_DMAC_ID_SEQ                          (48)       /* Index of DMA SEQ trigger */
+#define PTC_DMAC_ID_WCOMP                        (47)       /* Index of DMA WCOMP trigger */
+#define PTC_DS_LINES_MSB                         (31)       /* Number of DS lines */
+#define PTC_FUSEPRESENT                          (1)        /* Allows the Driven shield to be included or excluded with a fuse */
+#define PTC_GCLK_ID                              (39)       /* Index of Generic Clock */
+#define PTC_XY_LINES_MSB                         (47)       /* The number of x and y lines */
+#define PTC_X_LINES_MSB                          (15)       /* Number of X lines */
+#define PTC_Y_LINES_MSB                          (31)       /* Number of Y lines */
+#define PTC_INSTANCE_ID                          (85)       /* Instance index for PTC */
 
 #endif /* _PIC32CMJH01_PTC_INSTANCE_ */

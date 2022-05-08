@@ -1,7 +1,7 @@
-/**
- * \brief Instance header file for PIC32CM5164JH01100
+/*
+ * Instance header file for PIC32CM5164JH01100
  *
- * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,18 +20,18 @@
  *
  */
 
-/* file generated from device description version 2021-02-12T15:11:42Z */
+/* file generated from device description version 2022-05-20T08:40:47Z */
 #ifndef _PIC32CMJH01_ADC1_INSTANCE_
 #define _PIC32CMJH01_ADC1_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for ADC1 peripheral ========== */
-#define ADC1_DMAC_ID_RESRDY                      _UL_(43)   /* Index of DMA RESRDY trigger */
-#define ADC1_EXTCHANNEL_MSB                      _UL_(11)   /* Number of external channels */
-#define ADC1_GCLK_ID                             _UL_(37)   /* Index of Generic Clock */
-#define ADC1_INT_CH30                            _UL_(0)    /* Select OPAMP or CTAT on Channel 30 */
-#define ADC1_MASTER_SLAVE_MODE                   _UL_(2)    /* ADC Master/Slave Mode */
-#define ADC1_INSTANCE_ID                         _UL_(82)   /* Instance index for ADC1 */
-#define ADC1_LOAD_CALIB                          _UL_(1)    /* CALIB register to be loaded from NVM */
+#define ADC1_DMAC_ID_RESRDY                      (43)       /* Index of DMA RESRDY trigger */
+#define ADC1_EXTCHANNEL_MSB                      (11)       /* Number of external channels */
+#define ADC1_GCLK_ID                             (37)       /* Index of Generic Clock */
+#define ADC1_INT_CH30                            (0)        /* Select OPAMP or CTAT on Channel 30 */
+#define ADC1_MASTER_SLAVE_MODE                   (2)        /* ADC Master/Slave Mode */
+#define ADC1_INSTANCE_ID                         (82)       /* Instance index for ADC1 */
+#define ADC1_LOAD_CALIB                          (1)        /* CALIB register to be loaded from NVM */
 
 #endif /* _PIC32CMJH01_ADC1_INSTANCE_ */

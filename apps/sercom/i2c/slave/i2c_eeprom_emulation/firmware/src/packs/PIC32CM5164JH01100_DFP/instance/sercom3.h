@@ -1,7 +1,7 @@
-/**
- * \brief Instance header file for PIC32CM5164JH01100
+/*
+ * Instance header file for PIC32CM5164JH01100
  *
- * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,18 +20,18 @@
  *
  */
 
-/* file generated from device description version 2021-02-12T15:11:42Z */
+/* file generated from device description version 2022-05-20T08:40:47Z */
 #ifndef _PIC32CMJH01_SERCOM3_INSTANCE_
 #define _PIC32CMJH01_SERCOM3_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for SERCOM3 peripheral ========== */
-#define SERCOM3_DMAC_ID_RX                       _UL_(8)    /* Index of DMA RX trigger */
-#define SERCOM3_DMAC_ID_TX                       _UL_(9)    /* Index of DMA TX trigger */
-#define SERCOM3_GCLK_ID_CORE                     _UL_(21)   
-#define SERCOM3_GCLK_ID_SLOW                     _UL_(17)   
-#define SERCOM3_INT_MSB                          _UL_(6)    
-#define SERCOM3_PMSB                             _UL_(3)    
-#define SERCOM3_INSTANCE_ID                      _UL_(68)   /* Instance index for SERCOM3 */
+#define SERCOM3_DMAC_ID_RX                       (8)        /* Index of DMA RX trigger */
+#define SERCOM3_DMAC_ID_TX                       (9)        /* Index of DMA TX trigger */
+#define SERCOM3_GCLK_ID_CORE                     (21)       
+#define SERCOM3_GCLK_ID_SLOW                     (17)       
+#define SERCOM3_INT_MSB                          (6)        
+#define SERCOM3_PMSB                             (3)        
+#define SERCOM3_INSTANCE_ID                      (68)       /* Instance index for SERCOM3 */
 
 #endif /* _PIC32CMJH01_SERCOM3_INSTANCE_ */

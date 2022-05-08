@@ -1,7 +1,7 @@
-/**
- * \brief Instance header file for PIC32CM5164JH01100
+/*
+ * Instance header file for PIC32CM5164JH01100
  *
- * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,14 +20,14 @@
  *
  */
 
-/* file generated from device description version 2021-02-12T15:11:42Z */
+/* file generated from device description version 2022-05-20T08:40:47Z */
 #ifndef _PIC32CMJH01_FREQM_INSTANCE_
 #define _PIC32CMJH01_FREQM_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for FREQM peripheral ========== */
-#define FREQM_GCLK_ID_MSR                        _UL_(3)    /* Index of measure generic clock */
-#define FREQM_GCLK_ID_REF                        _UL_(4)    /* Index of reference generic clock */
-#define FREQM_INSTANCE_ID                        _UL_(11)   /* Instance index for FREQM */
+#define FREQM_GCLK_ID_MSR                        (3)        /* Index of measure generic clock */
+#define FREQM_GCLK_ID_REF                        (4)        /* Index of reference generic clock */
+#define FREQM_INSTANCE_ID                        (11)       /* Instance index for FREQM */
 
 #endif /* _PIC32CMJH01_FREQM_INSTANCE_ */

@@ -1,7 +1,7 @@
-/**
- * \brief Instance header file for PIC32CM5164JH01100
+/*
+ * Instance header file for PIC32CM5164JH01100
  *
- * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,20 +20,20 @@
  *
  */
 
-/* file generated from device description version 2021-02-12T15:11:42Z */
+/* file generated from device description version 2022-05-20T08:40:47Z */
 #ifndef _PIC32CMJH01_PORT_INSTANCE_
 #define _PIC32CMJH01_PORT_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for PORT peripheral ========== */
-#define PORT_BITS                                _UL_(93)   
-#define PORT_DRVSTR                              _UL_(1)    /* DRVSTR supported? */
-#define PORT_EV_NUM                              _UL_(4)    
-#define PORT_GROUPS                              _UL_(3)    
-#define PORT_MSB                                 _UL_(92)   
-#define PORT_ODRAIN                              _UL_(0)    /* ODRAIN supported? */
-#define PORT_SECURE_IMPLEMENTED                  _UL_(0)    /* Secure I/Os supported? */
-#define PORT_SLEWLIM                             _UL_(0)    /* SLEWLIM supported? */
-#define PORT_INSTANCE_ID                         _UL_(32)   /* Instance index for PORT */
+#define PORT_BITS                                (93)       
+#define PORT_DRVSTR                              (1)        /* DRVSTR supported? */
+#define PORT_EV_NUM                              (4)        
+#define PORT_GROUPS                              (3)        
+#define PORT_MSB                                 (92)       
+#define PORT_ODRAIN                              (0)        /* ODRAIN supported? */
+#define PORT_SECURE_IMPLEMENTED                  (0)        /* Secure I/Os supported? */
+#define PORT_SLEWLIM                             (0)        /* SLEWLIM supported? */
+#define PORT_INSTANCE_ID                         (32)       /* Instance index for PORT */
 
 #endif /* _PIC32CMJH01_PORT_INSTANCE_ */

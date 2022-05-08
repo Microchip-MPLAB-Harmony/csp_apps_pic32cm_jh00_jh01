@@ -1,7 +1,7 @@
-/**
- * \brief Instance header file for PIC32CM5164JH01100
+/*
+ * Instance header file for PIC32CM5164JH01100
  *
- * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,12 +20,12 @@
  *
  */
 
-/* file generated from device description version 2021-02-12T15:11:42Z */
+/* file generated from device description version 2022-05-20T08:40:47Z */
 #ifndef _PIC32CMJH01_MCRAMC_INSTANCE_
 #define _PIC32CMJH01_MCRAMC_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for MCRAMC peripheral ========== */
-#define MCRAMC_INSTANCE_ID                       _UL_(12)   /* Instance index for MCRAMC */
+#define MCRAMC_INSTANCE_ID                       (12)       /* Instance index for MCRAMC */
 
 #endif /* _PIC32CMJH01_MCRAMC_INSTANCE_ */
