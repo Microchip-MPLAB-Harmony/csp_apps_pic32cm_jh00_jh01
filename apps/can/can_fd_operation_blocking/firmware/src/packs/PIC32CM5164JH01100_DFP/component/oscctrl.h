@@ -1,7 +1,7 @@
-/**
- * \brief Component description for OSCCTRL
+/*
+ * Component description for OSCCTRL
  *
- * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2021-02-12T15:11:42Z */
+/* file generated from device description version 2022-01-18T09:31:06Z */
 #ifndef _PIC32CMJH01_OSCCTRL_COMPONENT_H_
 #define _PIC32CMJH01_OSCCTRL_COMPONENT_H_
 
@@ -474,24 +474,24 @@
 
 
 /** \brief OSCCTRL register offsets definitions */
-#define OSCCTRL_INTENCLR_REG_OFST      (0x00)              /**< (OSCCTRL_INTENCLR) Interrupt Enable Clear Offset */
-#define OSCCTRL_INTENSET_REG_OFST      (0x04)              /**< (OSCCTRL_INTENSET) Interrupt Enable Set Offset */
-#define OSCCTRL_INTFLAG_REG_OFST       (0x08)              /**< (OSCCTRL_INTFLAG) Interrupt Flag Status and Clear Offset */
-#define OSCCTRL_STATUS_REG_OFST        (0x0C)              /**< (OSCCTRL_STATUS) Power and Clocks Status Offset */
-#define OSCCTRL_XOSCCTRL_REG_OFST      (0x10)              /**< (OSCCTRL_XOSCCTRL) External Multipurpose Crystal Oscillator (XOSC) Control Offset */
-#define OSCCTRL_CFDPRESC_REG_OFST      (0x12)              /**< (OSCCTRL_CFDPRESC) Clock Failure Detector Prescaler Offset */
-#define OSCCTRL_EVCTRL_REG_OFST        (0x13)              /**< (OSCCTRL_EVCTRL) Event Control Offset */
-#define OSCCTRL_OSC48MCTRL_REG_OFST    (0x14)              /**< (OSCCTRL_OSC48MCTRL) 48MHz Internal Oscillator (OSC48M) Control Offset */
-#define OSCCTRL_OSC48MDIV_REG_OFST     (0x15)              /**< (OSCCTRL_OSC48MDIV) OSC48M Divider Offset */
-#define OSCCTRL_OSC48MSTUP_REG_OFST    (0x16)              /**< (OSCCTRL_OSC48MSTUP) OSC48M Startup Time Offset */
-#define OSCCTRL_OSC48MSYNCBUSY_REG_OFST (0x18)              /**< (OSCCTRL_OSC48MSYNCBUSY) OSC48M Synchronization Busy Offset */
-#define OSCCTRL_DPLLCTRLA_REG_OFST     (0x1C)              /**< (OSCCTRL_DPLLCTRLA) DPLL Control Offset */
-#define OSCCTRL_DPLLRATIO_REG_OFST     (0x20)              /**< (OSCCTRL_DPLLRATIO) DPLL Ratio Control Offset */
-#define OSCCTRL_DPLLCTRLB_REG_OFST     (0x24)              /**< (OSCCTRL_DPLLCTRLB) Digital Core Configuration Offset */
-#define OSCCTRL_DPLLPRESC_REG_OFST     (0x28)              /**< (OSCCTRL_DPLLPRESC) DPLL Prescaler Offset */
-#define OSCCTRL_DPLLSYNCBUSY_REG_OFST  (0x2C)              /**< (OSCCTRL_DPLLSYNCBUSY) DPLL Synchronization Busy Offset */
-#define OSCCTRL_DPLLSTATUS_REG_OFST    (0x30)              /**< (OSCCTRL_DPLLSTATUS) DPLL Status Offset */
-#define OSCCTRL_CAL48M_REG_OFST        (0x38)              /**< (OSCCTRL_CAL48M) 48MHz Oscillator Calibration Offset */
+#define OSCCTRL_INTENCLR_REG_OFST      (0x00)              /* (OSCCTRL_INTENCLR) Interrupt Enable Clear Offset */
+#define OSCCTRL_INTENSET_REG_OFST      (0x04)              /* (OSCCTRL_INTENSET) Interrupt Enable Set Offset */
+#define OSCCTRL_INTFLAG_REG_OFST       (0x08)              /* (OSCCTRL_INTFLAG) Interrupt Flag Status and Clear Offset */
+#define OSCCTRL_STATUS_REG_OFST        (0x0C)              /* (OSCCTRL_STATUS) Power and Clocks Status Offset */
+#define OSCCTRL_XOSCCTRL_REG_OFST      (0x10)              /* (OSCCTRL_XOSCCTRL) External Multipurpose Crystal Oscillator (XOSC) Control Offset */
+#define OSCCTRL_CFDPRESC_REG_OFST      (0x12)              /* (OSCCTRL_CFDPRESC) Clock Failure Detector Prescaler Offset */
+#define OSCCTRL_EVCTRL_REG_OFST        (0x13)              /* (OSCCTRL_EVCTRL) Event Control Offset */
+#define OSCCTRL_OSC48MCTRL_REG_OFST    (0x14)              /* (OSCCTRL_OSC48MCTRL) 48MHz Internal Oscillator (OSC48M) Control Offset */
+#define OSCCTRL_OSC48MDIV_REG_OFST     (0x15)              /* (OSCCTRL_OSC48MDIV) OSC48M Divider Offset */
+#define OSCCTRL_OSC48MSTUP_REG_OFST    (0x16)              /* (OSCCTRL_OSC48MSTUP) OSC48M Startup Time Offset */
+#define OSCCTRL_OSC48MSYNCBUSY_REG_OFST (0x18)              /* (OSCCTRL_OSC48MSYNCBUSY) OSC48M Synchronization Busy Offset */
+#define OSCCTRL_DPLLCTRLA_REG_OFST     (0x1C)              /* (OSCCTRL_DPLLCTRLA) DPLL Control Offset */
+#define OSCCTRL_DPLLRATIO_REG_OFST     (0x20)              /* (OSCCTRL_DPLLRATIO) DPLL Ratio Control Offset */
+#define OSCCTRL_DPLLCTRLB_REG_OFST     (0x24)              /* (OSCCTRL_DPLLCTRLB) Digital Core Configuration Offset */
+#define OSCCTRL_DPLLPRESC_REG_OFST     (0x28)              /* (OSCCTRL_DPLLPRESC) DPLL Prescaler Offset */
+#define OSCCTRL_DPLLSYNCBUSY_REG_OFST  (0x2C)              /* (OSCCTRL_DPLLSYNCBUSY) DPLL Synchronization Busy Offset */
+#define OSCCTRL_DPLLSTATUS_REG_OFST    (0x30)              /* (OSCCTRL_DPLLSTATUS) DPLL Status Offset */
+#define OSCCTRL_CAL48M_REG_OFST        (0x38)              /* (OSCCTRL_CAL48M) 48MHz Oscillator Calibration Offset */
 
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
 /** \brief OSCCTRL register API structure */

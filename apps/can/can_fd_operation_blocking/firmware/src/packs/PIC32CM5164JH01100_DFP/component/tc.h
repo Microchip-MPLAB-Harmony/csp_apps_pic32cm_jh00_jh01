@@ -1,7 +1,7 @@
-/**
- * \brief Component description for TC
+/*
+ * Component description for TC
  *
- * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2021-02-12T15:11:42Z */
+/* file generated from device description version 2022-01-18T09:31:06Z */
 #ifndef _PIC32CMJH01_TC_COMPONENT_H_
 #define _PIC32CMJH01_TC_COMPONENT_H_
 
@@ -482,41 +482,41 @@
 
 
 /** \brief TC register offsets definitions */
-#define TC_CTRLA_REG_OFST              (0x00)              /**< (TC_CTRLA) Control A Offset */
-#define TC_CTRLBCLR_REG_OFST           (0x04)              /**< (TC_CTRLBCLR) Control B Clear Offset */
-#define TC_CTRLBSET_REG_OFST           (0x05)              /**< (TC_CTRLBSET) Control B Set Offset */
-#define TC_EVCTRL_REG_OFST             (0x06)              /**< (TC_EVCTRL) Event Control Offset */
-#define TC_INTENCLR_REG_OFST           (0x08)              /**< (TC_INTENCLR) Interrupt Enable Clear Offset */
-#define TC_INTENSET_REG_OFST           (0x09)              /**< (TC_INTENSET) Interrupt Enable Set Offset */
-#define TC_INTFLAG_REG_OFST            (0x0A)              /**< (TC_INTFLAG) Interrupt Flag Status and Clear Offset */
-#define TC_STATUS_REG_OFST             (0x0B)              /**< (TC_STATUS) Status Offset */
-#define TC_WAVE_REG_OFST               (0x0C)              /**< (TC_WAVE) Waveform Generation Control Offset */
-#define TC_DRVCTRL_REG_OFST            (0x0D)              /**< (TC_DRVCTRL) Control C Offset */
-#define TC_DBGCTRL_REG_OFST            (0x0F)              /**< (TC_DBGCTRL) Debug Control Offset */
-#define TC_SYNCBUSY_REG_OFST           (0x10)              /**< (TC_SYNCBUSY) Synchronization Status Offset */
-#define TC_COUNT8_COUNT_REG_OFST       (0x14)              /**< (TC_COUNT8_COUNT) COUNT8 Count Offset */
-#define TC_COUNT16_COUNT_REG_OFST      (0x14)              /**< (TC_COUNT16_COUNT) COUNT16 Count Offset */
-#define TC_COUNT32_COUNT_REG_OFST      (0x14)              /**< (TC_COUNT32_COUNT) COUNT32 Count Offset */
-#define TC_COUNT8_PER_REG_OFST         (0x1B)              /**< (TC_COUNT8_PER) COUNT8 Period Offset */
-#define TC_COUNT8_CC_REG_OFST          (0x1C)              /**< (TC_COUNT8_CC) COUNT8 Compare and Capture Offset */
-#define TC_COUNT8_CC0_REG_OFST         (0x1C)              /**< (TC_COUNT8_CC0) COUNT8 Compare and Capture Offset */
-#define TC_COUNT8_CC1_REG_OFST         (0x1D)              /**< (TC_COUNT8_CC1) COUNT8 Compare and Capture Offset */
-#define TC_COUNT16_CC_REG_OFST         (0x1C)              /**< (TC_COUNT16_CC) COUNT16 Compare and Capture Offset */
-#define TC_COUNT16_CC0_REG_OFST        (0x1C)              /**< (TC_COUNT16_CC0) COUNT16 Compare and Capture Offset */
-#define TC_COUNT16_CC1_REG_OFST        (0x1E)              /**< (TC_COUNT16_CC1) COUNT16 Compare and Capture Offset */
-#define TC_COUNT32_CC_REG_OFST         (0x1C)              /**< (TC_COUNT32_CC) COUNT32 Compare and Capture Offset */
-#define TC_COUNT32_CC0_REG_OFST        (0x1C)              /**< (TC_COUNT32_CC0) COUNT32 Compare and Capture Offset */
-#define TC_COUNT32_CC1_REG_OFST        (0x20)              /**< (TC_COUNT32_CC1) COUNT32 Compare and Capture Offset */
-#define TC_COUNT8_PERBUF_REG_OFST      (0x2F)              /**< (TC_COUNT8_PERBUF) COUNT8 Period Buffer Offset */
-#define TC_COUNT8_CCBUF_REG_OFST       (0x30)              /**< (TC_COUNT8_CCBUF) COUNT8 Compare and Capture Buffer Offset */
-#define TC_COUNT8_CCBUF0_REG_OFST      (0x30)              /**< (TC_COUNT8_CCBUF0) COUNT8 Compare and Capture Buffer Offset */
-#define TC_COUNT8_CCBUF1_REG_OFST      (0x31)              /**< (TC_COUNT8_CCBUF1) COUNT8 Compare and Capture Buffer Offset */
-#define TC_COUNT16_CCBUF_REG_OFST      (0x30)              /**< (TC_COUNT16_CCBUF) COUNT16 Compare and Capture Buffer Offset */
-#define TC_COUNT16_CCBUF0_REG_OFST     (0x30)              /**< (TC_COUNT16_CCBUF0) COUNT16 Compare and Capture Buffer Offset */
-#define TC_COUNT16_CCBUF1_REG_OFST     (0x32)              /**< (TC_COUNT16_CCBUF1) COUNT16 Compare and Capture Buffer Offset */
-#define TC_COUNT32_CCBUF_REG_OFST      (0x30)              /**< (TC_COUNT32_CCBUF) COUNT32 Compare and Capture Buffer Offset */
-#define TC_COUNT32_CCBUF0_REG_OFST     (0x30)              /**< (TC_COUNT32_CCBUF0) COUNT32 Compare and Capture Buffer Offset */
-#define TC_COUNT32_CCBUF1_REG_OFST     (0x34)              /**< (TC_COUNT32_CCBUF1) COUNT32 Compare and Capture Buffer Offset */
+#define TC_CTRLA_REG_OFST              (0x00)              /* (TC_CTRLA) Control A Offset */
+#define TC_CTRLBCLR_REG_OFST           (0x04)              /* (TC_CTRLBCLR) Control B Clear Offset */
+#define TC_CTRLBSET_REG_OFST           (0x05)              /* (TC_CTRLBSET) Control B Set Offset */
+#define TC_EVCTRL_REG_OFST             (0x06)              /* (TC_EVCTRL) Event Control Offset */
+#define TC_INTENCLR_REG_OFST           (0x08)              /* (TC_INTENCLR) Interrupt Enable Clear Offset */
+#define TC_INTENSET_REG_OFST           (0x09)              /* (TC_INTENSET) Interrupt Enable Set Offset */
+#define TC_INTFLAG_REG_OFST            (0x0A)              /* (TC_INTFLAG) Interrupt Flag Status and Clear Offset */
+#define TC_STATUS_REG_OFST             (0x0B)              /* (TC_STATUS) Status Offset */
+#define TC_WAVE_REG_OFST               (0x0C)              /* (TC_WAVE) Waveform Generation Control Offset */
+#define TC_DRVCTRL_REG_OFST            (0x0D)              /* (TC_DRVCTRL) Control C Offset */
+#define TC_DBGCTRL_REG_OFST            (0x0F)              /* (TC_DBGCTRL) Debug Control Offset */
+#define TC_SYNCBUSY_REG_OFST           (0x10)              /* (TC_SYNCBUSY) Synchronization Status Offset */
+#define TC_COUNT8_COUNT_REG_OFST       (0x14)              /* (TC_COUNT8_COUNT) COUNT8 Count Offset */
+#define TC_COUNT16_COUNT_REG_OFST      (0x14)              /* (TC_COUNT16_COUNT) COUNT16 Count Offset */
+#define TC_COUNT32_COUNT_REG_OFST      (0x14)              /* (TC_COUNT32_COUNT) COUNT32 Count Offset */
+#define TC_COUNT8_PER_REG_OFST         (0x1B)              /* (TC_COUNT8_PER) COUNT8 Period Offset */
+#define TC_COUNT8_CC_REG_OFST          (0x1C)              /* (TC_COUNT8_CC) COUNT8 Compare and Capture Offset */
+#define TC_COUNT8_CC0_REG_OFST         (0x1C)              /* (TC_COUNT8_CC0) COUNT8 Compare and Capture Offset */
+#define TC_COUNT8_CC1_REG_OFST         (0x1D)              /* (TC_COUNT8_CC1) COUNT8 Compare and Capture Offset */
+#define TC_COUNT16_CC_REG_OFST         (0x1C)              /* (TC_COUNT16_CC) COUNT16 Compare and Capture Offset */
+#define TC_COUNT16_CC0_REG_OFST        (0x1C)              /* (TC_COUNT16_CC0) COUNT16 Compare and Capture Offset */
+#define TC_COUNT16_CC1_REG_OFST        (0x1E)              /* (TC_COUNT16_CC1) COUNT16 Compare and Capture Offset */
+#define TC_COUNT32_CC_REG_OFST         (0x1C)              /* (TC_COUNT32_CC) COUNT32 Compare and Capture Offset */
+#define TC_COUNT32_CC0_REG_OFST        (0x1C)              /* (TC_COUNT32_CC0) COUNT32 Compare and Capture Offset */
+#define TC_COUNT32_CC1_REG_OFST        (0x20)              /* (TC_COUNT32_CC1) COUNT32 Compare and Capture Offset */
+#define TC_COUNT8_PERBUF_REG_OFST      (0x2F)              /* (TC_COUNT8_PERBUF) COUNT8 Period Buffer Offset */
+#define TC_COUNT8_CCBUF_REG_OFST       (0x30)              /* (TC_COUNT8_CCBUF) COUNT8 Compare and Capture Buffer Offset */
+#define TC_COUNT8_CCBUF0_REG_OFST      (0x30)              /* (TC_COUNT8_CCBUF0) COUNT8 Compare and Capture Buffer Offset */
+#define TC_COUNT8_CCBUF1_REG_OFST      (0x31)              /* (TC_COUNT8_CCBUF1) COUNT8 Compare and Capture Buffer Offset */
+#define TC_COUNT16_CCBUF_REG_OFST      (0x30)              /* (TC_COUNT16_CCBUF) COUNT16 Compare and Capture Buffer Offset */
+#define TC_COUNT16_CCBUF0_REG_OFST     (0x30)              /* (TC_COUNT16_CCBUF0) COUNT16 Compare and Capture Buffer Offset */
+#define TC_COUNT16_CCBUF1_REG_OFST     (0x32)              /* (TC_COUNT16_CCBUF1) COUNT16 Compare and Capture Buffer Offset */
+#define TC_COUNT32_CCBUF_REG_OFST      (0x30)              /* (TC_COUNT32_CCBUF) COUNT32 Compare and Capture Buffer Offset */
+#define TC_COUNT32_CCBUF0_REG_OFST     (0x30)              /* (TC_COUNT32_CCBUF0) COUNT32 Compare and Capture Buffer Offset */
+#define TC_COUNT32_CCBUF1_REG_OFST     (0x34)              /* (TC_COUNT32_CCBUF1) COUNT32 Compare and Capture Buffer Offset */
 
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
 /** \brief TC register API structure */

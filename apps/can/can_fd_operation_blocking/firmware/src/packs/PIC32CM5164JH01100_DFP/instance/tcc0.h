@@ -1,7 +1,7 @@
-/**
- * \brief Instance header file for PIC32CM5164JH01100
+/*
+ * Instance header file for PIC32CM5164JH01100
  *
- * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2021-02-12T15:11:42Z */
+/* file generated from device description version 2022-01-18T09:31:06Z */
 #ifndef _PIC32CMJH01_TCC0_INSTANCE_
 #define _PIC32CMJH01_TCC0_INSTANCE_
 
@@ -28,6 +28,10 @@
 /* ========== Instance Parameter definitions for TCC0 peripheral ========== */
 #define TCC0_CC_NUM                              _UL_(4)    /* Number of Compare/Capture units */
 #define TCC0_DITHERING                           _UL_(1)    /* Dithering feature implemented */
+#define TCC0_DMAC_ID_MC_0                        _UL_(17)   /* Indexes of DMA Match/Compare triggers 0 */
+#define TCC0_DMAC_ID_MC_1                        _UL_(18)   /* Indexes of DMA Match/Compare triggers 1 */
+#define TCC0_DMAC_ID_MC_2                        _UL_(19)   /* Indexes of DMA Match/Compare triggers 2 */
+#define TCC0_DMAC_ID_MC_3                        _UL_(20)   /* Indexes of DMA Match/Compare triggers 3 */
 #define TCC0_DMAC_ID_OVF                         _UL_(16)   /* DMA overflow/underflow/retrigger trigger */
 #define TCC0_DTI                                 _UL_(1)    /* Dead-Time-Insertion feature implemented */
 #define TCC0_GCLK_ID                             _UL_(28)   /* Index of Generic Clock */
