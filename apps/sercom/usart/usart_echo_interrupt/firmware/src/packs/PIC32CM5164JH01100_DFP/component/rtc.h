@@ -1,7 +1,7 @@
-/**
- * \brief Component description for RTC
+/*
+ * Component description for RTC
  *
- * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2021-02-12T15:11:42Z */
+/* file generated from device description version 2022-01-18T09:31:06Z */
 #ifndef _PIC32CMJH01_RTC_COMPONENT_H_
 #define _PIC32CMJH01_RTC_COMPONENT_H_
 
@@ -1017,42 +1017,42 @@
 
 
 /** \brief RTC register offsets definitions */
-#define RTC_MODE0_CTRLA_REG_OFST       (0x00)              /**< (RTC_MODE0_CTRLA) MODE0 Control A Offset */
-#define RTC_MODE1_CTRLA_REG_OFST       (0x00)              /**< (RTC_MODE1_CTRLA) MODE1 Control A Offset */
-#define RTC_MODE2_CTRLA_REG_OFST       (0x00)              /**< (RTC_MODE2_CTRLA) MODE2 Control A Offset */
-#define RTC_MODE0_CTRLB_REG_OFST       (0x02)              /**< (RTC_MODE0_CTRLB) MODE0 Control B Offset */
-#define RTC_MODE1_CTRLB_REG_OFST       (0x02)              /**< (RTC_MODE1_CTRLB) MODE1 Control B Offset */
-#define RTC_MODE2_CTRLB_REG_OFST       (0x02)              /**< (RTC_MODE2_CTRLB) MODE2 Control B Offset */
-#define RTC_MODE0_EVCTRL_REG_OFST      (0x04)              /**< (RTC_MODE0_EVCTRL) MODE0 Event Control Offset */
-#define RTC_MODE1_EVCTRL_REG_OFST      (0x04)              /**< (RTC_MODE1_EVCTRL) MODE1 Event Control Offset */
-#define RTC_MODE2_EVCTRL_REG_OFST      (0x04)              /**< (RTC_MODE2_EVCTRL) MODE2 Event Control Offset */
-#define RTC_MODE0_INTENCLR_REG_OFST    (0x08)              /**< (RTC_MODE0_INTENCLR) MODE0 Interrupt Enable Clear Offset */
-#define RTC_MODE1_INTENCLR_REG_OFST    (0x08)              /**< (RTC_MODE1_INTENCLR) MODE1 Interrupt Enable Clear Offset */
-#define RTC_MODE2_INTENCLR_REG_OFST    (0x08)              /**< (RTC_MODE2_INTENCLR) MODE2 Interrupt Enable Clear Offset */
-#define RTC_MODE0_INTENSET_REG_OFST    (0x0A)              /**< (RTC_MODE0_INTENSET) MODE0 Interrupt Enable Set Offset */
-#define RTC_MODE1_INTENSET_REG_OFST    (0x0A)              /**< (RTC_MODE1_INTENSET) MODE1 Interrupt Enable Set Offset */
-#define RTC_MODE2_INTENSET_REG_OFST    (0x0A)              /**< (RTC_MODE2_INTENSET) MODE2 Interrupt Enable Set Offset */
-#define RTC_MODE0_INTFLAG_REG_OFST     (0x0C)              /**< (RTC_MODE0_INTFLAG) MODE0 Interrupt Flag Status and Clear Offset */
-#define RTC_MODE1_INTFLAG_REG_OFST     (0x0C)              /**< (RTC_MODE1_INTFLAG) MODE1 Interrupt Flag Status and Clear Offset */
-#define RTC_MODE2_INTFLAG_REG_OFST     (0x0C)              /**< (RTC_MODE2_INTFLAG) MODE2 Interrupt Flag Status and Clear Offset */
-#define RTC_DBGCTRL_REG_OFST           (0x0E)              /**< (RTC_DBGCTRL) Debug Control Offset */
-#define RTC_MODE0_SYNCBUSY_REG_OFST    (0x10)              /**< (RTC_MODE0_SYNCBUSY) MODE0 Synchronization Busy Status Offset */
-#define RTC_MODE1_SYNCBUSY_REG_OFST    (0x10)              /**< (RTC_MODE1_SYNCBUSY) MODE1 Synchronization Busy Status Offset */
-#define RTC_MODE2_SYNCBUSY_REG_OFST    (0x10)              /**< (RTC_MODE2_SYNCBUSY) MODE2 Synchronization Busy Status Offset */
-#define RTC_FREQCORR_REG_OFST          (0x14)              /**< (RTC_FREQCORR) Frequency Correction Offset */
-#define RTC_MODE0_COUNT_REG_OFST       (0x18)              /**< (RTC_MODE0_COUNT) MODE0 Counter Value Offset */
-#define RTC_MODE1_COUNT_REG_OFST       (0x18)              /**< (RTC_MODE1_COUNT) MODE1 Counter Value Offset */
-#define RTC_MODE2_CLOCK_REG_OFST       (0x18)              /**< (RTC_MODE2_CLOCK) MODE2 Clock Value Offset */
-#define RTC_MODE1_PER_REG_OFST         (0x1C)              /**< (RTC_MODE1_PER) MODE1 Counter Period Offset */
-#define RTC_MODE0_COMP0_REG_OFST       (0x20)              /**< (RTC_MODE0_COMP0) MODE0 Compare Value Offset */
-#define RTC_MODE1_COMP_REG_OFST        (0x20)              /**< (RTC_MODE1_COMP) MODE1 Compare n Value Offset */
-#define RTC_MODE1_COMP0_REG_OFST       (0x20)              /**< (RTC_MODE1_COMP0) MODE1 Compare n Value Offset */
-#define RTC_MODE1_COMP1_REG_OFST       (0x22)              /**< (RTC_MODE1_COMP1) MODE1 Compare n Value Offset */
-#define RTC_MODE2_ALARM0_REG_OFST      (0x20)              /**< (RTC_MODE2_ALARM0) MODE2 Alarm Value Offset */
-#define RTC_MODE2_MASK0_REG_OFST       (0x24)              /**< (RTC_MODE2_MASK0) MODE2 Alarm Mask Offset */
-#define RTC_GP_REG_OFST                (0x40)              /**< (RTC_GP) General Purpose Offset */
-#define RTC_GP0_REG_OFST               (0x40)              /**< (RTC_GP0) General Purpose Offset */
-#define RTC_GP1_REG_OFST               (0x44)              /**< (RTC_GP1) General Purpose Offset */
+#define RTC_MODE0_CTRLA_REG_OFST       (0x00)              /* (RTC_MODE0_CTRLA) MODE0 Control A Offset */
+#define RTC_MODE1_CTRLA_REG_OFST       (0x00)              /* (RTC_MODE1_CTRLA) MODE1 Control A Offset */
+#define RTC_MODE2_CTRLA_REG_OFST       (0x00)              /* (RTC_MODE2_CTRLA) MODE2 Control A Offset */
+#define RTC_MODE0_CTRLB_REG_OFST       (0x02)              /* (RTC_MODE0_CTRLB) MODE0 Control B Offset */
+#define RTC_MODE1_CTRLB_REG_OFST       (0x02)              /* (RTC_MODE1_CTRLB) MODE1 Control B Offset */
+#define RTC_MODE2_CTRLB_REG_OFST       (0x02)              /* (RTC_MODE2_CTRLB) MODE2 Control B Offset */
+#define RTC_MODE0_EVCTRL_REG_OFST      (0x04)              /* (RTC_MODE0_EVCTRL) MODE0 Event Control Offset */
+#define RTC_MODE1_EVCTRL_REG_OFST      (0x04)              /* (RTC_MODE1_EVCTRL) MODE1 Event Control Offset */
+#define RTC_MODE2_EVCTRL_REG_OFST      (0x04)              /* (RTC_MODE2_EVCTRL) MODE2 Event Control Offset */
+#define RTC_MODE0_INTENCLR_REG_OFST    (0x08)              /* (RTC_MODE0_INTENCLR) MODE0 Interrupt Enable Clear Offset */
+#define RTC_MODE1_INTENCLR_REG_OFST    (0x08)              /* (RTC_MODE1_INTENCLR) MODE1 Interrupt Enable Clear Offset */
+#define RTC_MODE2_INTENCLR_REG_OFST    (0x08)              /* (RTC_MODE2_INTENCLR) MODE2 Interrupt Enable Clear Offset */
+#define RTC_MODE0_INTENSET_REG_OFST    (0x0A)              /* (RTC_MODE0_INTENSET) MODE0 Interrupt Enable Set Offset */
+#define RTC_MODE1_INTENSET_REG_OFST    (0x0A)              /* (RTC_MODE1_INTENSET) MODE1 Interrupt Enable Set Offset */
+#define RTC_MODE2_INTENSET_REG_OFST    (0x0A)              /* (RTC_MODE2_INTENSET) MODE2 Interrupt Enable Set Offset */
+#define RTC_MODE0_INTFLAG_REG_OFST     (0x0C)              /* (RTC_MODE0_INTFLAG) MODE0 Interrupt Flag Status and Clear Offset */
+#define RTC_MODE1_INTFLAG_REG_OFST     (0x0C)              /* (RTC_MODE1_INTFLAG) MODE1 Interrupt Flag Status and Clear Offset */
+#define RTC_MODE2_INTFLAG_REG_OFST     (0x0C)              /* (RTC_MODE2_INTFLAG) MODE2 Interrupt Flag Status and Clear Offset */
+#define RTC_DBGCTRL_REG_OFST           (0x0E)              /* (RTC_DBGCTRL) Debug Control Offset */
+#define RTC_MODE0_SYNCBUSY_REG_OFST    (0x10)              /* (RTC_MODE0_SYNCBUSY) MODE0 Synchronization Busy Status Offset */
+#define RTC_MODE1_SYNCBUSY_REG_OFST    (0x10)              /* (RTC_MODE1_SYNCBUSY) MODE1 Synchronization Busy Status Offset */
+#define RTC_MODE2_SYNCBUSY_REG_OFST    (0x10)              /* (RTC_MODE2_SYNCBUSY) MODE2 Synchronization Busy Status Offset */
+#define RTC_FREQCORR_REG_OFST          (0x14)              /* (RTC_FREQCORR) Frequency Correction Offset */
+#define RTC_MODE0_COUNT_REG_OFST       (0x18)              /* (RTC_MODE0_COUNT) MODE0 Counter Value Offset */
+#define RTC_MODE1_COUNT_REG_OFST       (0x18)              /* (RTC_MODE1_COUNT) MODE1 Counter Value Offset */
+#define RTC_MODE2_CLOCK_REG_OFST       (0x18)              /* (RTC_MODE2_CLOCK) MODE2 Clock Value Offset */
+#define RTC_MODE1_PER_REG_OFST         (0x1C)              /* (RTC_MODE1_PER) MODE1 Counter Period Offset */
+#define RTC_MODE0_COMP0_REG_OFST       (0x20)              /* (RTC_MODE0_COMP0) MODE0 Compare Value Offset */
+#define RTC_MODE1_COMP_REG_OFST        (0x20)              /* (RTC_MODE1_COMP) MODE1 Compare n Value Offset */
+#define RTC_MODE1_COMP0_REG_OFST       (0x20)              /* (RTC_MODE1_COMP0) MODE1 Compare n Value Offset */
+#define RTC_MODE1_COMP1_REG_OFST       (0x22)              /* (RTC_MODE1_COMP1) MODE1 Compare n Value Offset */
+#define RTC_MODE2_ALARM0_REG_OFST      (0x20)              /* (RTC_MODE2_ALARM0) MODE2 Alarm Value Offset */
+#define RTC_MODE2_MASK0_REG_OFST       (0x24)              /* (RTC_MODE2_MASK0) MODE2 Alarm Mask Offset */
+#define RTC_GP_REG_OFST                (0x40)              /* (RTC_GP) General Purpose Offset */
+#define RTC_GP0_REG_OFST               (0x40)              /* (RTC_GP0) General Purpose Offset */
+#define RTC_GP1_REG_OFST               (0x44)              /* (RTC_GP1) General Purpose Offset */
 
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
 /** \brief RTC register API structure */

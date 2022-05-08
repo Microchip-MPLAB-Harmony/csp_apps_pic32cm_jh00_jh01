@@ -1,7 +1,7 @@
-/**
- * \brief Component description for PDEC
+/*
+ * Component description for PDEC
  *
- * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2021-02-12T15:11:42Z */
+/* file generated from device description version 2022-01-18T09:31:06Z */
 #ifndef _PIC32CMJH01_PDEC_COMPONENT_H_
 #define _PIC32CMJH01_PDEC_COMPONENT_H_
 
@@ -470,27 +470,27 @@
 
 
 /** \brief PDEC register offsets definitions */
-#define PDEC_CTRLA_REG_OFST            (0x00)              /**< (PDEC_CTRLA) Control A Offset */
-#define PDEC_CTRLBCLR_REG_OFST         (0x04)              /**< (PDEC_CTRLBCLR) Control B Clear Offset */
-#define PDEC_CTRLBSET_REG_OFST         (0x05)              /**< (PDEC_CTRLBSET) Control B Set Offset */
-#define PDEC_EVCTRL_REG_OFST           (0x06)              /**< (PDEC_EVCTRL) Event Control Offset */
-#define PDEC_INTENCLR_REG_OFST         (0x08)              /**< (PDEC_INTENCLR) Interrupt Enable Clear Offset */
-#define PDEC_INTENSET_REG_OFST         (0x09)              /**< (PDEC_INTENSET) Interrupt Enable Set Offset */
-#define PDEC_INTFLAG_REG_OFST          (0x0A)              /**< (PDEC_INTFLAG) Interrupt Flag Status and Clear Offset */
-#define PDEC_STATUS_REG_OFST           (0x0C)              /**< (PDEC_STATUS) Status Offset */
-#define PDEC_DBGCTRL_REG_OFST          (0x0F)              /**< (PDEC_DBGCTRL) Debug Control Offset */
-#define PDEC_SYNCBUSY_REG_OFST         (0x10)              /**< (PDEC_SYNCBUSY) Synchronization Status Offset */
-#define PDEC_PRESC_REG_OFST            (0x14)              /**< (PDEC_PRESC) Prescaler Value Offset */
-#define PDEC_FILTER_REG_OFST           (0x15)              /**< (PDEC_FILTER) Filter Value Offset */
-#define PDEC_PRESCBUF_REG_OFST         (0x18)              /**< (PDEC_PRESCBUF) Prescaler Buffer Value Offset */
-#define PDEC_FILTERBUF_REG_OFST        (0x19)              /**< (PDEC_FILTERBUF) Filter Buffer Value Offset */
-#define PDEC_COUNT_REG_OFST            (0x1C)              /**< (PDEC_COUNT) Counter Value Offset */
-#define PDEC_CC_REG_OFST               (0x20)              /**< (PDEC_CC) Channel n Compare Value Offset */
-#define PDEC_CC0_REG_OFST              (0x20)              /**< (PDEC_CC0) Channel n Compare Value Offset */
-#define PDEC_CC1_REG_OFST              (0x24)              /**< (PDEC_CC1) Channel n Compare Value Offset */
-#define PDEC_CCBUF_REG_OFST            (0x30)              /**< (PDEC_CCBUF) Channel Compare Buffer Value Offset */
-#define PDEC_CCBUF0_REG_OFST           (0x30)              /**< (PDEC_CCBUF0) Channel Compare Buffer Value Offset */
-#define PDEC_CCBUF1_REG_OFST           (0x34)              /**< (PDEC_CCBUF1) Channel Compare Buffer Value Offset */
+#define PDEC_CTRLA_REG_OFST            (0x00)              /* (PDEC_CTRLA) Control A Offset */
+#define PDEC_CTRLBCLR_REG_OFST         (0x04)              /* (PDEC_CTRLBCLR) Control B Clear Offset */
+#define PDEC_CTRLBSET_REG_OFST         (0x05)              /* (PDEC_CTRLBSET) Control B Set Offset */
+#define PDEC_EVCTRL_REG_OFST           (0x06)              /* (PDEC_EVCTRL) Event Control Offset */
+#define PDEC_INTENCLR_REG_OFST         (0x08)              /* (PDEC_INTENCLR) Interrupt Enable Clear Offset */
+#define PDEC_INTENSET_REG_OFST         (0x09)              /* (PDEC_INTENSET) Interrupt Enable Set Offset */
+#define PDEC_INTFLAG_REG_OFST          (0x0A)              /* (PDEC_INTFLAG) Interrupt Flag Status and Clear Offset */
+#define PDEC_STATUS_REG_OFST           (0x0C)              /* (PDEC_STATUS) Status Offset */
+#define PDEC_DBGCTRL_REG_OFST          (0x0F)              /* (PDEC_DBGCTRL) Debug Control Offset */
+#define PDEC_SYNCBUSY_REG_OFST         (0x10)              /* (PDEC_SYNCBUSY) Synchronization Status Offset */
+#define PDEC_PRESC_REG_OFST            (0x14)              /* (PDEC_PRESC) Prescaler Value Offset */
+#define PDEC_FILTER_REG_OFST           (0x15)              /* (PDEC_FILTER) Filter Value Offset */
+#define PDEC_PRESCBUF_REG_OFST         (0x18)              /* (PDEC_PRESCBUF) Prescaler Buffer Value Offset */
+#define PDEC_FILTERBUF_REG_OFST        (0x19)              /* (PDEC_FILTERBUF) Filter Buffer Value Offset */
+#define PDEC_COUNT_REG_OFST            (0x1C)              /* (PDEC_COUNT) Counter Value Offset */
+#define PDEC_CC_REG_OFST               (0x20)              /* (PDEC_CC) Channel n Compare Value Offset */
+#define PDEC_CC0_REG_OFST              (0x20)              /* (PDEC_CC0) Channel n Compare Value Offset */
+#define PDEC_CC1_REG_OFST              (0x24)              /* (PDEC_CC1) Channel n Compare Value Offset */
+#define PDEC_CCBUF_REG_OFST            (0x30)              /* (PDEC_CCBUF) Channel Compare Buffer Value Offset */
+#define PDEC_CCBUF0_REG_OFST           (0x30)              /* (PDEC_CCBUF0) Channel Compare Buffer Value Offset */
+#define PDEC_CCBUF1_REG_OFST           (0x34)              /* (PDEC_CCBUF1) Channel Compare Buffer Value Offset */
 
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
 /** \brief PDEC register API structure */
