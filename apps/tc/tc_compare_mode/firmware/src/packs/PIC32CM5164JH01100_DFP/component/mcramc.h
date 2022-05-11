@@ -1,7 +1,7 @@
-/**
- * \brief Component description for MCRAMC
+/*
+ * Component description for MCRAMC
  *
- * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2021-02-12T15:11:42Z */
+/* file generated from device description version 2022-01-18T09:31:06Z */
 #ifndef _PIC32CMJH01_MCRAMC_COMPONENT_H_
 #define _PIC32CMJH01_MCRAMC_COMPONENT_H_
 
@@ -172,16 +172,16 @@
 #define MCRAMC_ERRCSYN_ERR(value)             (MCRAMC_ERRCSYN_ERR_Msk & ((value) << MCRAMC_ERRCSYN_ERR_Pos)) 
 
 /** \brief MCRAMC register offsets definitions */
-#define MCRAMC_CTRLA_REG_OFST          (0x00)              /**< (MCRAMC_CTRLA) Control Enable A Register Offset */
-#define MCRAMC_INTENCLR_REG_OFST       (0x08)              /**< (MCRAMC_INTENCLR) Interrupt Enable Clear Register Offset */
-#define MCRAMC_INTENSET_REG_OFST       (0x0C)              /**< (MCRAMC_INTENSET) Interrupt Enable Set Register Offset */
-#define MCRAMC_INTSTA_REG_OFST         (0x10)              /**< (MCRAMC_INTSTA) Interrupt Status Register Offset */
-#define MCRAMC_FLTCTRL_REG_OFST        (0x14)              /**< (MCRAMC_FLTCTRL) Fault Injection Control Register Offset */
-#define MCRAMC_FLTPTR_REG_OFST         (0x18)              /**< (MCRAMC_FLTPTR) Fault Injection Pointer Register Offset */
-#define MCRAMC_FLTADR_REG_OFST         (0x1C)              /**< (MCRAMC_FLTADR) Fault Injection Address Register Offset */
-#define MCRAMC_ERRCADR_REG_OFST        (0x20)              /**< (MCRAMC_ERRCADR) Error Capture Address Register Offset */
-#define MCRAMC_ERRCPAR_REG_OFST        (0x24)              /**< (MCRAMC_ERRCPAR) Error Capture Parity Register Offset */
-#define MCRAMC_ERRCSYN_REG_OFST        (0x28)              /**< (MCRAMC_ERRCSYN) Error Capture Syndrome Register Offset */
+#define MCRAMC_CTRLA_REG_OFST          (0x00)              /* (MCRAMC_CTRLA) Control Enable A Register Offset */
+#define MCRAMC_INTENCLR_REG_OFST       (0x08)              /* (MCRAMC_INTENCLR) Interrupt Enable Clear Register Offset */
+#define MCRAMC_INTENSET_REG_OFST       (0x0C)              /* (MCRAMC_INTENSET) Interrupt Enable Set Register Offset */
+#define MCRAMC_INTSTA_REG_OFST         (0x10)              /* (MCRAMC_INTSTA) Interrupt Status Register Offset */
+#define MCRAMC_FLTCTRL_REG_OFST        (0x14)              /* (MCRAMC_FLTCTRL) Fault Injection Control Register Offset */
+#define MCRAMC_FLTPTR_REG_OFST         (0x18)              /* (MCRAMC_FLTPTR) Fault Injection Pointer Register Offset */
+#define MCRAMC_FLTADR_REG_OFST         (0x1C)              /* (MCRAMC_FLTADR) Fault Injection Address Register Offset */
+#define MCRAMC_ERRCADR_REG_OFST        (0x20)              /* (MCRAMC_ERRCADR) Error Capture Address Register Offset */
+#define MCRAMC_ERRCPAR_REG_OFST        (0x24)              /* (MCRAMC_ERRCPAR) Error Capture Parity Register Offset */
+#define MCRAMC_ERRCSYN_REG_OFST        (0x28)              /* (MCRAMC_ERRCSYN) Error Capture Syndrome Register Offset */
 
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
 /** \brief MCRAMC register API structure */
