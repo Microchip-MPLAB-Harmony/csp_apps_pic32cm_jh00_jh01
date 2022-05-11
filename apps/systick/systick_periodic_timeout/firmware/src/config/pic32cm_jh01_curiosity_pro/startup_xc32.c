@@ -33,9 +33,12 @@
  *  The MPLAB X Simulator does not yet support simulation of programming the
  *  GPNVM bits yet. We can remove this once it supports the FRDY bit.
  */
+ /* MISRAC 2012 deviation block start */
+/* MISRA C-2012 Rule 21.1 deviated 1 time. Deviation record ID -  H3_MISRAC_2012_R_21_1_DR_1 */
 #ifdef __MPLAB_DEBUGGER_SIMULATOR
 #define __XC32_SKIP_STARTUP_GPNVM_WAIT
 #endif
+/* MISRAC 2012 deviation block end */
 
 /*
  *  This startup code relies on features that are specific to the MPLAB XC32
@@ -45,22 +48,12 @@
 #warning This startup code is intended for use with the MPLAB XC32 Compiler only.
 #endif
 
-/* Initialize segments */
-extern uint32_t __svectors;
+/* MISRAC 2012 deviation block start */
+/* MISRA C-2012 Rule 21.2 deviated 5 times. Deviation record ID -  H3_MISRAC_2012_R_21_2_DR_1 */
+/* MISRA C-2012 Rule 8.6 deviated 6 times.  Deviation record ID -  H3_MISRAC_2012_R_8_6_DR_1 */
 
-extern int main(void);
+/* array initialization  function */
 extern void __attribute__((long_call)) __libc_init_array(void);
-
-/* Device Vector information is available in interrupt.c file */
-
-
-extern void Dummy_App_Func(void);
-
-/* Brief default application function used as a weak reference */
-void __attribute__((optimize("-O1"),long_call))Dummy_App_Func(void)
-{
-    return;
-}
 
 /* Optional application-provided functions */
 extern void __attribute__((weak,long_call, alias("Dummy_App_Func"))) _on_reset(void);
@@ -70,16 +63,88 @@ extern void __attribute__((weak,long_call, alias("Dummy_App_Func"))) _on_bootstr
 extern void __attribute__((weak,long_call, alias("Dummy_App_Func"))) __xc32_on_reset(void);
 extern void __attribute__((weak,long_call, alias("Dummy_App_Func"))) __xc32_on_bootstrap(void);
 
+/* Linker defined variables */
+extern uint32_t __svectors;
+
+/* MISRAC 2012 deviation block end */
+
+
+extern int main(void);
+
+
+__STATIC_INLINE void  __attribute__((optimize("-O1")))  RAM_Initialize(void)
+{
+    register uint32_t *pRam;
+
+    // MCRAMC initialization loop (to handle ECC properly)
+    // Write to entire RAM to initialize ECC checksum
+
+    if ((WDT_REGS->WDT_CTRLA & WDT_CTRLA_ALWAYSON_Msk) || (WDT_REGS->WDT_CTRLA & WDT_CTRLA_ENABLE_Msk))
+    {
+        if (WDT_REGS->WDT_CTRLA & WDT_CTRLA_WEN_Msk)
+        {
+            for (pRam = (uint32_t*)0x20000000U ; pRam < ((uint32_t*)(0x20000000U + 0x10000U)) ; pRam++)
+            {
+                *pRam = 0U;
+
+                if ((WDT_REGS->WDT_INTFLAG & WDT_INTFLAG_EW_Msk) == WDT_INTFLAG_EW_Msk)
+                {
+                    if (!(WDT_REGS->WDT_SYNCBUSY & WDT_SYNCBUSY_CLEAR_Msk))
+                    {
+
+                        /* Clear WDT and reset the WDT timer before the
+                        timeout occurs */
+                        WDT_REGS->WDT_CLEAR = (uint8_t)WDT_CLEAR_CLEAR_KEY;
+
+                        WDT_REGS->WDT_INTFLAG |= WDT_INTFLAG_EW_Msk;
+                    }
+                }
+            }
+        }
+        else
+        {
+            for (pRam = (uint32_t*)0x20000000U ; pRam < ((uint32_t*)(0x20000000U + 0x10000U)) ; pRam++)
+            {
+                *pRam = 0U;
+
+                if (!(WDT_REGS->WDT_SYNCBUSY & WDT_SYNCBUSY_CLEAR_Msk))
+                {
+
+                    /* Clear WDT and reset the WDT timer before the timeout occurs */
+                    WDT_REGS->WDT_CLEAR = (uint8_t)WDT_CLEAR_CLEAR_KEY;
+                }
+            }
+        }
+    }
+    else
+    {
+        for (pRam = (uint32_t*)0x20000000U ; pRam < ((uint32_t*)(0x20000000U + 0x10000U)) ; pRam++)
+        {
+            *pRam = 0U;
+        }
+    }
+}
+
+
+/* Brief default application function used as a weak reference */
+extern void Dummy_App_Func(void);
+void __attribute__((optimize("-O1"),long_call))Dummy_App_Func(void)
+{
+    /* Do nothing */
+    return;
+}
+
 /**
  * \brief This is the code that gets called on processor reset.
  * To initialize the device, and call the main() routine.
  */
 void __attribute__((optimize("-O1"), section(".text.Reset_Handler"), long_call, noreturn)) Reset_Handler(void)
 {
+    RAM_Initialize();
+
 #ifdef SCB_VTOR_TBLOFF_Msk
     uint32_t *pSrc;
 #endif
-
 
 #if defined (__REINIT_STACK_POINTER)
     /* Initialize SP from linker-defined _stack symbol. */
@@ -92,15 +157,11 @@ void __attribute__((optimize("-O1"), section(".text.Reset_Handler"), long_call, 
     __asm__ volatile ("add r7, sp, #0" : : : "r7");
 #endif
 
-
     /* Call the optional application-provided _on_reset() function. */
     _on_reset();
 
     /* Reserved for use by MPLAB XC32. */
     __xc32_on_reset();
-
-
-
 
     /* Initialize data after TCM is enabled.
      * Data initialization from the XC32 .dinit template */
@@ -116,22 +177,21 @@ void __attribute__((optimize("-O1"), section(".text.Reset_Handler"), long_call, 
     /* Initialize the C library */
     __libc_init_array();
 
-
-
-
     /* Call the optional application-provided _on_bootstrap() function. */
     _on_bootstrap();
-    
+
     /* Reserved for use by MPLAB XC32. */
     __xc32_on_bootstrap();
 
     /* Branch to application's main function */
-    int retval = main();
-    (void)retval;
+    (void)main();
 
 #if (defined(__DEBUG) || defined(__DEBUG_D)) && defined(__XC32)
     __builtin_software_breakpoint();
 #endif
-    /* Infinite loop */
-    while (true) {}
+
+    while (true)
+    {
+        /* Infinite loop */
+    }
 }

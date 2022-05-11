@@ -1,7 +1,7 @@
-/**
- * \brief Instance header file for PIC32CM5164JH01100
+/*
+ * Instance header file for PIC32CM5164JH01100
  *
- * Copyright (c) 2021 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2021-02-12T15:11:42Z */
+/* file generated from device description version 2022-01-18T09:31:06Z */
 #ifndef _PIC32CMJH01_TCC1_INSTANCE_
 #define _PIC32CMJH01_TCC1_INSTANCE_
 
@@ -28,6 +28,8 @@
 /* ========== Instance Parameter definitions for TCC1 peripheral ========== */
 #define TCC1_CC_NUM                              _UL_(2)    /* Number of Compare/Capture units */
 #define TCC1_DITHERING                           _UL_(1)    /* Dithering feature implemented */
+#define TCC1_DMAC_ID_MC_0                        _UL_(22)   /* Indexes of DMA Match/Compare triggers 0 */
+#define TCC1_DMAC_ID_MC_1                        _UL_(23)   /* Indexes of DMA Match/Compare triggers 1 */
 #define TCC1_DMAC_ID_OVF                         _UL_(21)   /* DMA overflow/underflow/retrigger trigger */
 #define TCC1_DTI                                 _UL_(0)    /* Dead-Time-Insertion feature implemented */
 #define TCC1_GCLK_ID                             _UL_(28)   /* Index of Generic Clock */
