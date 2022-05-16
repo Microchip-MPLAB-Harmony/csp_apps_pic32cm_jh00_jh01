@@ -20,12 +20,12 @@
  *
  */
 
-/* file generated from device description version 2022-01-18T09:31:06Z */
+/* file generated from device description version 2022-05-20T08:40:47Z */
 #ifndef _PIC32CMJH01_ICM_INSTANCE_
 #define _PIC32CMJH01_ICM_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for ICM peripheral ========== */
-#define ICM_INSTANCE_ID                          _UL_(89)   /* Instance index for ICM */
+#define ICM_INSTANCE_ID                          (89)       /* Instance index for ICM */
 
 #endif /* _PIC32CMJH01_ICM_INSTANCE_ */

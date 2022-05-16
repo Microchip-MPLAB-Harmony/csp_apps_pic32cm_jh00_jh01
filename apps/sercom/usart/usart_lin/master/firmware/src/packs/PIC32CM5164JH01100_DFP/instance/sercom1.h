@@ -20,18 +20,18 @@
  *
  */
 
-/* file generated from device description version 2022-01-18T09:31:06Z */
+/* file generated from device description version 2022-05-20T08:40:47Z */
 #ifndef _PIC32CMJH01_SERCOM1_INSTANCE_
 #define _PIC32CMJH01_SERCOM1_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for SERCOM1 peripheral ========== */
-#define SERCOM1_DMAC_ID_RX                       _UL_(4)    /* Index of DMA RX trigger */
-#define SERCOM1_DMAC_ID_TX                       _UL_(5)    /* Index of DMA TX trigger */
-#define SERCOM1_GCLK_ID_CORE                     _UL_(19)   
-#define SERCOM1_GCLK_ID_SLOW                     _UL_(17)   
-#define SERCOM1_INT_MSB                          _UL_(6)    
-#define SERCOM1_PMSB                             _UL_(3)    
-#define SERCOM1_INSTANCE_ID                      _UL_(66)   /* Instance index for SERCOM1 */
+#define SERCOM1_DMAC_ID_RX                       (4)        /* Index of DMA RX trigger */
+#define SERCOM1_DMAC_ID_TX                       (5)        /* Index of DMA TX trigger */
+#define SERCOM1_GCLK_ID_CORE                     (19)       
+#define SERCOM1_GCLK_ID_SLOW                     (17)       
+#define SERCOM1_INT_MSB                          (6)        
+#define SERCOM1_PMSB                             (3)        
+#define SERCOM1_INSTANCE_ID                      (66)       /* Instance index for SERCOM1 */
 
 #endif /* _PIC32CMJH01_SERCOM1_INSTANCE_ */

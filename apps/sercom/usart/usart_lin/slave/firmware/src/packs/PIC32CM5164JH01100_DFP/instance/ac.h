@@ -20,17 +20,17 @@
  *
  */
 
-/* file generated from device description version 2022-01-18T09:31:06Z */
+/* file generated from device description version 2022-05-20T08:40:47Z */
 #ifndef _PIC32CMJH01_AC_INSTANCE_
 #define _PIC32CMJH01_AC_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for AC peripheral ========== */
-#define AC_COMPCTRL_MUXNEG_OPAMP                 _UL_(7)    /* OPAMP selection for MUXNEG */
-#define AC_GCLK_ID                               _UL_(42)   /* Index of Generic Clock */
-#define AC_NUM_CMP                               _UL_(4)    /* Number of comparators */
-#define AC_PAIRS                                 _UL_(2)    /* Number of pairs of comparators */
-#define AC_SPEED_LEVELS                          _UL_(2)    /* Number of speed values */
-#define AC_INSTANCE_ID                           _UL_(83)   /* Instance index for AC */
+#define AC_COMPCTRL_MUXNEG_OPAMP                 (7)        /* OPAMP selection for MUXNEG */
+#define AC_GCLK_ID                               (42)       /* Index of Generic Clock */
+#define AC_NUM_CMP                               (4)        /* Number of comparators */
+#define AC_PAIRS                                 (2)        /* Number of pairs of comparators */
+#define AC_SPEED_LEVELS                          (2)        /* Number of speed values */
+#define AC_INSTANCE_ID                           (83)       /* Instance index for AC */
 
 #endif /* _PIC32CMJH01_AC_INSTANCE_ */

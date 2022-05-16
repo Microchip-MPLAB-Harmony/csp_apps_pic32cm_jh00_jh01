@@ -52,6 +52,7 @@ Hardware setup requires two boards, one acting as the LIN Master and the other a
 ### Setting up [PIC32CM JH01 Curiosity Pro Evaluation Kit]()
 
 - Disable the Master node pull-up by un-mounting the jumper on J501 connector
+- Change the VCC-SEL jumper settings from 3.3V to 5V.
 - Mount the jumper on J500 connector to power the LIN transceiver from the on board VCC.
 - Connect a wire from "LIN" on J503 on LIN Master board to "LIN" on J503 on LIN slave board
 - Connect a wire from "GND" on J503 on LIN Master board to "GND" on J503 on LIN slave board

@@ -20,13 +20,13 @@
  *
  */
 
-/* file generated from device description version 2022-01-18T09:31:06Z */
+/* file generated from device description version 2022-05-20T08:40:47Z */
 #ifndef _PIC32CMJH01_OSC32KCTRL_INSTANCE_
 #define _PIC32CMJH01_OSC32KCTRL_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for OSC32KCTRL peripheral ========== */
-#define OSC32KCTRL_OSC32K_COARSE_CALIB_MSB       _UL_(6)    
-#define OSC32KCTRL_INSTANCE_ID                   _UL_(5)    /* Instance index for OSC32KCTRL */
+#define OSC32KCTRL_OSC32K_COARSE_CALIB_MSB       (6)        
+#define OSC32KCTRL_INSTANCE_ID                   (5)        /* Instance index for OSC32KCTRL */
 
 #endif /* _PIC32CMJH01_OSC32KCTRL_INSTANCE_ */

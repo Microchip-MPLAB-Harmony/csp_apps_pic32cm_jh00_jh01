@@ -20,16 +20,16 @@
  *
  */
 
-/* file generated from device description version 2022-01-18T09:31:06Z */
+/* file generated from device description version 2022-05-20T08:40:47Z */
 #ifndef _PIC32CMJH01_CAN0_INSTANCE_
 #define _PIC32CMJH01_CAN0_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for CAN0 peripheral ========== */
-#define CAN0_DMAC_ID_DEBUG                       _UL_(14)   /* DMA CAN Debug Req */
-#define CAN0_GCLK_ID                             _UL_(26)   /* Index of Generic Clock */
-#define CAN0_MSG_RAM_ADDR                        _UL_(0x200000000) 
-#define CAN0_QOS_RESET_VAL                       _UL_(2)    /* QOS reset value */
-#define CAN0_INSTANCE_ID                         _UL_(71)   /* Instance index for CAN0 */
+#define CAN0_DMAC_ID_DEBUG                       (14)       /* DMA CAN Debug Req */
+#define CAN0_GCLK_ID                             (26)       /* Index of Generic Clock */
+#define CAN0_MSG_RAM_ADDR                        (0x200000000) 
+#define CAN0_QOS_RESET_VAL                       (2)        /* QOS reset value */
+#define CAN0_INSTANCE_ID                         (71)       /* Instance index for CAN0 */
 
 #endif /* _PIC32CMJH01_CAN0_INSTANCE_ */

@@ -20,14 +20,14 @@
  *
  */
 
-/* file generated from device description version 2022-01-18T09:31:06Z */
+/* file generated from device description version 2022-05-20T08:40:47Z */
 #ifndef _PIC32CMJH01_RSTC_INSTANCE_
 #define _PIC32CMJH01_RSTC_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for RSTC peripheral ========== */
-#define RSTC_BACKUP_IMPLEMENTED                  _UL_(0)    
-#define RSTC_NUMBER_OF_EXTWAKE                   _UL_(0)    /* number of external wakeup line */
-#define RSTC_INSTANCE_ID                         _UL_(3)    /* Instance index for RSTC */
+#define RSTC_BACKUP_IMPLEMENTED                  (0)        
+#define RSTC_NUMBER_OF_EXTWAKE                   (0)        /* number of external wakeup line */
+#define RSTC_INSTANCE_ID                         (3)        /* Instance index for RSTC */
 
 #endif /* _PIC32CMJH01_RSTC_INSTANCE_ */

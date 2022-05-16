@@ -20,18 +20,18 @@
  *
  */
 
-/* file generated from device description version 2022-01-18T09:31:06Z */
+/* file generated from device description version 2022-05-20T08:40:47Z */
 #ifndef _PIC32CMJH01_ADC0_INSTANCE_
 #define _PIC32CMJH01_ADC0_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for ADC0 peripheral ========== */
-#define ADC0_DMAC_ID_RESRDY                      _UL_(42)   /* Index of DMA RESRDY trigger */
-#define ADC0_EXTCHANNEL_MSB                      _UL_(11)   /* Number of external channels */
-#define ADC0_GCLK_ID                             _UL_(36)   /* Index of Generic Clock */
-#define ADC0_INT_CH30                            _UL_(0)    /* Select OPAMP or CTAT on Channel 30 */
-#define ADC0_MASTER_SLAVE_MODE                   _UL_(1)    /* ADC Master/Slave Mode */
-#define ADC0_INSTANCE_ID                         _UL_(81)   /* Instance index for ADC0 */
-#define ADC0_LOAD_CALIB                          _UL_(1)    /* CALIB register to be loaded from NVM */
+#define ADC0_DMAC_ID_RESRDY                      (42)       /* Index of DMA RESRDY trigger */
+#define ADC0_EXTCHANNEL_MSB                      (11)       /* Number of external channels */
+#define ADC0_GCLK_ID                             (36)       /* Index of Generic Clock */
+#define ADC0_INT_CH30                            (0)        /* Select OPAMP or CTAT on Channel 30 */
+#define ADC0_MASTER_SLAVE_MODE                   (1)        /* ADC Master/Slave Mode */
+#define ADC0_INSTANCE_ID                         (81)       /* Instance index for ADC0 */
+#define ADC0_LOAD_CALIB                          (1)        /* CALIB register to be loaded from NVM */
 
 #endif /* _PIC32CMJH01_ADC0_INSTANCE_ */

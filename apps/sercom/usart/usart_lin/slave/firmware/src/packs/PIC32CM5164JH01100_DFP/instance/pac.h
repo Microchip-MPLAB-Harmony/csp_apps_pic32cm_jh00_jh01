@@ -20,14 +20,14 @@
  *
  */
 
-/* file generated from device description version 2022-01-18T09:31:06Z */
+/* file generated from device description version 2022-05-20T08:40:47Z */
 #ifndef _PIC32CMJH01_PAC_INSTANCE_
 #define _PIC32CMJH01_PAC_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for PAC peripheral ========== */
-#define PAC_HPB_NUM                              _UL_(4)    /* Number of bridges AHB/APB */
-#define PAC_INTFLAG_NUM                          _UL_(4)    /* Number of intflag registers */
-#define PAC_INSTANCE_ID                          _UL_(0)    /* Instance index for PAC */
+#define PAC_HPB_NUM                              (4)        /* Number of bridges AHB/APB */
+#define PAC_INTFLAG_NUM                          (4)        /* Number of intflag registers */
+#define PAC_INSTANCE_ID                          (0)        /* Instance index for PAC */
 
 #endif /* _PIC32CMJH01_PAC_INSTANCE_ */

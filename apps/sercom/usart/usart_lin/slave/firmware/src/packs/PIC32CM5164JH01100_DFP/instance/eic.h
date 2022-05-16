@@ -20,17 +20,17 @@
  *
  */
 
-/* file generated from device description version 2022-01-18T09:31:06Z */
+/* file generated from device description version 2022-05-20T08:40:47Z */
 #ifndef _PIC32CMJH01_EIC_INSTANCE_
 #define _PIC32CMJH01_EIC_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for EIC peripheral ========== */
-#define EIC_EXTINT_NUM                           _UL_(16)   /* Number of external interrupts */
-#define EIC_GCLK_ID                              _UL_(2)    /* Generic Clock index */
-#define EIC_NUMBER_OF_CONFIG_REGS                _UL_(2)    /* Number of CONFIG registers */
-#define EIC_NUMBER_OF_DPRESCALER_REGS            _UL_(2)    /* Number of DPRESCALER registers */
-#define EIC_NUMBER_OF_INTERRUPTS                 _UL_(16)   /* Number of external interrupts (obsolete) */
-#define EIC_INSTANCE_ID                          _UL_(10)   /* Instance index for EIC */
+#define EIC_EXTINT_NUM                           (16)       /* Number of external interrupts */
+#define EIC_GCLK_ID                              (2)        /* Generic Clock index */
+#define EIC_NUMBER_OF_CONFIG_REGS                (2)        /* Number of CONFIG registers */
+#define EIC_NUMBER_OF_DPRESCALER_REGS            (2)        /* Number of DPRESCALER registers */
+#define EIC_NUMBER_OF_INTERRUPTS                 (16)       /* Number of external interrupts (obsolete) */
+#define EIC_INSTANCE_ID                          (10)       /* Instance index for EIC */
 
 #endif /* _PIC32CMJH01_EIC_INSTANCE_ */

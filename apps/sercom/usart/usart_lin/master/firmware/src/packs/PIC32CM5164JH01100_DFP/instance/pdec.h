@@ -20,14 +20,14 @@
  *
  */
 
-/* file generated from device description version 2022-01-18T09:31:06Z */
+/* file generated from device description version 2022-05-20T08:40:47Z */
 #ifndef _PIC32CMJH01_PDEC_INSTANCE_
 #define _PIC32CMJH01_PDEC_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for PDEC peripheral ========== */
-#define PDEC_CC_NUM                              _UL_(2)    /* Number of Compare Channels units */
-#define PDEC_GCLK_ID                             _UL_(41)   
-#define PDEC_INSTANCE_ID                         _UL_(90)   /* Instance index for PDEC */
+#define PDEC_CC_NUM                              (2)        /* Number of Compare Channels units */
+#define PDEC_GCLK_ID                             (41)       
+#define PDEC_INSTANCE_ID                         (90)       /* Instance index for PDEC */
 
 #endif /* _PIC32CMJH01_PDEC_INSTANCE_ */

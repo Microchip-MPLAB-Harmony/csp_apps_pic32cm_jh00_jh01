@@ -20,16 +20,16 @@
  *
  */
 
-/* file generated from device description version 2022-01-18T09:31:06Z */
+/* file generated from device description version 2022-05-20T08:40:47Z */
 #ifndef _PIC32CMJH01_MCLK_INSTANCE_
 #define _PIC32CMJH01_MCLK_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for MCLK peripheral ========== */
-#define MCLK_CTRLA_MCSEL_GCLK                    _UL_(1)    
-#define MCLK_CTRLA_MCSEL_OSC8M                   _UL_(0)    
-#define MCLK_CLK_APB_NUM                         _UL_(4)    
-#define MCLK_SYSTEM_CLOCK                        _UL_(4000000) /* System Clock Frequency at Reset */
-#define MCLK_INSTANCE_ID                         _UL_(2)    /* Instance index for MCLK */
+#define MCLK_CTRLA_MCSEL_GCLK                    (1)        
+#define MCLK_CTRLA_MCSEL_OSC8M                   (0)        
+#define MCLK_CLK_APB_NUM                         (4)        
+#define MCLK_SYSTEM_CLOCK                        (4000000)  /* System Clock Frequency at Reset */
+#define MCLK_INSTANCE_ID                         (2)        /* Instance index for MCLK */
 
 #endif /* _PIC32CMJH01_MCLK_INSTANCE_ */
