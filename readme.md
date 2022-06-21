@@ -54,7 +54,9 @@ The following applications are provided to demonstrate the typical or interestin
 | [EIC Interrupt](apps/eic/eic_led_on_off/readme.md) | This example application demonstrates how to generate interrupt using the EIC on switch press and indicate it through an LED |
 | [EVSYS trigger](apps/evsys/evsys_trigger/readme.md) | This example application demonstrates how to use the EVSYS Peripheral library to setup autonomous, low-latency and configurable communication between peripherals |
 | [FREQM measurement](apps/freqm/freqm_measure_clock_freq/readme.md) | This example application demonstrates how to use the FREQM peripheral to measure the frequency of the internal RC Oscillator |
+| [MCRAMC ECC with Fault Injection and MBIST Testing](apps/mcramc/mcramc_ecc_mbist_testing/readme.md) | This example application demonstrates how to test the SRAM using MBIST and the MCRAMC ECC feature on internal SRAM memory |
 | [NVMCTRL data flash](apps/nvmctrl/nvmctrl_data_flash/readme.md) | This example application demonstrates code execution from the main Flash memory while performing erase operation in data flash section |
+| [NVMCTRL ECC Testing](apps/nvmctrl/nvmctrl_ecc_testing/readme.md) | This example application demonstrates how to test the NVMCTRL ECC feature on internal Flash and Data Flash memories |
 | [NVMCTRL read write](apps/nvmctrl/nvmctrl_flash_read_write/readme.md) | This example application demonstrates how to use the NVMCTRL to erase and program the internal Flash memory |
 | [PM wakeup using EIC](apps/pm/pm_wakeup_eic/readme.md) | This application demonstrates entering the low power modes and exiting it using the EIC |
 | [PM wakeup using RTC](apps/pm/pm_wakeup_rtc/readme.md) | This example demonstrates entering the low power modes and exiting it using the RTC |
@@ -65,6 +67,8 @@ The following applications are provided to demonstrate the typical or interestin
 | [SERCOM I2C EEPROM emulation (I2C slave)](apps/sercom/i2c/slave/i2c_eeprom_emulation/readme.md) | This example application demonstrates how to use the SERCOM peripheral in slave mode |
 | [SERCOM SPI EEPROM read write](apps/sercom/spi/spi_eeprom_write_read/readme.md) | This example application demonstrates how to use the SERCOM SPI peripheral to write and read from the SPI serial EEPROM memory |
 | [SERCOM USART interrupt](apps/sercom/usart/usart_echo_interrupt/readme.md) | This example application demonstrates how to use the SERCOM peripheral in USART mode to transfer data in a non-blocking manner |
+| [SERCOM USART LIN Master](apps/sercom/usart/usart_lin/master/readme.md) | This example application demonstrates how to use the SERCOM USART peripheral in LIN Master mode |
+| [SERCOM USART LIN Slave](apps/sercom/usart/usart_lin/slave/readme.md) | This example application demonstrates how to use the SERCOM USART peripheral in LIN Slave mode |
 | [Systick periodic interrupt](apps/systick/systick_periodic_timeout/readme.md) | This example shows how to use the SysTick to generate periodic interrupts |
 | [TC capture mode](apps/tc/tc_capture_mode/readme.md) | This example shows how to use the TC module in capture mode to measure duty cycle and frequency of an external input |
 | [TC compare mode](apps/tc/tc_compare_mode/readme.md) | This example shows how to use the TC module in compare mode to generate an active low, active high, and toggle output on compare match |
