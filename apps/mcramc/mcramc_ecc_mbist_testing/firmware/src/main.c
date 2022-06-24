@@ -69,6 +69,20 @@ enum
     DOUBLE_FAULT_INJECTION = 'b'    
 } ECC_TESTING_MEMORY;
 
+/* Optional application-provided functions */
+extern void _on_reset(void)
+{
+    // SMBIST is no longer PAC secure to perform SMBIST Test
+    PAC_REGS->PAC_WRCTRL = (uint32_t)(PAC_WRCTRL_KEY_CLR | PAC_WRCTRL_PERID (91));
+    
+    // Clear SMBIST Status Flags
+    SMBIST_REGS->SMBIST_STATUS = (uint32_t) SMBIST_STATUS_Msk;
+    // Launch the MBIST Test on SRAM
+    SMBIST_REGS->SMBIST_CTRL = (uint32_t)(SMBIST_CTRL_SMBISTP1_Msk | SMBIST_CTRL_SMBISTP2_Msk);
+    // Wait for Test to Finish
+    while ((SMBIST_REGS->SMBIST_STATUS & SMBIST_STATUS_DONE_Msk) == 0);
+}
+
 void display_menu ( void )
 {
     printf ("Select the test to launch: \n\r");
