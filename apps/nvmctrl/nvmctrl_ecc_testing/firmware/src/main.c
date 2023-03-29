@@ -62,17 +62,16 @@
 #define FLASH_WRITE_ADDR      0x9000
 #define DATAFLASH_WRITE_ADDR  0x401000
 
-uint8_t cmd = 0;
-bool first_iteration = true;
+static uint8_t cmd = 0;
+static bool first_iteration = true;
 
-uint8_t secout = 0;
-uint8_t secin = 0;
-uint8_t syndrome = 0;
+static uint8_t secout = 0;
+static uint8_t secin = 0;
+static uint8_t syndrome = 0;
 
-uint32_t data [NVMCTRL_PAGE_SIZE] = {0};
-uint32_t data_read [NVMCTRL_PAGE_SIZE] = {0};
-uint32_t data_length = 32;
-volatile uint32_t intFlag = 0;
+static uint32_t data [NVMCTRL_PAGE_SIZE] = {0};
+static uint32_t data_read [NVMCTRL_PAGE_SIZE] = {0};
+static volatile uint32_t intFlag = 0;
 
 enum
 {
@@ -88,6 +87,18 @@ void display_menu (void)
     printf ("Enter your choice: ");
     scanf ("%c", &cmd);
     printf("\n\n\r");
+}
+
+void __attribute__((noreturn)) HardFault_Handler(void)
+{
+    if (NVMCTRL_InterruptFlagGet() & NVMCTRL_INTFLAG_DERR_Msk)
+    {
+        printf ("Bus Error Fault occurred due to Double Fault Injection. Please RESET the board.\n\r");
+    }
+    while (true)
+    {
+        /* Wait forever */
+    }
 }
 
 void NVMCTRL_EventHandler (uintptr_t context)

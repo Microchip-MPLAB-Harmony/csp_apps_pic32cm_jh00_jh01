@@ -183,7 +183,6 @@
       </logicalFolder>
       <itemPath>Makefile</itemPath>
       <itemPath>../src/config/pic32cm_jh01_curiosity_pro/harmony-manifest-success.yml</itemPath>
-      <itemPath>sram_ecc_mbist_testing_pic32cm_jh01_curiosity_pro.mc3</itemPath>
       <itemPath>mcramc_ecc_mbist_testing_pic32cm_jh01_curiosity_pro.mc3</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"

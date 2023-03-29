@@ -66,15 +66,15 @@
  * <break><0x55><0xC1><0xYY><CRC> where YY = 0x01 to turn on LED0 and YY = 0x00 to turn off LED0  
  */
 
-uint8_t txData[1];
-uint8_t txBuffer[10];
-uint8_t rxBuffer[10];
+static uint8_t txData[1];
+static uint8_t txBuffer[10];
+static uint8_t rxBuffer[10];
 
 #define READ_SWITCH_LED_PID     0x80
 #define WRITE_LED_PID           0xC1
 
-uint16_t checksum = 0;
-uint8_t nTxBytes = 0;
+static uint16_t checksum = 0;
+static uint8_t nTxBytes = 0;
 
 /* Compute LIN Master Checksum */
 void LIN_MasterChecksumAdd(uint8_t* pBuffer, uint8_t nBytes)
