@@ -45,7 +45,7 @@
 #include "plib_ram.h"
 
 
-static RAM_ECC_CALLBACK_OBJ RAM_ECC_CallbackObject;
+volatile static RAM_ECC_CALLBACK_OBJ RAM_ECC_CallbackObject;
 
 
 void RAM_ECC_Initialize(void)
@@ -60,7 +60,10 @@ void RAM_ECC_SingleBitFaultInject(uint32_t fltaddr, uint8_t fltBitPtr)
     MCRAMC_REGS->MCRAMC_FLTCTRL &= ~MCRAMC_FLTCTRL_FLTEN_Msk;
 
     // Dummy Read back for synchronization purpose
-    while  (MCRAMC_REGS->MCRAMC_FLTCTRL & MCRAMC_FLTCTRL_FLTEN_Msk);
+    while ((MCRAMC_REGS->MCRAMC_FLTCTRL & MCRAMC_FLTCTRL_FLTEN_Msk) != 0U)
+    {
+        /* Wait for read back to complete */
+    }
 
     /* Set the fault address */
     MCRAMC_REGS->MCRAMC_FLTADR = MCRAMC_FLTADR_FLTADR (fltaddr);
@@ -72,7 +75,10 @@ void RAM_ECC_SingleBitFaultInject(uint32_t fltaddr, uint8_t fltBitPtr)
     MCRAMC_REGS->MCRAMC_FLTCTRL = (MCRAMC_REGS->MCRAMC_FLTCTRL & ~MCRAMC_FLTCTRL_FLTMD_Msk) | MCRAMC_FLTCTRL_FLTMD(0x1) | MCRAMC_FLTCTRL_FLTEN_Msk;
 
     // Dummy Read back for synchronization purpose
-    while  (MCRAMC_REGS->MCRAMC_FLTCTRL != (MCRAMC_FLTCTRL_FLTMD(0x1) | MCRAMC_FLTCTRL_FLTEN_Msk));
+    while  (MCRAMC_REGS->MCRAMC_FLTCTRL != (MCRAMC_FLTCTRL_FLTMD(0x1) | MCRAMC_FLTCTRL_FLTEN_Msk))
+    {
+        /* Wait for read back to complete */
+    }
 }
 
 void RAM_ECC_DoubleBitFaultInject(uint32_t fltaddr, uint8_t flt1BitPtr, uint8_t flt2BitPtr)
@@ -81,7 +87,10 @@ void RAM_ECC_DoubleBitFaultInject(uint32_t fltaddr, uint8_t flt1BitPtr, uint8_t 
     MCRAMC_REGS->MCRAMC_FLTCTRL &= ~MCRAMC_FLTCTRL_FLTEN_Msk;
 
     // Dummy Read back for synchronization purpose
-    while  (MCRAMC_REGS->MCRAMC_FLTCTRL & MCRAMC_FLTCTRL_FLTEN_Msk);
+    while ((MCRAMC_REGS->MCRAMC_FLTCTRL & MCRAMC_FLTCTRL_FLTEN_Msk) != 0U)
+    {
+        /* Wait for read back to complete */
+    }
 
     /* Set the fault address */
     MCRAMC_REGS->MCRAMC_FLTADR = MCRAMC_FLTADR_FLTADR (fltaddr);
@@ -93,7 +102,10 @@ void RAM_ECC_DoubleBitFaultInject(uint32_t fltaddr, uint8_t flt1BitPtr, uint8_t 
     MCRAMC_REGS->MCRAMC_FLTCTRL = (MCRAMC_REGS->MCRAMC_FLTCTRL & ~MCRAMC_FLTCTRL_FLTMD_Msk) | MCRAMC_FLTCTRL_FLTMD(0x2) | MCRAMC_FLTCTRL_FLTEN_Msk;
 
     // Dummy Read back for synchronization purpose
-    while  (MCRAMC_REGS->MCRAMC_FLTCTRL != (MCRAMC_FLTCTRL_FLTMD(0x2) | MCRAMC_FLTCTRL_FLTEN_Msk));
+    while  (MCRAMC_REGS->MCRAMC_FLTCTRL != (MCRAMC_FLTCTRL_FLTMD(0x2) | MCRAMC_FLTCTRL_FLTEN_Msk))
+    {
+        /* Wait for read back to complete */
+    }
 }
 
 void RAM_ECC_Enable(void)
@@ -123,12 +135,12 @@ uint32_t RAM_ECC_FaultCaptureAddrGet(void)
 
 uint8_t RAM_ECC_FaultCaptureSyndromeGet(void)
 {
-    return (MCRAMC_REGS->MCRAMC_ERRCSYN & MCRAMC_ERRCSYN_ERCSYN_Msk);
+    return (uint8_t)(MCRAMC_REGS->MCRAMC_ERRCSYN & MCRAMC_ERRCSYN_ERCSYN_Msk);
 }
 
 uint8_t RAM_ECC_FaultCaptureParityGet(void)
 {
-    return (MCRAMC_REGS->MCRAMC_ERRCPAR & MCRAMC_ERRCPAR_ERCPAR_Msk);
+    return (uint8_t)(MCRAMC_REGS->MCRAMC_ERRCPAR & MCRAMC_ERRCPAR_ERCPAR_Msk);
 }
 
 void RAM_ECC_CallbackRegister (RAM_ECC_CALLBACK callback, uintptr_t context)
@@ -138,7 +150,7 @@ void RAM_ECC_CallbackRegister (RAM_ECC_CALLBACK callback, uintptr_t context)
     RAM_ECC_CallbackObject.context = context;
 }
 
-void RAM_ECC_InterruptHandler ( void )
+void __attribute__((used)) RAM_ECC_InterruptHandler ( void )
 {
     if (MCRAMC_REGS->MCRAMC_INTENSET != 0U)
     {
@@ -147,28 +159,29 @@ void RAM_ECC_InterruptHandler ( void )
 
         /* Clear interrupt */
         MCRAMC_REGS->MCRAMC_INTSTA = status;
-        while (MCRAMC_REGS->MCRAMC_INTSTA & status)
+        while ((MCRAMC_REGS->MCRAMC_INTSTA & status) != 0U)
         {
             /* Wait for the interrupt status to clear */
         }
-        if ((status != RAM_ECC_STATUS_NONE) && (RAM_ECC_CallbackObject.callback != NULL))
+        if ((RAM_ECC_CallbackObject.callback != NULL) && (status != RAM_ECC_STATUS_NONE))
         {
-            RAM_ECC_CallbackObject.callback(status, RAM_ECC_CallbackObject.context);
+            uintptr_t context = RAM_ECC_CallbackObject.context;
+            RAM_ECC_CallbackObject.callback(status, context);
         }
     }
 }
 
-bool RAM_Read( uint32_t *data, uint32_t length, const uint32_t address )
+bool RAM_Read( uint32_t *data, uint32_t length, uint32_t address )
 {
-    (void) memcpy((void *)data, (void *)address, length);
-
+    uint32_t *p_address = (uint32_t*)address;
+    (void) memcpy(data, p_address, length);
     return true;
 }
 
 bool RAM_Write( uint32_t *data, uint32_t length, uint32_t address )
 {
-    (void) memcpy((void *)address, (void *)data, length);
-
+    uint32_t *p_address = (uint32_t*)address;
+    (void) memcpy(p_address, data, length);
     return true;
 }
 

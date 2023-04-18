@@ -56,6 +56,7 @@
 #include <stdbool.h>
 #include <stddef.h>
 #include "device.h"
+#include "interrupts.h"
 
 #ifdef __cplusplus // Provide C++ Compatibility
 extern "C" {
@@ -101,9 +102,9 @@ uint8_t RAM_ECC_FaultCaptureParityGet(void);
 void RAM_ECC_CallbackRegister (RAM_ECC_CALLBACK callback, uintptr_t context);
 
 
-bool RAM_Read( uint32_t *data, uint32_t length, const uint32_t address );
+bool RAM_Read( uint32_t *data, uint32_t length, uint32_t address);
 
-bool RAM_Write( uint32_t *data, uint32_t length, uint32_t address );
+bool RAM_Write( uint32_t *data, uint32_t length, uint32_t address);
 
 bool RAM_IsBusy(void);
 
