@@ -1,7 +1,7 @@
 /*
  * Component description for DSU
  *
- * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2023 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2022-05-20T08:40:47Z */
+/* file generated from device description version 2023-03-27T04:02:13Z */
 #ifndef _PIC32CMJH01_DSU_COMPONENT_H_
 #define _PIC32CMJH01_DSU_COMPONENT_H_
 
@@ -144,6 +144,8 @@
 #define   DSU_DID_DEVSEL_256KB_32KB_64PIN_CAN_Val _UINT32_(0x5)                                        /* (DSU_DID) 256 KB Flash / 32 KB SRAM / 64-pin / CAN  */
 #define   DSU_DID_DEVSEL_256KB_32KB_48PIN_CAN_Val _UINT32_(0x6)                                        /* (DSU_DID) 256 KB Flash / 32 KB SRAM / 48-pin / CAN  */
 #define   DSU_DID_DEVSEL_256KB_32KB_32PIN_CAN_Val _UINT32_(0x7)                                        /* (DSU_DID) 256 KB Flash / 32 KB SRAM / 32-pin / CAN  */
+#define   DSU_DID_DEVSEL_128KB_16KB_32PIN_CAN_Val _UINT32_(0xB)                                        /* (DSU_DID) 128 KB Flash / 16 KB SRAM / 32-pin / CAN  */
+#define   DSU_DID_DEVSEL_128KB_16KB_48PIN_CAN_Val _UINT32_(0xA)                                        /* (DSU_DID) 128 KB Flash / 16 KB SRAM / 48-pin / CAN  */
 #define   DSU_DID_DEVSEL_256KB_32KB_100PIN_NOCAN_Val _UINT32_(0xD)                                        /* (DSU_DID) 256 KB Flash / 32 KB SRAM / 100-pin / No CAN  */
 #define   DSU_DID_DEVSEL_512KB_64KB_100PIN_NOCAN_Val _UINT32_(0xE)                                        /* (DSU_DID) 512 KB Flash / 64 KB SRAM / 100-pin / No CAN  */
 #define   DSU_DID_DEVSEL_512KB_64KB_64PIN_NOCAN_Val _UINT32_(0xF)                                        /* (DSU_DID) 512 KB Flash / 64 KB SRAM / 64-pin / No CAN  */
@@ -160,6 +162,8 @@
 #define DSU_DID_DEVSEL_256KB_32KB_64PIN_CAN   (DSU_DID_DEVSEL_256KB_32KB_64PIN_CAN_Val << DSU_DID_DEVSEL_Pos) /* (DSU_DID) 256 KB Flash / 32 KB SRAM / 64-pin / CAN Position  */
 #define DSU_DID_DEVSEL_256KB_32KB_48PIN_CAN   (DSU_DID_DEVSEL_256KB_32KB_48PIN_CAN_Val << DSU_DID_DEVSEL_Pos) /* (DSU_DID) 256 KB Flash / 32 KB SRAM / 48-pin / CAN Position  */
 #define DSU_DID_DEVSEL_256KB_32KB_32PIN_CAN   (DSU_DID_DEVSEL_256KB_32KB_32PIN_CAN_Val << DSU_DID_DEVSEL_Pos) /* (DSU_DID) 256 KB Flash / 32 KB SRAM / 32-pin / CAN Position  */
+#define DSU_DID_DEVSEL_128KB_16KB_32PIN_CAN   (DSU_DID_DEVSEL_128KB_16KB_32PIN_CAN_Val << DSU_DID_DEVSEL_Pos) /* (DSU_DID) 128 KB Flash / 16 KB SRAM / 32-pin / CAN Position  */
+#define DSU_DID_DEVSEL_128KB_16KB_48PIN_CAN   (DSU_DID_DEVSEL_128KB_16KB_48PIN_CAN_Val << DSU_DID_DEVSEL_Pos) /* (DSU_DID) 128 KB Flash / 16 KB SRAM / 48-pin / CAN Position  */
 #define DSU_DID_DEVSEL_256KB_32KB_100PIN_NOCAN (DSU_DID_DEVSEL_256KB_32KB_100PIN_NOCAN_Val << DSU_DID_DEVSEL_Pos) /* (DSU_DID) 256 KB Flash / 32 KB SRAM / 100-pin / No CAN Position  */
 #define DSU_DID_DEVSEL_512KB_64KB_100PIN_NOCAN (DSU_DID_DEVSEL_512KB_64KB_100PIN_NOCAN_Val << DSU_DID_DEVSEL_Pos) /* (DSU_DID) 512 KB Flash / 64 KB SRAM / 100-pin / No CAN Position  */
 #define DSU_DID_DEVSEL_512KB_64KB_64PIN_NOCAN (DSU_DID_DEVSEL_512KB_64KB_64PIN_NOCAN_Val << DSU_DID_DEVSEL_Pos) /* (DSU_DID) 512 KB Flash / 64 KB SRAM / 64-pin / No CAN Position  */
