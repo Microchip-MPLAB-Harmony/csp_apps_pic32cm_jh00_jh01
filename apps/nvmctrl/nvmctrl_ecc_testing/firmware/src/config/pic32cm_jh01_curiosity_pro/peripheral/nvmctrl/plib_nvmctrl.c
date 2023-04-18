@@ -51,30 +51,37 @@
 #include "plib_nvmctrl.h"
 #include "interrupts.h"
 
+
+typedef struct
+{
+	NVMCTRL_CALLBACK CallbackFunc;
+	uintptr_t Context;
+}nvmCallbackObjType;
+
+volatile static nvmCallbackObjType nvmctrlCallbackObj;
 // *****************************************************************************
 // *****************************************************************************
 // Section: NVMCTRL Implementation
 // *****************************************************************************
 // *****************************************************************************
 
-static NVMCTRL_CALLBACK nvmctrlCallbackFunc;
-
-static uintptr_t nvmctrlContext;
+    
 
 void NVMCTRL_CallbackRegister( NVMCTRL_CALLBACK callback, uintptr_t context )
 {
     /* Register callback function */
-    nvmctrlCallbackFunc = callback;
-    nvmctrlContext = context;
+    nvmctrlCallbackObj.CallbackFunc = callback;
+    nvmctrlCallbackObj.Context = context;
 }
 
-void NVMCTRL_InterruptHandler(void)
+void __attribute__((used)) NVMCTRL_InterruptHandler(void)
 {
     NVMCTRL_REGS->NVMCTRL_INTENCLR = NVMCTRL_INTENCLR_READY_Msk;
 
-    if(nvmctrlCallbackFunc != NULL)
+    if(nvmctrlCallbackObj.CallbackFunc != NULL)
     {
-        nvmctrlCallbackFunc(nvmctrlContext);
+        uintptr_t context = nvmctrlCallbackObj.Context;
+        nvmctrlCallbackObj.CallbackFunc(context);
     }
 }
 
@@ -82,7 +89,7 @@ void NVMCTRL_Initialize(void)
 {
     NVMCTRL_REGS->NVMCTRL_CTRLB = NVMCTRL_CTRLB_CACHEDIS_CACHE_DF_DIS_MAIN_EN | NVMCTRL_CTRLB_READMODE_NO_MISS_PENALTY | NVMCTRL_CTRLB_SLEEPPRM_WAKEONACCESS | NVMCTRL_CTRLB_RWS(2U) | NVMCTRL_CTRLB_MANW_Msk;
 
-   NVMCTRL_REGS->NVMCTRL_ECCCTRL = (uint32_t)(NVMCTRL_ECCCTRL_SECCNT (0)  );
+   NVMCTRL_REGS->NVMCTRL_ECCCTRL = (uint16_t)(NVMCTRL_ECCCTRL_SECCNT (0UL)  );
 
     NVMCTRL_REGS->NVMCTRL_INTENSET = NVMCTRL_INTENSET_SERR_Msk | NVMCTRL_INTENSET_DERR_Msk;
 }
@@ -101,7 +108,7 @@ bool NVMCTRL_DATA_FLASH_Read( uint32_t *data, uint32_t length, const uint32_t ad
 
 bool NVMCTRL_DATA_FLASH_PageWrite ( uint32_t *data, const uint32_t address )
 {
-    uint32_t i = 0U;
+    uint32_t i;
     uint32_t * paddress = (uint32_t *)address;
 
     /* Writing 32-bit words in the given address */
@@ -139,7 +146,7 @@ bool NVMCTRL_Read( uint32_t *data, uint32_t length, const uint32_t address )
 
 bool NVMCTRL_PageBufferWrite( uint32_t *data, const uint32_t address)
 {
-    uint32_t i = 0U;
+    uint32_t i;
     uint32_t * paddress = (uint32_t *)address;
 
     /* writing 32-bit data into the given address */
@@ -173,7 +180,7 @@ bool NVMCTRL_PageBufferCommit( const uint32_t address)
 
 bool NVMCTRL_PageWrite( uint32_t *data, const uint32_t address )
 {
-    uint32_t i = 0U;
+    uint32_t i;
     uint32_t * paddress = (uint32_t *)address;
 
     /* writing 32-bit data into the given address */
@@ -205,7 +212,7 @@ bool NVMCTRL_RowErase( uint32_t address )
 
 bool NVMCTRL_USER_ROW_PageWrite( uint32_t *data, const uint32_t address )
 {
-    uint32_t i = 0U;
+    uint32_t i;
     uint32_t * paddress = (uint32_t *)address;
     bool pagewrite_val = false;
 
@@ -251,7 +258,7 @@ bool NVMCTRL_USER_ROW_RowErase( uint32_t address )
 
 NVMCTRL_ERROR NVMCTRL_ErrorGet( void )
 {
-    volatile uint16_t nvm_error = 0U;
+    volatile uint16_t nvm_error;
 
     /* Get the error bits set */
     nvm_error = (NVMCTRL_REGS->NVMCTRL_STATUS & ((uint8_t)NVMCTRL_STATUS_NVME_Msk | NVMCTRL_STATUS_LOCKE_Msk | NVMCTRL_STATUS_PROGE_Msk));
@@ -296,61 +303,79 @@ uint32_t NVMCTRL_InterruptFlagGet(void)
 void NVMCTRL_ECC_SingleBitFaultInject(uint32_t fltaddr, uint8_t fltBitPtr, NVMCTRL_ECC_FLT_MODE fltOnReadOrWrite)
 {
     /* Disable fault injection */
-    NVMCTRL_REGS->NVMCTRL_FLTCTRL &= ~NVMCTRL_FLTCTRL_FLTEN_En;
+    NVMCTRL_REGS->NVMCTRL_FLTCTRL &= (uint16_t)~NVMCTRL_FLTCTRL_FLTEN_En;
 
     /* Dummy Read back for synchronization purpose */
-    while  (NVMCTRL_REGS->NVMCTRL_FLTCTRL & NVMCTRL_FLTCTRL_FLTEN_En);
+    while  ((NVMCTRL_REGS->NVMCTRL_FLTCTRL & NVMCTRL_FLTCTRL_FLTEN_En)!= 0U)
+	{
+		/* Do Nothing */
+	}
 
     /* Set the fault address */
-    NVMCTRL_REGS->NVMCTRL_FFLTADR = (uint32_t)(NVMCTRL_FFLTADR_FLTADR (fltaddr));
+    NVMCTRL_REGS->NVMCTRL_FFLTADR = NVMCTRL_FFLTADR_FLTADR ((uint32_t)fltaddr);
 
     /* Set the fault bit position */
-    NVMCTRL_REGS->NVMCTRL_FFLTPTR = NVMCTRL_FFLTPTR_FLT1PTR (fltBitPtr);
+    NVMCTRL_REGS->NVMCTRL_FFLTPTR = NVMCTRL_FFLTPTR_FLT1PTR ((uint32_t)fltBitPtr);
 
     if (fltOnReadOrWrite == NVMCTRL_ECC_FLT_MODE_ON_READ)
     {
         /* Set the single bit fault mode and enable fault injection */
-        NVMCTRL_REGS->NVMCTRL_FLTCTRL = NVMCTRL_FLTCTRL_FLTMD (0x4) | NVMCTRL_FLTCTRL_FLTEN_En;
+        NVMCTRL_REGS->NVMCTRL_FLTCTRL = (uint16_t)(NVMCTRL_FLTCTRL_FLTMD (0x4UL) | NVMCTRL_FLTCTRL_FLTEN_En);
 
         /* Dummy Read back for synchronization purpose */
-        while  (NVMCTRL_REGS->NVMCTRL_FLTCTRL != (NVMCTRL_FLTCTRL_FLTMD (0x4) | NVMCTRL_FLTCTRL_FLTEN_En));
+        while  (NVMCTRL_REGS->NVMCTRL_FLTCTRL != (NVMCTRL_FLTCTRL_FLTMD (0x4UL) | NVMCTRL_FLTCTRL_FLTEN_En))
+		{
+		        /* Do Nothing */
+	    }
     }
     else
     {
         /* Set the single bit fault mode and enable fault injection */
-        NVMCTRL_REGS->NVMCTRL_FLTCTRL = NVMCTRL_FLTCTRL_FLTMD (0x6) | NVMCTRL_FLTCTRL_FLTEN_En;
+        NVMCTRL_REGS->NVMCTRL_FLTCTRL = (uint16_t)(NVMCTRL_FLTCTRL_FLTMD (0x6UL) | NVMCTRL_FLTCTRL_FLTEN_En);
 
-        while  (NVMCTRL_REGS->NVMCTRL_FLTCTRL != (NVMCTRL_FLTCTRL_FLTMD (0x6) | NVMCTRL_FLTCTRL_FLTEN_En));
+        while  (NVMCTRL_REGS->NVMCTRL_FLTCTRL != (NVMCTRL_FLTCTRL_FLTMD (0x6UL) | NVMCTRL_FLTCTRL_FLTEN_En))
+	    {
+		       /* Do Nothing */
+	    }
     }
 }
 
 void NVMCTRL_ECC_DoubleBitFaultInject(uint32_t fltaddr, uint8_t flt1BitPtr, uint8_t flt2BitPtr, NVMCTRL_ECC_FLT_MODE fltOnReadOrWrite)
 {
     /* Disable fault injection */
-    NVMCTRL_REGS->NVMCTRL_FLTCTRL &= ~NVMCTRL_FLTCTRL_FLTEN_En;
+    NVMCTRL_REGS->NVMCTRL_FLTCTRL &= (uint16_t)~NVMCTRL_FLTCTRL_FLTEN_En;
 
     /* Dummy Read back for synchronization purpose */
-    while  (NVMCTRL_REGS->NVMCTRL_FLTCTRL & NVMCTRL_FLTCTRL_FLTEN_En);
+    while ((NVMCTRL_REGS->NVMCTRL_FLTCTRL & NVMCTRL_FLTCTRL_FLTEN_En) != 0U)
+	{
+		/* Do Nothing */
+	}
 
     /* Set the fault address */
-    NVMCTRL_REGS->NVMCTRL_FFLTADR = (uint32_t)(NVMCTRL_FFLTADR_FLTADR (fltaddr));
+    NVMCTRL_REGS->NVMCTRL_FFLTADR = NVMCTRL_FFLTADR_FLTADR ((uint32_t)fltaddr);
 
     /* Set the fault bit position */
-    NVMCTRL_REGS->NVMCTRL_FFLTPTR = NVMCTRL_FFLTPTR_FLT1PTR (flt1BitPtr) | NVMCTRL_FFLTPTR_FLT2PTR (flt2BitPtr);
+    NVMCTRL_REGS->NVMCTRL_FFLTPTR = NVMCTRL_FFLTPTR_FLT1PTR ((uint32_t)flt1BitPtr) | NVMCTRL_FFLTPTR_FLT2PTR ((uint32_t)flt2BitPtr);
 
     if (fltOnReadOrWrite == NVMCTRL_ECC_FLT_MODE_ON_READ)
     {
         /* Set the single bit fault mode and enable fault injection */
-        NVMCTRL_REGS->NVMCTRL_FLTCTRL = NVMCTRL_FLTCTRL_FLTMD (0x5) | NVMCTRL_FLTCTRL_FLTEN_En;
+        NVMCTRL_REGS->NVMCTRL_FLTCTRL = (uint16_t)(NVMCTRL_FLTCTRL_FLTMD (0x5UL) | NVMCTRL_FLTCTRL_FLTEN_En);
         /* Dummy Read back for synchronization purpose */
-        while  (NVMCTRL_REGS->NVMCTRL_FLTCTRL != (NVMCTRL_FLTCTRL_FLTMD (0x5) | NVMCTRL_FLTCTRL_FLTEN_En));
+        while  (NVMCTRL_REGS->NVMCTRL_FLTCTRL != (NVMCTRL_FLTCTRL_FLTMD (0x5UL) | NVMCTRL_FLTCTRL_FLTEN_En))
+		{
+		    /* Do Nothing */
+	    }
     }
     else
     {
         /* Set the single bit fault mode and enable fault injection */
-        NVMCTRL_REGS->NVMCTRL_FLTCTRL = NVMCTRL_FLTCTRL_FLTMD (0x7) | NVMCTRL_FLTCTRL_FLTEN_En;
+        NVMCTRL_REGS->NVMCTRL_FLTCTRL = (uint16_t)(NVMCTRL_FLTCTRL_FLTMD (0x7UL) | NVMCTRL_FLTCTRL_FLTEN_En);
         /* Dummy Read back for synchronization purpose */
-        while  (NVMCTRL_REGS->NVMCTRL_FLTCTRL != (NVMCTRL_FLTCTRL_FLTMD (0x7) | NVMCTRL_FLTCTRL_FLTEN_En));
+        while  (NVMCTRL_REGS->NVMCTRL_FLTCTRL != (NVMCTRL_FLTCTRL_FLTMD (0x7UL) | NVMCTRL_FLTCTRL_FLTEN_En))
+		{
+		     /* Do Nothing */
+	    }
     }
 }
 
@@ -371,22 +396,22 @@ uint32_t NVMCTRL_ECC_FaultCaptureAddrGet(void)
 
 uint8_t NVMCTRL_ECC_FaultSyndromeGet(void)
 {
-    return (NVMCTRL_REGS->NVMCTRL_FFLTSYN & NVMCTRL_FFLTSYN_SECSYN_Msk);
+    return (uint8_t)(NVMCTRL_REGS->NVMCTRL_FFLTSYN & NVMCTRL_FFLTSYN_SECSYN_Msk);
 }
 
 uint8_t NVMCTRL_ECC_SECIN_FaultParityGet(void)
 {
-    return (NVMCTRL_REGS->NVMCTRL_FFLTPAR & NVMCTRL_FFLTPAR_SECIN_Msk);
+    return (uint8_t)(NVMCTRL_REGS->NVMCTRL_FFLTPAR & NVMCTRL_FFLTPAR_SECIN_Msk);
 }
 
 uint8_t NVMCTRL_ECC_SECOUT_FaultParityGet(void)
 {
-    return ((NVMCTRL_REGS->NVMCTRL_FFLTPAR & NVMCTRL_FFLTPAR_SECOUT_Msk) >> NVMCTRL_FFLTPAR_SECOUT_Pos);
+    return (uint8_t)((NVMCTRL_REGS->NVMCTRL_FFLTPAR & NVMCTRL_FFLTPAR_SECOUT_Msk) >> NVMCTRL_FFLTPAR_SECOUT_Pos);
 }
 
 void NVMCTRL_ECC_SECErrorCountSet(uint8_t errorCount)
 {
-    NVMCTRL_REGS->NVMCTRL_ECCCTRL = (NVMCTRL_REGS->NVMCTRL_ECCCTRL & ~NVMCTRL_ECCCTRL_SECCNT_Msk) | ((uint32_t)errorCount << NVMCTRL_ECCCTRL_SECCNT_Pos);
+    NVMCTRL_REGS->NVMCTRL_ECCCTRL = (uint16_t)(NVMCTRL_REGS->NVMCTRL_ECCCTRL & ~NVMCTRL_ECCCTRL_SECCNT_Msk) | ((uint16_t)errorCount << NVMCTRL_ECCCTRL_SECCNT_Pos);
 }
 
 void NVMCTRL_ECC_FaultLogicReset(void)
