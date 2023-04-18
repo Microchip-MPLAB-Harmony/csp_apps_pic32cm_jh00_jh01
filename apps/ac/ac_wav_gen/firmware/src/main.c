@@ -54,7 +54,7 @@
 #define VDDSCALAR_REF_HIGH_LIMIT 40
 
 #define NUM_OF_SAMPLES (100)
-volatile uint8_t sampleNumber = 0;
+volatile static uint8_t sampleNumber = 0;
 
 const uint16_t sineWave[NUM_OF_SAMPLES] = {
 0x200,   0x210,   0x220,   0x230,   0x240,   0x24F,   0x25E,   0x26D,  0x27B,   0x289,
@@ -84,7 +84,7 @@ void TC0_CallBack_Function (TC_TIMER_STATUS status, uintptr_t context)
     }
 }
 
-uint8_t vdd_scalar   = VDDSCALAR_REF_LOW_LIMIT;
+static uint8_t vdd_scalar   = VDDSCALAR_REF_LOW_LIMIT;
 
 void switch_handler(uintptr_t context )
 {

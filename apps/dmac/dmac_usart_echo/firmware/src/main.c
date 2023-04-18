@@ -57,15 +57,15 @@ static void ReceiveCompleteCallback(DMAC_TRANSFER_EVENT event, uintptr_t context
 #define LED_ON    LED_Clear
 #define LED_OFF   LED_Set
 
-char messageStart[] = "**** DMAC USART echo demo ****\r\n\
+static char messageStart[] = "**** DMAC USART echo demo ****\r\n\
 **** Type a buffer of 10 characters and observe it echo back using DMA ****\r\n\
 **** LED toggles each time the buffer is echoed ****\r\n";
-char receiveBuffer[RX_BUFFER_SIZE] = {};
-char echoBuffer[RX_BUFFER_SIZE+2] = {};
+static char receiveBuffer[RX_BUFFER_SIZE] = {};
+static char echoBuffer[RX_BUFFER_SIZE+2] = {};
 
         
-volatile bool writeStatus = false;
-volatile bool readStatus = false;
+volatile static bool writeStatus = false;
+volatile static bool readStatus = false;
 
 // *****************************************************************************
 // *****************************************************************************

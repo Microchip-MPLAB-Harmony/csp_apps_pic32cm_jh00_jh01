@@ -67,9 +67,9 @@ enum
   STANDBY_SLEEP_MODE = 'b',
 }SLEEP_MODES;
 
-uint8_t cmd = 0;
+static uint8_t cmd = 0;
 
-void timeout (uintptr_t context)
+static void timeout (uintptr_t context)
 {
     LED_Toggle();
 }

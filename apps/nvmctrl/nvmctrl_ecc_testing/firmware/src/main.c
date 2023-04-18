@@ -89,6 +89,14 @@ void display_menu (void)
     printf("\n\n\r");
 }
 
+void __attribute__((noreturn)) NonMaskableInt_Handler(void)
+{
+    while (true)
+    {
+        /* Wait forever */
+    }
+}
+
 void __attribute__((noreturn)) HardFault_Handler(void)
 {
     if (NVMCTRL_InterruptFlagGet() & NVMCTRL_INTFLAG_DERR_Msk)

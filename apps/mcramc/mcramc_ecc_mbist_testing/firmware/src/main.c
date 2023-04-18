@@ -69,6 +69,14 @@ enum
     DOUBLE_FAULT_INJECTION = 'b'
 } ECC_TESTING_MEMORY;
 
+void __attribute__((noreturn)) NonMaskableInt_Handler(void)
+{
+    while (true)
+    {
+        /* Wait forever */
+    }
+}
+
 void __attribute__((noreturn)) HardFault_Handler(void)
 {
     if (MCRAMC_REGS->MCRAMC_INTSTA & MCRAMC_INTSTA_DERR_Msk)
