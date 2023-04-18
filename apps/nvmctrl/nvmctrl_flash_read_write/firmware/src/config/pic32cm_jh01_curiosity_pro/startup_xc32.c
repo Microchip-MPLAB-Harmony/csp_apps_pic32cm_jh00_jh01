@@ -65,6 +65,9 @@ extern void __attribute__((weak,long_call, alias("Dummy_App_Func"))) __xc32_on_b
 
 /* Linker defined variables */
 extern uint32_t __svectors;
+#if defined (__REINIT_STACK_POINTER)
+extern uint32_t _stack;
+#endif
 
 /* MISRAC 2012 deviation block end */
 
@@ -79,9 +82,9 @@ __STATIC_INLINE void  __attribute__((optimize("-O1")))  RAM_Initialize(void)
     // MCRAMC initialization loop (to handle ECC properly)
     // Write to entire RAM to initialize ECC checksum
 
-    if ((WDT_REGS->WDT_CTRLA & WDT_CTRLA_ALWAYSON_Msk) || (WDT_REGS->WDT_CTRLA & WDT_CTRLA_ENABLE_Msk))
+    if (((WDT_REGS->WDT_CTRLA & WDT_CTRLA_ALWAYSON_Msk) != 0U) || ((WDT_REGS->WDT_CTRLA & WDT_CTRLA_ENABLE_Msk) != 0U))
     {
-        if (WDT_REGS->WDT_CTRLA & WDT_CTRLA_WEN_Msk)
+        if ((WDT_REGS->WDT_CTRLA & WDT_CTRLA_WEN_Msk) != 0U)
         {
             for (pRam = (uint32_t*)0x20000000U ; pRam < ((uint32_t*)(0x20000000U + 0x10000U)) ; pRam++)
             {
@@ -89,7 +92,7 @@ __STATIC_INLINE void  __attribute__((optimize("-O1")))  RAM_Initialize(void)
 
                 if ((WDT_REGS->WDT_INTFLAG & WDT_INTFLAG_EW_Msk) == WDT_INTFLAG_EW_Msk)
                 {
-                    if (!(WDT_REGS->WDT_SYNCBUSY & WDT_SYNCBUSY_CLEAR_Msk))
+                    if ((WDT_REGS->WDT_SYNCBUSY & WDT_SYNCBUSY_CLEAR_Msk) == 0U)
                     {
 
                         /* Clear WDT and reset the WDT timer before the
@@ -107,7 +110,7 @@ __STATIC_INLINE void  __attribute__((optimize("-O1")))  RAM_Initialize(void)
             {
                 *pRam = 0U;
 
-                if (!(WDT_REGS->WDT_SYNCBUSY & WDT_SYNCBUSY_CLEAR_Msk))
+                if ((WDT_REGS->WDT_SYNCBUSY & WDT_SYNCBUSY_CLEAR_Msk) == 0U)
                 {
 
                     /* Clear WDT and reset the WDT timer before the timeout occurs */
@@ -148,7 +151,7 @@ void __attribute__((optimize("-O1"), section(".text.Reset_Handler"), long_call, 
 
 #if defined (__REINIT_STACK_POINTER)
     /* Initialize SP from linker-defined _stack symbol. */
-    __asm__ volatile ("ldr sp, =_stack" : : : "sp");
+    __set_MSP((uint32_t)&_stack);
 
 #ifdef SCB_VTOR_TBLOFF_Msk
     /* Buy stack for locals */
