@@ -3,11 +3,11 @@
 	"category": "com.microchip.ide.project",
 	"content": {
 		"metaDataVersion": "1.1.0",
-		"name": "com.microchip.mcu32.mplabx.project.csp_apps_pic32cm_jh00_jh01_nvmctrl_flash_read_write",
+		"name": "com.microchip.mcu32.mplabx.project.csp_apps_pic32cm_jh00_jh01_usart_lin_slave",
 		"version": "3.4.0",
-		"displayName": "NVMCTRL read write Example for PIC32CM JH Family",
-		"projectName": "nvmctrl_flash_read_write_pic32cm_jh01_curiosity_pro",
-		"shortDescription": "This example application demonstrates how to use the NVMCTRL to erase and program the internal Flash memory.",
+		"displayName": "SERCOM USART LIN Slave Example for PIC32CM JH Family",
+		"projectName": "usart_lin_slave_pic32cm_jh01_curiosity_pro",
+		"shortDescription": "This example application demonstrates how to use the SERCOM USART peripheral in LIN Slave mode",
 		"ide": {
 			"name": "MPLABX",
 			"semverRange": ">=6.5.0"
@@ -45,26 +45,29 @@
 			[
 				"Harmony",
 				"Peripherals",
-				"NVMCTRL"
+				"SERCOM"
 			],
 			[
 				"Peripherals",
-				"NVMCTRL"
+				"SERCOM"
 			]
 		],
 		"peripherals": [
-			"NVMCTRL"
+			"SERCOM"
 		],
 		"keywords": [
 			"MHC",
 			"Harmony",
 			"PIC32CM5164JH00100",
 			"PIC32CM JH Family",
-			"Memory",
-			"NVMCTRL",
-			"NVM",
-			"Flash",
-			"NVM Controller"
+			"FLEXCOM",
+			"Serial Communication",
+			"I2C",
+			"SPI",
+			"UART",
+			"SERCOM",
+			"TWI",
+			"LIN"
 		],
 		"additionalData": {
 			"longDescription": {

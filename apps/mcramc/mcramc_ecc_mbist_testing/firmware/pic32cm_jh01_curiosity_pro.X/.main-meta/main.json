@@ -3,11 +3,11 @@
 	"category": "com.microchip.ide.project",
 	"content": {
 		"metaDataVersion": "1.1.0",
-		"name": "com.microchip.mcu32.mplabx.project.csp_apps_pic32cm_jh00_jh01_nvmctrl_flash_read_write",
+		"name": "com.microchip.mcu32.mplabx.project.csp_apps_pic32cm_jh00_jh01_mcramc_ecc_mbist_testing",
 		"version": "3.4.0",
-		"displayName": "NVMCTRL read write Example for PIC32CM JH Family",
-		"projectName": "nvmctrl_flash_read_write_pic32cm_jh01_curiosity_pro",
-		"shortDescription": "This example application demonstrates how to use the NVMCTRL to erase and program the internal Flash memory.",
+		"displayName": "MCRAMC ECC with Fault Injection and MBIST Testing Example for PIC32CM JH Family",
+		"projectName": "mcramc_ecc_mbist_testing_pic32cm_jh01_curiosity_pro",
+		"shortDescription": "This example application demonstrates how to test the SRAM using MBIST and the MCRAMC ECC feature on internal SRAM memory.",
 		"ide": {
 			"name": "MPLABX",
 			"semverRange": ">=6.5.0"
@@ -45,26 +45,23 @@
 			[
 				"Harmony",
 				"Peripherals",
-				"NVMCTRL"
+				"MCRAMC"
 			],
 			[
 				"Peripherals",
-				"NVMCTRL"
+				"MCRAMC"
 			]
 		],
 		"peripherals": [
-			"NVMCTRL"
+			"MCRAMC"
 		],
 		"keywords": [
 			"MHC",
 			"Harmony",
 			"PIC32CM5164JH00100",
 			"PIC32CM JH Family",
-			"Memory",
-			"NVMCTRL",
-			"NVM",
-			"Flash",
-			"NVM Controller"
+			"MCRAMC",
+			"MBIST"
 		],
 		"additionalData": {
 			"longDescription": {
