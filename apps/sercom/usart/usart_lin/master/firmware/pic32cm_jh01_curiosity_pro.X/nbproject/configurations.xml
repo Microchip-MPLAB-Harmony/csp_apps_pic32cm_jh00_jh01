@@ -204,6 +204,7 @@
     <logicalFolder name="ExternalFiles" displayName="Important Files" projectFiles="false">
       <itemPath>Makefile</itemPath>
       <itemPath>usart_lin_master_pic32cm_jh01_curiosity_pro.mc3</itemPath>
+      <itemPath>../src/config/pic32cm_jh01_curiosity_pro/harmony-manifest-success.yml</itemPath>
     </logicalFolder>
   </logicalFolder>
   <projectmakefile>Makefile</projectmakefile>
