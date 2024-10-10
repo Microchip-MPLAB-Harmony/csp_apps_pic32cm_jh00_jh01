@@ -57,8 +57,8 @@
 #include "peripheral/pm/plib_pm.h"
 #include "peripheral/sercom/usart/plib_sercom4_usart.h"
 #include "peripheral/supc/plib_supc.h"
-#include "peripheral/ac/plib_ac.h"
 #include "peripheral/rtc/plib_rtc.h"
+#include "peripheral/ac/plib_ac.h"
 
 // DOM-IGNORE-BEGIN
 #ifdef __cplusplus  // Provide C++ Compatibility
@@ -69,13 +69,13 @@ extern "C" {
 // DOM-IGNORE-END
 
 /* Device Information */
-#define DEVICE_NAME			 "PIC32CM5164JH01100"
-#define DEVICE_ARCH			 "CORTEX-M0PLUS"
-#define DEVICE_FAMILY		 "PIC32CM"
-#define DEVICE_SERIES		 "PIC32CMJH01"
+#define DEVICE_NAME          "PIC32CM5164JH01100"
+#define DEVICE_ARCH          "CORTEX-M0PLUS"
+#define DEVICE_FAMILY        "PIC32CM"
+#define DEVICE_SERIES        "PIC32CMJH01"
 
 /* CPU clock frequency */
-#define CPU_CLOCK_FREQUENCY 48000000
+#define CPU_CLOCK_FREQUENCY 48000000U
 
 // *****************************************************************************
 // *****************************************************************************
