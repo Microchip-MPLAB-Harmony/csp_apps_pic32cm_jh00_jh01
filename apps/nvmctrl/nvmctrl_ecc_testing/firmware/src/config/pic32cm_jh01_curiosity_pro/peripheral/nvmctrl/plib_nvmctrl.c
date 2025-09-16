@@ -58,7 +58,7 @@ typedef struct
     uintptr_t Context;
 }nvmCallbackObjType;
 
-volatile static nvmCallbackObjType nvmctrlCallbackObj;
+static volatile nvmCallbackObjType nvmctrlCallbackObj;
 // *****************************************************************************
 // *****************************************************************************
 // Section: NVMCTRL Implementation
