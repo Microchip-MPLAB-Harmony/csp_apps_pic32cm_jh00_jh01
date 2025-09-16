@@ -151,9 +151,19 @@
       </logicalFolder>
     </logicalFolder>
     <logicalFolder name="ExternalFiles" displayName="Important Files" projectFiles="true">
+      <logicalFolder name="spi_eeprom_write_read_pic32cm_jh01_curiosity_pro_pic32cm_jh01_curiosity_pro" displayName="spi_eeprom_write_read_pic32cm_jh01_curiosity_pro_pic32cm_jh01_curiosity_pro" projectFiles="true">
+        <itemPath>spi_eeprom_write_read_pic32cm_jh01_curiosity_pro_pic32cm_jh01_curiosity_pro/mcc-config.mc4</itemPath>
+        <logicalFolder name="components" displayName="components" projectFiles="true">
+          <itemPath>spi_eeprom_write_read_pic32cm_jh01_curiosity_pro_pic32cm_jh01_curiosity_pro/components/cmsis.yml</itemPath>
+          <itemPath>spi_eeprom_write_read_pic32cm_jh01_curiosity_pro_pic32cm_jh01_curiosity_pro/components/core.yml</itemPath>
+          <itemPath>spi_eeprom_write_read_pic32cm_jh01_curiosity_pro_pic32cm_jh01_curiosity_pro/components/dfp.yml</itemPath>
+          <itemPath>spi_eeprom_write_read_pic32cm_jh01_curiosity_pro_pic32cm_jh01_curiosity_pro/components/evsys.yml</itemPath>
+          <itemPath>spi_eeprom_write_read_pic32cm_jh01_curiosity_pro_pic32cm_jh01_curiosity_pro/components/nvmctrl.yml</itemPath>
+          <itemPath>spi_eeprom_write_read_pic32cm_jh01_curiosity_pro_pic32cm_jh01_curiosity_pro/components/sercom1.yml</itemPath>
+        </logicalFolder>
+      </logicalFolder>
       <itemPath>Makefile</itemPath>
       <itemPath>../src/config/pic32cm_jh01_curiosity_pro/harmony-manifest-success.yml</itemPath>
-      <itemPath>spi_eeprom_write_read_pic32cm_jh01_curiosity_pro.mc3</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript" displayName="Linker Files" projectFiles="true">
       <logicalFolder name="f1" displayName="config" projectFiles="true">
@@ -213,12 +223,12 @@
         <targetPluginBoard/>
         <platformTool>EdbgTool</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>4.45</languageToolchainVersion>
+        <languageToolchainVersion>4.60</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
         <pack name="CMSIS" vendor="ARM" version="5.4.0"/>
-        <pack name="PIC32CM-JH_DFP" vendor="Microchip" version="1.2.208"/>
+        <pack name="PIC32CM-JH_DFP" vendor="Microchip" version="1.5.236"/>
       </packs>
       <ScriptingSettings>
       </ScriptingSettings>
