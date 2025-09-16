@@ -163,9 +163,24 @@
       </logicalFolder>
     </logicalFolder>
     <logicalFolder displayName="Important Files" name="ExternalFiles" projectFiles="true">
+      <logicalFolder name="ac_sleepwalk_singleshot_pic32cm_jh01_curiosity_pro_pic32cm_jh01_curiosity_pro" displayName="ac_sleepwalk_singleshot_pic32cm_jh01_curiosity_pro_pic32cm_jh01_curiosity_pro" projectFiles="true">
+        <itemPath>ac_sleepwalk_singleshot_pic32cm_jh01_curiosity_pro_pic32cm_jh01_curiosity_pro/mcc-config.mc4</itemPath>
+        <logicalFolder name="components" displayName="components" projectFiles="true">
+          <itemPath>ac_sleepwalk_singleshot_pic32cm_jh01_curiosity_pro_pic32cm_jh01_curiosity_pro/components/ac.yml</itemPath>
+          <itemPath>ac_sleepwalk_singleshot_pic32cm_jh01_curiosity_pro_pic32cm_jh01_curiosity_pro/components/cmsis.yml</itemPath>
+          <itemPath>ac_sleepwalk_singleshot_pic32cm_jh01_curiosity_pro_pic32cm_jh01_curiosity_pro/components/core.yml</itemPath>
+          <itemPath>ac_sleepwalk_singleshot_pic32cm_jh01_curiosity_pro_pic32cm_jh01_curiosity_pro/components/dfp.yml</itemPath>
+          <itemPath>ac_sleepwalk_singleshot_pic32cm_jh01_curiosity_pro_pic32cm_jh01_curiosity_pro/components/evsys.yml</itemPath>
+          <itemPath>ac_sleepwalk_singleshot_pic32cm_jh01_curiosity_pro_pic32cm_jh01_curiosity_pro/components/nvmctrl.yml</itemPath>
+          <itemPath>ac_sleepwalk_singleshot_pic32cm_jh01_curiosity_pro_pic32cm_jh01_curiosity_pro/components/pm.yml</itemPath>
+          <itemPath>ac_sleepwalk_singleshot_pic32cm_jh01_curiosity_pro_pic32cm_jh01_curiosity_pro/components/rtc.yml</itemPath>
+          <itemPath>ac_sleepwalk_singleshot_pic32cm_jh01_curiosity_pro_pic32cm_jh01_curiosity_pro/components/sercom4.yml</itemPath>
+          <itemPath>ac_sleepwalk_singleshot_pic32cm_jh01_curiosity_pro_pic32cm_jh01_curiosity_pro/components/stdio.yml</itemPath>
+          <itemPath>ac_sleepwalk_singleshot_pic32cm_jh01_curiosity_pro_pic32cm_jh01_curiosity_pro/components/supc.yml</itemPath>
+        </logicalFolder>
+      </logicalFolder>
       <itemPath>Makefile</itemPath>
       <itemPath>../src/config/pic32cm_jh01_curiosity_pro/harmony-manifest-success.yml</itemPath>
-      <itemPath>ac_sleepwalk_singleshot_pic32cm_jh01_curiosity_pro.mc3</itemPath>
     </logicalFolder>
     <logicalFolder displayName="Linker Files" name="LinkerScript" projectFiles="true">
       <logicalFolder displayName="config" name="f1" projectFiles="true">
@@ -237,12 +252,12 @@
         <targetPluginBoard/>
         <platformTool>EdbgTool</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>4.45</languageToolchainVersion>
+        <languageToolchainVersion>4.60</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
         <pack name="CMSIS" vendor="ARM" version="5.4.0"/>
-        <pack name="PIC32CM-JH_DFP" vendor="Microchip" version="1.2.208"/>
+        <pack name="PIC32CM-JH_DFP" vendor="Microchip" version="1.5.236"/>
       </packs>
       <ScriptingSettings>
       </ScriptingSettings>
