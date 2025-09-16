@@ -45,7 +45,7 @@
 #include "plib_ram.h"
 
 
-volatile static RAM_ECC_CALLBACK_OBJ RAM_ECC_CallbackObject;
+static volatile RAM_ECC_CALLBACK_OBJ RAM_ECC_CallbackObject;
 
 
 void RAM_ECC_Initialize(void)
