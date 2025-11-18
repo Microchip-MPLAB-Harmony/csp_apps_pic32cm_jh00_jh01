@@ -171,7 +171,7 @@
         <itemPath>tcc_synchronous_pwm_channels_pic32cm_jh01_curiosity_pro_pic32cm_jh01_curiosity_pro/mcc-config.mc4</itemPath>
       </logicalFolder>
       <itemPath>Makefile</itemPath>
-      <itemPath>../src/config/pic32cm_jh01_curiosity_pro/harmony-manifest-success.yml</itemPath>
+      <itemPath>../src/config/pic32cm_jh01_curiosity_pro/pin_configurations.csv</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -241,7 +241,7 @@
         <platform>3</platform>
       </toolsSet>
       <packs>
-        <pack name="CMSIS" vendor="ARM" version="5.4.0"/>
+        <pack name="CMSIS" vendor="ARM" version="5.9.0"/>
         <pack name="PIC32CM-JH_DFP" vendor="Microchip" version="1.5.236"/>
       </packs>
       <ScriptingSettings>
