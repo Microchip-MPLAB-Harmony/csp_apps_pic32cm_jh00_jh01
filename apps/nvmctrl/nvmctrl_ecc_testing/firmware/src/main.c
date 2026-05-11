@@ -50,6 +50,7 @@
 #include <stddef.h>                     // Defines NULL
 #include <stdbool.h>                    // Defines true
 #include <stdlib.h>                     // Defines EXIT_FAILURE
+#include <stdint.h>                     // Defines uintptr_t
 #include "definitions.h"
 
 // *****************************************************************************
@@ -140,20 +141,20 @@ void fault_injection_routine ( uint32_t address )
         intFlag = 0;
     }
     
-    printf ("Value Read at address 0x%X: 0x%X is corrected on the fly\n\r", (uint)(address), (uint)data_read[0]);
-    printf ("Value Read at address 0x%X: 0x%X is corrected on the fly\n\r", (uint)(address + 4), (uint)data_read[1]);
+    printf ("Value Read at address 0x%X: 0x%X is corrected on the fly\n\r", (unsigned int)(address), (unsigned int)data_read[0]);
+    printf ("Value Read at address 0x%X: 0x%X is corrected on the fly\n\r", (unsigned int)(address + 4), (unsigned int)data_read[1]);
     
     // Read updated SECIN value and display result on terminal (SECIN is the ECC read from memory. This was calculated on un-corrupted data and written upon a flash write operation)
     secin = NVMCTRL_ECC_SECIN_FaultParityGet();
-    printf ("The computed SECIN is 0x%X\n\r", (uint)secin); 
+    printf ("The computed SECIN is 0x%X\n\r", (unsigned int)secin); 
     
     // Read updated SECOUT value and display result on terminal (SECOUT is the ECC calculated on the corrupted data upon a read operation)
     secout = NVMCTRL_ECC_SECOUT_FaultParityGet();
-    printf ("The new computed SECOUT is 0x%X\n\r", (uint)secout);
+    printf ("The new computed SECOUT is 0x%X\n\r", (unsigned int)secout);
     
     // Read updated Syndrome value and display result on terminal
     syndrome = NVMCTRL_ECC_FaultSyndromeGet();
-    printf ("The syndrome is 0x%X\n\n\r", (uint)syndrome);      
+    printf ("The syndrome is 0x%X\n\n\r", (unsigned int)syndrome);      
     
     if (address == FLASH_WRITE_ADDR)
         NVMCTRL_ECC_MainArrayDisable();
@@ -163,8 +164,8 @@ void fault_injection_routine ( uint32_t address )
     // Read physical value contained in Flash (or Data Flash) memory at defined address. This value is returned raw as ECC feature is disabled
     *((uint64_t*)&data_read[0]) = *(uint64_t*)address;
     
-    printf ("Physical value at address 0x%X: 0x%X \n\r", (uint)(address), (uint)data_read[0]);
-    printf ("Physical value at address 0x%X: 0x%X \n\n\r", (uint)(address + 4), (uint)data_read[1]);
+    printf ("Physical value at address 0x%X: 0x%X \n\r", (unsigned int)(address), (unsigned int)data_read[0]);
+    printf ("Physical value at address 0x%X: 0x%X \n\n\r", (unsigned int)(address + 4), (unsigned int)data_read[1]);
 }
 
 // *****************************************************************************
